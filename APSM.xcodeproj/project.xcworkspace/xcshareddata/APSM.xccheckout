@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F6979FE-B7B2-4D29-82CA-B96D4BDE4FCB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>APSM</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9A12E704-1317-422D-8B16-9BE7316ED9B4</key>
+		<string>https://github.com/scar712345/APSM.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>APSM.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9A12E704-1317-422D-8B16-9BE7316ED9B4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/scar712345/APSM.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9A12E704-1317-422D-8B16-9BE7316ED9B4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9A12E704-1317-422D-8B16-9BE7316ED9B4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>APSM0718</string>
+		</dict>
+	</array>
+</dict>
+</plist>
