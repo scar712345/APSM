@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="9mL-Uo-ehC">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="7jC-KL-x7D" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9M9-lX-P6y"/>
+                        <viewControllerLayoutGuide type="bottom" id="ejG-Cn-Nlt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Ek-go-LxF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone_page00(640).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-NT-Mns">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bej-ec-jeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="-504"/>
+        </scene>
+        <!--License Page View Controller-->
+        <scene sceneID="b08-VF-TZp">
+            <objects>
+                <viewController storyboardIdentifier="LicensePageViewController" id="t08-HA-JBm" customClass="LicensePageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9lX-wP-le4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xb4-u8-Vaw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7mK-Fs-ees">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="VFi-PV-D6h">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBN-Jm-zUH">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aUL-aR-yzM"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="menu_background.png(296x36).png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSubmit:" destination="t08-HA-JBm" eventType="touchUpInside" id="v4D-7f-3as"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Py-xZO">
+                                <rect key="frame" x="0.0" y="73" width="320" height="417"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Au-VEz" customClass="VerticalUILabel">
+                                        <rect key="frame" x="20" y="0.0" width="280" height="3000"/>
+                                        <string key="text">歡迎使用「ALIGN G-Pro介面軟體」！一旦下載、安裝或使用 ALIGN G-Pro軟體或其中任何部分，即表示貴用戶同意遵守下列條款與細則。ALIGN G-Pro軟體及其中任何部分，在本文中統稱「軟體」。
+
+用戶明確了解並同意：
+
+a) 貴用戶應自行承擔「軟體」使用之任何風險。「軟體」係以「現狀」提供，且不做任何形式之保證。在相關法律所允許之最大範圍內，ALIGN 在此聲明不對任何明示或默示的擔保及條件負責，其中包括但不限於適售性、適合某特定用途及不侵權等情形。
+
+b) ALIGN 不就下列事項提供任何擔保：(I)「軟體」符合貴用戶的需求，(II)「軟體」不含任何錯誤；(III)「軟體」的安全性、可靠性、即時性或效能；以及 (IV)「軟體」的任何錯誤都會獲得修正。
+
+c) 貴用戶須自行承擔使用「軟體」下載或以其他方式取得之內容和材料的風險。若下載任何此類內容或資料，而導致電腦系統或其他裝置的損壞或資料遺失，貴用戶必須獨自負責其後果。
+
+d)「軟體」並非設計用於操作核子設備、維生系統、緊急通訊、飛機導航或通訊系統、空中交通控制系統，或任何其他可能因「軟體」失效而造成死亡、人身傷害、嚴重的實質或環境損害之活動。
+
+e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得的建議或資訊，無論是以口頭或書面方式取得，皆不成為本《條款及細則》未明示提及之保證。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgs-te-OWI">
+                                <rect key="frame" x="20" y="497" width="285" height="23"/>
+                                <state key="normal" image="112.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCheckBox:" destination="t08-HA-JBm" eventType="touchUpInside" id="tRV-Pd-nfo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gpro 免責聲明:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-3Q-R4p">
+                                <rect key="frame" x="20" y="44" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Sgs-te-OWI" secondAttribute="trailing" constant="15" id="4w6-PK-00B"/>
+                            <constraint firstItem="CTr-Py-xZO" firstAttribute="leading" secondItem="VFi-PV-D6h" secondAttribute="leading" id="Bfi-Lw-EO5"/>
+                            <constraint firstAttribute="bottom" secondItem="VFi-PV-D6h" secondAttribute="bottom" id="KT4-xo-UOw"/>
+                            <constraint firstItem="CTr-Py-xZO" firstAttribute="trailing" secondItem="fBN-Jm-zUH" secondAttribute="trailing" id="MMi-Yq-sa1"/>
+                            <constraint firstItem="fBN-Jm-zUH" firstAttribute="bottom" secondItem="VFi-PV-D6h" secondAttribute="bottom" id="Mhh-1q-eIP"/>
+                            <constraint firstItem="CTr-Py-xZO" firstAttribute="leading" secondItem="7mK-Fs-ees" secondAttribute="leading" id="QqB-tS-ZcA"/>
+                            <constraint firstItem="CTr-Py-xZO" firstAttribute="leading" secondItem="fBN-Jm-zUH" secondAttribute="leading" id="Rk0-So-zPs"/>
+                            <constraint firstItem="CTr-Py-xZO" firstAttribute="top" secondItem="9lX-wP-le4" secondAttribute="bottom" constant="53" id="aK4-Y1-0rE"/>
+                            <constraint firstAttribute="trailing" secondItem="VFi-PV-D6h" secondAttribute="trailing" id="f2W-bO-c0s"/>
+                            <constraint firstItem="Sgs-te-OWI" firstAttribute="leading" secondItem="7mK-Fs-ees" secondAttribute="leading" constant="20" symbolic="YES" id="jvO-Fq-B4Z"/>
+                            <constraint firstItem="VFi-PV-D6h" firstAttribute="top" secondItem="7mK-Fs-ees" secondAttribute="top" id="kGY-tT-2NW"/>
+                            <constraint firstItem="fBN-Jm-zUH" firstAttribute="trailing" secondItem="VFi-PV-D6h" secondAttribute="trailing" id="pJV-q6-0PG"/>
+                            <constraint firstItem="Sgs-te-OWI" firstAttribute="top" secondItem="CTr-Py-xZO" secondAttribute="bottom" constant="7" id="tdk-su-JIf"/>
+                            <constraint firstItem="fBN-Jm-zUH" firstAttribute="top" secondItem="Sgs-te-OWI" secondAttribute="bottom" constant="8" symbolic="YES" id="tdl-uk-6Wy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCheckBox" destination="Sgs-te-OWI" id="Rsi-5Y-www"/>
+                        <outlet property="btnEnter" destination="fBN-Jm-zUH" id="W6R-OM-FgD"/>
+                        <outlet property="labelLicense" destination="hnh-Au-VEz" id="fYE-1j-Ek8"/>
+                        <outlet property="labelTitle" destination="Ock-3Q-R4p" id="Aka-fT-r02"/>
+                        <outlet property="scroll" destination="CTr-Py-xZO" id="vCW-rz-st1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oh7-cu-e29" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="-504"/>
+        </scene>
+        <!--Page1-->
+        <scene sceneID="uSX-CL-Fgk">
+            <objects>
+                <viewController storyboardIdentifier="APSM_Page1" id="UKq-wP-EzR" customClass="APSM_Page1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dxC-m8-3Ef"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xu6-dZ-5vT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CgV-e2-t7W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="WNX-v0-xbb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ib-F7-5sV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahz-6Y-dhJ" customClass="ReceiverAndBindView">
+                                        <rect key="frame" x="10" y="5" width="300" height="195"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelReceiverText" value="123"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelBindingText" value="456"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="btnReceiverText" value="BtnA"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="btnBindingText" value="BtnB"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-3c-np6" customClass="BlankView">
+                                        <rect key="frame" x="10" y="209" width="300" height="621"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVe-CA-jX9" customClass="TransmitterRadioView">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="139"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-o7-eJ3">
+                                                        <rect key="frame" x="8" y="138" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ale"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWB-HU-Gd8" customClass="TransmitterRadioView">
+                                                <rect key="frame" x="0.0" y="147" width="300" height="139"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4q-Oz-zCl">
+                                                        <rect key="frame" x="8" y="138" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ele"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-hc-S31" customClass="TransmitterRadioView">
+                                                <rect key="frame" x="0.0" y="294" width="300" height="139"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-4r-mAY">
+                                                        <rect key="frame" x="8" y="138" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Thr"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVo-sW-5hj" customClass="TransmitterRadioView">
+                                                <rect key="frame" x="0.0" y="441" width="300" height="139"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Rud"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1200"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="WNX-v0-xbb" id="vDZ-1a-JDb"/>
+                        <outlet property="lastView" destination="Vw7-3c-np6" id="5JT-Ns-pIw"/>
+                        <outlet property="scrollView" destination="8Ib-F7-5sV" id="JYZ-Mz-Zh3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtP-rt-a4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146" y="-338"/>
+        </scene>
+        <!--Page2-->
+        <scene sceneID="cOa-Z2-SyP">
+            <objects>
+                <viewController storyboardIdentifier="APSM_Page2" id="cQ3-eS-LQv" customClass="APSM_Page2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3q2-Lb-1Yf"/>
+                        <viewControllerLayoutGuide type="bottom" id="A9z-dW-cnY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gvi-7J-nBp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-M5-KRn">
+                                <rect key="frame" x="0.0" y="-350" width="320" height="1600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-pV-aV8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-7u-eld" customClass="yumeImageButtonsView">
+                                        <rect key="frame" x="10" y="360" width="300" height="487"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="buttonBeginPoint">
+                                                <point key="value" x="10" y="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="buttonSize">
+                                                <size key="value" width="130" height="130"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonInRow">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonMargin">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasChangeAlert" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonSelected">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mk-Pgc" customClass="yumeSensitivityView">
+                                        <rect key="frame" x="10" y="0.0" width="300" height="352"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualAileronKeyPath" value="parameterDatas.p"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualElevatorKeyPath" value="parameterDatas.q"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualRudderKeyPath" value="parameterDatas.r"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAileronKeyPath" value="parameterDatas.phi"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeElevatorKeyPath" value="parameterDatas.theta"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeRudderKeyPath" value="parameterDatas.psi"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAltitudeKeyPath" value="parameterDatas.altitude"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="hrU-M5-KRn" id="yGg-uS-8yr"/>
+                        <outlet property="lastView" destination="AdR-7u-eld" id="VcX-kx-gBN"/>
+                        <outlet property="scrollView" destination="YBD-pV-aV8" id="PgD-Ef-MQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgC-Yk-Bwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539" y="-338"/>
+        </scene>
+        <!--Page3-->
+        <scene sceneID="Cy3-ve-LVl">
+            <objects>
+                <viewController storyboardIdentifier="APSM_Page3" id="kZC-4x-xZH" customClass="APSM_Page3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csq-2K-d83"/>
+                        <viewControllerLayoutGuide type="bottom" id="82h-vN-QoG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yBw-4W-KkU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="sFo-3y-bcX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ywz-Re-pnm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSs-ka-e4B" customClass="yumeSwicthAndVoltageView">
+                                        <rect key="frame" x="0.0" y="273" width="320" height="218"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel1_Enable"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel1_Voltage"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
+                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel2_Enable"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel2_Voltage"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s46-gz-1Lh" customClass="yumeXYZView">
+                                        <rect key="frame" x="5" y="0.0" width="310" height="265"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xKeyPath" value="parameterDatas.AntX"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="yKeyPath" value="parameterDatas.AntY"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="zKeyPath" value="parameterDatas.AntZ"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yrU-al-8pn"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="900"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="sFo-3y-bcX" id="rY2-bg-vwV"/>
+                        <outlet property="backgroundView" destination="sFo-3y-bcX" id="hG2-9B-VbO"/>
+                        <outlet property="lastView" destination="Mls-h3-Yur" id="v4b-tv-Q04"/>
+                        <outlet property="scrollView" destination="Ywz-Re-pnm" id="UZy-aD-CwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZ5-8N-rBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2928" y="-338"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vza-OH-KFa">
+            <objects>
+                <viewController id="0Of-Ae-IW1" customClass="APSMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1KY-NG-24s"/>
+                        <viewControllerLayoutGuide type="bottom" id="qhh-F8-2ev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GRD-V5-yGu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="628"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-CT-8Zq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="900"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zT-h0-sFl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="628"/>
+                                <subviews>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sII-28-a57">
+                                        <rect key="frame" x="20" y="129" width="280" height="192"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caution(60x60).png.png" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-Yj-yUe">
+                                                <rect key="frame" x="52" y="3" width="20" height="20"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caution" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="130" translatesAutoresizingMaskIntoConstraints="NO" id="auG-es-cnn">
+                                                <rect key="frame" x="75" y="3" width="130" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukw-UX-Jws">
+                                        <rect key="frame" x="30" y="156" width="260" height="160"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="grl-wW-Itc" customClass="VerticalUILabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="800"/>
+                                                <string key="text">Thank you for choice Align Gpro flybarless system.  
+Prior to first use, please enter setup program through helicopter’s Hardware Settings menu, followed by parameter tuning in each tab, then concludes with flight parameter menu settings.  
+Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.</string>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </scrollView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="link_r.png" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-Ca-LOZ">
+                                        <rect key="frame" x="258" y="14" width="22" height="22"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone_ConnectionStatus(64x64).png" translatesAutoresizingMaskIntoConstraints="NO" id="RWB-Dt-GZk">
+                                        <rect key="frame" x="20" y="1" width="37" height="44"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmj-6H-XN5">
+                                        <rect key="frame" x="20" y="54" width="239" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ine-eV-WIu">
+                                        <rect key="frame" x="84" y="14" width="148" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My5-pN-45S">
+                                        <rect key="frame" x="0.0" y="78" width="320" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_001(630x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDisconnect:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="yWH-8T-Uj3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3j-bt-c0l">
+                                        <rect key="frame" x="0.0" y="78" width="320" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_001(630x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDevice:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="der-bz-P8g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxo-np-Hdp">
+                                        <rect key="frame" x="211" y="329" width="48" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loadAPSMData:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="wE6-ht-if9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-AD-Lym">
+                                        <rect key="frame" x="259" y="329" width="61" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveAPSMData:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="R7k-L6-kRG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGb-Zr-7k3">
+                                        <rect key="frame" x="0.0" y="389" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-Il-ujv">
+                                        <rect key="frame" x="211" y="389" width="48" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L22-Cl-1zn">
+                                        <rect key="frame" x="259" y="389" width="61" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ON-xj-P0N">
+                                        <rect key="frame" x="0.0" y="516" width="105" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_021(218x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnHowToUse:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="XGG-zC-cyZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBy-Nk-u07">
+                                        <rect key="frame" x="106" y="516" width="105" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_022(194x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeLanguage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="TjH-D8-tkQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og1-3J-MdJ">
+                                        <rect key="frame" x="212" y="516" width="108" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_023(218x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnWebside:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="zN1-E6-HPX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-gc-KYf">
+                                        <rect key="frame" x="0.0" y="329" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushToAPSMSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="p1k-41-k6B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-bt-xgF">
+                                        <rect key="frame" x="-2" y="449" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-lv-l63">
+                                        <rect key="frame" x="209" y="449" width="48" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-3m-EdB">
+                                        <rect key="frame" x="257" y="449" width="61" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4KR-GQ-4Zx">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="3dV-3g-rgf"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="628"/>
+                    <connections>
+                        <outlet property="btnDisconnectDevice" destination="My5-pN-45S" id="Gvd-Xt-rsZ"/>
+                        <outlet property="btnScanDevice" destination="e3j-bt-c0l" id="1kN-4R-8Qe"/>
+                        <outlet property="imgLight" destination="UFq-Ca-LOZ" id="hmx-cB-VNK"/>
+                        <outlet property="labelCaution" destination="auG-es-cnn" id="faE-G0-PIa"/>
+                        <outlet property="labelConnectingStatus" destination="ine-eV-WIu" id="02X-oq-MVc"/>
+                        <outlet property="labelDevice" destination="dmj-6H-XN5" id="hhr-eD-WXn"/>
+                        <outlet property="labelWarning" destination="grl-wW-Itc" id="KRQ-K0-JpQ"/>
+                        <outlet property="lastView" destination="og1-3J-MdJ" id="t7u-C9-1Yz"/>
+                        <outlet property="scrollView" destination="6zT-h0-sFl" id="w9N-QB-NPL"/>
+                        <outlet property="scrollViewWarning" destination="ukw-UX-Jws" id="W6M-lR-8AC"/>
+                        <outlet property="viewWarning" destination="sII-28-a57" id="9Ht-t9-6Kn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TiM-ch-3jV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357" y="-504"/>
+        </scene>
+        <!--Pages-->
+        <scene sceneID="gkS-r7-KLf">
+            <objects>
+                <viewController storyboardIdentifier="Pages" id="tzy-sw-trm" customClass="Pages" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UNz-Wv-Zyw"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqC-zp-DaG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sa9-Xw-HO5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="1Lr-NX-7Z7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-KW-rd0">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page_buttombackground(1008x64).png" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-zw-xAj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-G5-Z4h">
+                                        <rect key="frame" x="114" y="5" width="96" height="40"/>
+                                        <state key="normal" backgroundImage="phone_Menu_032(194x96).png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonMenu:" destination="tzy-sw-trm" eventType="touchUpInside" id="U4i-G8-JoR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5E-xy-ltg">
+                                        <rect key="frame" x="218" y="5" width="96" height="40"/>
+                                        <state key="normal" backgroundImage="phone_Menu_033(218x96).png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonNext:" destination="tzy-sw-trm" eventType="touchUpInside" id="JIL-u0-Yfl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-QO-0eE">
+                                        <rect key="frame" x="10" y="5" width="96" height="40"/>
+                                        <state key="normal" backgroundImage="phone_Menu_031(218x96).png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonBack:" destination="tzy-sw-trm" eventType="touchUpInside" id="HFC-kA-Pbd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBack" destination="SWR-QO-0eE" id="0Ir-s8-qEo"/>
+                        <outlet property="buttonMenu" destination="Tap-G5-Z4h" id="tPD-CC-EyO"/>
+                        <outlet property="buttonNext" destination="J5E-xy-ltg" id="XIP-ij-MN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gf-L4-3rz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-520"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eak-aC-hsK">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="bX5-AB-Iaj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AGQ-Rf-m4X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Of-Ae-IW1" kind="relationship" relationship="rootViewController" id="Hty-W1-pWH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVu-8C-iTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-504"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="112.png" width="23" height="23"/>
+        <image name="caution(60x60).png.png" width="60" height="50"/>
+        <image name="link_r.png" width="32" height="32"/>
+        <image name="menu_background.png(296x36).png" width="296" height="36"/>
+        <image name="page_buttombackground(1008x64).png" width="1008" height="64"/>
+        <image name="phone_ConnectionStatus(64x64).png" width="64" height="64"/>
+        <image name="phone_Menu_001(630x96).png" width="632" height="96"/>
+        <image name="phone_Menu_011(412x96).png" width="414" height="96"/>
+        <image name="phone_Menu_012(96x96).png" width="96" height="96"/>
+        <image name="phone_Menu_013(122x96).png" width="123" height="96"/>
+        <image name="phone_Menu_021(218x96).png" width="219" height="96"/>
+        <image name="phone_Menu_022(194x96).png" width="195" height="96"/>
+        <image name="phone_Menu_023(218x96).png" width="219" height="96"/>
+        <image name="phone_Menu_031(218x96).png" width="219" height="96"/>
+        <image name="phone_Menu_032(194x96).png" width="195" height="96"/>
+        <image name="phone_Menu_033(218x96).png" width="219" height="96"/>
+        <image name="phone_page00(640).jpg" width="640" height="1136"/>
+        <image name="window_background.png(1008x642).png" width="1008" height="642"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
+</document>

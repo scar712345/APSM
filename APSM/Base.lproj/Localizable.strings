@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  APSM
+
+  Created by APP559 on 2014/7/16.
+  Copyright (c) 2014年 yume. All rights reserved.
+*/
+
+"License" = "\nThis ALIGN Gpro Flybarless System Agreement for the licensing of ALIGN Cooperation Ltd.\n\nProducts and Services is made and entered into by and between ALIGN Cooperation Ltd. \n\nand the customer/users identified below and/or on the Ordering Document(s). \n\nThis Agreement, each accompanying addendum and each accompanying Ordering Document governs Customer/user's access to and use of the Products and Services (hereinafter called the Software).\n\nCustomers and Users understand and agree completely with:\n\na) Except as explicitly provided in this agreement or in an addendum, and to the maximum extent permitted by applicable law, ALIGN, its licensors, and their suppliers do not make any other warranty of any kind, whether express, implied, statutory or otherwise including, without limitation, warranties of merchantability, fitness for a particular use, non-infringement or ALIGN content accuracy\n\nALIGN do not make any other warranty of any kind and of below situation:\n\n(I) The Software will meet all customers/users need and request.\n\n(II) The operation of the Software will be uninterrupted and error free\n\n(III) The liability, safety, instant and performance of the Software are in accuracy.\n\n(IV) Any improvements, updates, variations, modifications, alterations, additions and error message of the Software will be corrected.\n\nb) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if causing any damage or data and/or other relative device lost, customers and users must be solely responsible for the consequences.\n\nc) The Software does not designed for emergency services, nuclear facilities, air traffic control or life support systems, and any occupation where the use or failure of the Software could lead to death, personal injury, or environmental damage.\n\nd) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if the claim would have been avoided by the non-combined or independent use of the Ordering Document(s).";
+
+//First page
+"WarningMessageFirstPage"= "Thank you for choosing Align Gpro flybarless system.\n\nPrior to first use, please enter setup program through helicopter’s Hardware Setup menu, followed by parameter tuning in each tab, then concludes with flight parameter menu settings.\n\nPlease ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
+
+"ConnectedParameterPushMessage"="Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
+"Confirm" = "Ok";
+
+//(彈跳視窗)
+"Incorrect Version" = "Unsupported version";
+"Formatting errors or corrupted file" = "Corrupted file or formatting errors";//
+
+//page10
+
+"Page1_0Warning" = "Are you sure to apply beginner settings ?";
+
+
+//page11
+"RestWarning" = "Click \"Reset\" will revert back to system default value, are you sure?" ;
+"Elevator Precomp" = "Elevator Precomp.";
+
+//page12
+"RUD Gyro Gain" = "Rud Gyro Gain";
+
+//page21
+
+"WarningMessagePage21" = "This process is for setting up of helicopter hardware.\n\nIf your Gpro hasn’t been through setup process or if you are performing the setup process again, please make sure to choose Create New Setting, and follow instruction to complete the setup accordingly.\n\nIf your Gpro is already been through the setup process or its hardware parameters was adjusted previously, please choose Edit Current Setting to make changes to your setup.";
+
+"All previous settings in Gpro will be erased if you choose Create New Setting.\n\nIf the Gpro has not been through setup process or if you are performing the setup process again, please click “Yes”, otherwise please choose “No”."= "All previous settings in Gpro will be erased if you choose Create New Setting.\n\nIf the Gpro has not been through setup process or if you are performing the setup process again, please click \"Yes\", otherwise please choose \"No\".";
+
+"Confirm “Create New Setting?”" = "Confirm \"Create New Setting?\"";
+//page22
+
+"WarningMessage" = "Your current channel mapping selection contains duplicate channels.\n\nThe setup program will remain in this page until the duplicate channels are resolved.\n\nPlease select the channel mapping based on your radio's channel sequence.";
+"GER(Tail Gain)" = "GER (Tail Gain)";
+"AUX2(Spare)" = "AUX2 (Spare)";
+
+//page24
+"Swash Type Change Warning"="You must be select your swashplate type and connect servos to Gpro correctly, otherwise it will cause swashplate movement disorders!\n\nAre you sure you want to change the settings?";
+
+//page25
+"UpP25" = "Up";
+"DownP25" = "Down";
+
+
+//page26
+
+"CollectiveP" = "Collective";
+"CollectiveN" = "Collective";
+"Cyclic pitch"= "Cyclic Pitch";
+
+//page28
+
+"GovernorModeWarning" = "Governor mode is a dedicated function for nitro powered helicopters.\n\nDo not activate this function for electric powered helicopter, otherwise unintentional motor startup may cause unforeseen dangerous circumstances.\n\nAre you sure this helicopter is Nitro Helicopter?";
+
+
+//page29
+"WarningMessagePage29"="Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
+
+"CautionMessagePage29" = "Before flight, please ensure correct helicopter movement and correct swashplate compensation prior to flights.";
+"Entering parameter Menu" = "Entering Parameter Menu";

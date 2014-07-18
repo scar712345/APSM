@@ -1,0 +1,241 @@
+//
+//  APSMViewController.m
+//  APSM
+//
+//  Created by APP559 on 2014/7/16.
+//  Copyright (c) 2014年 yume. All rights reserved.
+//
+
+#import "APSMViewController.h"
+#import "VerticalUILabel.h"
+#import "Language.h"
+#import "yumeBTLERemoteController.h"
+#import "Pages.h"
+
+@interface APSMViewController ()<UIAlertViewDelegate>
+{
+    UIAlertView *alertSettingPush;
+    UIAlertView *alertParameterPush;
+    UIAlertView *alertConnectedPush;
+    UIAlertView *alertLanguage;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *btnScanDevice;
+@property (weak, nonatomic) IBOutlet UIButton *btnDisconnectDevice;
+@property (weak, nonatomic) IBOutlet UILabel *labelConnectingStatus;
+@property (weak, nonatomic) IBOutlet UIView *viewWarning;
+@property (weak, nonatomic) IBOutlet UIImageView *imgLight;
+@property (weak, nonatomic) IBOutlet UILabel *labelCaution;
+//@property (weak, nonatomic) IBOutlet UILabel *labelWarning;
+@property (weak, nonatomic) IBOutlet VerticalUILabel *labelWarning;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollViewWarning;
+
+@property (strong, nonatomic) IBOutlet UIImageView *homeImageView;
+@end
+
+@implementation APSMViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self lockButtonWhenDisconnect];
+//    [yumeBTLERemoteController sharedInstance].rootVC = self;
+    
+    [self prepareNavigationIcon];
+    
+    [self.btnScanDevice setTitle:NSLocalizedString(@"Search Device - Bluetooth",nil) forState:UIControlStateNormal];
+    [self.btnDisconnectDevice setTitle:NSLocalizedString(@"Disconnected ",nil) forState:UIControlStateNormal];
+//    [self.btnSettingPage setTitle:NSLocalizedString(@"Setup Menu",nil) forState:UIControlStateNormal];
+//    [self.btnParameterPage setTitle:NSLocalizedString(@"Parameter Menu",nil) forState:UIControlStateNormal];
+    self.labelCaution.text = [Language get:@"Caution" alter:nil];
+    self.labelWarning.text = NSLocalizedString(@"WarningMessageFirstPage",nil);
+    
+    self.viewWarning.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    self.scrollViewWarning.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+}
+
+-(void)prepareNavigationIcon{
+    UIImage *buttonImage = [UIImage imageNamed:@"phone_h_icon(44x44).png"];
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [aButton setImage:buttonImage forState:UIControlStateNormal];
+    aButton.frame = CGRectMake(0.0,0.0,buttonImage.size.width,buttonImage.size.height);
+    //    [aButton addTarget:self action:@selector(aSelector) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
+    self.navigationItem.leftBarButtonItem = backButton;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidLayoutSubviews
+{
+    _labelWarning.verticalAlignment = VerticalAlignmentTop;
+    CGSize maximumLabelSize = CGSizeMake(260, FLT_MAX);
+    NSDictionary *stringAttributes = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:18] forKey: NSFontAttributeName];
+    CGRect frame = [_labelWarning.text boundingRectWithSize:maximumLabelSize
+                                                    options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin
+                                                 attributes:stringAttributes context:nil];
+    _labelWarning.frame = CGRectMake(0, 0, 260, frame.size.height);
+    _scrollViewWarning.contentSize = CGSizeMake(240, frame.size.height);
+    
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth, self.lastView.frame.origin.y + self.lastView.frame.size.height);
+    self.scrollView.frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight - 64);
+}
+
+#pragma mark - Button
+
+- (IBAction)btnDevice:(id)sender {
+    [[yumeBTLERemoteController sharedInstance] startScanWithShowDeviceList];
+}
+
+- (IBAction)btnDisconnect:(id)sender {
+    [[yumeBTLERemoteController sharedInstance]disconnet];
+}
+
+- (IBAction)loadAPSMData:(id)sender {
+//    [[yumeBTLERemoteController sharedInstance].fileController loadParameterData];
+}
+
+- (IBAction)saveAPSMData:(id)sender {
+}
+
+-(void)setLabelDeviceText:(NSString*)text{
+    self.labelDevice.text = text;
+}
+
+-(void)lockButtonWhenDisconnect{
+    self.btnScanDevice.hidden=NO;
+    self.btnDisconnectDevice.hidden=YES;
+    self.labelConnectingStatus.textColor=[UIColor redColor];
+    self.labelConnectingStatus.text=[Language get:@"Disconnected" alter:nil];
+    self.imgLight.image=[UIImage imageNamed:@"link_r"];
+    
+}
+
+-(void)lockButtonWhenConnected{
+    self.btnScanDevice.hidden=YES;
+    self.btnDisconnectDevice.hidden=NO;
+    self.labelConnectingStatus.textColor=[UIColor greenColor];
+    self.labelConnectingStatus.text=[Language get:@"Connected" alter:nil];
+    self.imgLight.image=[UIImage imageNamed:@"link_g"];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView == alertLanguage) {
+        if (buttonIndex == 0) {
+            return;
+        }
+        
+        NSArray *languages = @[@"zh-Hant",@"zh-Hans",@"en",@"de",@"fr"];
+        if ((buttonIndex - 1) > languages.count) {
+            return;
+        }
+        [Language setLanguage:(NSString *)languages[buttonIndex - 1]];
+        
+        self.labelCaution.text=[Language get:@"Caution" alter:nil];
+        [self.btnScanDevice setTitle:[Language get:@"Search Device - Bluetooth" alter:nil] forState:UIControlStateNormal];
+        [self.btnDisconnectDevice setTitle:[Language get:@"Disconnected " alter:nil] forState:UIControlStateNormal];
+//        [self.btnSettingPage setTitle:[Language get:@"Setup Menu" alter:nil] forState:UIControlStateNormal];
+//        [self.btnParameterPage setTitle:[Language get:@"Parameter Menu" alter:nil] forState:UIControlStateNormal];
+        self.labelWarning.text=NSLocalizedString(@"WarningMessageFirstPage",nil);
+        
+        if (self.btnScanDevice.hidden==NO) {
+            self.labelConnectingStatus.text=[Language get:@"Disconnected" alter:nil];
+        }else{
+            self.labelConnectingStatus.text=[Language get:@"Connected" alter:nil];
+        }
+        //        [self viewDidLayoutSubviews];
+    }
+    
+//    if (alertView==alertSettingPush) {
+//        if (buttonIndex==0) {
+//            page2_1 *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"page2_1"];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//    }
+//    if (alertView==alertParameterPush) {
+//        if (buttonIndex==0) {
+//            page1 *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"page1"];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//    }
+//    if (alertView==alertConnectedPush) {
+//        if (buttonIndex==1) {
+//            page1 *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"page1"];
+//            [self.navigationController pushViewController:vc animated:YES];
+//        }
+//    }
+}
+
+//- (IBAction)btnSettingPush:(id)sender {
+//    if (self.btnScanDevice.hidden==NO) {
+//        alertSettingPush=[[UIAlertView alloc] initWithTitle:nil
+//                                                    message:NSLocalizedString(@"Entering Offline mode",nil)
+//                                                   delegate:self
+//                                          cancelButtonTitle:nil
+//                                          otherButtonTitles:NSLocalizedString(@"Yes",nil), nil];
+//        [alertSettingPush show];
+//    }
+//    else{
+////        page2_1 *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"page2_1"];
+////        [self.navigationController pushViewController:vc animated:YES];
+//    }
+//}
+
+- (IBAction)pushToAPSMSettingPage:(id)sender {
+
+    Pages *APSMPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
+    APSMPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
+                                                 message:nil
+                                                delegate:self
+                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                       otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3", nil];
+    
+    APSMPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page1"],
+               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page2"],
+               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page3"]];
+    APSMPages.pageTitle = @"APSM Setting";
+    APSMPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"def"];
+    [self.navigationController pushViewController:APSMPages animated:YES];
+    
+//    if (self.btnScanDevice.hidden==YES) {
+//        alertConnectedPush=[[UIAlertView alloc] initWithTitle:nil
+//                                                      message:NSLocalizedString(@"ConnectedParameterPushMessage",nil)
+//                                                     delegate:self
+//                                            cancelButtonTitle:NSLocalizedString(@"No",nil)
+//                                            otherButtonTitles:NSLocalizedString(@"Yes",nil), nil];
+//        [alertConnectedPush show];
+//    }
+//    else{
+//        alertParameterPush=[[UIAlertView alloc] initWithTitle:nil
+//                                                      message:NSLocalizedString(@"Entering Offline mode",nil)
+//                                                     delegate:self
+//                                            cancelButtonTitle:nil
+//                                            otherButtonTitles:NSLocalizedString(@"Yes",nil), nil];
+//        [alertParameterPush show];
+//    }
+}
+
+
+- (IBAction)btnWebside:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.align.com.tw/Gpro/"]];
+}
+
+
+- (IBAction)changeLanguage:(id)sender {
+    alertLanguage = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Language",nil)
+                                              message:nil delegate:self
+                                    cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                    otherButtonTitles:@"繁體中文",@"简体中文",@"English",@"Deutsch",@"Français", nil];
+    [alertLanguage show];
+}
+
+- (IBAction)btnHowToUse:(id)sender {
+//    HowToUseViewController *vc=[self.storyboard instantiateViewControllerWithIdentifier:@"HowToUseViewController"];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
+@end
