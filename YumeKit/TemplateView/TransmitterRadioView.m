@@ -74,9 +74,8 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
 
-
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png" ] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
+    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     self.slider.continuous = YES;
     
     

@@ -70,8 +70,7 @@
     
     self.labelReceiver.text = self.labelReceiverText;
     self.labelBinding.text = self.labelBindingText;
-        [self.btnReceiver setBackgroundImage:[UIImage imageNamed:@"arrow(560x100).png"] forState:UIControlStateNormal];
-        [self.btnBinding setBackgroundImage:[UIImage imageNamed:@"arrow(560x100).png"] forState:UIControlStateNormal];
+
     [self.btnReceiver setTitle:[NSString stringWithFormat:@"%@",self.btnReceiverText] forState:UIControlStateNormal];
     [self.btnBinding setTitle:[NSString stringWithFormat:@"%@",self.btnBindingText] forState:UIControlStateNormal];
 
