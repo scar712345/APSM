@@ -9,6 +9,7 @@
 #import "TransmitterRadioView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
+#import "ViewSource.h"
 
 @interface TransmitterRadioView()
 
@@ -88,6 +89,13 @@
         self.labelMin.text = [[_sliderSource valueForKey:@"valueMin"] stringValue];
         self.labelDef.text = [[_sliderSource valueForKey:@"valueUI"] stringValue];
         self.labelMax.text = [[_sliderSource valueForKey:@"valueMax"] stringValue];
+    }
+    
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        _labelTitle.text = dict[@"labelTitle"];
+        _labelLeft.text = dict[@"labelLeft"];
+        _labelRight.text = dict[@"labelRight"];
     }
     
 }
