@@ -10,10 +10,6 @@
 IB_DESIGNABLE
 @interface yumeSensitivityView : UIView
 
-#ifndef IBInspectable
-#define IBInspectable
-#endif
-
 @property (nonatomic) IBInspectable float borderLineWidth;
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;

@@ -10,15 +10,12 @@
 IB_DESIGNABLE
 @interface yumeSwicthAndVoltageView : UIView
 
-#ifndef IBInspectable
-#define IBInspectable
-#endif
-
 @property (nonatomic) IBInspectable float borderLineWidth;
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString* segmentKeyPath;
 @property (nonatomic) IBInspectable NSString* textFieldKeyPath;
+@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @end
