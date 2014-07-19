@@ -10,7 +10,6 @@
 
 @interface APSM_Page2 ()
 
-
 @end
 
 @implementation APSM_Page2
@@ -26,6 +25,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];

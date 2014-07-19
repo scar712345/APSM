@@ -9,8 +9,6 @@
 #import "APSM_Page3.h"
 
 @interface APSM_Page3 ()
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -27,6 +25,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];

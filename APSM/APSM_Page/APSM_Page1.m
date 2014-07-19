@@ -7,17 +7,8 @@
 //
 
 #import "APSM_Page1.h"
-//#import "TemplateViewXX.h"
-#import "NIDropDown.h"
-#import "VerticalUILabel.h"
 
-//#import "yumeBTLERemoteController.h"
-//#import "yumeRemoteControllerDataProtocol.h"
-//#import "yumeRCPDRemoteControllerParameterData.h"
-//#import "yumeRCPRemoteControllerParameter.h"
-
-#import "Language.h"
-@interface APSM_Page1 ()<UIAlertViewDelegate>
+@interface APSM_Page1 ()
 
 @end
 

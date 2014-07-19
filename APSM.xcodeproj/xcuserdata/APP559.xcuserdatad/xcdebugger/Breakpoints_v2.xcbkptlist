@@ -81,6 +81,36 @@
             endingLineNumber = "21"
             landmarkName = "-initWithCoder:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeSensitivityView textFieldManualElevator]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/TemplateView/yumeSensitivityView.m"
+                  timestampString = "427364666.250121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeSensitivityView setTextFieldManualElevator:]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/TemplateView/yumeSensitivityView.m"
+                  timestampString = "427364666.25029"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
