@@ -10,5 +10,4 @@
 #import "Page.h"
 
 @interface APSM_Page3 : Page
-
 @end
