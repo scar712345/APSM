@@ -16,11 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone_page00(640).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-NT-Mns">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone_page00(640).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-NT-Mns">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XHJ-NT-Mns" firstAttribute="leading" secondItem="2Ek-go-LxF" secondAttribute="leading" id="YJZ-0X-zqh"/>
+                            <constraint firstAttribute="trailing" secondItem="XHJ-NT-Mns" secondAttribute="trailing" id="eUv-to-r0a"/>
+                            <constraint firstAttribute="bottom" secondItem="XHJ-NT-Mns" secondAttribute="bottom" id="giP-hx-3Uk"/>
+                            <constraint firstItem="XHJ-NT-Mns" firstAttribute="top" secondItem="2Ek-go-LxF" secondAttribute="top" id="nXt-o0-ElE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bej-ec-jeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,10 +169,10 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-3c-np6" customClass="BlankView">
-                                        <rect key="frame" x="10" y="209" width="300" height="585"/>
+                                        <rect key="frame" x="10" y="208" width="300" height="610"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVe-CA-jX9" customClass="TransmitterRadioView">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="139"/>
+                                                <rect key="frame" x="0.0" y="31" width="300" height="139"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-o7-eJ3">
                                                         <rect key="frame" x="8" y="138" width="284" height="1"/>
@@ -179,7 +185,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWB-HU-Gd8" customClass="TransmitterRadioView">
-                                                <rect key="frame" x="0.0" y="147" width="300" height="139"/>
+                                                <rect key="frame" x="0.0" y="178" width="300" height="139"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4q-Oz-zCl">
                                                         <rect key="frame" x="8" y="138" width="284" height="1"/>
@@ -192,7 +198,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-hc-S31" customClass="TransmitterRadioView">
-                                                <rect key="frame" x="0.0" y="294" width="300" height="139"/>
+                                                <rect key="frame" x="0.0" y="325" width="300" height="139"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAM-4r-mAY">
                                                         <rect key="frame" x="8" y="138" width="284" height="1"/>
@@ -205,12 +211,18 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVo-sW-5hj" customClass="TransmitterRadioView">
-                                                <rect key="frame" x="0.0" y="441" width="300" height="139"/>
+                                                <rect key="frame" x="0.0" y="472" width="300" height="139"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Rud"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transmitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF6-CC-Ugy">
+                                                <rect key="frame" x="8" y="5" width="284" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -226,18 +238,32 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9e-3f-SoT" customClass="BlankView">
-                                        <rect key="frame" x="10" y="811" width="300" height="370"/>
+                                        <rect key="frame" x="10" y="826" width="300" height="370"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-vs-HNZ" customClass="SegmentAndSlider">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
+                                                <rect key="frame" x="0.0" y="9" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxF-6h-SLS" customClass="SegmentAndSlider">
-                                                <rect key="frame" x="0.0" y="92" width="300" height="84"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-Z2-GVb" customClass="SegmentAndSlider">
+                                                <rect key="frame" x="0.0" y="82" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U98-nA-wdx" customClass="SegmentAndSlider">
-                                                <rect key="frame" x="0.0" y="190" width="300" height="84"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fi-Rn-Q3e" customClass="SegmentAndSlider">
+                                                <rect key="frame" x="0.0" y="155" width="300" height="65"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knm-ne-3gu">
+                                                <rect key="frame" x="8" y="233" width="284" height="1"/>
+                                                <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="腳架收合功能" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-pS-7jJ">
+                                                <rect key="frame" x="8" y="249" width="284" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jq-N0-Z5O" customClass="SegmentAndSlider">
+                                                <rect key="frame" x="0.0" y="284" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -263,13 +289,122 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                     <size key="freeformSize" width="320" height="1200"/>
                     <connections>
                         <outlet property="backgroundView" destination="WNX-v0-xbb" id="vDZ-1a-JDb"/>
-                        <outlet property="lastView" destination="Vw7-3c-np6" id="5JT-Ns-pIw"/>
+                        <outlet property="lastView" destination="h9e-3f-SoT" id="NbX-d2-Edi"/>
                         <outlet property="scrollView" destination="8Ib-F7-5sV" id="JYZ-Mz-Zh3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtP-rt-a4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2146" y="-338"/>
+        </scene>
+        <!--Page1-->
+        <scene sceneID="q1H-Ra-g4P">
+            <objects>
+                <viewController storyboardIdentifier="OSD_Page1" id="aKr-I7-x09" customClass="OSD_Page1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IvN-cz-Cqf"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCW-fW-xz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DFf-jD-oZc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jP-eDw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="day-UJ-pXw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kze-Sn-JgL" customClass="LabelAndSegment">
+                                        <rect key="frame" x="10" y="0.0" width="300" height="92"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5K-wY-SYB" customClass="LabelAndSegment">
+                                        <rect key="frame" x="10" y="100" width="300" height="92"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gp-PA-zjd" customClass="LabelAndSegment">
+                                        <rect key="frame" x="10" y="200" width="300" height="92"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d97-hz-9I3" customClass="AngleOfVisibilityView">
+                                        <rect key="frame" x="10" y="300" width="300" height="94"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-R7-P3I" customClass="BlankView">
+                                        <rect key="frame" x="10" y="402" width="300" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="800"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="dOA-jP-eDw" id="Gv3-pr-OXb"/>
+                        <outlet property="scrollView" destination="day-UJ-pXw" id="eIi-KO-7zc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn7-aK-NUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146" y="786"/>
         </scene>
         <!--Page2-->
         <scene sceneID="cOa-Z2-SyP">
@@ -438,7 +573,6 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="900"/>
                     <connections>
-                        <outlet property="backgroundImageView" destination="sFo-3y-bcX" id="rY2-bg-vwV"/>
                         <outlet property="backgroundView" destination="sFo-3y-bcX" id="hG2-9B-VbO"/>
                         <outlet property="lastView" destination="Mls-h3-Yur" id="v4b-tv-Q04"/>
                         <outlet property="scrollView" destination="Ywz-Re-pnm" id="UZy-aD-CwX"/>
@@ -561,6 +695,9 @@ Please ensure helicopter’s hardware settings has been completed before making 
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pushToOSDSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="vMN-mU-o7m"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-Il-ujv">
                                         <rect key="frame" x="211" y="389" width="48" height="48"/>
@@ -606,17 +743,6 @@ Please ensure helicopter’s hardware settings has been completed before making 
                                             <action selector="btnWebside:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="zN1-E6-HPX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-gc-KYf">
-                                        <rect key="frame" x="0.0" y="329" width="211" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushToAPSMSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="p1k-41-k6B"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-bt-xgF">
                                         <rect key="frame" x="-2" y="449" width="211" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -638,6 +764,17 @@ Please ensure helicopter’s hardware settings has been completed before making 
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-gc-KYf">
+                                        <rect key="frame" x="0.0" y="329" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushToAPSMSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="p1k-41-k6B"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </scrollView>
