@@ -8,17 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum{
+typedef NS_ENUM(NSInteger, VerticalAlignment) {
     VerticalAlignmentTop = 0, // default
     VerticalAlignmentMiddle,
     VerticalAlignmentBottom,
-} VerticalAlignment;
+};
 
 @interface VerticalUILabel : UILabel{
     
 @private
     VerticalAlignment _verticalAlignment;
-    
+
 }
 
 @property (nonatomic) VerticalAlignment verticalAlignment;
