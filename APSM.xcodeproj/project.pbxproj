@@ -16,7 +16,6 @@
 		4D43517619751A020018D4F9 /* wing8_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D43517019751A020018D4F9 /* wing8_1.jpg */; };
 		4D43517719751A020018D4F9 /* wing8_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D43517119751A020018D4F9 /* wing8_2.jpg */; };
 		4D43E3051976205E00B7CA4F /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E3041976205E00B7CA4F /* Page.m */; };
-		4D43E3071976290D00B7CA4F /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E3061976290D00B7CA4F /* Main2.storyboard */; };
 		4D43E310197629E800B7CA4F /* caution(60x60).png.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E308197629E800B7CA4F /* caution(60x60).png.png */; };
 		4D43E311197629E800B7CA4F /* link_g.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E309197629E800B7CA4F /* link_g.png */; };
 		4D43E312197629E800B7CA4F /* link_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E30A197629E800B7CA4F /* link_r.png */; };
@@ -63,7 +62,6 @@
 		4DF8E4511974B98500023E2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E4501974B98500023E2A /* Images.xcassets */; };
 		4DF8E45D1974B98600023E2A /* APSMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E45C1974B98600023E2A /* APSMTests.m */; };
 		4DF8E48C1974BA0000023E2A /* APSM_Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E4681974BA0000023E2A /* APSM_Page1.m */; };
-		4DF8E48D1974BA0000023E2A /* APSM_Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E46A1974BA0000023E2A /* APSM_Pages.m */; };
 		4DF8E48E1974BA0000023E2A /* NIDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E46D1974BA0000023E2A /* NIDropDown.m */; };
 		4DF8E48F1974BA0000023E2A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E46F1974BA0000023E2A /* HomeViewController.m */; };
 		4DF8E4901974BA0000023E2A /* 112.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E4711974BA0000023E2A /* 112.png */; };
@@ -111,6 +109,9 @@
 		DB9437CC19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9437B919790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.h */; };
 		DB9437CD19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9437BA19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m */; };
 		DB9437D019790DBC00AA2AE8 /* APSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9437CF19790DBC00AA2AE8 /* APSMViewController.m */; };
+		DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = DBAB59D9197A1845008E770A /* SegmentAndSlider.h */; };
+		DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAB59DA197A1845008E770A /* SegmentAndSlider.m */; };
+		DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */; };
 		DBBF4B431978A8D700665F99 /* page_buttombackground(1008x64).png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF4B421978A8D700665F99 /* page_buttombackground(1008x64).png */; };
 		DBC6109A1978F3390003EC11 /* slider_track(240x10).png in Resources */ = {isa = PBXBuildFile; fileRef = DBC610981978F3390003EC11 /* slider_track(240x10).png */; };
 		DBC6109B1978F3390003EC11 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC610991978F3390003EC11 /* slider.png */; };
@@ -201,7 +202,6 @@
 		4D43517119751A020018D4F9 /* wing8_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wing8_2.jpg; sourceTree = "<group>"; };
 		4D43E3031976205E00B7CA4F /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
 		4D43E3041976205E00B7CA4F /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
-		4D43E3061976290D00B7CA4F /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		4D43E308197629E800B7CA4F /* caution(60x60).png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "caution(60x60).png.png"; sourceTree = "<group>"; };
 		4D43E309197629E800B7CA4F /* link_g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link_g.png; sourceTree = "<group>"; };
 		4D43E30A197629E800B7CA4F /* link_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link_r.png; sourceTree = "<group>"; };
@@ -259,8 +259,6 @@
 		4DF8E45C1974B98600023E2A /* APSMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APSMTests.m; sourceTree = "<group>"; };
 		4DF8E4671974BA0000023E2A /* APSM_Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSM_Page1.h; sourceTree = "<group>"; };
 		4DF8E4681974BA0000023E2A /* APSM_Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSM_Page1.m; sourceTree = "<group>"; };
-		4DF8E4691974BA0000023E2A /* APSM_Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSM_Pages.h; sourceTree = "<group>"; };
-		4DF8E46A1974BA0000023E2A /* APSM_Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSM_Pages.m; sourceTree = "<group>"; };
 		4DF8E46C1974BA0000023E2A /* NIDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIDropDown.h; sourceTree = "<group>"; };
 		4DF8E46D1974BA0000023E2A /* NIDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIDropDown.m; sourceTree = "<group>"; };
 		4DF8E46E1974BA0000023E2A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -321,6 +319,9 @@
 		DB9437BA19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeRemoteControllerDeviceProtocol.m; sourceTree = "<group>"; };
 		DB9437CE19790DBC00AA2AE8 /* APSMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSMViewController.h; sourceTree = "<group>"; };
 		DB9437CF19790DBC00AA2AE8 /* APSMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSMViewController.m; sourceTree = "<group>"; };
+		DBAB59D9197A1845008E770A /* SegmentAndSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentAndSlider.h; sourceTree = "<group>"; };
+		DBAB59DA197A1845008E770A /* SegmentAndSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentAndSlider.m; sourceTree = "<group>"; };
+		DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentAndSlider.xib; sourceTree = "<group>"; };
 		DBBF4B421978A8D700665F99 /* page_buttombackground(1008x64).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_buttombackground(1008x64).png"; sourceTree = "<group>"; };
 		DBC610981978F3390003EC11 /* slider_track(240x10).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_track(240x10).png"; sourceTree = "<group>"; };
 		DBC610991978F3390003EC11 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
@@ -392,6 +393,9 @@
 				DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */,
 				DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */,
 				DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */,
+				DBAB59D9197A1845008E770A /* SegmentAndSlider.h */,
+				DBAB59DA197A1845008E770A /* SegmentAndSlider.m */,
+				DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */,
 				DBC610A0197909950003EC11 /* UITextField+Yume.h */,
 				DBC610A1197909950003EC11 /* UITextField+Yume.m */,
 				DBC610A2197909950003EC11 /* yumeImageButtonsView.h */,
@@ -530,7 +534,6 @@
 				4DF8E4471974B98500023E2A /* AppDelegate.h */,
 				4DF8E4481974B98500023E2A /* AppDelegate.m */,
 				4DF8E44D1974B98500023E2A /* Main.storyboard */,
-				4D43E3061976290D00B7CA4F /* Main2.storyboard */,
 				4DF8E4501974B98500023E2A /* Images.xcassets */,
 				4DF8E4431974B98500023E2A /* Supporting Files */,
 			);
@@ -574,8 +577,6 @@
 				4D43514019750D530018D4F9 /* APSM_Page2.m */,
 				4D4351161974D8CE0018D4F9 /* APSM_Page3.h */,
 				4D4351171974D8CE0018D4F9 /* APSM_Page3.m */,
-				4DF8E4691974BA0000023E2A /* APSM_Pages.h */,
-				4DF8E46A1974BA0000023E2A /* APSM_Pages.m */,
 			);
 			path = APSM_Page;
 			sourceTree = "<group>";
@@ -717,6 +718,7 @@
 				4DC05E8A1974C82E0011B415 /* SWLongPressGestureRecognizer.h in Headers */,
 				DB8D1C901978E7C900FC88BA /* TransmitterRadioView.h in Headers */,
 				DBC610B6197909950003EC11 /* yumeSwicthAndVoltageView.h in Headers */,
+				DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */,
 				4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */,
 				4DC05E901974C82E0011B415 /* SWUtilityButtonView.h in Headers */,
 			);
@@ -859,7 +861,6 @@
 				4D43E310197629E800B7CA4F /* caution(60x60).png.png in Resources */,
 				DBBF4B431978A8D700665F99 /* page_buttombackground(1008x64).png in Resources */,
 				4D43E325197659FF00B7CA4F /* Localizable.strings in Resources */,
-				4D43E3071976290D00B7CA4F /* Main2.storyboard in Resources */,
 				4DF8E4931974BA0000023E2A /* Icon.png in Resources */,
 				4D43E314197629E800B7CA4F /* phone_Menu_001(630x96).png in Resources */,
 				DBC6109B1978F3390003EC11 /* slider.png in Resources */,
@@ -899,6 +900,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
+				DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */,
 				DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */,
 				4DC05E991974C82E0011B415 /* pic_Blade-Direction_002(172x172).png in Resources */,
 				4DC05EA11974C82E0011B415 /* TemplateView2.xib in Resources */,
@@ -940,7 +942,6 @@
 				4DF8E48E1974BA0000023E2A /* NIDropDown.m in Sources */,
 				4DF8E49E1974BA0000023E2A /* TTScrollViewWrapper.m in Sources */,
 				4DF8E4461974B98500023E2A /* main.m in Sources */,
-				4DF8E48D1974BA0000023E2A /* APSM_Pages.m in Sources */,
 				4D43514119750D530018D4F9 /* APSM_Page2.m in Sources */,
 				4D4351181974D8CE0018D4F9 /* APSM_Page3.m in Sources */,
 				4D43E32C19765B7300B7CA4F /* Language.m in Sources */,
@@ -972,6 +973,7 @@
 				DB9437BF19790B9800AA2AE8 /* yumeBTLERemoteController.m in Sources */,
 				DB9437C119790B9800AA2AE8 /* yumeDeviceListAlertTableView.m in Sources */,
 				4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */,
 				DB9437BD19790B9800AA2AE8 /* VerticalUILabel.m in Sources */,
 				4DC05E911974C82E0011B415 /* SWUtilityButtonView.m in Sources */,
 				DBC610B4197909950003EC11 /* yumeSensitivityView.m in Sources */,
