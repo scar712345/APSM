@@ -45,7 +45,6 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
-    
 }
 
 
@@ -69,22 +68,28 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
+    [self processFuture];
+    
+    [self processViewSource];
+    
     NSArray *itemArray =[NSArray arrayWithObjects:@"?", @"??",nil];
     self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
     self.segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
     self.segmentedControl.tintColor = [UIColor whiteColor];
     self.segmentedControl.selectedSegmentIndex = 0;
     [self.view addSubview:self.segmentedControl];
+}
+
+-(void)processFuture{
+    
+}
+
+-(void)processViewSource{
 
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(id)debugQuickLookObject{
+    return self;
 }
-*/
 
 @end

@@ -68,5 +68,21 @@
 
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
+    
+    [self processFuture];
+    
+    [self processViewSource];
+}
+
+-(void)processFuture{
+    
+}
+
+-(void)processViewSource{
+    
+}
+
+-(id)debugQuickLookObject{
+    return self;
 }
 @end

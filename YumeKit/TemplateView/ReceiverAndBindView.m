@@ -46,8 +46,6 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
-
-    
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -68,26 +66,40 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.labelReceiver.text = self.labelReceiverText;
-    self.labelBinding.text = self.labelBindingText;
+    [self processFuture];
+    
+    [self processViewSource];
 
     [self.btnReceiver setTitle:[NSString stringWithFormat:@"%@",self.btnReceiverText] forState:UIControlStateNormal];
     [self.btnBinding setTitle:[NSString stringWithFormat:@"%@",self.btnBindingText] forState:UIControlStateNormal];
 
 }
+
+-(void)processFuture{
+
+}
+
+-(void)processViewSource{
+    if (_labelReceiverText) {
+        self.labelReceiver.text = self.labelReceiverText;
+    }
+    
+    if (_labelBindingText) {
+        self.labelBinding.text = self.labelBindingText;
+    }
+}
+
+-(id)debugQuickLookObject{
+    return self;
+}
+
+#pragma mark - Button Method 
+
 - (IBAction)btnReceiverAction:(id)sender {
     NSLog(@"btnReceiver be check");
 }
 - (IBAction)btnBindingAction:(id)sender {
     NSLog(@"btnBinding be check");
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
