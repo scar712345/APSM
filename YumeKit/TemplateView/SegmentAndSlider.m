@@ -68,8 +68,8 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png" ] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"] forState:UIControlStateNormal];
+    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     self.slider.continuous = YES;
     
     NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
@@ -83,8 +83,6 @@
     self.segmentedControl.selectedSegmentIndex = 0;
     [self.view addSubview:self.segmentedControl];
 
-    
-    
 //    if (_sliderKeyPath) {
 //        _sliderSource = [YumeBTSharedInstance valueForKeyPath:_sliderKeyPath];
 //        self.slider.minimumValue = [[_sliderSource valueForKey:@"valueMin"] floatValue];

@@ -31,7 +31,6 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewWarning;
 
-@property (strong, nonatomic) IBOutlet UIImageView *homeImageView;
 @end
 
 @implementation APSMViewController
@@ -219,6 +218,20 @@
 //    }
 }
 
+- (IBAction)pushToOSDSettingPage:(id)sender {
+    Pages *OSDPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
+    OSDPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
+                                                 message:nil
+                                                delegate:self
+                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                       otherButtonTitles:@"PAGE1", nil];
+    
+    OSDPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"OSD_Page1"]];
+    OSDPages.pageTitle = @"OSD Setting";
+    OSDPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings"];
+    [self.navigationController pushViewController:OSDPages animated:YES];
+    
+}
 
 - (IBAction)btnWebside:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.align.com.tw/Gpro/"]];
