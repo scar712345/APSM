@@ -77,6 +77,40 @@
              @"viewContent2":@"飛行器警示燈閃爍提醒"};
 }
 
+#pragma mark - OSD Page 1
+
+-(NSDictionary*)OSDPage1View11{
+    return @{@"labelTitle":@"顯示單位",
+             @"segmentedControl":@[@"公制",@"英制"]};
+}
+
+-(NSDictionary*)OSDPage1View12{
+    return @{@"labelTitle":@"影像格式",
+             @"segmentedControl":@[@"NTSC",@"PAL"]};
+}
+
+-(NSDictionary*)OSDPage1View13{
+    return @{@"labelTitle":@"顯示經緯度",
+             @"segmentedControl":@[@"ON",@"OFF"]};
+}
+
+#pragma mark - CradleHead Page 1
+
+-(NSDictionary*)CradleHeadPage1View31{
+    return @{@"labelTitle":@"Pan",
+             @"segmentedControl":@[@"Manual",@"Attitude"]};
+}
+
+-(NSDictionary*)CradleHeadPage1View32{
+    return @{@"labelTitle":@"Roll",
+             @"segmentedControl":@[@"Manual",@"Attitude"]};
+}
+
+-(NSDictionary*)CradleHeadPage1View33{
+    return @{@"labelTitle":@"Tilt",
+             @"segmentedControl":@[@"Manual",@"Attitude"]};
+}
+
 -(id)valueForUndefinedKey:(NSString *)key{
     return nil;
 }
