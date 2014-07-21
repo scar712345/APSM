@@ -16,6 +16,13 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
+@property (weak, nonatomic) IBOutlet UILabel *labelMode;
+@property (weak, nonatomic) IBOutlet UILabel *labelAileron;
+@property (weak, nonatomic) IBOutlet UILabel *labelElevator;
+@property (weak, nonatomic) IBOutlet UILabel *labelRudder;
+@property (weak, nonatomic) IBOutlet UILabel *labelAltitude;
+@property (weak, nonatomic) IBOutlet UILabel *labelManual;
+@property (weak, nonatomic) IBOutlet UILabel *labelAltitude2;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldManualAileron;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldManualElevator;
@@ -80,6 +87,12 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
+    [self processFuture];
+    
+    [self processViewSource];
+}
+
+-(void)processFuture{
     if (_manualAileronKeyPath) {
         _textFieldManualAileron.parameter = [YumeBTSharedInstance valueForKeyPath:_manualAileronKeyPath];
         _textFieldManualAileron.text = [[_textFieldManualAileron.parameter valueForKey:@"valueUI"] stringValue];
@@ -113,6 +126,40 @@
     if (_altitudeAltitudeKeyPath) {
         _textFieldAltitudeAltitude.parameter = [YumeBTSharedInstance valueForKeyPath:_altitudeAltitudeKeyPath];
         _textFieldAltitudeAltitude.text = [[_textFieldAltitudeAltitude.parameter valueForKey:@"valueUI"] stringValue];
+    }
+}
+
+-(void)processViewSource{
+    if (self.viewTitleText) {
+        self.viewTitle.text = _viewTitleText;
+    }
+    
+    if (self.labelModeText) {
+        self.labelMode.text = _labelModeText;
+    }
+    
+    if (self.labelAileronText) {
+        self.labelAileron.text = _labelAileronText;
+    }
+    
+    if (self.labelElevatorText) {
+        self.labelElevator.text = _labelElevatorText;
+    }
+    
+    if (self.labelRudderText) {
+        self.labelRudder.text = _labelRudderText;
+    }
+    
+    if (self.labelAltitudeText) {
+        self.labelAltitude.text = _labelAltitudeText;
+    }
+    
+    if (self.labelManualText) {
+        self.labelManual.text = _labelManualText;
+    }
+    
+    if (self.labelAltitude2Text) {
+        self.labelAltitude2.text = _labelAltitude2Text;
     }
 }
 

@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelX;
 @property (weak, nonatomic) IBOutlet UILabel *labelY;
 @property (weak, nonatomic) IBOutlet UILabel *labelZ;
+@property (weak, nonatomic) IBOutlet UILabel *labelUnit;
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldX;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldY;
@@ -79,6 +80,13 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
+    [self processFuture];
+    
+    [self processViewSource];
+    
+}
+
+-(void)processFuture{
     if (_xKeyPath) {
         _textFieldX.parameter = [YumeBTSharedInstance valueForKeyPath:_xKeyPath];
         _textFieldX.text = [[_textFieldX.parameter valueForKey:@"valueUI"] stringValue];
@@ -92,6 +100,32 @@
     if (_zKeyPath) {
         _textFieldZ.parameter = [YumeBTSharedInstance valueForKeyPath:_zKeyPath];
         _textFieldZ.text = [[_textFieldZ.parameter valueForKey:@"valueUI"] stringValue];
+    }
+}
+
+-(void)processViewSource{
+    if (_viewTitleText) {
+        _viewTitle.text = _viewTitleText;
+    }
+    
+    if (_viewContentText) {
+        _viewContent.text = _viewContentText;
+    }
+    
+    if (_xText) {
+        _labelX.text = _xText;
+    }
+    
+    if (_yText) {
+        _labelY.text = _yText;
+    }
+    
+    if (_zText) {
+        _labelZ.text = _zText;
+    }
+    
+    if (_unitText) {
+        _labelUnit.text = _unitText;
     }
 }
 

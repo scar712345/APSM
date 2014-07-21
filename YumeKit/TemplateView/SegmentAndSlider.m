@@ -47,11 +47,6 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
-    
-//    self.segmentedControl = [[UISegmentedControl alloc] initWithFrame:CGRectMake(8, 0, 284, 30)];
-//    [self.view addSubview:self.segmentedControl];
-    
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -68,6 +63,16 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
+    [self processFuture];
+    
+    [self processViewSource];
+}
+
+-(void)processFuture{
+    
+}
+
+-(void)processViewSource{
     [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     self.slider.continuous = YES;
@@ -82,24 +87,10 @@
     self.segmentedControl.tintColor = [UIColor whiteColor];
     self.segmentedControl.selectedSegmentIndex = 0;
     [self.view addSubview:self.segmentedControl];
-
-//    if (_sliderKeyPath) {
-//        _sliderSource = [YumeBTSharedInstance valueForKeyPath:_sliderKeyPath];
-//        self.slider.minimumValue = [[_sliderSource valueForKey:@"valueMin"] floatValue];
-//        self.slider.value = [[_sliderSource valueForKey:@"valueUI"] floatValue];
-//        self.slider.maximumValue = [[_sliderSource valueForKey:@"valueMax"] floatValue];
-//        self.labelMin.text = [[_sliderSource valueForKey:@"valueMin"] stringValue];
-//        self.labelDef.text = [[_sliderSource valueForKey:@"valueUI"] stringValue];
-//        self.labelMax.text = [[_sliderSource valueForKey:@"valueMax"] stringValue];
-//    }
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(id)debugQuickLookObject{
+    return self;
 }
-*/
 
 @end
