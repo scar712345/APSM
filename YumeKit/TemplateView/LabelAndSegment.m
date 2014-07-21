@@ -1,22 +1,21 @@
 //
-//  ReceiverAndBindView.m
+//  LabelAndSegment.m
 //  APSM
 //
-//  Created by ALIGN-APP on 2014/7/17.
+//  Created by ALIGN-APP on 2014/7/19.
 //  Copyright (c) 2014年 yume. All rights reserved.
 //
 
-#import "ReceiverAndBindView.h"
-@interface ReceiverAndBindView()
-@property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UILabel *labelReceiver;
-@property (weak, nonatomic) IBOutlet UILabel *labelBinding;
-@property (weak, nonatomic) IBOutlet UIButton *btnReceiver;
-@property (weak, nonatomic) IBOutlet UIButton *btnBinding;
+#import "LabelAndSegment.h"
 
+@interface LabelAndSegment()
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (strong,nonatomic) UISegmentedControl *segmentedControl;
 @end
 
-@implementation ReceiverAndBindView
+
+@implementation LabelAndSegment
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -46,9 +45,9 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
-
     
 }
+
 
 -(void)prepareForInterfaceBuilder{
     [self viewLiveRendering];
@@ -60,6 +59,8 @@
     
     if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
         [self.layer setCornerRadius:_borderRadius];
+    
+    
 #ifndef TARGET_INTERFACE_BUILDER
     [self viewLiveRendering];
 #endif
@@ -68,19 +69,15 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    self.labelReceiver.text = self.labelReceiverText;
-    self.labelBinding.text = self.labelBindingText;
+    NSArray *itemArray =[NSArray arrayWithObjects:@"?", @"??",nil];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+    self.segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
+    self.segmentedControl.tintColor = [UIColor whiteColor];
+    self.segmentedControl.selectedSegmentIndex = 0;
+    [self.view addSubview:self.segmentedControl];
 
-    [self.btnReceiver setTitle:[NSString stringWithFormat:@"%@",self.btnReceiverText] forState:UIControlStateNormal];
-    [self.btnBinding setTitle:[NSString stringWithFormat:@"%@",self.btnBindingText] forState:UIControlStateNormal];
+}
 
-}
-- (IBAction)btnReceiverAction:(id)sender {
-    NSLog(@"btnReceiver be check");
-}
-- (IBAction)btnBindingAction:(id)sender {
-    NSLog(@"btnBinding be check");
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

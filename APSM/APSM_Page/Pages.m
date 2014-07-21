@@ -28,16 +28,11 @@
     
     [self preparePageTitle];
     
-    
-
     self.buttonBack.enabled = NO;
-    
-    
-    _pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page1"],
-               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page2"],
-               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page3"]];
-    //    _pages = @[[APSM_Page1 class]];
-    _pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"def"];
+    if (_pages.count == 1) {
+        self.buttonNext.enabled = NO;
+    }
+
 }
 
 -(void)prepareTTScrollSlidingPagesController{
