@@ -145,6 +145,9 @@
 		DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */; };
 		DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */; };
 		DBCF9594197CE376000ECE81 /* CradleHead_Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */; };
+		DBCF9597197CF106000ECE81 /* CradleHead360.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCF9595197CF106000ECE81 /* CradleHead360.h */; };
+		DBCF9598197CF106000ECE81 /* CradleHead360.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF9596197CF106000ECE81 /* CradleHead360.m */; };
+		DBCF959A197CF1CB000ECE81 /* CradleHead360.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF9599197CF1CB000ECE81 /* CradleHead360.xib */; };
 		DBD489421977CA3500532968 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */; };
 		DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD489431977D37900532968 /* ReceiverAndBindView.h */; };
 		DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489441977D37900532968 /* ReceiverAndBindView.m */; };
@@ -372,6 +375,9 @@
 		DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadControllView.xib; sourceTree = "<group>"; };
 		DBCF9592197CE376000ECE81 /* CradleHead_Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page2.h; sourceTree = "<group>"; };
 		DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page2.m; sourceTree = "<group>"; };
+		DBCF9595197CF106000ECE81 /* CradleHead360.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead360.h; sourceTree = "<group>"; };
+		DBCF9596197CF106000ECE81 /* CradleHead360.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead360.m; sourceTree = "<group>"; };
+		DBCF9599197CF1CB000ECE81 /* CradleHead360.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHead360.xib; sourceTree = "<group>"; };
 		DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
 		DBD489431977D37900532968 /* ReceiverAndBindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverAndBindView.h; sourceTree = "<group>"; };
 		DBD489441977D37900532968 /* ReceiverAndBindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverAndBindView.m; sourceTree = "<group>"; };
@@ -450,6 +456,9 @@
 				DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */,
 				DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */,
 				DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */,
+				DBCF9595197CF106000ECE81 /* CradleHead360.h */,
+				DBCF9596197CF106000ECE81 /* CradleHead360.m */,
+				DBCF9599197CF1CB000ECE81 /* CradleHead360.xib */,
 			);
 			path = TemplateView;
 			sourceTree = "<group>";
@@ -783,6 +792,7 @@
 				DB9437BC19790B9800AA2AE8 /* VerticalUILabel.h in Headers */,
 				DB9437C219790B9800AA2AE8 /* yumeLanguage.h in Headers */,
 				DB9437C619790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.h in Headers */,
+				DBCF9597197CF106000ECE81 /* CradleHead360.h in Headers */,
 				DBC610B9197909950003EC11 /* yumeXYZView.h in Headers */,
 				4DC05EB51974C82E0011B415 /* YumeKit-Prefix.pch in Headers */,
 				4DC05E8A1974C82E0011B415 /* SWLongPressGestureRecognizer.h in Headers */,
@@ -968,6 +978,7 @@
 			files = (
 				DB0E56A9197A21A8006D471C /* slider.png in Resources */,
 				DB9B36F9197A5A72005B0021 /* AngleOfVisibilityView.xib in Resources */,
+				DBCF959A197CF1CB000ECE81 /* CradleHead360.xib in Resources */,
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
 				DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */,
 				DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */,
@@ -1060,6 +1071,7 @@
 				4DC05E9D1974C82E0011B415 /* TemplateView1.m in Sources */,
 				DB9B36F7197A58CD005B0021 /* AngleOfVisibilityView.m in Sources */,
 				DBC610BA197909950003EC11 /* yumeXYZView.m in Sources */,
+				DBCF9598197CF106000ECE81 /* CradleHead360.m in Sources */,
 				DBC610AF197909950003EC11 /* UITextField+Yume.m in Sources */,
 				DB9437C919790B9800AA2AE8 /* yumeRCPRemoteControllerRadio.m in Sources */,
 				DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */,
