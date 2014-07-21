@@ -23,6 +23,7 @@ IB_DESIGNABLE
 
 @property (nonatomic) IBInspectable BOOL hasChangeAlert;
 
+@property (nonatomic) IBInspectable NSString* buttonsKeyPath;
 @property (nonatomic) IBInspectable NSString* viewSourceKeyPath;
 
 @end

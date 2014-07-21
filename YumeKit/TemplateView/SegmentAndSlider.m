@@ -63,9 +63,9 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self processFuture];
-    
     [self processViewSource];
+    
+    [self processFuture];
 }
 
 -(void)processFuture{
@@ -80,7 +80,14 @@
     NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
     if (_viewSourceKeyPath) {
         NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        itemArray = dict[@"itemArray"];
+        
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            itemArray = dict[@"itemArray"];
+        }
+        
     }
     self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
     self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);

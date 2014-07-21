@@ -66,9 +66,9 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self processFuture];
-    
     [self processViewSource];
+    
+    [self processFuture];
 
     [self.btnReceiver setTitle:[NSString stringWithFormat:@"%@",self.btnReceiverText] forState:UIControlStateNormal];
     [self.btnBinding setTitle:[NSString stringWithFormat:@"%@",self.btnBindingText] forState:UIControlStateNormal];

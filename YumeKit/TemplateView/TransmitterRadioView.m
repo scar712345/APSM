@@ -76,9 +76,9 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self processFuture];
-    
     [self processViewSource];
+    
+    [self processFuture];
 }
 
 -(void)processFuture{
@@ -100,9 +100,16 @@
     
     if (_viewSourceKeyPath) {
         NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        _labelTitle.text = dict[@"labelTitle"];
-        _labelLeft.text = dict[@"labelLeft"];
-        _labelRight.text = dict[@"labelRight"];
+        
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            _labelTitle.text = dict[@"labelTitle"];
+            _labelLeft.text = dict[@"labelLeft"];
+            _labelRight.text = dict[@"labelRight"];
+        }
+
     }
 }
 

@@ -69,9 +69,9 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [self processFuture];
-    
     [self processViewSource];
+    
+    [self processFuture];
 }
 
 -(void)processFuture{
@@ -84,10 +84,15 @@
     if (_viewSourceKeyPath) {
         NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
         
-        _labelTitle.text = dict[@"labelTitle"];
-        array = dict[@"segmentedControl"];
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
         
-        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+        if ([className isEqualToString:type]) {
+            _labelTitle.text = dict[@"labelTitle"];
+            array = dict[@"segmentedControl"];
+            
+            _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+        }
     }else{
         _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
     }
