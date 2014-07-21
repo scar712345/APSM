@@ -16,7 +16,7 @@ IB_DESIGNABLE
 
 @property (nonatomic) IBInspectable NSString *receiverKeyPath;
 @property (nonatomic) IBInspectable NSString *bindingKeyPath;
-@property (nonatomic) IBInspectable NSString *sourceKeyPath;
+@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @property (nonatomic) IBInspectable NSString *labelReceiverText;
 @property (nonatomic) IBInspectable NSString *labelBindingText;

@@ -7,11 +7,12 @@
 //
 
 #import "CradleHeadControllView.h"
+#import "ViewSource.h"
 
 @interface CradleHeadControllView()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) UISegmentedControl *segmentedControl;
 @end
 
 @implementation CradleHeadControllView
@@ -44,6 +45,7 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
+
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -60,9 +62,9 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
 
-    [self processFuture];
-    
     [self processViewSource];
+    
+    [self processFuture];
 }
 
 -(void) processFuture{
@@ -70,11 +72,27 @@
 }
 
 -(void) processViewSource{
-//    if (_labelTitleText) {
-//        _labelTitle.text = _labelTitleText;
-//    }
+    NSArray *array = @[@"seg1",@"seg2"];
+    
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        
+        _labelTitle.text = dict[@"labelTitle"];
+        array = dict[@"segmentedControl"];
+
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+    }else{
+       _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+    }
+    _segmentedControl.frame = CGRectMake(115, 5, 177, 29);
+    _segmentedControl.tintColor = [UIColor whiteColor];
+//    _segmentedControl.selectedSegmentIndex = 0;
+    [self.view addSubview:_segmentedControl];
 }
 
+-(id)debugQuickLookObject{
+    return self;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
