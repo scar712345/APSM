@@ -7,6 +7,7 @@
 //
 
 #import "LabelAndSegment.h"
+#import "ViewSource.h"
 
 @interface LabelAndSegment()
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -71,13 +72,6 @@
     [self processFuture];
     
     [self processViewSource];
-    
-    NSArray *itemArray =[NSArray arrayWithObjects:@"?", @"??",nil];
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    self.segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
-    self.segmentedControl.tintColor = [UIColor whiteColor];
-    self.segmentedControl.selectedSegmentIndex = 0;
-    [self.view addSubview:self.segmentedControl];
 }
 
 -(void)processFuture{
@@ -85,6 +79,21 @@
 }
 
 -(void)processViewSource{
+    NSArray *array = @[@"seg1",@"seg2"];
+    
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        
+        _labelTitle.text = dict[@"labelTitle"];
+        array = dict[@"segmentedControl"];
+        
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+    }else{
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+    }
+    _segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
+    _segmentedControl.tintColor = [UIColor whiteColor];
+    [self.view addSubview:_segmentedControl];
 
 }
 

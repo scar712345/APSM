@@ -12,5 +12,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable float borderLineWidth;
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;
+
+@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 @end
 

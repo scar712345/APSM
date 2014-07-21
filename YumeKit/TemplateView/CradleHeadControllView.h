@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+IB_DESIGNABLE
 @interface CradleHeadControllView : UIView
 @property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 

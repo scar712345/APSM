@@ -239,11 +239,12 @@
                                                 message:nil
                                                delegate:self
                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                      otherButtonTitles:@"PAGE1", nil];
+                                      otherButtonTitles:@"PAGE1",@"PAGE2", nil];
     
-    cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"]];
+    cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"],
+                              [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page2"]];
     cradleHeadPages.pageTitle = @"CradleHeadPages Setting";
-    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings"];
+    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc"];
     [self.navigationController pushViewController:cradleHeadPages animated:YES];
 }
 
