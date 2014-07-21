@@ -77,8 +77,12 @@
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
     
-    [_segment setSelectedSegmentIndex:1];
+    [self processFuture];
     
+    [self processViewSource];
+}
+
+-(void)processFuture{
     if (_segmentKeyPath) {
         _segmentSource = [YumeBTSharedInstance valueForKeyPath:_segmentKeyPath];
         [_segment setSelectedSegmentIndex:((int)(_segmentSource.valueUI + 1) % 2)];
@@ -88,16 +92,15 @@
         _textFieldSource = [YumeBTSharedInstance valueForKeyPath:_textFieldKeyPath];
         _textField.text = [[_textFieldSource valueForKey:@"valueUI"] stringValue];
     }
-    
+}
 
+-(void)processViewSource{
     if (_viewSourceKeyPath) {
         NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
         _viewTitle.text = dict[@"viewTitle"];
         _viewContent1.text = dict[@"viewContent1"];
         _viewContent2.text = dict[@"viewContent2"];
     }
-    
-
 }
 
 -(id)debugQuickLookObject{
@@ -158,6 +161,5 @@
 - (IBAction)segmentValueChanged:(UISegmentedControl *)sender {
     _segmentSource.valueUI = (float) ((sender.selectedSegmentIndex + 1) % 2);
 }
-
 
 @end

@@ -74,12 +74,13 @@
 
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
+    
+    [self processFuture];
+    
+    [self processViewSource];
+}
 
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    self.slider.continuous = YES;
-    
-    
+-(void)processFuture{
     if (_sliderKeyPath) {
         _sliderSource = [YumeBTSharedInstance valueForKeyPath:_sliderKeyPath];
         self.slider.minimumValue = [[_sliderSource valueForKey:@"valueMin"] floatValue];
@@ -89,6 +90,12 @@
         self.labelDef.text = [[_sliderSource valueForKey:@"valueUI"] stringValue];
         self.labelMax.text = [[_sliderSource valueForKey:@"valueMax"] stringValue];
     }
+}
+
+-(void)processViewSource{
+    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    self.slider.continuous = YES;
     
     if (_viewSourceKeyPath) {
         NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
@@ -96,8 +103,13 @@
         _labelLeft.text = dict[@"labelLeft"];
         _labelRight.text = dict[@"labelRight"];
     }
-    
 }
+
+-(id)debugQuickLookObject{
+    return self;
+}
+
+#pragma mark - Future Method
 
 -(void)radioData:(NSNotification*) notification {
     self.slider.value = _sliderSource.valueUI;
@@ -106,12 +118,5 @@
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

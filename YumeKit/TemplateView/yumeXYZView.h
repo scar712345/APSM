@@ -18,4 +18,11 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString* yKeyPath;
 @property (nonatomic) IBInspectable NSString* zKeyPath;
 
+@property (nonatomic) IBInspectable NSString* viewTitleText;
+@property (nonatomic) IBInspectable NSString* viewContentText;
+@property (nonatomic) IBInspectable NSString* xText;
+@property (nonatomic) IBInspectable NSString* yText;
+@property (nonatomic) IBInspectable NSString* zText;
+@property (nonatomic) IBInspectable NSString* unitText;
+
 @end
