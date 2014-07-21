@@ -77,12 +77,17 @@
     if (_viewSourceKeyPath) {
         NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
         
-        _labelTitle.text = dict[@"labelTitle"];
-        array = dict[@"segmentedControl"];
-
-        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            _labelTitle.text = dict[@"labelTitle"];
+            array = dict[@"segmentedControl"];
+            
+            _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+        }
     }else{
-       _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
     }
     _segmentedControl.frame = CGRectMake(115, 5, 177, 29);
     _segmentedControl.tintColor = [UIColor whiteColor];
@@ -93,13 +98,5 @@
 -(id)debugQuickLookObject{
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
