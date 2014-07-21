@@ -529,23 +529,6 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
-                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel2_Enable"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel2_Voltage"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s46-gz-1Lh" customClass="yumeXYZView">
                                         <rect key="frame" x="5" y="0.0" width="310" height="265"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -562,6 +545,23 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="string" keyPath="xKeyPath" value="parameterDatas.AntX"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="yKeyPath" value="parameterDatas.AntY"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="zKeyPath" value="parameterDatas.AntZ"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
+                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel2_Enable"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel2_Voltage"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
