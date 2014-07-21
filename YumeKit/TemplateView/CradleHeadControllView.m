@@ -1,19 +1,20 @@
 //
-//  blankView.m
+//  CradleHeadControllView.m
 //  APSM
 //
-//  Created by ALIGN-APP on 2014/7/18.
+//  Created by ALIGN-APP on 2014/7/21.
 //  Copyright (c) 2014年 yume. All rights reserved.
 //
 
-#import "BlankView.h"
+#import "CradleHeadControllView.h"
 
-@interface BlankView()
-@property (strong,nonatomic) UILabel *labelTitle;
+@interface CradleHeadControllView()
+@property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @end
 
-
-@implementation BlankView
+@implementation CradleHeadControllView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -34,11 +35,15 @@
 }
 
 - (void) setup{
-    _labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(8, 5, 284, 26)];
-    _labelTitle.textColor = [UIColor whiteColor];
-    _labelTitle.font = [UIFont systemFontOfSize:22.0];
-    _labelTitle.textAlignment = NSTextAlignmentLeft;
-    [self addSubview:_labelTitle];
+    NSString *nibName = NSStringFromClass([self class]);
+    
+    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
+    
+    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
+    
+    [nib instantiateWithOwner:self options:nil];
+    //Add the view loaded from the nib into self.
+    [self addSubview:self.view];
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -46,34 +51,31 @@
 }
 
 - (void)drawRect:(CGRect)rect{
-    self.layer.borderColor = _borderColor.CGColor;
-    self.layer.borderWidth = _borderLineWidth;
-    
-    if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
-        [self.layer setCornerRadius:_borderRadius];
+ 
 #ifndef TARGET_INTERFACE_BUILDER
     [self viewLiveRendering];
 #endif
 }
 
 -(void)viewLiveRendering{
-    self.backgroundColor =[UIColor clearColor];
-    
+    self.view.backgroundColor = [UIColor clearColor];
+
     [self processFuture];
     
     [self processViewSource];
 }
-
 
 -(void) processFuture{
     
 }
 
 -(void) processViewSource{
-    if (_labelTitleText) {
-        _labelTitle.text = _labelTitleText;
-    }
+//    if (_labelTitleText) {
+//        _labelTitle.text = _labelTitleText;
+//    }
 }
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

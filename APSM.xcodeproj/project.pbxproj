@@ -140,6 +140,10 @@
 		DBC610B9197909950003EC11 /* yumeXYZView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610AB197909950003EC11 /* yumeXYZView.h */; };
 		DBC610BA197909950003EC11 /* yumeXYZView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610AC197909950003EC11 /* yumeXYZView.m */; };
 		DBC610BB197909950003EC11 /* yumeXYZView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC610AD197909950003EC11 /* yumeXYZView.xib */; };
+		DBCF958B197CA8BF000ECE81 /* CradleHead_Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */; };
+		DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */; };
+		DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */; };
+		DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */; };
 		DBD489421977CA3500532968 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */; };
 		DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD489431977D37900532968 /* ReceiverAndBindView.h */; };
 		DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489441977D37900532968 /* ReceiverAndBindView.m */; };
@@ -360,6 +364,11 @@
 		DBC610AB197909950003EC11 /* yumeXYZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeXYZView.h; sourceTree = "<group>"; };
 		DBC610AC197909950003EC11 /* yumeXYZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeXYZView.m; sourceTree = "<group>"; };
 		DBC610AD197909950003EC11 /* yumeXYZView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeXYZView.xib; sourceTree = "<group>"; };
+		DBCF9589197CA8BF000ECE81 /* CradleHead_Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page1.h; sourceTree = "<group>"; };
+		DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page1.m; sourceTree = "<group>"; };
+		DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadControllView.h; sourceTree = "<group>"; };
+		DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadControllView.m; sourceTree = "<group>"; };
+		DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadControllView.xib; sourceTree = "<group>"; };
 		DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
 		DBD489431977D37900532968 /* ReceiverAndBindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverAndBindView.h; sourceTree = "<group>"; };
 		DBD489441977D37900532968 /* ReceiverAndBindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverAndBindView.m; sourceTree = "<group>"; };
@@ -435,6 +444,9 @@
 				DB9B36F4197A58CD005B0021 /* AngleOfVisibilityView.h */,
 				DB9B36F5197A58CD005B0021 /* AngleOfVisibilityView.m */,
 				DB9B36F8197A5A72005B0021 /* AngleOfVisibilityView.xib */,
+				DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */,
+				DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */,
+				DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */,
 			);
 			path = TemplateView;
 			sourceTree = "<group>";
@@ -553,6 +565,7 @@
 				4D43E32B19765B7300B7CA4F /* Language.m */,
 				4DF8E4661974BA0000023E2A /* APSM_Page */,
 				DB9B36EA197A46EB005B0021 /* OSD_Page */,
+				DBCF9585197CA84B000ECE81 /* CradleHead_Pages */,
 				4DF8E46B1974BA0000023E2A /* DropDown */,
 				4DF8E4701974BA0000023E2A /* images */,
 				4DF8E47E1974BA0000023E2A /* TTScroll */,
@@ -722,6 +735,16 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		DBCF9585197CA84B000ECE81 /* CradleHead_Pages */ = {
+			isa = PBXGroup;
+			children = (
+				DBCF9589197CA8BF000ECE81 /* CradleHead_Page1.h */,
+				DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */,
+			);
+			name = CradleHead_Pages;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -730,6 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9437BB19790B9800AA2AE8 /* MCUPacketDevice.h in Headers */,
+				DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */,
 				DBC610AE197909950003EC11 /* UITextField+Yume.h in Headers */,
 				DBC610B3197909950003EC11 /* yumeSensitivityView.h in Headers */,
 				DB9437C819790B9800AA2AE8 /* yumeRCPRemoteControllerRadio.h in Headers */,
@@ -955,6 +979,7 @@
 				DB9B36F3197A4B38005B0021 /* LabelAndSegment.xib in Resources */,
 				DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */,
 				DBC610B2197909950003EC11 /* yumeImageButtonsView.xib in Resources */,
+				DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */,
 				DBC610BB197909950003EC11 /* yumeXYZView.xib in Resources */,
 				4DC05E9B1974C82E0011B415 /* pic_pitdirection_002(172x172).png in Resources */,
 				4D43517219751A020018D4F9 /* wing4_1.jpg in Resources */,
@@ -987,6 +1012,7 @@
 				4DF8E4461974B98500023E2A /* main.m in Sources */,
 				4D43514119750D530018D4F9 /* APSM_Page2.m in Sources */,
 				4D4351181974D8CE0018D4F9 /* APSM_Page3.m in Sources */,
+				DBCF958B197CA8BF000ECE81 /* CradleHead_Page1.m in Sources */,
 				DB9B36ED197A4739005B0021 /* OSD_Page1.m in Sources */,
 				4D43E32C19765B7300B7CA4F /* Language.m in Sources */,
 				4DF8E48F1974BA0000023E2A /* HomeViewController.m in Sources */,
@@ -1021,6 +1047,7 @@
 				DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */,
 				DB9437BD19790B9800AA2AE8 /* VerticalUILabel.m in Sources */,
 				4DC05E911974C82E0011B415 /* SWUtilityButtonView.m in Sources */,
+				DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */,
 				DBC610B4197909950003EC11 /* yumeSensitivityView.m in Sources */,
 				DB9437CD19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m in Sources */,
 				DB8D1C911978E7C900FC88BA /* TransmitterRadioView.m in Sources */,

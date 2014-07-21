@@ -233,6 +233,20 @@
     
 }
 
+- (IBAction)pushToCradleHeadSettingPage:(id)sender {
+    Pages *cradleHeadPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
+    cradleHeadPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
+                                                message:nil
+                                               delegate:self
+                                      cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
+                                      otherButtonTitles:@"PAGE1", nil];
+    
+    cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"]];
+    cradleHeadPages.pageTitle = @"CradleHeadPages Setting";
+    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings"];
+    [self.navigationController pushViewController:cradleHeadPages animated:YES];
+}
+
 - (IBAction)btnWebside:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.align.com.tw/Gpro/"]];
 }
