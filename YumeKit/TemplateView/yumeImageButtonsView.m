@@ -7,6 +7,7 @@
 //
 
 #import "yumeImageButtonsView.h"
+#import "ViewSource.h"
 
 typedef NSInteger(^yumeAdapter)(NSInteger value);
 
@@ -61,12 +62,12 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 //               [UIImage imageNamed:@"wing6_2.jpg"],
 //               [UIImage imageNamed:@"wing8_1.jpg"],
 //               [UIImage imageNamed:@"wing8_2.jpg"]] mutableCopy];
-    _images = [@[@"wing4_1.jpg",
-               @"wing4_2.jpg",
-               @"wing6_1.jpg",
-               @"wing6_2.jpg",
-               @"wing8_1.jpg",
-               @"wing8_2.jpg"] mutableCopy];
+//    _images = [@[@"wing4_1.jpg",
+//               @"wing4_2.jpg",
+//               @"wing6_1.jpg",
+//               @"wing6_2.jpg",
+//               @"wing8_1.jpg",
+//               @"wing8_2.jpg"] mutableCopy];
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -86,34 +87,57 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 }
 
 -(void)viewLiveRendering{
+    self.view.backgroundColor = [UIColor clearColor];
     
-    yumeAdapter toUI = ^NSInteger(NSInteger valueMCU) {
-        return valueMCU;
-    };
-    yumeAdapter toMCU = ^NSInteger(NSInteger valueUI) {
-        return valueUI;
-    };
-    [self setAdapterWithUIToMCU:toMCU WithMCUToUI:toUI];
+    [self processViewSource];
     
-    for (int index = 0;index < _images.count;index++) {
-        int row = index % _buttonInRow;
-        int column = index /_buttonInRow;
-        CGRect frame = CGRectMake(self.buttonBeginPoint.x + row * (self.buttonSize.width + self.buttonMargin),
-                                  self.buttonBeginPoint.y + column * (self.buttonSize.height + self.buttonMargin),
-                                  self.buttonSize.width,
-                                  self.buttonSize.height);
-        UIButton *button = [[UIButton alloc]initWithFrame:frame];
-//        UIImage *image = [UIImage imageNamed:images[index]];
-        UIImage *image = [UIImage imageNamed:_images[index] inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil];
-        [button setBackgroundImage:image forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(selectButtonAndSend:) forControlEvents:UIControlEventTouchUpInside];
-        button.alpha = 0.5;
-        button.tag = index;
-        [_buttons addObject:button];
-        [self addSubview:button];
+    [self processFuture];
+}
+
+-(void)processFuture{
+    
+}
+
+-(void)processViewSource{
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            _viewTitle.text = dict[@"viewTitle"];
+            _images = dict[@"images"];
+//            yumeAdapter toUI = ^NSInteger(NSInteger valueMCU) {
+//                return valueMCU;
+//            };
+//            yumeAdapter toMCU = ^NSInteger(NSInteger valueUI) {
+//                return valueUI;
+//            };
+            yumeAdapter toUI = dict[@"toUI"];
+            yumeAdapter toMCU = dict[@"toMCU"];
+            [self setAdapterWithUIToMCU:toMCU WithMCUToUI:toUI];
+            
+            for (int index = 0;index < _images.count;index++) {
+                int row = index % _buttonInRow;
+                int column = index /_buttonInRow;
+                CGRect frame = CGRectMake(self.buttonBeginPoint.x + row * (self.buttonSize.width + self.buttonMargin),
+                                          self.buttonBeginPoint.y + column * (self.buttonSize.height + self.buttonMargin),
+                                          self.buttonSize.width,
+                                          self.buttonSize.height);
+                UIButton *button = [[UIButton alloc]initWithFrame:frame];
+                UIImage *image = [UIImage imageNamed:_images[index] inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil];
+                [button setBackgroundImage:image forState:UIControlStateNormal];
+                [button addTarget:self action:@selector(selectButtonAndSend:) forControlEvents:UIControlEventTouchUpInside];
+                button.alpha = 0.5;
+                button.tag = index;
+                [_buttons addObject:button];
+                [self addSubview:button];
+            }
+            
+            [self selectButtonWithButtonIndex:_MCUToUI(_buttonSelected)];
+        }
     }
-    
-    [self selectButtonWithButtonIndex:_MCUToUI(_buttonSelected)];
 }
 
 -(id)debugQuickLookObject{
