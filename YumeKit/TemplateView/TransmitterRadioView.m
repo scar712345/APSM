@@ -58,6 +58,7 @@
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
     
+    _slider.enabled = NO;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
 }
 
