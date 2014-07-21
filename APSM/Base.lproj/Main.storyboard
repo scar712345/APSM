@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
@@ -182,6 +182,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ale"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View21"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWB-HU-Gd8" customClass="TransmitterRadioView">
@@ -195,6 +196,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ele"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View22"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-hc-S31" customClass="TransmitterRadioView">
@@ -208,6 +210,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Thr"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View23"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVo-sW-5hj" customClass="TransmitterRadioView">
@@ -215,6 +218,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Rud"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View24"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Transmitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF6-CC-Ugy">
@@ -243,10 +247,9 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-vs-HNZ" customClass="SegmentAndSlider">
                                                 <rect key="frame" x="0.0" y="9" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-Z2-GVb" customClass="SegmentAndSlider">
-                                                <rect key="frame" x="0.0" y="82" width="300" height="65"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View31"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fi-Rn-Q3e" customClass="SegmentAndSlider">
                                                 <rect key="frame" x="0.0" y="155" width="300" height="65"/>
@@ -265,6 +268,16 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jq-N0-Z5O" customClass="SegmentAndSlider">
                                                 <rect key="frame" x="0.0" y="284" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View33"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxF-6h-SLS" customClass="SegmentAndSlider">
+                                                <rect key="frame" x="0.0" y="92" width="300" height="84"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View32"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -527,23 +540,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
-                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel2_Enable"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel2_Voltage"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage3View2"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s46-gz-1Lh" customClass="yumeXYZView">
@@ -562,6 +559,24 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="string" keyPath="xKeyPath" value="parameterDatas.AntX"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="yKeyPath" value="parameterDatas.AntY"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="zKeyPath" value="parameterDatas.AntZ"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
+                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.LPLevel2_Enable"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.LPLevel2_Voltage"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage3View3"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -620,8 +635,8 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="grl-wW-Itc" customClass="VerticalUILabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="800"/>
-                                                <string key="text">Thank you for choice Align Gpro flybarless system.  
-Prior to first use, please enter setup program through helicopter’s Hardware Settings menu, followed by parameter tuning in each tab, then concludes with flight parameter menu settings.  
+                                                <string key="text">Thank you for choice Align Gpro flybarless system.
+Prior to first use, please enter setup program through helicopter’s Hardware Settings menu, followed by parameter tuning in each tab, then concludes with flight parameter menu settings.
 Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

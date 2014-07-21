@@ -9,6 +9,7 @@
 #import "yumeSwicthAndVoltageView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
+#import "ViewSource.h"
 
 @interface yumeSwicthAndVoltageView ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -89,10 +90,14 @@
     }
     
 
-    yumeRCPRemoteControllerParameter *textFieldSource = [[yumeBTLERemoteController sharedInstance]valueForKeyPath:_textFieldKeyPath];
-    _textField.text = [[textFieldSource valueForKey:@"valueUI"] stringValue];
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        _viewTitle.text = dict[@"viewTitle"];
+        _viewContent1.text = dict[@"viewContent1"];
+        _viewContent2.text = dict[@"viewContent2"];
+    }
     
-    _viewContent1.text = @"test";
+
 }
 
 -(id)debugQuickLookObject{

@@ -31,6 +31,8 @@
 		4D43E325197659FF00B7CA4F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E327197659FF00B7CA4F /* Localizable.strings */; };
 		4D43E32C19765B7300B7CA4F /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E32B19765B7300B7CA4F /* Language.m */; };
 		4D43E33019765FF100B7CA4F /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E32F19765FF100B7CA4F /* Pages.m */; };
+		4D6BED25197A596900F6B545 /* ViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6BED23197A596900F6B545 /* ViewSource.h */; };
+		4D6BED26197A596900F6B545 /* ViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BED24197A596900F6B545 /* ViewSource.m */; };
 		4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */; };
 		4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */; };
 		4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E551974C82E0011B415 /* SWCellScrollView.h */; };
@@ -229,6 +231,8 @@
 		4D43E32D19765EB200B7CA4F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4D43E32E19765FF100B7CA4F /* Pages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pages.h; path = APSM_Page/Pages.h; sourceTree = "<group>"; };
 		4D43E32F19765FF100B7CA4F /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = APSM_Page/Pages.m; sourceTree = "<group>"; };
+		4D6BED23197A596900F6B545 /* ViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSource.h; sourceTree = "<group>"; };
+		4D6BED24197A596900F6B545 /* ViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSource.m; sourceTree = "<group>"; };
 		4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		4DC05E551974C82E0011B415 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -509,6 +513,8 @@
 				DB9437B819790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.m */,
 				DB9437B919790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.h */,
 				DB9437BA19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m */,
+				4D6BED23197A596900F6B545 /* ViewSource.h */,
+				4D6BED24197A596900F6B545 /* ViewSource.m */,
 			);
 			path = yume;
 			sourceTree = "<group>";
@@ -730,6 +736,7 @@
 				4DC05E9F1974C82E0011B415 /* TemplateView2.h in Headers */,
 				DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */,
 				4DF8E4AB1974BA0E00023E2A /* YumeKit.h in Headers */,
+				4D6BED25197A596900F6B545 /* ViewSource.h in Headers */,
 				4DC05E8E1974C82E0011B415 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
 				DBC6109E1978FC980003EC11 /* BlankView.h in Headers */,
 				DB9437C419790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.h in Headers */,
@@ -1007,6 +1014,7 @@
 				DBC610B1197909950003EC11 /* yumeImageButtonsView.m in Sources */,
 				DB9437C319790B9800AA2AE8 /* yumeLanguage.m in Sources */,
 				DBC6109F1978FC980003EC11 /* BlankView.m in Sources */,
+				4D6BED26197A596900F6B545 /* ViewSource.m in Sources */,
 				DB9437BF19790B9800AA2AE8 /* yumeBTLERemoteController.m in Sources */,
 				DB9437C119790B9800AA2AE8 /* yumeDeviceListAlertTableView.m in Sources */,
 				4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */,

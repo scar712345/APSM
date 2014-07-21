@@ -10,10 +10,7 @@
 IB_DESIGNABLE
 @interface SegmentAndSlider : UIView
 
-
 @property (nonatomic) IBInspectable NSString *sliderKeyPath;
 @property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
-//@property (nonatomic) IBInspectable NSInteger 
-
 
 @end

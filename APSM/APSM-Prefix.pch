@@ -15,6 +15,7 @@
     #import <Foundation/Foundation.h>
 #endif
 
+// Log Method
 #ifdef DEBUG
 #   define DLog(...) NSLog(__VA_ARGS__)
 #else
@@ -22,10 +23,20 @@
 #endif
 #define ALog(...) NSLog(__VA_ARGS__)
 
-#pragma mark - UI Tool
+// UI Tool
 #define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
 #define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
 
+// Shared Instance
 #define UserDefaults                        [NSUserDefaults standardUserDefaults]
 #define NotificationCenter                  [NSNotificationCenter defaultCenter]
 #define YumeBTSharedInstance                [yumeBTLERemoteController sharedInstance]
+#define ViewSourceInstance                  [ViewSource sharedInstance]
+
+// IOS 7 Compliant
+#ifndef IBInspectable
+#define IBInspectable
+#endif
+#ifndef IB_DESIGNABLE
+#define IB_DESIGNABLE
+#endif

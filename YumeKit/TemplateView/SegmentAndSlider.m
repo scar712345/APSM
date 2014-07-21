@@ -7,6 +7,7 @@
 //
 
 #import "SegmentAndSlider.h"
+#import "ViewSource.h"
 
 @interface SegmentAndSlider()
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -71,10 +72,13 @@
     [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     self.slider.continuous = YES;
     
-    NSArray *itemArray =[NSArray arrayWithObjects:@"?", @"??", @"123456",nil];
+    NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        itemArray = dict[@"itemArray"];
+    }
     self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
     self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
-    
     self.segmentedControl.tintColor = [UIColor whiteColor];
     self.segmentedControl.selectedSegmentIndex = 0;
     [self.view addSubview:self.segmentedControl];

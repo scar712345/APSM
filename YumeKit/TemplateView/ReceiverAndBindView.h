@@ -10,7 +10,6 @@
 IB_DESIGNABLE
 @interface ReceiverAndBindView : UIView
 
-
 @property (nonatomic) IBInspectable float borderLineWidth;
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;
@@ -23,6 +22,5 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString *labelBindingText;
 @property (nonatomic) IBInspectable NSString *btnReceiverText;
 @property (nonatomic) IBInspectable NSString *btnBindingText;
-
 
 @end
