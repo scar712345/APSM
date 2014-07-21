@@ -144,6 +144,7 @@
 		DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */; };
 		DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */; };
 		DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */; };
+		DBCF9594197CE376000ECE81 /* CradleHead_Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */; };
 		DBD489421977CA3500532968 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */; };
 		DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD489431977D37900532968 /* ReceiverAndBindView.h */; };
 		DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489441977D37900532968 /* ReceiverAndBindView.m */; };
@@ -369,6 +370,8 @@
 		DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadControllView.h; sourceTree = "<group>"; };
 		DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadControllView.m; sourceTree = "<group>"; };
 		DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadControllView.xib; sourceTree = "<group>"; };
+		DBCF9592197CE376000ECE81 /* CradleHead_Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page2.h; sourceTree = "<group>"; };
+		DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page2.m; sourceTree = "<group>"; };
 		DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
 		DBD489431977D37900532968 /* ReceiverAndBindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverAndBindView.h; sourceTree = "<group>"; };
 		DBD489441977D37900532968 /* ReceiverAndBindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverAndBindView.m; sourceTree = "<group>"; };
@@ -740,6 +743,8 @@
 			children = (
 				DBCF9589197CA8BF000ECE81 /* CradleHead_Page1.h */,
 				DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */,
+				DBCF9592197CE376000ECE81 /* CradleHead_Page2.h */,
+				DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */,
 			);
 			name = CradleHead_Pages;
 			path = ..;
@@ -1015,6 +1020,7 @@
 				DBCF958B197CA8BF000ECE81 /* CradleHead_Page1.m in Sources */,
 				DB9B36ED197A4739005B0021 /* OSD_Page1.m in Sources */,
 				4D43E32C19765B7300B7CA4F /* Language.m in Sources */,
+				DBCF9594197CE376000ECE81 /* CradleHead_Page2.m in Sources */,
 				4DF8E48F1974BA0000023E2A /* HomeViewController.m in Sources */,
 				4D43E33019765FF100B7CA4F /* Pages.m in Sources */,
 				4DF8E4A01974BA0000023E2A /* TTSlidingPageTitle.m in Sources */,
