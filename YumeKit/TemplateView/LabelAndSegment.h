@@ -13,3 +13,4 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;
 @end
+
