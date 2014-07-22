@@ -35,6 +35,23 @@
 @property(nonatomic,strong) yumeRCPRemoteControllerParameter* ThrDir;
 @property(nonatomic,strong) yumeRCPRemoteControllerParameter* RudDir;
 
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_Unit;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_VideoFormat;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_VoltageEnable;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_VoltageWarning;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_DistanceEnable;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_DistanceWarning;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_HeightEnable;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_HeightHWarning;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_HeightLWarning;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_SatelliteEnable;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_SatelliteWarning;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_VisionAngle;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_ScreenHOffSet;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_ScreenVOffSet;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* OSD_ShowPosition;
+@property(nonatomic,strong) yumeRCPRemoteControllerParameter* FlightMode;
+
 -(void)setDataWithPacket:(devicePacketParameters)packet;
 -(devicePacketParameters)getPacket;
 @end

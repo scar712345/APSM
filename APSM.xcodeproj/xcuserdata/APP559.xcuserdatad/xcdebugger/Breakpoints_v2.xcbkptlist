@@ -2,4 +2,192 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708482.895043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "407"
+            endingLineNumber = "407"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708483.783727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "414"
+            endingLineNumber = "414"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708483.794919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708483.795097"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "414"
+                  endingLineNumber = "414"
+                  offsetFromSymbolStart = "656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708484.393036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "418"
+            endingLineNumber = "418"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708484.402564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "418"
+                  endingLineNumber = "418"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708484.402811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "418"
+                  endingLineNumber = "418"
+                  offsetFromSymbolStart = "836">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708486.296589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "433"
+            endingLineNumber = "433"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708486.306843"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "433"
+                  endingLineNumber = "433"
+                  offsetFromSymbolStart = "1700">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[yumeBTLERemoteController processAPSMDevicePacket]"
+                  moduleName = "YumeKit"
+                  urlString = "file:///Users/APP559/Desktop/APSM/YumeKit/yume/yumeBTLERemoteController.m"
+                  timestampString = "427708486.306987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "433"
+                  endingLineNumber = "433"
+                  offsetFromSymbolStart = "1704">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708487.406142"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "436"
+            endingLineNumber = "436"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YumeKit/yume/yumeBTLERemoteController.m"
+            timestampString = "427708490.647153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
+            landmarkName = "-processAPSMDevicePacket"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
