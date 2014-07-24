@@ -7,6 +7,8 @@
 //
 
 #import "yumeImageButtonsView.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 #import "ViewSource.h"
 
 typedef NSInteger(^yumeAdapter)(NSInteger value);
@@ -20,6 +22,8 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
+
+@property (weak, nonatomic) yumeRCPRemoteControllerParameter *buttonsSource;
 
 @end
 
@@ -95,7 +99,10 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 }
 
 -(void)processFuture{
-    
+    if (_buttonsKeyPath) {
+        _buttonsSource = [YumeBTSharedInstance valueForKeyPath:_buttonsKeyPath];
+        [self selectButtonWithButtonIndex:_MCUToUI(_buttonsSource.valueMCU)];
+    }
 }
 
 -(void)processViewSource{
@@ -126,7 +133,11 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
                                           self.buttonSize.width,
                                           self.buttonSize.height);
                 UIButton *button = [[UIButton alloc]initWithFrame:frame];
+#ifdef __IPHONE_8_0
                 UIImage *image = [UIImage imageNamed:_images[index] inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil];
+#else
+                UIImage *image = [UIImage imageNamed:_images[index]];
+#endif
                 [button setBackgroundImage:image forState:UIControlStateNormal];
                 [button addTarget:self action:@selector(selectButtonAndSend:) forControlEvents:UIControlEventTouchUpInside];
                 button.alpha = 0.5;
@@ -135,7 +146,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
                 [self addSubview:button];
             }
             
-            [self selectButtonWithButtonIndex:_MCUToUI(_buttonSelected)];
+//            [self selectButtonWithButtonIndex:_MCUToUI(_buttonSelected)];
         }
     }
 }
@@ -159,6 +170,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
         
     }else{
         [self selectButton:sender];
+        _buttonsSource.valueUI = sender.tag;
     }
 }
 
@@ -183,9 +195,9 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
     sender.alpha=1;
     [[sender layer] setBorderWidth:4.0f];
     
-    NSInteger mcu = _UIToMCU(sender.tag);
+//    NSInteger mcu = _UIToMCU(sender.tag);
     
-    DLog(@"mcu %ld",(long)mcu);
+//    DLog(@"mcu %ld",(long)mcu);
 }
 
 -(void)setAdapterWithUIToMCU:(yumeAdapter)toMCU WithMCUToUI:(yumeAdapter)toUI{
