@@ -52,22 +52,60 @@
 
 -(NSDictionary*)APSMPage1View31{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"MANUAL",@"ATTITUDE",@"GPS"]};
+             @"itemArray":@[@"MANUAL",@"ATTITUDE",@"GPS"],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= -551) {
+                     return 0;
+                 }else if (-550 <= value && value <= 449){
+                     return 1;
+                 }else if (450 <= value && value <= 1000){
+                     return 2;
+                 }else{
+                     return 0;
+                 }
+             }};
 }
 
 -(NSDictionary*)APSMPage1View32{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"SMART",@"OFF"]};
+             @"itemArray":@[@"SMART",@"OFF"],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= 0) {
+                     return 0;
+                 }else if (1 <= value && value <= 1000){
+                     return 1;
+                 }else{
+                     return 0;
+                 }
+             }};
 }
 
 -(NSDictionary*)APSMPage1View33{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"HOME",@"OFF"]};
+             @"itemArray":@[@"HOME",@"OFF"],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= 0) {
+                     return 0;
+                 }else if (1 <= value && value <= 1000){
+                     return 1;
+                 }else{
+                     return 0;
+                 }
+             }};
 }
 
 -(NSDictionary*)APSMPage1View34{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"ON",@"OFF"]};
+             @"itemArray":@[@"ON",@"OFF"],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= 0) {
+                     return 0;
+                 }else if (1 <= value && value <= 1000){
+                     return 1;
+                 }else{
+                     return 0;
+                 }
+             }};
 }
 
 #pragma mark - APSM Page 2

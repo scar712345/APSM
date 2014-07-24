@@ -162,10 +162,8 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelReceiverText" value="123"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelBindingText" value="456"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="btnReceiverText" value="BtnA"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="btnBindingText" value="BtnB"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="receiverKeyPath" value="parameterDatas.CMDSource"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="bindingKeyPath" value="parameterDatas.SPK_Binding"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-3c-np6" customClass="BlankView">
@@ -244,6 +242,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View33"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Aux1"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knm-ne-3gu">
@@ -255,6 +254,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View32"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Pit"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNS-Vj-I0o" customClass="BlankView">
@@ -265,6 +265,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View33"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Aux2"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -278,6 +279,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View31"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ger"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -320,14 +322,14 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <viewControllerLayoutGuide type="bottom" id="jCW-fW-xz3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DFf-jD-oZc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jP-eDw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="day-UJ-pXw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d97-hz-9I3" customClass="AngleOfVisibilityView">
                                         <rect key="frame" x="10" y="300" width="300" height="94"/>
@@ -342,10 +344,11 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonKeyPath" value="parameterDatas.OSD_VisionAngle"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-R7-P3I" customClass="BlankView">
-                                        <rect key="frame" x="10" y="402" width="300" height="1000"/>
+                                        <rect key="frame" x="10" y="402" width="300" height="803"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-TD-Eoa" customClass="yumeSwicthAndVoltageView">
                                                 <rect key="frame" x="-9" y="46" width="320" height="170"/>
@@ -402,7 +405,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSz-BP-KwK" customClass="yumeHeightWarningView">
-                                                <rect key="frame" x="-9" y="579" width="320" height="251"/>
+                                                <rect key="frame" x="-9" y="579" width="320" height="204"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -487,7 +490,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-gk-yu8" customClass="BlankView">
-                                        <rect key="frame" x="10" y="1419" width="300" height="200"/>
+                                        <rect key="frame" x="10" y="1222" width="300" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-uk-ZRW">
                                                 <rect key="frame" x="108" y="20" width="84" height="30"/>
@@ -537,6 +540,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="影像微調"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -545,7 +549,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="2000"/>
+                    <size key="freeformSize" width="320" height="1500"/>
                     <connections>
                         <outlet property="backgroundView" destination="dOA-jP-eDw" id="Gv3-pr-OXb"/>
                         <outlet property="lastView" destination="kZg-gk-yu8" id="7kq-bD-d6d"/>
