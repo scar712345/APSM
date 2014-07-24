@@ -198,7 +198,7 @@ typedef char(^yumePredictionOPCode)(void);
     }
     self.discoveredPeripheral = nil;
     
-    [NotificationCenter postNotificationName:@"disconnect" object:nil];
+    [NotificationCenter postNotificationName:@"disconnect" object:self];
 }
 
 -(void)pause{
@@ -347,6 +347,9 @@ typedef char(^yumePredictionOPCode)(void);
         
         NSData *data = [yumeRemoteControllerDeviceProtocol readParameters];
         [self enqueueDataToQueue:data prediction:COMMAND_READ_PARAMETERS];
+        
+        checkConnectThread = [[NSThread alloc]initWithTarget:self selector:@selector(threadCheckConnect) object:nil];
+        [checkConnectThread start];
     }
 }
 
@@ -407,6 +410,7 @@ typedef char(^yumePredictionOPCode)(void);
         DLog(@"command 8 Ask Version :%d.%d.%d",packet->typeSetting.mainVersion,packet->typeSetting.subVersion,packet->typeSetting.revVersion);
         mainVersion = packet->typeSetting.mainVersion;
         subVersion = packet->typeSetting.subVersion;
+        [NotificationCenter postNotificationName:@"connect" object:self];
     }else if (command == COMMAND_SEND_PASSWORD){
         DLog(@"command 10 Send Password:%d",packet->typeAck.ack);
         if (packet->typeAck.ack == ACK_SUCCESS) {
