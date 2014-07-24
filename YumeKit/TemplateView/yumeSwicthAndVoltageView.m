@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent1;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent2;
+@property (weak, nonatomic) IBOutlet UILabel *labelUnit;
 
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *segmentSource;
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *textFieldSource;
@@ -105,6 +106,7 @@
             _viewTitle.text = dict[@"viewTitle"];
             _viewContent1.text = dict[@"viewContent1"];
             _viewContent2.text = dict[@"viewContent2"];
+            _labelUnit.text = dict[@"labelUnit"];
         }
         
     }
