@@ -12,7 +12,7 @@
 @interface APSMViewController : Page
 @property (weak, nonatomic) IBOutlet UILabel *labelDevice;
 
--(void)setLabelDeviceText:(NSString*)text;
+//-(void)setLabelDeviceText:(NSString*)text;
 
 -(void)lockButtonWhenConnected;
 -(void)lockButtonWhenDisconnect;
