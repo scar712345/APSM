@@ -20,18 +20,18 @@
 //        0: QuadX, 1: QuadP, 2: HexX, 3: HexP
         _multiRotorMode      = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
                                                                                               @"default":@0,
-                                                                                              @"max"    :@3,
+                                                                                              @"max"    :@5,
                                                                                               @"index"  :@0}];
         
 //        0: SBus, 1: Traditional, 2: SPK DMS2, 3: SPK DMSX, 4: Xbus, 5: JR DMSS, 6: FlySky
         _CMDSource           = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
                                                                                               @"default":@0,
-                                                                                              @"max"    :@5,
+                                                                                              @"max"    :@6,
                                                                                               @"index"  :@1}];
 
-        _SPK_Binding         = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@50,
-                                                                                              @"default":@100,
-                                                                                              @"max"    :@300,
+        _SPK_Binding         = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
+                                                                                              @"default":@0,
+                                                                                              @"max"    :@2,
                                                                                               @"index"  :@2}];
 
         _p                   = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@50,
