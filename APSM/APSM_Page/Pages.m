@@ -22,6 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    if (_alert) {
+        _alert.delegate = self;
+    }
+    
     [self prepareTTScrollSlidingPagesController];
     
     [self prepareHomeButton];
@@ -38,8 +42,8 @@
 -(void)prepareTTScrollSlidingPagesController{
     ttScrollSlidingPagesController = [[TTScrollSlidingPagesController alloc] init];
     ttScrollSlidingPagesController.dataSource = self; /*the current view controller (self) conforms to the TTSlidingPagesDataSource protocol)*/
-    ttScrollSlidingPagesController.view.frame =  CGRectMake(0, 59, self.view.frame.size.width, self.view.frame.size.height-100); //I'm setting up the view to be fullscreen in the current view
-    ttScrollSlidingPagesController.TTScrollSlidingPagesControllerDelegate=self;
+    ttScrollSlidingPagesController.view.frame =  CGRectMake(0, 59, self.view.frame.size.width, self.view.frame.size.height - 25 - 10 - 25 - 50); //I'm setting up the view to be fullscreen in the current view
+    ttScrollSlidingPagesController.TTScrollSlidingPagesControllerDelegate = self;
     [self.view addSubview:ttScrollSlidingPagesController.view];
     [self addChildViewController:ttScrollSlidingPagesController];
 }
@@ -86,12 +90,10 @@
 }
 
 -(int)numberOfPagesForSlidingPagesViewController:(TTScrollSlidingPagesController *)source{
-    return (int)[_pages count]; //5 pages. The below two methods will each now get called 5 times, one for
+    return (int)[_pages count];
 }
 
 -(TTSlidingPage *)pageForSlidingPagesViewController:(TTScrollSlidingPagesController*)source atIndex:(int)index{
-    //    Class class = _pages[index];
-    //    return [[TTSlidingPage alloc] initWithContentViewController:[class new]];
     return [[TTSlidingPage alloc] initWithContentViewController:_pages[index]];
 }
 
@@ -101,13 +103,11 @@
     return [[TTSlidingPageTitle alloc]initWithHeaderText:_pagesSubTitle[index]];
 }
 
-
-
 - (IBAction)buttonBack:(id)sender{
     _buttonNext.enabled=YES;
     _buttonBack.enabled=YES;
 
-    long page = (ttScrollSlidingPagesController.pageControl.currentPage-1) % ttScrollSlidingPagesController.pageControl.numberOfPages;
+    long page = (ttScrollSlidingPagesController.pageControl.currentPage - 1) % ttScrollSlidingPagesController.pageControl.numberOfPages;
     CGRect frame = ttScrollSlidingPagesController.bottomScrollView.frame;
     frame.origin.x = frame.size.width * page;
     frame.origin.y = 0;
@@ -120,12 +120,6 @@
 }
 
 - (IBAction)buttonMenu:(id)sender{
-    
-    //    _alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
-    //                                                    message:nil
-    //                                                   delegate:self
-    //                                          cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-    //                                          otherButtonTitles:NSLocalizedString(@"Helicopter Size & Beginner Settings",nil),NSLocalizedString(@"Swashplate Parameter",nil), NSLocalizedString(@"Tail Parameter",nil),NSLocalizedString(@"Nitro Governor Parameter",nil), nil];
     [_alert show];
 }
 
@@ -140,23 +134,23 @@
     }
     
     if ((buttonIndex - 1) == 0) {
-        _buttonBack.enabled=NO;
+        _buttonBack.enabled = NO;
     }else if ((buttonIndex - 1) == ([_pages count] - 1)){
-        _buttonNext.enabled=NO;
+        _buttonNext.enabled = NO;
     }
     
-    frame.origin.x = frame.size.width * (buttonIndex-1);
-    ttScrollSlidingPagesController.pageControl.currentPage=buttonIndex-1;
+    frame.origin.x = frame.size.width * (buttonIndex - 1);
+    ttScrollSlidingPagesController.pageControl.currentPage = buttonIndex - 1;
     [ttScrollSlidingPagesController.bottomScrollView scrollRectToVisible:frame animated:YES];
     
 }
 
 - (IBAction)buttonNext:(id)sender{
     
-    if (ttScrollSlidingPagesController.pageControl.currentPage+1 == ttScrollSlidingPagesController.pageControl.numberOfPages)
+    if (ttScrollSlidingPagesController.pageControl.currentPage + 1 == ttScrollSlidingPagesController.pageControl.numberOfPages)
         return;
     
-    long page =(ttScrollSlidingPagesController.pageControl.currentPage+1)%ttScrollSlidingPagesController.pageControl.numberOfPages;
+    long page =(ttScrollSlidingPagesController.pageControl.currentPage + 1) % ttScrollSlidingPagesController.pageControl.numberOfPages;
     
     CGRect frame = ttScrollSlidingPagesController.bottomScrollView.frame;
     frame.origin.x = frame.size.width * page;
@@ -165,26 +159,26 @@
     [ttScrollSlidingPagesController.bottomScrollView scrollRectToVisible:frame animated:YES];
     ttScrollSlidingPagesController.pageControl.currentPage = page;
     
-    _buttonBack.enabled=YES;
-    _buttonNext.enabled=YES;
+    _buttonBack.enabled = YES;
+    _buttonNext.enabled = YES;
     if (page == ([_pages count] - 1)) {
-        _buttonNext.enabled=NO;
+        _buttonNext.enabled = NO;
     }
 }
 
 -(void)scrollSlidingPagesController:(TTScrollSlidingPagesController *)scrollSlidingPagesController WithPageChange:(NSInteger)page{
     
-    _buttonNext.enabled=NO;
-    _buttonBack.enabled=NO;
+    _buttonNext.enabled = NO;
+    _buttonBack.enabled = NO;
     
     if (page != ([_pages count] - 1)) {
-        _buttonNext.enabled=YES;
+        _buttonNext.enabled = YES;
     }
     if (page != 0) {
-        _buttonBack.enabled=YES;
+        _buttonBack.enabled = YES;
     }
-    
 }
+
 - (IBAction)aSelector:(id)sender{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -194,14 +188,5 @@
         [_alert dismissWithClickedButtonIndex:0 animated:NO];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

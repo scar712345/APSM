@@ -174,7 +174,7 @@
     Pages *APSMPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
     APSMPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
                                                  message:nil
-                                                delegate:self
+                                                delegate:nil
                                        cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
                                        otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3", nil];
     
@@ -190,7 +190,7 @@
     Pages *OSDPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
     OSDPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
                                                  message:nil
-                                                delegate:self
+                                                delegate:nil
                                        cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
                                        otherButtonTitles:@"PAGE1", nil];
     
@@ -204,7 +204,7 @@
     Pages *cradleHeadPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
     cradleHeadPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
                                                 message:nil
-                                               delegate:self
+                                               delegate:nil
                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
                                       otherButtonTitles:@"PAGE1",@"PAGE2", nil];
     
