@@ -95,14 +95,16 @@
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":@"低電壓返航保護裝置",
              @"viewContent1":@"電壓低於",
-             @"viewContent2":@"飛行器執行返回Home點"};
+             @"viewContent2":@"飛行器執行返回Home點",
+             @"labelUnit":@"V"};
 }
 
 -(NSDictionary*)APSMPage3View3{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":@"低電壓警示燈閃爍提醒",
              @"viewContent1":@"電壓低於",
-             @"viewContent2":@"飛行器警示燈閃爍提醒"};
+             @"viewContent2":@"飛行器警示燈閃爍提醒",
+             @"labelUnit":@"V"};
 }
 
 #pragma mark - OSD Page 1
@@ -123,6 +125,39 @@
     return @{@"type":@"LabelAndSegment",
              @"labelTitle":@"顯示經緯度",
              @"segmentedControl":@[@"ON",@"OFF"]};
+}
+
+-(NSDictionary*)APSMPage5View1{
+    return @{@"type":@"yumeSwicthAndVoltageView",
+             @"viewTitle":@"低電壓提醒",
+             @"viewContent1":@"電壓低於",
+             @"viewContent2":@"",
+             @"labelUnit":@"V"};
+}
+
+-(NSDictionary*)APSMPage5View2{
+    return @{@"type":@"yumeSwicthAndVoltageView",
+             @"viewTitle":@"衛星數量",
+             @"viewContent1":@"衛星數量低於",
+             @"viewContent2":@"",
+             @"labelUnit":@"個"};
+}
+
+-(NSDictionary*)APSMPage5View3{
+    return @{@"type":@"yumeSwicthAndVoltageView",
+             @"viewTitle":@"飛行距離提醒",
+             @"viewContent1":@"飛行距離超過",
+             @"viewContent2":@"",
+             @"labelUnit":@"M"};
+}
+
+-(NSDictionary*)APSMPage5View4{
+    return @{@"type":@"yumeHeightWarningView",
+             @"viewTitle":@"飛行高度提醒",
+             @"viewContent1":@"飛行高度超過",
+             @"viewContent2":@"飛行高度低於",
+             @"labelUnit1":@"M",
+             @"labelUnit2":@"M"};
 }
 
 #pragma mark - CradleHead Page 1
