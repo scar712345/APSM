@@ -7,12 +7,16 @@
 //
 
 #import "LabelAndSegment.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 #import "ViewSource.h"
 
 @interface LabelAndSegment()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (strong,nonatomic) UISegmentedControl *segmentedControl;
+
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *segmentSource;
 @end
 
 
@@ -75,7 +79,10 @@
 }
 
 -(void)processFuture{
-    
+    if (_segmentKeyPath) {
+        _segmentSource = [YumeBTSharedInstance valueForKeyPath:_segmentKeyPath];
+        [_segmentedControl setSelectedSegmentIndex:(int)_segmentSource.valueUI];
+    }
 }
 
 -(void)processViewSource{
@@ -98,12 +105,19 @@
     }
     _segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
     _segmentedControl.tintColor = [UIColor whiteColor];
+    [_segmentedControl addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentedControl];
 
 }
 
 -(id)debugQuickLookObject{
     return self;
+}
+
+#pragma mark - Segment Method
+
+- (IBAction)segmentValueChanged:(UISegmentedControl *)sender {
+    _segmentSource.valueUI = (float) sender.selectedSegmentIndex;
 }
 
 @end

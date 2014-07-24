@@ -14,5 +14,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+@property (nonatomic) IBInspectable NSString *segmentKeyPath;
 @end
 
