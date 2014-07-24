@@ -47,4 +47,5 @@ static NSBundle *bundle = nil;
 +(NSString *)getImagePath:(NSString *)key WithExtension:(NSString *)extension{
     return [bundle pathForResource:key ofType:extension];
 }
+
 @end

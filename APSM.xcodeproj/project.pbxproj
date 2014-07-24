@@ -33,6 +33,9 @@
 		4D43E33019765FF100B7CA4F /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E32F19765FF100B7CA4F /* Pages.m */; };
 		4D6BED25197A596900F6B545 /* ViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6BED23197A596900F6B545 /* ViewSource.h */; };
 		4D6BED26197A596900F6B545 /* ViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BED24197A596900F6B545 /* ViewSource.m */; };
+		4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */; };
+		4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */; };
+		4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */; };
 		4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */; };
 		4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */; };
 		4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E551974C82E0011B415 /* SWCellScrollView.h */; };
@@ -155,6 +158,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D8422121980A091008113AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF8E4381974B98500023E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF8E4A51974BA0E00023E2A;
+			remoteInfo = YumeKit;
+		};
 		4DF8E4571974B98600023E2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DF8E4381974B98500023E2A /* Project object */;
@@ -241,6 +251,9 @@
 		4D43E32F19765FF100B7CA4F /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = APSM_Page/Pages.m; sourceTree = "<group>"; };
 		4D6BED23197A596900F6B545 /* ViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSource.h; sourceTree = "<group>"; };
 		4D6BED24197A596900F6B545 /* ViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSource.m; sourceTree = "<group>"; };
+		4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeHeightWarningView.h; sourceTree = "<group>"; };
+		4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeHeightWarningView.m; sourceTree = "<group>"; };
+		4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeHeightWarningView.xib; sourceTree = "<group>"; };
 		4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		4DC05E551974C82E0011B415 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -444,6 +457,9 @@
 				DBC610A8197909950003EC11 /* yumeSwicthAndVoltageView.h */,
 				DBC610A9197909950003EC11 /* yumeSwicthAndVoltageView.m */,
 				DBC610AA197909950003EC11 /* yumeSwicthAndVoltageView.xib */,
+				4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */,
+				4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */,
+				4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */,
 				DBC610AB197909950003EC11 /* yumeXYZView.h */,
 				DBC610AC197909950003EC11 /* yumeXYZView.m */,
 				DBC610AD197909950003EC11 /* yumeXYZView.xib */,
@@ -789,6 +805,7 @@
 				4DC05E8C1974C82E0011B415 /* SWTableViewCell.h in Headers */,
 				4DDB13831974C93200045C40 /* APSM-Prefix.pch in Headers */,
 				4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */,
 				DB9437BC19790B9800AA2AE8 /* VerticalUILabel.h in Headers */,
 				DB9437C219790B9800AA2AE8 /* yumeLanguage.h in Headers */,
 				DB9437C619790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.h in Headers */,
@@ -876,6 +893,7 @@
 			dependencies = (
 				4DF8E4B31974BA0E00023E2A /* PBXTargetDependency */,
 				4DF8E4C71974BA0F00023E2A /* PBXTargetDependency */,
+				4D8422131980A091008113AC /* PBXTargetDependency */,
 			);
 			name = YumeKitTests;
 			productName = YumeKitTests;
@@ -981,6 +999,7 @@
 				DB9B36F9197A5A72005B0021 /* AngleOfVisibilityView.xib in Resources */,
 				DBCF959A197CF1CB000ECE81 /* CradleHead360.xib in Resources */,
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
+				4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */,
 				DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */,
 				DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */,
 				4DC05E991974C82E0011B415 /* pic_Blade-Direction_002(172x172).png in Resources */,
@@ -1083,6 +1102,7 @@
 				DB9437CB19790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.m in Sources */,
 				4DC05E8B1974C82E0011B415 /* SWLongPressGestureRecognizer.m in Sources */,
 				4DC05EA01974C82E0011B415 /* TemplateView2.m in Sources */,
+				4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */,
 				DBC610B7197909950003EC11 /* yumeSwicthAndVoltageView.m in Sources */,
 				DB9437C519790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.m in Sources */,
 				DB9437C719790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.m in Sources */,
@@ -1100,6 +1120,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D8422131980A091008113AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF8E4A51974BA0E00023E2A /* YumeKit */;
+			targetProxy = 4D8422121980A091008113AC /* PBXContainerItemProxy */;
+		};
 		4DF8E4581974B98600023E2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4DF8E43F1974B98500023E2A /* APSM */;
@@ -1184,7 +1209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1219,7 +1244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

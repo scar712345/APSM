@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="yumeSwicthAndVoltageView">
             <connections>
+                <outlet property="labelUnit" destination="IvF-Sa-nz3" id="JKQ-n8-ED5"/>
                 <outlet property="segment" destination="uZu-8I-kbm" id="9Fo-nE-WRN"/>
                 <outlet property="textField" destination="a72-EC-Mhv" id="SrI-he-GMs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="NXW-D6-Cpa"/>
