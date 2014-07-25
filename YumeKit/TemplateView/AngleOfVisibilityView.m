@@ -23,7 +23,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *buttonSource;
 
 @property (strong) yumeAdapter adapterToUI;
-@property (strong) yumeAdapter adapterToMCU;
+//@property (strong) yumeAdapter adapterToMCU;
 
 @end
 
@@ -61,7 +61,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
     
     _btnAngleOfVisibility.tintColor = [UIColor whiteColor];
     
-    _angleArray = @[@"30",@"60",@"90",@"120"];
+    _angleArray = @[@"30度",@"60度",@"90度",@"120度"];
     _adapterToUI = ^NSInteger(NSInteger angle) {
         NSInteger index = 0;
         switch (angle) {
@@ -79,24 +79,24 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
         }
         return index;
     };
-    _adapterToMCU = ^NSInteger(NSInteger index) {
-        NSInteger angle = 0;
-        switch (index) {
-            case 3:
-                angle += 30;
-            case 2:
-                angle += 30;
-            case 1:
-                angle += 30;
-            case 0:
-                angle += 30;
-                break;
-                
-            default:
-                break;
-        }
-        return angle;
-    };
+//    _adapterToMCU = ^NSInteger(NSInteger index) {
+//        NSInteger angle = 0;
+//        switch (index) {
+//            case 3:
+//                angle += 30;
+//            case 2:
+//                angle += 30;
+//            case 1:
+//                angle += 30;
+//            case 0:
+//                angle += 30;
+//                break;
+//                
+//            default:
+//                break;
+//        }
+//        return angle;
+//    };
 }
 
 -(void)prepareForInterfaceBuilder{

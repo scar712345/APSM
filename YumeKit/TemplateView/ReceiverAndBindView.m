@@ -58,8 +58,8 @@
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
     
-    _receiverArray = @[@"r1",@"r2",@"r3",@"r4",@"r5",@"r6"];
-    _bindingArray = @[@"b1",@"b2",@"b3"];
+    _receiverArray = @[@"SBus",@"Traditional",@"SPK DMS2",@"SPK DMSX",@"Xbus",@"JR DMSS",@"FlySky"];
+    _bindingArray = @[@"No bind",@"Binding",@"Binding with FS"];
 }
 
 -(void)prepareForInterfaceBuilder{
