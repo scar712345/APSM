@@ -82,6 +82,22 @@ typedef struct {
     float EleDir;
     float ThrDir;
     float RudDir;
+    float OSD_Unit;
+    float OSD_VideoFormat;
+    float OSD_VoltageEnable;
+    float OSD_VoltageWarning;
+    float OSD_DistanceEnable;
+    float OSD_DistanceWarning;
+    float OSD_HeightEnable;
+    float OSD_HeightHWarning;
+    float OSD_HeightLWarning;
+    float OSD_SatelliteEnable;
+    float OSD_SatelliteWarning;
+    float OSD_VisionAngle;
+    float OSD_ScreenHOffSet;
+    float OSD_ScreenVOffSet;
+    float OSD_ShowPosition;
+    float FlightMode;
 } devicePacketParameters;
 
 typedef struct {

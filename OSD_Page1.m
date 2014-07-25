@@ -7,6 +7,8 @@
 //
 
 #import "OSD_Page1.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 
 @interface OSD_Page1 ()
 
@@ -27,6 +29,22 @@
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
 }
-
+//parameterDatas.OSD_VoltageWarning
+- (IBAction)screenUp:(id)sender {
+    yumeRCPRemoteControllerParameter *source = [YumeBTSharedInstance valueForKeyPath:@"parameterDatas.OSD_ScreenVOffSet"];
+    source.valueUI = source.valueUI - 1;
+}
+- (IBAction)screenDown:(id)sender {
+    yumeRCPRemoteControllerParameter *source = [YumeBTSharedInstance valueForKeyPath:@"parameterDatas.OSD_ScreenVOffSet"];
+    source.valueUI = source.valueUI + 1;
+}
+- (IBAction)screenLeft:(id)sender {
+    yumeRCPRemoteControllerParameter *source = [YumeBTSharedInstance valueForKeyPath:@"parameterDatas.OSD_ScreenHOffSet"];
+    source.valueUI = source.valueUI - 1;
+}
+- (IBAction)screenRight:(id)sender {
+    yumeRCPRemoteControllerParameter *source = [YumeBTSharedInstance valueForKeyPath:@"parameterDatas.OSD_ScreenHOffSet"];
+    source.valueUI = source.valueUI + 1;
+}
 
 @end

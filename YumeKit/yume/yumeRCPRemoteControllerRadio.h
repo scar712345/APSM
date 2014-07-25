@@ -12,6 +12,6 @@
 @property (nonatomic) short valueMCU;
 @property (nonatomic,readonly) short valueUI;
 
--(id)initWithMin:(short)min WithMax:(short)max WithZoom:(short)zoom WithOffset:(short)offset;
-
+//-(id)initWithMin:(short)min WithMax:(short)max WithZoom:(short)zoom WithOffset:(short)offset;
+-(instancetype)initWithDictionary:(NSDictionary *)dict;
 @end

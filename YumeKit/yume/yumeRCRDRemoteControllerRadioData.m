@@ -11,17 +11,19 @@
 
 @implementation yumeRCRDRemoteControllerRadioData
 
+#define RCP_ALLOC [yumeRCPRemoteControllerRadio alloc]
+
 -(id)init{
     self = [super init];
     if (self) {
-        _Ale                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  0
-        _Ele                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  1
-        _Thr                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  2
-        _Rud                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  3
-        _Ger                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  4
-        _Pit                    = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  5
-        _Aux1                   = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  6
-        _Aux2                   = [[yumeRCPRemoteControllerRadio alloc]initWithMin:324 WithMax:1724 WithZoom:7 WithOffset:1024];                //  7
+        _Ale                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Ele                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Thr                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Rud                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Ger                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Pit                    = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Aux1                   = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
+        _Aux2                   = [RCP_ALLOC initWithDictionary:@{@"min":@(-1000),@"max":@(1000)}];
     }
     return self;
 }

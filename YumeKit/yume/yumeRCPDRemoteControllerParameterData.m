@@ -20,18 +20,18 @@
 //        0: QuadX, 1: QuadP, 2: HexX, 3: HexP
         _multiRotorMode      = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
                                                                                               @"default":@0,
-                                                                                              @"max"    :@3,
+                                                                                              @"max"    :@5,
                                                                                               @"index"  :@0}];
         
 //        0: SBus, 1: Traditional, 2: SPK DMS2, 3: SPK DMSX, 4: Xbus, 5: JR DMSS, 6: FlySky
         _CMDSource           = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
                                                                                               @"default":@0,
-                                                                                              @"max"    :@5,
+                                                                                              @"max"    :@6,
                                                                                               @"index"  :@1}];
 
-        _SPK_Binding         = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@50,
-                                                                                              @"default":@100,
-                                                                                              @"max"    :@300,
+        _SPK_Binding         = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@0,
+                                                                                              @"default":@0,
+                                                                                              @"max"    :@2,
                                                                                               @"index"  :@2}];
 
         _p                   = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@50,
@@ -123,6 +123,88 @@
                                                                                               @"default":@1,
                                                                                               @"max"    :@1,
                                                                                               @"index"  :@20}];
+        
+        
+        
+        _OSD_Unit               = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@21}];
+        
+        _OSD_VideoFormat        = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@22}];
+        
+        _OSD_VoltageEnable      = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@23}];
+        
+        _OSD_VoltageWarning     = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(11.1),
+                                                                                                 @"default":@11.1,
+                                                                                                 @"max"    :@25.4,
+                                                                                                 @"index"  :@24}];
+        
+        _OSD_DistanceEnable     = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@25}];
+        
+        _OSD_DistanceWarning    = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@100000,
+                                                                                                 @"index"  :@26}];
+        
+        _OSD_HeightEnable       = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@27}];
+        
+        _OSD_HeightHWarning     = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@100000,
+                                                                                                 @"index"  :@28}];
+        
+        _OSD_HeightLWarning     = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@100000,
+                                                                                                 @"index"  :@29}];
+        
+        _OSD_SatelliteEnable    = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@30}];
+        
+        _OSD_SatelliteWarning   = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(5),
+                                                                                                 @"default":@5,
+                                                                                                 @"max"    :@32,
+                                                                                                 @"index"  :@31}];
+        
+        _OSD_VisionAngle        = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(30),
+                                                                                                 @"default":@30,
+                                                                                                 @"max"    :@120,
+                                                                                                 @"index"  :@32}];
+        
+        _OSD_ScreenHOffSet      = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(-8),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@7,
+                                                                                                 @"index"  :@33}];
+        
+        _OSD_ScreenVOffSet      = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(-8),
+                                                                                                 @"default":@0,
+                                                                                                 @"max"    :@7,
+                                                                                                 @"index"  :@34}];
+        
+        _OSD_ShowPosition       = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(0),
+                                                                                                 @"default":@1,
+                                                                                                 @"max"    :@1,
+                                                                                                 @"index"  :@35}];
+        
+        _FlightMode             = [[yumeRCPRemoteControllerParameter alloc] initWithDictionary:@{@"min"    :@(1),
+                                                                                                 @"default":@2,
+                                                                                                 @"max"    :@2,
+                                                                                                 @"index"  :@36}];
 
     }
     return self;
@@ -151,6 +233,23 @@
     _EleDir.valueMCU            = packet.EleDir;
     _ThrDir.valueMCU            = packet.theta;
     _RudDir.valueMCU            = packet.RudDir;
+    
+    _OSD_Unit.valueMCU              = packet.OSD_Unit;
+    _OSD_VideoFormat.valueMCU       = packet.OSD_VideoFormat;
+    _OSD_VoltageEnable.valueMCU     = packet.OSD_VoltageEnable;
+    _OSD_VoltageWarning.valueMCU    = packet.OSD_VoltageWarning;
+    _OSD_DistanceEnable.valueMCU    = packet.OSD_DistanceEnable;
+    _OSD_DistanceWarning.valueMCU   = packet.OSD_DistanceWarning;
+    _OSD_HeightEnable.valueMCU      = packet.OSD_HeightEnable;
+    _OSD_HeightHWarning.valueMCU    = packet.OSD_HeightHWarning;
+    _OSD_HeightLWarning.valueMCU    = packet.OSD_HeightLWarning;
+    _OSD_SatelliteEnable.valueMCU   = packet.OSD_SatelliteEnable;
+    _OSD_SatelliteWarning.valueMCU  = packet.OSD_SatelliteWarning;
+    _OSD_VisionAngle.valueMCU       = packet.OSD_VisionAngle;
+    _OSD_ScreenHOffSet.valueMCU     = packet.OSD_ScreenHOffSet;
+    _OSD_ScreenVOffSet.valueMCU     = packet.OSD_ScreenVOffSet;
+    _OSD_ShowPosition.valueMCU      = packet.OSD_ShowPosition;
+    _FlightMode.valueMCU            = packet.FlightMode;
 }
 
 -(devicePacketParameters)getPacket{
@@ -178,6 +277,23 @@
     packet.EleDir           = _EleDir.valueMCU;
     packet.theta            = _ThrDir.valueMCU;
     packet.RudDir           = _RudDir.valueMCU;
+    
+    packet.OSD_Unit             = _OSD_Unit.valueMCU;
+    packet.OSD_VideoFormat      = _OSD_VideoFormat.valueMCU;
+    packet.OSD_VoltageEnable    = _OSD_VoltageEnable.valueMCU;
+    packet.OSD_VoltageWarning   = _OSD_VoltageWarning.valueMCU;
+    packet.OSD_DistanceEnable   = _OSD_DistanceEnable.valueMCU;
+    packet.OSD_DistanceWarning  = _OSD_DistanceWarning.valueMCU;
+    packet.OSD_HeightEnable     = _OSD_HeightEnable.valueMCU;
+    packet.OSD_HeightHWarning   = _OSD_HeightHWarning.valueMCU;
+    packet.OSD_HeightLWarning   = _OSD_HeightLWarning.valueMCU;
+    packet.OSD_SatelliteEnable  = _OSD_SatelliteEnable.valueMCU;
+    packet.OSD_SatelliteWarning = _OSD_SatelliteWarning.valueMCU;
+    packet.OSD_VisionAngle      = _OSD_VisionAngle.valueMCU;
+    packet.OSD_ScreenHOffSet    = _OSD_ScreenHOffSet.valueMCU;
+    packet.OSD_ScreenVOffSet    = _OSD_ScreenVOffSet.valueMCU;
+    packet.OSD_ShowPosition     = _OSD_ShowPosition.valueMCU;
+    packet.FlightMode           = _FlightMode.valueMCU;
     
     return packet;
     

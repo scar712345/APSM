@@ -13,8 +13,8 @@
     // 矩陣位置1 , 矩陣位置2 , 預設值 , 最小值 , 最大值 , 縮放比 , 偏移量
     short valueMin;
     short valueMax;
-    short valueZoom;
-    short valueOffset;
+//    short valueZoom;
+//    short valueOffset;
 }
 
 @end
@@ -23,13 +23,12 @@
 @synthesize valueMCU = _valueMCU;
 @synthesize valueUI = _valueUI;
 
--(id)initWithMin:(short)min WithMax:(short)max WithZoom:(short)zoom WithOffset:(short)offset{
+-(instancetype)initWithDictionary:(NSDictionary *)dict{
     self = [super init];
     if (self) {
-        valueMin = min;
-        valueMax = max;
-        valueZoom = zoom;
-        valueOffset = offset;
+        _valueMCU = 0;//[dict[@"default"] floatValue];
+        valueMin = [dict[@"min"] floatValue];
+        valueMax = [dict[@"max"] floatValue];
     }
     return self;
 }
@@ -54,29 +53,30 @@
 
 -(short)valueUI{
     //UIvalue = (value - offset) / value
-    return (_valueMCU - valueOffset) / valueZoom;
+//    return (_valueMCU - valueOffset) / valueZoom;
+    return _valueMCU;
 }
 
--(short)getValueUIMax{
-    return (valueMax - valueOffset) / valueZoom;
-}
+//-(short)getValueUIMax{
+//    return (valueMax - valueOffset) / valueZoom;
+//}
+//
+//-(short)getValueUIMin{
+//    return (valueMin - valueOffset) / valueZoom;
+//}
 
--(short)getValueUIMin{
-    return (valueMin - valueOffset) / valueZoom;
-}
-
-#pragma mark - Checker
-
--(BOOL)isBetweenMaxAndMin:(short)value{
-    if (value < valueMin) {
-        return NO;
-    }
-    
-    if (value > valueMax) {
-        return NO;
-    }
-    
-    return YES;
-}
+//#pragma mark - Checker
+//
+//-(BOOL)isBetweenMaxAndMin:(short)value{
+//    if (value < valueMin) {
+//        return NO;
+//    }
+//    
+//    if (value > valueMax) {
+//        return NO;
+//    }
+//    
+//    return YES;
+//}
 
 @end

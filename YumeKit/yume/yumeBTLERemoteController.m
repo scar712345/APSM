@@ -23,9 +23,9 @@
 #define TIMEOUT_SECOND 1
 #define CHECK_CONNECT_PERIOD 0.2
 
-#ifndef DLog
-#define DLog(...) /* */
-#endif
+//#ifndef DLog
+//#define DLog(...) /* */
+//#endif
 
 typedef NSData*(^yumeWriteToQueue)(void);
 typedef char(^yumePredictionOPCode)(void);
@@ -171,7 +171,7 @@ typedef char(^yumePredictionOPCode)(void);
     [predictionOPCodeQueue addObject:predictionOPCode];
     
     if (DataQueue.count == 1) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"sendData" object:self];
+        [NotificationCenter postNotificationName:@"sendData" object:self];
     }
 }
 
@@ -184,29 +184,21 @@ typedef char(^yumePredictionOPCode)(void);
     [DataQueue removeAllObjects];
     [predictionOPCodeQueue removeAllObjects];
     [timeoutTimer invalidate];
-    //    [checkConnectTimer invalidate];
     [checkConnectThread cancel];
     failCount = 0;
     
-    //    self.settingDatas = nil;
-    //    self.parameterDatas = nil;
     self.parameterDatas = [yumeRCPDRemoteControllerParameterData new];
     if (self.discoveredPeripheral != nil && self.readCharacteristic!= nil) {
         [self.discoveredPeripheral setNotifyValue:NO forCharacteristic:self.readCharacteristic];
     }
     self.readCharacteristic = nil;
     self.writeCharacteristic = nil;
-    //    if (self.discoveredPeripheral != nil && self.discoveredPeripheral.state == CBPeripheralStateConnected) {
     if (self.discoveredPeripheral != nil) {
         [self.centralManager cancelPeripheralConnection:self.discoveredPeripheral];
     }
     self.discoveredPeripheral = nil;
     
-//    if (self.rootVC) {
-//        [self.rootVC.navigationController popToRootViewControllerAnimated:YES];
-//        [self.rootVC setLabelDeviceText:[NSString stringWithFormat:@" "]];
-//        [self.rootVC lockButtonWhenDisconnect];
-//    }
+    [NotificationCenter postNotificationName:@"disconnect" object:self];
 }
 
 -(void)pause{
@@ -247,7 +239,8 @@ typedef char(^yumePredictionOPCode)(void);
         return;
     }
     
-//    NSData *data;
+    NSData *data = [yumeRemoteControllerDeviceProtocol radio];
+    [self enqueueDataToQueue:data prediction:COMMAND_RADIO];
 }
 
 #pragma mark - Notification
@@ -315,7 +308,6 @@ typedef char(^yumePredictionOPCode)(void);
             [peripheral discoverCharacteristics:nil
                                      forService:service];
         }
-        
     }
 }
 
@@ -331,31 +323,33 @@ typedef char(^yumePredictionOPCode)(void);
         
         DLog(@"find characteristic UUID:%@",characteristic.UUID);
         
-        //FFF1 Notify
+        //Characteristic Notify
         if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"49535343-1E4D-4BD9-BA61-23C647249616"]]) {
             DLog(@"find Notify ");
             [peripheral setNotifyValue:YES forCharacteristic:characteristic];
             self.readCharacteristic = characteristic;
         }
         
-        //FFF2 Write
+        //Characteristic Write
         if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"49535343-8841-43F4-A8D4-ECBE34729BB3"]]) {
             DLog(@"find Write characteristic");
             self.writeCharacteristic = characteristic;
         }
-        
     }
     
     //#warning 如果有write 以及 read
     if(self.readCharacteristic != nil && self.writeCharacteristic != nil){
         NSData* data1 = [yumeRemoteControllerDeviceProtocol askDevice];
-        [self enqueueDataToQueue:data1 prediction:0];
+        [self enqueueDataToQueue:data1 prediction:COMMAND_ASK_DEVICE];
         
         data1 = [yumeRemoteControllerDeviceProtocol askVersion];
-        [self enqueueDataToQueue:data1 prediction:8];
+        [self enqueueDataToQueue:data1 prediction:COMMAND_ASK_VERSION];
         
         NSData *data = [yumeRemoteControllerDeviceProtocol readParameters];
-        [self enqueueDataToQueue:data prediction:21];
+        [self enqueueDataToQueue:data prediction:COMMAND_READ_PARAMETERS];
+        
+        checkConnectThread = [[NSThread alloc]initWithTarget:self selector:@selector(threadCheckConnect) object:nil];
+        [checkConnectThread start];
     }
 }
 
@@ -402,21 +396,23 @@ typedef char(^yumePredictionOPCode)(void);
     char command = ((yumePredictionOPCode)predictionOPCode)();
     if (command != packet->deviceHeader.command) {
         [self resendDataWithTimer];
+        return;
     }
 
     if (command == COMMAND_ASK_DEVICE){
         //check gpro version
-        DLog(@"command 0:%d",packet->typeASKDeviceID.revVersion);
+        DLog(@"command 0 Ask Device :%d",packet->typeASKDeviceID.revVersion);
         if (packet->typeASKDeviceID.revVersion != DEVICE_ID) {
             [self disconnet];
             return;
         }
     }else if (command == COMMAND_ASK_VERSION){
-        DLog(@"command 8:%d.%d.%d",packet->typeSetting.mainVersion,packet->typeSetting.subVersion,packet->typeSetting.revVersion);
+        DLog(@"command 8 Ask Version :%d.%d.%d",packet->typeSetting.mainVersion,packet->typeSetting.subVersion,packet->typeSetting.revVersion);
         mainVersion = packet->typeSetting.mainVersion;
         subVersion = packet->typeSetting.subVersion;
+        [NotificationCenter postNotificationName:@"connect" object:self];
     }else if (command == COMMAND_SEND_PASSWORD){
-        DLog(@"command 10:%d",packet->typeAck.ack);
+        DLog(@"command 10 Send Password:%d",packet->typeAck.ack);
         if (packet->typeAck.ack == ACK_SUCCESS) {
             
             NSData *data = [yumeRemoteControllerDeviceProtocol readParameters];
@@ -431,11 +427,16 @@ typedef char(^yumePredictionOPCode)(void);
             return;
         }
     }else if (command == COMMAND_RADIO){
+        DLog(@"command 20 Radio");
         [self.radioDatas setDataWithPacket:packet->typeRadios];
         [NotificationCenter postNotificationName:@"radioData" object:self];
     }else if (command == COMMAND_READ_PARAMETERS){
+        DLog(@"command 21 Read Parameters");
         [self.parameterDatas setDataWithPacket:packet->typeParameters];
-    }else if (command == COMMAND_SAVE_PARAMETERS || command == COMMAND_UPDATE_PARAMETER || command == COMMAND_DEFAULT_PARAMETER){
+    }else if (command == COMMAND_SAVE_PARAMETERS ||
+              command == COMMAND_UPDATE_PARAMETER ||
+              command == COMMAND_DEFAULT_PARAMETER){
+        DLog(@"command %d Ack : %d",command,packet->typeAck.ack);
         if (packet->typeAck.ack == ACK_SUCCESS) {
             
         }else if (packet->typeAck.ack == ACK_FAIL) {
@@ -444,7 +445,6 @@ typedef char(^yumePredictionOPCode)(void);
             
         }
     }
-    
     
     [self dequeueDataFromQueueWithCleanBufferAndTimer];
     [self dequeueNextDataFromQueueIfExist];

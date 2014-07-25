@@ -33,6 +33,26 @@
 		4D43E33019765FF100B7CA4F /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E32F19765FF100B7CA4F /* Pages.m */; };
 		4D6BED25197A596900F6B545 /* ViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6BED23197A596900F6B545 /* ViewSource.h */; };
 		4D6BED26197A596900F6B545 /* ViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BED24197A596900F6B545 /* ViewSource.m */; };
+		4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */; };
+		4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */; };
+		4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */; };
+		4D879C711980D37400B7AE69 /* UIScrollView+HitTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C6F1980D37400B7AE69 /* UIScrollView+HitTest.h */; };
+		4D879C721980D37400B7AE69 /* UIScrollView+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C701980D37400B7AE69 /* UIScrollView+HitTest.m */; };
+		4D879C7E1980F50300B7AE69 /* CXAlertBackgroundWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C741980F50300B7AE69 /* CXAlertBackgroundWindow.h */; };
+		4D879C7F1980F50300B7AE69 /* CXAlertBackgroundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C751980F50300B7AE69 /* CXAlertBackgroundWindow.m */; };
+		4D879C801980F50300B7AE69 /* CXAlertButtonContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C761980F50300B7AE69 /* CXAlertButtonContainerView.h */; };
+		4D879C811980F50300B7AE69 /* CXAlertButtonContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C771980F50300B7AE69 /* CXAlertButtonContainerView.m */; };
+		4D879C821980F50300B7AE69 /* CXAlertButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C781980F50300B7AE69 /* CXAlertButtonItem.h */; };
+		4D879C831980F50300B7AE69 /* CXAlertButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C791980F50300B7AE69 /* CXAlertButtonItem.m */; };
+		4D879C841980F50300B7AE69 /* CXAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C7A1980F50300B7AE69 /* CXAlertView.h */; };
+		4D879C851980F50300B7AE69 /* CXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C7B1980F50300B7AE69 /* CXAlertView.m */; };
+		4D879C861980F50300B7AE69 /* CXAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C7C1980F50300B7AE69 /* CXAlertViewController.h */; };
+		4D879C871980F50300B7AE69 /* CXAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C7D1980F50300B7AE69 /* CXAlertViewController.m */; };
+		4D879C8D1980F55E00B7AE69 /* LFDisplayBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C881980F55E00B7AE69 /* LFDisplayBridge.h */; };
+		4D879C8E1980F55E00B7AE69 /* LFDisplayBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C891980F55E00B7AE69 /* LFDisplayBridge.m */; };
+		4D879C8F1980F55E00B7AE69 /* LFGlassView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C8A1980F55E00B7AE69 /* LFGlassView.h */; };
+		4D879C901980F55E00B7AE69 /* LFGlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C8B1980F55E00B7AE69 /* LFGlassView.m */; };
+		4D879C911980F55E00B7AE69 /* LiveFrost.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C8C1980F55E00B7AE69 /* LiveFrost.h */; };
 		4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */; };
 		4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */; };
 		4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC05E551974C82E0011B415 /* SWCellScrollView.h */; };
@@ -155,6 +175,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4D8422121980A091008113AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF8E4381974B98500023E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF8E4A51974BA0E00023E2A;
+			remoteInfo = YumeKit;
+		};
 		4DF8E4571974B98600023E2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DF8E4381974B98500023E2A /* Project object */;
@@ -241,6 +268,26 @@
 		4D43E32F19765FF100B7CA4F /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = APSM_Page/Pages.m; sourceTree = "<group>"; };
 		4D6BED23197A596900F6B545 /* ViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSource.h; sourceTree = "<group>"; };
 		4D6BED24197A596900F6B545 /* ViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSource.m; sourceTree = "<group>"; };
+		4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeHeightWarningView.h; sourceTree = "<group>"; };
+		4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeHeightWarningView.m; sourceTree = "<group>"; };
+		4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeHeightWarningView.xib; sourceTree = "<group>"; };
+		4D879C6F1980D37400B7AE69 /* UIScrollView+HitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HitTest.h"; sourceTree = "<group>"; };
+		4D879C701980D37400B7AE69 /* UIScrollView+HitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HitTest.m"; sourceTree = "<group>"; };
+		4D879C741980F50300B7AE69 /* CXAlertBackgroundWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertBackgroundWindow.h; sourceTree = "<group>"; };
+		4D879C751980F50300B7AE69 /* CXAlertBackgroundWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertBackgroundWindow.m; sourceTree = "<group>"; };
+		4D879C761980F50300B7AE69 /* CXAlertButtonContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertButtonContainerView.h; sourceTree = "<group>"; };
+		4D879C771980F50300B7AE69 /* CXAlertButtonContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertButtonContainerView.m; sourceTree = "<group>"; };
+		4D879C781980F50300B7AE69 /* CXAlertButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertButtonItem.h; sourceTree = "<group>"; };
+		4D879C791980F50300B7AE69 /* CXAlertButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertButtonItem.m; sourceTree = "<group>"; };
+		4D879C7A1980F50300B7AE69 /* CXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertView.h; sourceTree = "<group>"; };
+		4D879C7B1980F50300B7AE69 /* CXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertView.m; sourceTree = "<group>"; };
+		4D879C7C1980F50300B7AE69 /* CXAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertViewController.h; sourceTree = "<group>"; };
+		4D879C7D1980F50300B7AE69 /* CXAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertViewController.m; sourceTree = "<group>"; };
+		4D879C881980F55E00B7AE69 /* LFDisplayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFDisplayBridge.h; sourceTree = "<group>"; };
+		4D879C891980F55E00B7AE69 /* LFDisplayBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFDisplayBridge.m; sourceTree = "<group>"; };
+		4D879C8A1980F55E00B7AE69 /* LFGlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFGlassView.h; sourceTree = "<group>"; };
+		4D879C8B1980F55E00B7AE69 /* LFGlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFGlassView.m; sourceTree = "<group>"; };
+		4D879C8C1980F55E00B7AE69 /* LiveFrost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveFrost.h; sourceTree = "<group>"; };
 		4DC05E531974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		4DC05E541974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 		4DC05E551974C82E0011B415 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
@@ -422,6 +469,8 @@
 		4D435144197511E90018D4F9 /* TemplateView */ = {
 			isa = PBXGroup;
 			children = (
+				4D879C6F1980D37400B7AE69 /* UIScrollView+HitTest.h */,
+				4D879C701980D37400B7AE69 /* UIScrollView+HitTest.m */,
 				DBC6109C1978FC980003EC11 /* BlankView.h */,
 				DBC6109D1978FC980003EC11 /* BlankView.m */,
 				DBD489431977D37900532968 /* ReceiverAndBindView.h */,
@@ -444,6 +493,9 @@
 				DBC610A8197909950003EC11 /* yumeSwicthAndVoltageView.h */,
 				DBC610A9197909950003EC11 /* yumeSwicthAndVoltageView.m */,
 				DBC610AA197909950003EC11 /* yumeSwicthAndVoltageView.xib */,
+				4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */,
+				4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */,
+				4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */,
 				DBC610AB197909950003EC11 /* yumeXYZView.h */,
 				DBC610AC197909950003EC11 /* yumeXYZView.m */,
 				DBC610AD197909950003EC11 /* yumeXYZView.xib */,
@@ -477,6 +529,28 @@
 				DB0E56A6197A21A8006D471C /* slider.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		4D879C731980F50300B7AE69 /* CXAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4D879C881980F55E00B7AE69 /* LFDisplayBridge.h */,
+				4D879C891980F55E00B7AE69 /* LFDisplayBridge.m */,
+				4D879C8A1980F55E00B7AE69 /* LFGlassView.h */,
+				4D879C8B1980F55E00B7AE69 /* LFGlassView.m */,
+				4D879C8C1980F55E00B7AE69 /* LiveFrost.h */,
+				4D879C741980F50300B7AE69 /* CXAlertBackgroundWindow.h */,
+				4D879C751980F50300B7AE69 /* CXAlertBackgroundWindow.m */,
+				4D879C761980F50300B7AE69 /* CXAlertButtonContainerView.h */,
+				4D879C771980F50300B7AE69 /* CXAlertButtonContainerView.m */,
+				4D879C781980F50300B7AE69 /* CXAlertButtonItem.h */,
+				4D879C791980F50300B7AE69 /* CXAlertButtonItem.m */,
+				4D879C7A1980F50300B7AE69 /* CXAlertView.h */,
+				4D879C7B1980F50300B7AE69 /* CXAlertView.m */,
+				4D879C7C1980F50300B7AE69 /* CXAlertViewController.h */,
+				4D879C7D1980F50300B7AE69 /* CXAlertViewController.m */,
+			);
+			path = CXAlertView;
 			sourceTree = "<group>";
 		};
 		4DC05E521974C82E0011B415 /* SWTableViewCell */ = {
@@ -704,6 +778,7 @@
 				4DC05E521974C82E0011B415 /* SWTableViewCell */,
 				4D435144197511E90018D4F9 /* TemplateView */,
 				4DC05E661974C82E0011B415 /* TemplateView2 */,
+				4D879C731980F50300B7AE69 /* CXAlertView */,
 				4DC05E711974C82E0011B415 /* yume */,
 				4DC05E851974C82E0011B415 /* YumeKit-Prefix.pch */,
 				4DF8E4AA1974BA0E00023E2A /* YumeKit.h */,
@@ -766,29 +841,38 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D879C8D1980F55E00B7AE69 /* LFDisplayBridge.h in Headers */,
 				DB9437BB19790B9800AA2AE8 /* MCUPacketDevice.h in Headers */,
+				4D879C8F1980F55E00B7AE69 /* LFGlassView.h in Headers */,
 				DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */,
 				DBC610AE197909950003EC11 /* UITextField+Yume.h in Headers */,
 				DBC610B3197909950003EC11 /* yumeSensitivityView.h in Headers */,
+				4D879C7E1980F50300B7AE69 /* CXAlertBackgroundWindow.h in Headers */,
 				DB9437C819790B9800AA2AE8 /* yumeRCPRemoteControllerRadio.h in Headers */,
 				4DC05E9F1974C82E0011B415 /* TemplateView2.h in Headers */,
 				DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */,
 				4DF8E4AB1974BA0E00023E2A /* YumeKit.h in Headers */,
 				4D6BED25197A596900F6B545 /* ViewSource.h in Headers */,
 				4DC05E8E1974C82E0011B415 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
+				4D879C841980F50300B7AE69 /* CXAlertView.h in Headers */,
 				DBC6109E1978FC980003EC11 /* BlankView.h in Headers */,
 				DB9437C419790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.h in Headers */,
+				4D879C801980F50300B7AE69 /* CXAlertButtonContainerView.h in Headers */,
+				4D879C861980F50300B7AE69 /* CXAlertViewController.h in Headers */,
 				DBC610B0197909950003EC11 /* yumeImageButtonsView.h in Headers */,
 				DB9437BE19790B9800AA2AE8 /* yumeBTLERemoteController.h in Headers */,
 				DB9B36F6197A58CD005B0021 /* AngleOfVisibilityView.h in Headers */,
+				4D879C911980F55E00B7AE69 /* LiveFrost.h in Headers */,
 				DB9437C019790B9800AA2AE8 /* yumeDeviceListAlertTableView.h in Headers */,
 				DB9437CC19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.h in Headers */,
 				DB9437CA19790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.h in Headers */,
 				4DC05E9C1974C82E0011B415 /* TemplateView1.h in Headers */,
+				4D879C711980D37400B7AE69 /* UIScrollView+HitTest.h in Headers */,
 				DB9B36F0197A49B4005B0021 /* LabelAndSegment.h in Headers */,
 				4DC05E8C1974C82E0011B415 /* SWTableViewCell.h in Headers */,
 				4DDB13831974C93200045C40 /* APSM-Prefix.pch in Headers */,
 				4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */,
 				DB9437BC19790B9800AA2AE8 /* VerticalUILabel.h in Headers */,
 				DB9437C219790B9800AA2AE8 /* yumeLanguage.h in Headers */,
 				DB9437C619790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.h in Headers */,
@@ -801,6 +885,7 @@
 				DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */,
 				4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */,
 				4DC05E901974C82E0011B415 /* SWUtilityButtonView.h in Headers */,
+				4D879C821980F50300B7AE69 /* CXAlertButtonItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +961,7 @@
 			dependencies = (
 				4DF8E4B31974BA0E00023E2A /* PBXTargetDependency */,
 				4DF8E4C71974BA0F00023E2A /* PBXTargetDependency */,
+				4D8422131980A091008113AC /* PBXTargetDependency */,
 			);
 			name = YumeKitTests;
 			productName = YumeKitTests;
@@ -893,6 +979,7 @@
 				TargetAttributes = {
 					4DF8E43F1974B98500023E2A = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = LWKUTHEWPW;
 					};
 					4DF8E4551974B98600023E2A = {
 						CreatedOnToolsVersion = 6.0;
@@ -980,6 +1067,7 @@
 				DB9B36F9197A5A72005B0021 /* AngleOfVisibilityView.xib in Resources */,
 				DBCF959A197CF1CB000ECE81 /* CradleHead360.xib in Resources */,
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
+				4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */,
 				DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */,
 				DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */,
 				4DC05E991974C82E0011B415 /* pic_Blade-Direction_002(172x172).png in Resources */,
@@ -1061,14 +1149,20 @@
 				DB9437BF19790B9800AA2AE8 /* yumeBTLERemoteController.m in Sources */,
 				DB9437C119790B9800AA2AE8 /* yumeDeviceListAlertTableView.m in Sources */,
 				4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				4D879C901980F55E00B7AE69 /* LFGlassView.m in Sources */,
 				DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */,
 				DB9437BD19790B9800AA2AE8 /* VerticalUILabel.m in Sources */,
 				4DC05E911974C82E0011B415 /* SWUtilityButtonView.m in Sources */,
+				4D879C811980F50300B7AE69 /* CXAlertButtonContainerView.m in Sources */,
 				DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */,
 				DBC610B4197909950003EC11 /* yumeSensitivityView.m in Sources */,
 				DB9437CD19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m in Sources */,
+				4D879C851980F50300B7AE69 /* CXAlertView.m in Sources */,
+				4D879C7F1980F50300B7AE69 /* CXAlertBackgroundWindow.m in Sources */,
 				DB8D1C911978E7C900FC88BA /* TransmitterRadioView.m in Sources */,
+				4D879C831980F50300B7AE69 /* CXAlertButtonItem.m in Sources */,
 				4DC05E9D1974C82E0011B415 /* TemplateView1.m in Sources */,
+				4D879C721980D37400B7AE69 /* UIScrollView+HitTest.m in Sources */,
 				DB9B36F7197A58CD005B0021 /* AngleOfVisibilityView.m in Sources */,
 				DBC610BA197909950003EC11 /* yumeXYZView.m in Sources */,
 				DBCF9598197CF106000ECE81 /* CradleHead360.m in Sources */,
@@ -1080,8 +1174,11 @@
 				DB9B36F1197A49B4005B0021 /* LabelAndSegment.m in Sources */,
 				4DC05E891974C82E0011B415 /* SWCellScrollView.m in Sources */,
 				DB9437CB19790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.m in Sources */,
+				4D879C8E1980F55E00B7AE69 /* LFDisplayBridge.m in Sources */,
 				4DC05E8B1974C82E0011B415 /* SWLongPressGestureRecognizer.m in Sources */,
+				4D879C871980F50300B7AE69 /* CXAlertViewController.m in Sources */,
 				4DC05EA01974C82E0011B415 /* TemplateView2.m in Sources */,
+				4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */,
 				DBC610B7197909950003EC11 /* yumeSwicthAndVoltageView.m in Sources */,
 				DB9437C519790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.m in Sources */,
 				DB9437C719790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.m in Sources */,
@@ -1099,6 +1196,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4D8422131980A091008113AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF8E4A51974BA0E00023E2A /* YumeKit */;
+			targetProxy = 4D8422121980A091008113AC /* PBXContainerItemProxy */;
+		};
 		4DF8E4581974B98600023E2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4DF8E43F1974B98500023E2A /* APSM */;
@@ -1230,11 +1332,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSM/APSM-Prefix.pch";
 				INFOPLIST_FILE = APSM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1243,11 +1349,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APSM/APSM-Prefix.pch";
 				INFOPLIST_FILE = APSM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

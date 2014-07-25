@@ -7,12 +7,19 @@
 //
 
 #import "SegmentAndSlider.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 #import "ViewSource.h"
+
+typedef NSInteger(^yumeAdapter)(NSInteger value);
 
 @interface SegmentAndSlider()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
+
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *sliderSource;
+@property (strong,nonatomic) yumeAdapter adapter;
 
 @end
 
@@ -47,6 +54,11 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
+    
+    _slider.enabled = NO;
+//    _segmentedControl.enabled = NO;
+    _adapter = nil;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -69,7 +81,16 @@
 }
 
 -(void)processFuture{
-    
+    if (_sliderKeyPath) {
+        _sliderSource = [YumeBTSharedInstance valueForKeyPath:_sliderKeyPath];
+        self.slider.minimumValue = [[_sliderSource valueForKey:@"valueMin"] floatValue];
+        self.slider.value = [[_sliderSource valueForKey:@"valueUI"] floatValue];
+        self.slider.maximumValue = [[_sliderSource valueForKey:@"valueMax"] floatValue];
+        
+        if (_adapter) {
+            [_segmentedControl setSelectedSegmentIndex:_adapter(_sliderSource.valueUI)];
+        }
+    }
 }
 
 -(void)processViewSource{
@@ -86,6 +107,7 @@
         
         if ([className isEqualToString:type]) {
             itemArray = dict[@"itemArray"];
+            _adapter = dict[@"adapter"];
         }
         
     }
@@ -93,11 +115,25 @@
     self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
     self.segmentedControl.tintColor = [UIColor whiteColor];
     self.segmentedControl.selectedSegmentIndex = 0;
+    _segmentedControl.enabled = NO;
     [self.view addSubview:self.segmentedControl];
 }
 
 -(id)debugQuickLookObject{
     return self;
+}
+
+#pragma mark - Future Method
+
+-(void)radioData:(NSNotification*) notification {
+    self.slider.value = _sliderSource.valueUI;
+    if (_adapter) {
+        [_segmentedControl setSelectedSegmentIndex:_adapter(_sliderSource.valueUI)];
+    }
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
 }
 
 @end

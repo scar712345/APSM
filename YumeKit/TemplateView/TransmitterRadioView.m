@@ -13,8 +13,6 @@
 
 @interface TransmitterRadioView()
 
-@property (weak,nonatomic) yumeRCPRemoteControllerParameter *sliderSource;
-
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UISlider *slider;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
@@ -23,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelMin;
 @property (weak, nonatomic) IBOutlet UILabel *labelDef;
 @property (weak, nonatomic) IBOutlet UILabel *labelMax;
+
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *sliderSource;
 
 @end
 

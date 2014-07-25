@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A283o" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -162,10 +162,8 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelReceiverText" value="123"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelBindingText" value="456"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="btnReceiverText" value="BtnA"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="btnBindingText" value="BtnB"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="receiverKeyPath" value="parameterDatas.CMDSource"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="bindingKeyPath" value="parameterDatas.SPK_Binding"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-3c-np6" customClass="BlankView">
@@ -244,6 +242,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View33"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Aux1"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knm-ne-3gu">
@@ -255,6 +254,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View32"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Pit"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNS-Vj-I0o" customClass="BlankView">
@@ -265,6 +265,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View33"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Aux2"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -278,6 +279,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage1View31"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="sliderKeyPath" value="radioDatas.Ger"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -320,14 +322,14 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <viewControllerLayoutGuide type="bottom" id="jCW-fW-xz3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DFf-jD-oZc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-jP-eDw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="day-UJ-pXw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d97-hz-9I3" customClass="AngleOfVisibilityView">
                                         <rect key="frame" x="10" y="300" width="300" height="94"/>
@@ -342,10 +344,86 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonKeyPath" value="parameterDatas.OSD_VisionAngle"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-R7-P3I" customClass="BlankView">
-                                        <rect key="frame" x="10" y="402" width="300" height="256"/>
+                                        <rect key="frame" x="10" y="402" width="300" height="803"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-TD-Eoa" customClass="yumeSwicthAndVoltageView">
+                                                <rect key="frame" x="-9" y="46" width="320" height="170"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_VoltageEnable"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_VoltageWarning"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View1"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-5W-8yz" customClass="yumeSwicthAndVoltageView">
+                                                <rect key="frame" x="-9" y="223" width="320" height="170"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_SatelliteEnable"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_SatelliteWarning"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View2"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-Bc-U20" customClass="yumeSwicthAndVoltageView">
+                                                <rect key="frame" x="-9" y="401" width="320" height="170"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_DistanceEnable"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_DistanceWarning"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View3"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSz-BP-KwK" customClass="yumeHeightWarningView">
+                                                <rect key="frame" x="-9" y="579" width="320" height="204"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View4"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_HeightEnable"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textField1KeyPath" value="parameterDatas.OSD_HeightHWarning"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textField2KeyPath" value="parameterDatas.OSD_HeightLWarning"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -357,6 +435,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="警告提醒顯示"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-Uw-j32" customClass="LabelAndSegment">
@@ -373,6 +452,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View11"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_Unit"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-Zn-KuX" customClass="LabelAndSegment">
@@ -389,6 +469,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View12"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_VideoFormat"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWd-ar-Ray" customClass="LabelAndSegment">
@@ -405,10 +486,49 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View13"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_ShowPosition"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-gk-yu8" customClass="BlankView">
-                                        <rect key="frame" x="10" y="666" width="300" height="200"/>
+                                        <rect key="frame" x="10" y="1222" width="300" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-uk-ZRW">
+                                                <rect key="frame" x="108" y="20" width="84" height="30"/>
+                                                <state key="normal" title="UP">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="screenUp:" destination="aKr-I7-x09" eventType="touchUpInside" id="oCq-Gq-NCb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCO-js-A7b">
+                                                <rect key="frame" x="108" y="157" width="84" height="30"/>
+                                                <state key="normal" title="DOWN">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="screenDown:" destination="aKr-I7-x09" eventType="touchUpInside" id="8kj-5J-wnv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KM1-Ju-3G3">
+                                                <rect key="frame" x="20" y="85" width="84" height="30"/>
+                                                <state key="normal" title="LEFT">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="screenLeft:" destination="aKr-I7-x09" eventType="touchUpInside" id="l3R-S8-wxY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lel-k1-xDF">
+                                                <rect key="frame" x="196" y="85" width="84" height="30"/>
+                                                <state key="normal" title="RIGHT">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="screenRight:" destination="aKr-I7-x09" eventType="touchUpInside" id="nqO-IL-gmd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -420,6 +540,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="影像微調"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -428,7 +549,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1000"/>
+                    <size key="freeformSize" width="320" height="1500"/>
                     <connections>
                         <outlet property="backgroundView" destination="dOA-jP-eDw" id="Gv3-pr-OXb"/>
                         <outlet property="lastView" destination="kZg-gk-yu8" id="7kq-bD-d6d"/>
@@ -437,7 +558,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fn7-aK-NUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="871"/>
+            <point key="canvasLocation" x="2146" y="1321"/>
         </scene>
         <!--Cradle Head Page1-->
         <scene sceneID="u0X-zt-70n">
@@ -575,7 +696,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFx-zy-ZO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="2160"/>
+            <point key="canvasLocation" x="2146" y="2978"/>
         </scene>
         <!--Cradle Head Page2-->
         <scene sceneID="wyf-vp-SSS">
@@ -624,7 +745,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADD-o7-zPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="2160"/>
+            <point key="canvasLocation" x="2539" y="2978"/>
         </scene>
         <!--Page2-->
         <scene sceneID="cOa-Z2-SyP">
@@ -673,6 +794,8 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="buttonSelected">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage2View2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="buttonsKeyPath" value="parameterDatas.multiRotorMode"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mk-Pgc" customClass="yumeSensitivityView">

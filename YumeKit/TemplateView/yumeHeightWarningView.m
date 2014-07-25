@@ -1,32 +1,35 @@
 //
-//  yumeSwicthAndVoltageView.m
+//  yumeHeightWarningView.m
 //  APSM
 //
-//  Created by APP559 on 2014/7/14.
+//  Created by APP559 on 2014/7/24.
 //  Copyright (c) 2014年 yume. All rights reserved.
 //
 
-#import "yumeSwicthAndVoltageView.h"
+#import "yumeHeightWarningView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
 #import "ViewSource.h"
 
-@interface yumeSwicthAndVoltageView ()<UITextFieldDelegate>
+@interface yumeHeightWarningView ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent1;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent2;
-@property (weak, nonatomic) IBOutlet UILabel *labelUnit;
+@property (weak, nonatomic) IBOutlet UILabel *labelUnit1;
+@property (weak, nonatomic) IBOutlet UILabel *labelUnit2;
 
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *segmentSource;
-@property (weak,nonatomic) yumeRCPRemoteControllerParameter *textFieldSource;
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *textField1Source;
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *textField2Source;
 
 @end
 
-@implementation yumeSwicthAndVoltageView
+@implementation yumeHeightWarningView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -89,9 +92,14 @@
         [_segment setSelectedSegmentIndex:((int)(_segmentSource.valueUI + 1) % 2)];
     }
     
-    if (_textFieldKeyPath) {
-        _textFieldSource = [YumeBTSharedInstance valueForKeyPath:_textFieldKeyPath];
-        _textField.text = [[_textFieldSource valueForKey:@"valueUI"] stringValue];
+    if (_textField1KeyPath) {
+        _textField1Source = [YumeBTSharedInstance valueForKeyPath:_textField1KeyPath];
+        _textField1.text = [[_textField1Source valueForKey:@"valueUI"] stringValue];
+    }
+    
+    if (_textField2KeyPath) {
+        _textField2Source = [YumeBTSharedInstance valueForKeyPath:_textField2KeyPath];
+        _textField2.text = [[_textField2Source valueForKey:@"valueUI"] stringValue];
     }
 }
 
@@ -106,7 +114,8 @@
             _viewTitle.text = dict[@"viewTitle"];
             _viewContent1.text = dict[@"viewContent1"];
             _viewContent2.text = dict[@"viewContent2"];
-            _labelUnit.text = dict[@"labelUnit"];
+            _labelUnit1.text = dict[@"labelUnit1"];
+            _labelUnit2.text = dict[@"labelUnit2"];
         }
         
     }
@@ -158,7 +167,14 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    _textFieldSource.valueUI = textField.text.floatValue;
+    
+    if (textField == self.textField1) {
+        _textField1Source.valueUI = textField.text.floatValue;
+    }
+    
+    if (textField == self.textField2) {
+        _textField2Source.valueUI = textField.text.floatValue;
+    }
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{

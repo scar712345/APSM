@@ -21,7 +21,12 @@
 +(NSMutableData*)askDevice{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_UNKNOWN,COMMAND_ASK_DEVICE,0};
-    size_t size = sizeof(packet.deviceHeader);
+    
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = 0;
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -30,7 +35,12 @@
 +(NSMutableData*)askVersion{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_ASK_VERSION,0};
-    size_t size = sizeof(packet.deviceHeader);
+    
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = 0;
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -39,8 +49,13 @@
 +(NSMutableData*)sendPassword:(int32_t)password{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_SEND_PASSWORD,4};
+    
     packet.typeSendPassword.password = password;
-    size_t size = sizeof(packet.deviceHeader) + sizeof(packet.typeSendPassword.password);
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = sizeof(packet.typeSendPassword.password);
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -49,7 +64,12 @@
 +(NSMutableData*)radio{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_RADIO,0};
-    size_t size = sizeof(packet.deviceHeader);
+    
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = 0;
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -58,7 +78,12 @@
 +(NSMutableData*)readParameters{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_READ_PARAMETERS,0};
-    size_t size = sizeof(packet.deviceHeader);
+
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = 0;
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -66,9 +91,14 @@
 
 +(NSMutableData*)saveParameters:(devicePacketParameters)parameters{
     
-    devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_SAVE_PARAMETERS,84};
+    devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_SAVE_PARAMETERS,4 * 37};
+    
     packet.typeParameters = parameters;
-    size_t size = sizeof(packet.deviceHeader) + sizeof(packet.typeParameters);
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = sizeof(packet.typeParameters);
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -77,7 +107,14 @@
 +(NSMutableData*)updateParameterWithIndex:(float)index WithValue:(float)value{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_UPDATE_PARAMETER,8};
-    size_t size = sizeof(packet.deviceHeader) + sizeof(packet.typeSingleParameter);
+    
+    packet.typeSingleParameter.index = index;
+    packet.typeSingleParameter.value = value;
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = sizeof(packet.typeSingleParameter);
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];
@@ -86,7 +123,12 @@
 +(NSMutableData*)defaultParameter{
     
     devicePacket packet = {PACKET_HEADER_HEAD,0,PACKET_HEADER_DEVICE_ID_APSM,COMMAND_DEFAULT_PARAMETER,0};
-    size_t size = sizeof(packet.deviceHeader);
+
+    size_t headerSize = sizeof(packet.deviceHeader);
+    size_t contentSize = 0;
+    size_t size = headerSize + contentSize;
+    packet.deviceHeader.len = contentSize;
+    
     packet.deviceHeader.checksum = [self checksumWithBytes:(Byte *)&packet.deviceHeader WithSize:(int)size];
     
     return [self structToNSMutableData:&packet size:size];

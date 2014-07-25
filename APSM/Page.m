@@ -17,15 +17,15 @@
 -(void)viewDidLayoutSubviews{
     _scrollView.contentSize = CGSizeMake(ScreenWidth, _lastView.frame.origin.y + _lastView.frame.size.height);
     _scrollView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64 - 25 - 10 - 25 - 50);
-    
-    UIView *strongBackgroundView = _backgroundView;
-    if (strongBackgroundView) {
-        [strongBackgroundView removeFromSuperview];
-    }
 }
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     _scrollView.indicatorStyle=UIScrollViewIndicatorStyleWhite;
+    
+    UIView *strongBackgroundView = _backgroundView;
+    if (strongBackgroundView) {
+        [strongBackgroundView removeFromSuperview];
+    }
 }
 @end
