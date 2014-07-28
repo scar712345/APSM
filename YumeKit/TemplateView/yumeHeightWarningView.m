@@ -111,9 +111,9 @@
         NSString *className = NSStringFromClass([self class]);
         
         if ([className isEqualToString:type]) {
-            _viewTitle.text = dict[@"viewTitle"];
-            _viewContent1.text = dict[@"viewContent1"];
-            _viewContent2.text = dict[@"viewContent2"];
+            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil) ;
+            _viewContent1.text = NSLocalizedString( dict[@"viewContent1"], nil);
+            _viewContent2.text = NSLocalizedString( dict[@"viewContent2"], nil);
             _labelUnit1.text = dict[@"labelUnit1"];
             _labelUnit2.text = dict[@"labelUnit2"];
         }

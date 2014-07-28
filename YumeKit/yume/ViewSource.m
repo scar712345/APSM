@@ -24,35 +24,35 @@
 
 -(NSDictionary*)APSMPage1View21{
     return @{@"type":@"TransmitterRadioView",
-             @"labelTitle":@"AIL",
-             @"labelLeft":@"Left",
-             @"labelRight":@"Right"};
+             @"labelTitle":NSLocalizedString(@"AIL", nil),
+             @"labelLeft":NSLocalizedString(@"Left", nil),
+             @"labelRight":NSLocalizedString(@"Right", nil)};
 }
 
 -(NSDictionary*)APSMPage1View22{
     return @{@"type":@"TransmitterRadioView",
-             @"labelTitle":@"ELE",
-             @"labelLeft":@"Up",
-             @"labelRight":@"Down"};
+             @"labelTitle":NSLocalizedString(@"ELE", nil),
+             @"labelLeft":NSLocalizedString(@"Up", nil),
+             @"labelRight":NSLocalizedString(@"Down", nil)};
 }
 
 -(NSDictionary*)APSMPage1View23{
     return @{@"type":@"TransmitterRadioView",
-             @"labelTitle":@"RUD",
-             @"labelLeft":@"Left",
-             @"labelRight":@"Right"};
+             @"labelTitle":NSLocalizedString(@"RUD", nil),
+             @"labelLeft":NSLocalizedString(@"Left", nil),
+             @"labelRight":NSLocalizedString(@"Right", nil)};
 }
 
 -(NSDictionary*)APSMPage1View24{
     return @{@"type":@"TransmitterRadioView",
-             @"labelTitle":@"THR",
-             @"labelLeft":@"Idle",
-             @"labelRight":@"Full"};
+             @"labelTitle":NSLocalizedString(@"THR", nil),
+             @"labelLeft":NSLocalizedString(@"Idle", nil),
+             @"labelRight":NSLocalizedString(@"Full", nil)};
 }
 
 -(NSDictionary*)APSMPage1View31{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"MANUAL",@"ATTITUDE",@"GPS"],
+             @"itemArray":@[NSLocalizedString(@"MANUAL", nil),NSLocalizedString(@"ATTITUDE", nil),NSLocalizedString(@"GPS", nil)],
              @"adapter":^NSInteger(NSInteger value) {
                  if (-1000 <= value && value <= -551) {
                      return 0;
@@ -68,7 +68,7 @@
 
 -(NSDictionary*)APSMPage1View32{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"SMART",@"OFF"],
+             @"itemArray":@[NSLocalizedString(@"SMART", nil),NSLocalizedString(@"OFF", nil)],
              @"adapter":^NSInteger(NSInteger value) {
                  if (-1000 <= value && value <= 0) {
                      return 0;
@@ -82,7 +82,7 @@
 
 -(NSDictionary*)APSMPage1View33{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"HOME",@"OFF"],
+             @"itemArray":@[NSLocalizedString(@"HOME", nil),NSLocalizedString(@"OFF", nil)],
              @"adapter":^NSInteger(NSInteger value) {
                  if (-1000 <= value && value <= 0) {
                      return 0;
@@ -96,7 +96,7 @@
 
 -(NSDictionary*)APSMPage1View34{
     return @{@"type":@"SegmentAndSlider",
-             @"itemArray":@[@"ON",@"OFF"],
+             @"itemArray":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)],
              @"adapter":^NSInteger(NSInteger value) {
                  if (-1000 <= value && value <= 0) {
                      return 0;
@@ -112,7 +112,7 @@
 
 -(NSDictionary*)APSMPage2View2{
     return @{@"type":@"yumeImageButtonsView",
-             @"viewTitle":@"飛行器類型",
+             @"viewTitle":NSLocalizedString(@"飛行器類型", nil),
              @"images":@[@"wing4_1.jpg",
                          @"wing4_2.jpg",
                          @"wing6_1.jpg",
@@ -131,17 +131,17 @@
 
 -(NSDictionary*)APSMPage3View2{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":@"低電壓返航保護裝置",
-             @"viewContent1":@"電壓低於",
-             @"viewContent2":@"飛行器執行返回Home點",
+             @"viewTitle":NSLocalizedString(@"低電壓返航保護裝置", nil),
+             @"viewContent1":NSLocalizedString(@"電壓低於", nil),
+             @"viewContent2":NSLocalizedString(@"飛行器執行返回Home點", nil),
              @"labelUnit":@"V"};
 }
 
 -(NSDictionary*)APSMPage3View3{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":@"低電壓警示燈閃爍提醒",
-             @"viewContent1":@"電壓低於",
-             @"viewContent2":@"飛行器警示燈閃爍提醒",
+             @"viewTitle":NSLocalizedString(@"低電壓警示燈閃爍提醒", nil),
+             @"viewContent1":NSLocalizedString(@"電壓低於", nil),
+             @"viewContent2":NSLocalizedString(@"飛行器警示燈閃爍提醒", nil),
              @"labelUnit":@"V"};
 }
 
@@ -149,51 +149,51 @@
 
 -(NSDictionary*)OSDPage1View11{
     return @{@"type":@"LabelAndSegment",
-             @"labelTitle":@"顯示單位",
-             @"segmentedControl":@[@"公制",@"英制"]};
+             @"labelTitle":NSLocalizedString(@"顯示單位", nil),
+             @"segmentedControl":@[NSLocalizedString(@"公制", nil),NSLocalizedString(@"英制",nil)]};
 }
 
 -(NSDictionary*)OSDPage1View12{
     return @{@"type":@"LabelAndSegment",
-             @"labelTitle":@"影像格式",
-             @"segmentedControl":@[@"NTSC",@"PAL"]};
+             @"labelTitle":NSLocalizedString(@"影像格式", nil),
+             @"segmentedControl":@[NSLocalizedString(@"NTSC", nil),NSLocalizedString(@"PAL", nil)]};
 }
 
 -(NSDictionary*)OSDPage1View13{
     return @{@"type":@"LabelAndSegment",
-             @"labelTitle":@"顯示經緯度",
-             @"segmentedControl":@[@"ON",@"OFF"]};
+             @"labelTitle":NSLocalizedString(@"顯示經緯度", nil),
+             @"segmentedControl":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)]};
 }
 
 -(NSDictionary*)APSMPage5View1{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":@"低電壓提醒",
-             @"viewContent1":@"電壓低於",
+             @"viewTitle":NSLocalizedString(@"低電壓提醒", nil),
+             @"viewContent1":NSLocalizedString(@"電壓低於", nil),
              @"viewContent2":@"",
              @"labelUnit":@"V"};
 }
 
 -(NSDictionary*)APSMPage5View2{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":@"衛星數量",
-             @"viewContent1":@"衛星數量低於",
+             @"viewTitle":NSLocalizedString(@"衛星數量", nil),
+             @"viewContent1":NSLocalizedString(@"衛星數量低於", nil),
              @"viewContent2":@"",
-             @"labelUnit":@"個"};
+             @"labelUnit":NSLocalizedString(@"個", nil)};
 }
 
 -(NSDictionary*)APSMPage5View3{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":@"飛行距離提醒",
-             @"viewContent1":@"飛行距離超過",
+             @"viewTitle":NSLocalizedString(@"飛行距離提醒", nil),
+             @"viewContent1":NSLocalizedString(@"飛行距離超過", nil),
              @"viewContent2":@"",
              @"labelUnit":@"M"};
 }
 
 -(NSDictionary*)APSMPage5View4{
     return @{@"type":@"yumeHeightWarningView",
-             @"viewTitle":@"飛行高度提醒",
-             @"viewContent1":@"飛行高度超過",
-             @"viewContent2":@"飛行高度低於",
+             @"viewTitle":NSLocalizedString(@"飛行高度提醒", nil),
+             @"viewContent1":NSLocalizedString(@"飛行高度超過", nil),
+             @"viewContent2":NSLocalizedString(@"飛行高度低於", nil),
              @"labelUnit1":@"M",
              @"labelUnit2":@"M"};
 }
@@ -202,20 +202,20 @@
 
 -(NSDictionary*)CradleHeadPage1View31{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":@"Pan",
-             @"segmentedControl":@[@"Manual",@"Attitude"]};
+             @"labelTitle":NSLocalizedString(@"Pan", nil),
+             @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
 -(NSDictionary*)CradleHeadPage1View32{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":@"Roll",
-             @"segmentedControl":@[@"Manual",@"Attitude"]};
+             @"labelTitle":NSLocalizedString(@"Roll", nil),
+             @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
 -(NSDictionary*)CradleHeadPage1View33{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":@"Tilt",
-             @"segmentedControl":@[@"Manual",@"Attitude"]};
+             @"labelTitle":NSLocalizedString(@"Tilt", nil),
+             @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
 -(id)valueForUndefinedKey:(NSString *)key{

@@ -105,23 +105,23 @@
 
 -(void)processViewSource{
     if (_viewTitleText) {
-        _viewTitle.text = _viewTitleText;
+        _viewTitle.text = NSLocalizedString(_viewTitleText, nil);
     }
     
     if (_viewContentText) {
-        _viewContent.text = _viewContentText;
+        _viewContent.text = NSLocalizedString(_viewContentText, nil);
     }
     
     if (_xText) {
-        _labelX.text = _xText;
+        _labelX.text = NSLocalizedString(_xText, nil);
     }
     
     if (_yText) {
-        _labelY.text = _yText;
+        _labelY.text = NSLocalizedString(_yText, nil);
     }
     
     if (_zText) {
-        _labelZ.text = _zText;
+        _labelZ.text = NSLocalizedString(_zText, nil);
     }
     
     if (_unitText) {

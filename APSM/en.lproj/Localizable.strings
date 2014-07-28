@@ -18,52 +18,96 @@
 "Incorrect Version" = "Unsupported version";
 "Formatting errors or corrupted file" = "Corrupted file or formatting errors";//
 
-//page10
 
-"Page1_0Warning" = "Are you sure to apply beginner settings ?";
+//APSM page 1
+
+"SBus" = "SBus";
+"Traditional" = "Traditional";
+"SPK DMS2" = "SPK DMS2";
+"SPK DMSX" = "SPK DMSX";
+"Xbus" = "Xbus";
+"JR DMSS" = "JR DMSS";
+"FlySky" = "FlySky";
+
+"No bind" = "No bind";
+"Binding" = "Binding";
+"Binding with FS" = "Binding with FS";
+
+"Cancel" = "Cancel";
+"OK" = "OK";
+
+"Transmitter" = "Transmitter";
+
+//APSMPage1View21
+"AIL" = "AIL";
+"Left" = "Left";
+"Right" = "Right";
+
+//APSMPage1View22
+"ELE" = "ELE";
+"Up" = "Up";
+"Down" = "Down";
+
+//APSMPage1View23
+"RUD" = "RUD";
+"Left" = "Left";
+"Right" = "Right";
+
+//APSMPage1View24
+"THR" = "THR";
+"Idle" = "Idle";
+"Full" = "Full";
+
+//APSMPage1View31
+"MANUAL" = "MANUAL";
+"ATTITUDE" = "ATTITUDE";
+"GPS" = "GPS";
+"SMART" = "SMART";
+"OFF" = "OFF";
+
+//APSMPage1View33
+"HOME" = "HOME";
+"OFF" = "OFF";
+
+//APSMPage1View34
+"ON" = "ON";
+"OFF" = "OFF";
 
 
-//page11
-"RestWarning" = "Click \"Reset\" will revert back to system default value, are you sure?" ;
-"Elevator Precomp" = "Elevator Precomp.";
+//APSM page 2
 
-//page12
-"RUD Gyro Gain" = "Rud Gyro Gain";
+//APSMPage2View2
+"飛行器類型" = "飛行器類型";
 
-//page21
+//APSM page 3
 
-"WarningMessagePage21" = "This process is for setting up of helicopter hardware.\n\nIf your Gpro hasn’t been through setup process or if you are performing the setup process again, please make sure to choose Create New Setting, and follow instruction to complete the setup accordingly.\n\nIf your Gpro is already been through the setup process or its hardware parameters was adjusted previously, please choose Edit Current Setting to make changes to your setup.";
+//APSMPage3View2
+"低電壓返航保護裝置" = "低電壓返航保護裝置";
+"電壓低於" = "電壓低於";
+"飛行器執行返回Home點" = "飛行器執行返回Home點";
 
-"All previous settings in Gpro will be erased if you choose Create New Setting.\n\nIf the Gpro has not been through setup process or if you are performing the setup process again, please click “Yes”, otherwise please choose “No”."= "All previous settings in Gpro will be erased if you choose Create New Setting.\n\nIf the Gpro has not been through setup process or if you are performing the setup process again, please click \"Yes\", otherwise please choose \"No\".";
+//APSMPage3View3
+"低電壓警示燈閃爍提醒" = "低電壓警示燈閃爍提醒";
+"電壓低於" = "電壓低於";
+"飛行器警示燈閃爍提醒" = "飛行器警示燈閃爍提醒";
 
-"Confirm “Create New Setting?”" = "Confirm \"Create New Setting?\"";
-//page22
-
-"WarningMessage" = "Your current channel mapping selection contains duplicate channels.\n\nThe setup program will remain in this page until the duplicate channels are resolved.\n\nPlease select the channel mapping based on your radio's channel sequence.";
-"GER(Tail Gain)" = "GER (Tail Gain)";
-"AUX2(Spare)" = "AUX2 (Spare)";
-
-//page24
-"Swash Type Change Warning"="You must be select your swashplate type and connect servos to Gpro correctly, otherwise it will cause swashplate movement disorders!\n\nAre you sure you want to change the settings?";
-
-//page25
-"UpP25" = "Up";
-"DownP25" = "Down";
+//OSD Page 1
 
 
-//page26
-
-"CollectiveP" = "Collective";
-"CollectiveN" = "Collective";
-"Cyclic pitch"= "Cyclic Pitch";
-
-//page28
-
-"GovernorModeWarning" = "Governor mode is a dedicated function for nitro powered helicopters.\n\nDo not activate this function for electric powered helicopter, otherwise unintentional motor startup may cause unforeseen dangerous circumstances.\n\nAre you sure this helicopter is Nitro Helicopter?";
+//OSDPage1View11
+"顯示單位" = "顯示單位";
+"公制" = "公制";
+"英制" = "英制";
 
 
-//page29
-"WarningMessagePage29"="Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
+//OSDPage1View12
 
-"CautionMessagePage29" = "Before flight, please ensure correct helicopter movement and correct swashplate compensation prior to flights.";
-"Entering parameter Menu" = "Entering Parameter Menu";
+"影像格式" = "影像格式";
+"NTSC" = "NTSC";
+"PAL" = "PAL";
+
+//OSDPage1View13
+"顯示經緯度" = "顯示經緯度";
+"ON" = "ON";
+"OFF" = "OFF";
+

@@ -95,7 +95,7 @@
         NSString *className = NSStringFromClass([self class]);
         
         if ([className isEqualToString:type]) {
-            _labelTitle.text = dict[@"labelTitle"];
+            _labelTitle.text = NSLocalizedString(dict[@"labelTitle"], nil) ;
             array = dict[@"segmentedControl"];
             
             _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];

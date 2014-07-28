@@ -71,7 +71,7 @@
 
 -(void) processViewSource{
     if (_labelTitleText) {
-        _labelTitle.text = _labelTitleText;
+        _labelTitle.text = NSLocalizedString(_labelTitleText, ni) ;
     }
 }
 

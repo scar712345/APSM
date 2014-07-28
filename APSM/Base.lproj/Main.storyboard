@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -348,28 +348,16 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-R7-P3I" customClass="BlankView">
-                                        <rect key="frame" x="10" y="402" width="300" height="803"/>
+                                        <rect key="frame" x="10" y="402" width="300" height="623"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-TD-Eoa" customClass="yumeSwicthAndVoltageView">
-                                                <rect key="frame" x="-9" y="46" width="320" height="170"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_VoltageEnable"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_VoltageWarning"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View1"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-5W-8yz" customClass="yumeSwicthAndVoltageView">
-                                                <rect key="frame" x="-9" y="223" width="320" height="170"/>
+                                                <rect key="frame" x="1" y="169" width="300" height="130"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t00-pl-Vrl">
+                                                        <rect key="frame" x="8" y="129" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -377,17 +365,29 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_SatelliteEnable"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_SatelliteWarning"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View2"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
+                                                        <real key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="viewTitleColor">
+                                                        <color key="value" red="0.015686274510000001" green="0.094117647060000004" blue="0.10980392160000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aY8-Bc-U20" customClass="yumeSwicthAndVoltageView">
-                                                <rect key="frame" x="-9" y="401" width="320" height="170"/>
+                                                <rect key="frame" x="1" y="307" width="300" height="130"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hS7-Dc-ZIH">
+                                                        <rect key="frame" x="8" y="129" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -395,24 +395,57 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_DistanceEnable"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_DistanceWarning"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View3"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
+                                                        <real key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="viewTitleColor">
+                                                        <color key="value" red="0.015686274510000001" green="0.094117647060000004" blue="0.10980392160000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.015686274510000001" green="0.094117647060000004" blue="0.10980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSz-BP-KwK" customClass="yumeHeightWarningView">
-                                                <rect key="frame" x="-9" y="579" width="320" height="204"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-TD-Eoa" customClass="yumeSwicthAndVoltageView">
+                                                <rect key="frame" x="0.0" y="31" width="300" height="130"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-h5-Ei4">
+                                                        <rect key="frame" x="8" y="129" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_VoltageEnable"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textFieldKeyPath" value="parameterDatas.OSD_VoltageWarning"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View1"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
+                                                        <real key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="viewTitleColor">
+                                                        <color key="value" red="0.015686274510000001" green="0.094117647060000004" blue="0.10980392160000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSz-BP-KwK" customClass="yumeHeightWarningView">
+                                                <rect key="frame" x="0.0" y="445" width="300" height="178"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                        <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
@@ -421,6 +454,9 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_HeightEnable"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textField1KeyPath" value="parameterDatas.OSD_HeightHWarning"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textField2KeyPath" value="parameterDatas.OSD_HeightLWarning"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.015686274510000001" green="0.094117647060000004" blue="0.10980392160000001" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -490,7 +526,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZg-gk-yu8" customClass="BlankView">
-                                        <rect key="frame" x="10" y="1222" width="300" height="200"/>
+                                        <rect key="frame" x="10" y="1033" width="300" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-uk-ZRW">
                                                 <rect key="frame" x="108" y="20" width="84" height="30"/>
@@ -707,17 +743,17 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <viewControllerLayoutGuide type="bottom" id="OfP-8n-3B9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e0U-uk-93a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="8NV-r5-VXS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1800"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qol-5c-ltb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-CG-eNN" customClass="CradleHead360">
-                                        <rect key="frame" x="10" y="96" width="300" height="290"/>
+                                        <rect key="frame" x="10" y="261" width="300" height="290"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -731,21 +767,64 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntV-Fk-goz" customClass="BlankView">
+                                        <rect key="frame" x="10" y="559" width="300" height="891"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93I-0y-MTl" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="32" width="300" height="281"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaD-k1-nPK">
+                                                        <rect key="frame" x="8" y="280" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-xU-Cec" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="321" width="300" height="281"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-qA-zG4">
+                                                        <rect key="frame" x="8" y="280" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vl7-H1-UlA" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="610" width="300" height="281"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="參數調整"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1200"/>
+                    <size key="freeformSize" width="320" height="1800"/>
                     <connections>
                         <outlet property="backgroundView" destination="8NV-r5-VXS" id="RNH-ru-ffq"/>
+                        <outlet property="lastView" destination="ntV-Fk-goz" id="4os-89-u02"/>
                         <outlet property="scrollView" destination="qol-5c-ltb" id="aIe-Hh-WhI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADD-o7-zPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="2978"/>
+            <point key="canvasLocation" x="2539" y="3278"/>
         </scene>
         <!--Page2-->
         <scene sceneID="cOa-Z2-SyP">
@@ -765,8 +844,30 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-pV-aV8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mk-Pgc" customClass="yumeSensitivityView">
+                                        <rect key="frame" x="10" y="5" width="300" height="267"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualAileronKeyPath" value="parameterDatas.p"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualElevatorKeyPath" value="parameterDatas.q"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="manualRudderKeyPath" value="parameterDatas.r"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAileronKeyPath" value="parameterDatas.phi"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeElevatorKeyPath" value="parameterDatas.theta"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeRudderKeyPath" value="parameterDatas.psi"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAltitudeKeyPath" value="parameterDatas.altitude"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-7u-eld" customClass="yumeImageButtonsView">
-                                        <rect key="frame" x="10" y="360" width="300" height="487"/>
+                                        <rect key="frame" x="10" y="280" width="300" height="487"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="point" keyPath="buttonBeginPoint">
@@ -796,28 +897,6 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage2View2"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="buttonsKeyPath" value="parameterDatas.multiRotorMode"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mk-Pgc" customClass="yumeSensitivityView">
-                                        <rect key="frame" x="10" y="0.0" width="300" height="352"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="manualAileronKeyPath" value="parameterDatas.p"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="manualElevatorKeyPath" value="parameterDatas.q"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="manualRudderKeyPath" value="parameterDatas.r"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAileronKeyPath" value="parameterDatas.phi"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeElevatorKeyPath" value="parameterDatas.theta"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeRudderKeyPath" value="parameterDatas.psi"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="altitudeAltitudeKeyPath" value="parameterDatas.altitude"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -856,7 +935,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSs-ka-e4B" customClass="yumeSwicthAndVoltageView">
-                                        <rect key="frame" x="0.0" y="273" width="320" height="218"/>
+                                        <rect key="frame" x="10" y="220" width="300" height="176"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -871,10 +950,13 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage3View2"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s46-gz-1Lh" customClass="yumeXYZView">
-                                        <rect key="frame" x="5" y="0.0" width="310" height="265"/>
+                                        <rect key="frame" x="10" y="5" width="300" height="207"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -892,7 +974,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-h3-Yur" customClass="yumeSwicthAndVoltageView">
-                                        <rect key="frame" x="0.0" y="499" width="320" height="218"/>
+                                        <rect key="frame" x="10" y="404" width="300" height="176"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
@@ -907,6 +989,9 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage3View3"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>

@@ -11,6 +11,7 @@
 #import "yumeRCPRemoteControllerParameter.h"
 #import "ViewSource.h"
 
+
 @interface yumeSwicthAndVoltageView ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 
@@ -56,6 +57,7 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
+    
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -81,6 +83,9 @@
     [self processViewSource];
     
     [self processFuture];
+
+    [_viewTitle setFont:[UIFont systemFontOfSize:_viewTitleTextFont]];
+    [_viewTitle setBackgroundColor:_viewTitleColor];
 }
 
 -(void)processFuture{
@@ -103,12 +108,11 @@
         NSString *className = NSStringFromClass([self class]);
         
         if ([className isEqualToString:type]) {
-            _viewTitle.text = dict[@"viewTitle"];
-            _viewContent1.text = dict[@"viewContent1"];
-            _viewContent2.text = dict[@"viewContent2"];
+            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil) ;
+            _viewContent1.text = NSLocalizedString(dict[@"viewContent1"], nil) ;
+            _viewContent2.text = NSLocalizedString(dict[@"viewContent2"], nil) ;
             _labelUnit.text = dict[@"labelUnit"];
         }
-        
     }
 }
 
