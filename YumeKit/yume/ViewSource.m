@@ -166,7 +166,7 @@
              @"segmentedControl":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)]};
 }
 
--(NSDictionary*)APSMPage5View1{
+-(NSDictionary*)OSDPage1View31{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"低電壓提醒", nil),
              @"viewContent1":NSLocalizedString(@"電壓低於", nil),
@@ -174,7 +174,7 @@
              @"labelUnit":@"V"};
 }
 
--(NSDictionary*)APSMPage5View2{
+-(NSDictionary*)OSDPage1View32{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"衛星數量", nil),
              @"viewContent1":NSLocalizedString(@"衛星數量低於", nil),
@@ -182,7 +182,7 @@
              @"labelUnit":NSLocalizedString(@"個", nil)};
 }
 
--(NSDictionary*)APSMPage5View3{
+-(NSDictionary*)OSDPage1View33{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"飛行距離提醒", nil),
              @"viewContent1":NSLocalizedString(@"飛行距離超過", nil),
@@ -190,7 +190,7 @@
              @"labelUnit":@"M"};
 }
 
--(NSDictionary*)APSMPage5View4{
+-(NSDictionary*)OSDPage1View34{
     return @{@"type":@"yumeHeightWarningView",
              @"viewTitle":NSLocalizedString(@"飛行高度提醒", nil),
              @"viewContent1":NSLocalizedString(@"飛行高度超過", nil),
@@ -201,22 +201,108 @@
 
 #pragma mark - CradleHead Page 1
 
+
 -(NSDictionary*)CradleHeadPage1View31{
+    return @{@"type":@"ParameterRevise",
+             @"viewTitle":NSLocalizedString(@"PAN", nil),
+             @"labelPGain":NSLocalizedString(@"P Gain", nil),
+             @"labelIGain":NSLocalizedString(@"I Gain", nil),
+             @"labelDGain":NSLocalizedString(@"D Gain", nil),
+             @"labelPower":NSLocalizedString(@"Power", nil)};
+}
+
+-(NSDictionary*)CradleHeadPage1View32{
+    return @{@"type":@"ParameterRevise",
+             @"viewTitle":NSLocalizedString(@"ROLL", nil),
+             @"labelPGain":NSLocalizedString(@"P Gain", nil),
+             @"labelIGain":NSLocalizedString(@"I Gain", nil),
+             @"labelDGain":NSLocalizedString(@"D Gain", nil),
+             @"labelPower":NSLocalizedString(@"Power", nil)};
+}
+
+-(NSDictionary*)CradleHeadPage1View33{
+    return @{@"type":@"ParameterRevise",
+             @"viewTitle":NSLocalizedString(@"TILT", nil),
+             @"labelPGain":NSLocalizedString(@"P Gain", nil),
+             @"labelIGain":NSLocalizedString(@"I Gain", nil),
+             @"labelDGain":NSLocalizedString(@"D Gain", nil),
+             @"labelPower":NSLocalizedString(@"Power", nil)};
+}
+
+#pragma mark - CradleHead Page 2
+
+-(NSDictionary*)CradleHeadPage2View21{
     return @{@"type":@"CradleHeadControllView",
              @"labelTitle":NSLocalizedString(@"Pan", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
--(NSDictionary*)CradleHeadPage1View32{
+-(NSDictionary*)CradleHeadPage2View22{
     return @{@"type":@"CradleHeadControllView",
              @"labelTitle":NSLocalizedString(@"Roll", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
--(NSDictionary*)CradleHeadPage1View33{
+-(NSDictionary*)CradleHeadPage2View23{
     return @{@"type":@"CradleHeadControllView",
              @"labelTitle":NSLocalizedString(@"Tilt", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
+}
+
+-(NSDictionary*)CradleHeadPage2View41{
+    return @{@"type":@"SegmentAndSlider",
+             @"itemArray":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= 0) {
+                     return 0;
+                 }else if (1 <= value && value <= 1000){
+                     return 1;
+                 }else{
+                     return 0;
+                 }
+             }};
+}
+
+-(NSDictionary*)CradleHeadPage2View42{
+    return @{@"type":@"SegmentAndSlider",
+             @"itemArray":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)],
+             @"adapter":^NSInteger(NSInteger value) {
+                 if (-1000 <= value && value <= 0) {
+                     return 0;
+                 }else if (1 <= value && value <= 1000){
+                     return 1;
+                 }else{
+                     return 0;
+                 }
+             }};
+}
+
+#pragma mark - CradleHead Page 3
+
+-(NSDictionary*)CradleHeadPage3View11{
+    return @{@"type":@"CamaraFollow",
+             @"viewTitle":NSLocalizedString(@"Pan", nil),
+             @"viewContent1":NSLocalizedString(@"跟隨速度", nil),
+             @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil),
+             @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude",nil)]};
+}
+
+-(NSDictionary*)CradleHeadPage3View12{
+    return @{@"type":@"CamaraFollow",
+             @"viewTitle":NSLocalizedString(@"Roll", nil),
+             @"viewContent1":NSLocalizedString(@"跟隨速度", nil) ,
+             @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil) ,
+             @"segmentedControl":@[NSLocalizedString(@"Manual",nil),
+                                   NSLocalizedString(@"Attitude",nil)]};
+}
+
+-(NSDictionary*)CradleHeadPage3View13{
+    return @{@"type":@"CamaraFollow",
+             @"viewTitle":NSLocalizedString(@"Tilt", nil),
+             @"viewContent1":NSLocalizedString(@"跟隨速度", nil),
+             @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil),
+             @"segmentedControl":@[NSLocalizedString(@"Manual",nil),
+                                   NSLocalizedString(@"Attitude",nil)]};
 }
 
 -(id)valueForUndefinedKey:(NSString *)key{

@@ -1,39 +1,23 @@
 //
-//  CradleHead360.m
+//  CamaraFollow.m
 //  APSM
 //
-//  Created by ALIGN-APP on 2014/7/21.
+//  Created by ALIGN-APP on 2014/7/28.
 //  Copyright (c) 2014年 yume. All rights reserved.
 //
 
-#import "CradleHead360.h"
-#import "UITextField+Yume.h"
+#import "CamaraFollow.h"
 #import "ViewSource.h"
 
-@interface CradleHead360()<UITextFieldDelegate>
+
+@interface CamaraFollow()
 @property (strong, nonatomic) IBOutlet UIView *view;
-@property (weak, nonatomic) IBOutlet UILabel *labelMainTitle;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (weak, nonatomic) IBOutlet UILabel *labelSubTitle;
+@property (weak, nonatomic) IBOutlet UILabel *viewTitle;
+@property (weak, nonatomic) IBOutlet UILabel *viewContent1;
+@property (weak, nonatomic) IBOutlet UILabel *viewContent2;
+@property (strong, nonatomic) UISegmentedControl *segmentedControl;@end
 
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree0;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree15;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree30;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree90;
-
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree0Unit;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree15Unit;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree30Unit;
-@property (weak, nonatomic) IBOutlet UILabel *labelDegree90Unit;
-
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree0;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree15;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree30;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree90;
-
-@end
-
-@implementation CradleHead360
+@implementation CamaraFollow
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
@@ -63,7 +47,7 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
-
+    
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -71,12 +55,7 @@
 }
 
 - (void)drawRect:(CGRect)rect{
-    self.layer.borderColor = _borderColor.CGColor;
-    self.layer.borderWidth = _borderLineWidth;
     
-    if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
-        [self.layer setCornerRadius:_borderRadius];
-
 #ifndef TARGET_INTERFACE_BUILDER
     [self viewLiveRendering];
 #endif
@@ -84,7 +63,7 @@
 
 -(void)viewLiveRendering{
     self.view.backgroundColor = [UIColor clearColor];
-
+    
     [self processViewSource];
     
     [self processFuture];
@@ -95,53 +74,36 @@
 }
 
 -(void) processViewSource{
-    if (_labelMainTitleKeyPath) {
-        self.labelMainTitle.text = NSLocalizedString(self.labelMainTitleKeyPath, nil) ;
-    }
+    NSArray *array = @[@"seg1",@"seg2"];
     
-    if (_labelSubTitleKeyPath) {
-        self.labelSubTitle.text = NSLocalizedString(self.labelSubTitleKeyPath, nil) ;
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil) ;
+            _viewContent1.text = NSLocalizedString(dict[@"viewContent1"], nil);
+            _viewContent2.text = NSLocalizedString(dict[@"viewContent2"],nil);
+            array = dict[@"segmentedControl"];
+            _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+            }
+    }else{
+        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
     }
+    _segmentedControl.frame = CGRectMake(111, 6, 181, 29);
+    _segmentedControl.tintColor = [UIColor whiteColor];
+    //    _segmentedControl.selectedSegmentIndex = 0;
+    [self.view addSubview:_segmentedControl];
     
-    if (_labelDegree0KeyPath) {
-        self.labelDegree0.text = NSLocalizedString(self.labelDegree0KeyPath, nil) ;
-    }
-    
-    if (_labelDegree15KeyPath) {
-        self.labelDegree15.text = NSLocalizedString(self.labelDegree15KeyPath, nil) ;
-    }
-    
-    if (_labelDegree30KeyPath) {
-        self.labelDegree30.text = NSLocalizedString(self.labelDegree30KeyPath, nil) ;
-    }
-    
-    if (_labelDegree90KeyPath) {
-        self.labelDegree90.text = NSLocalizedString(self.labelDegree90KeyPath, nil) ;
-    }
-    
-    if (_labelUnitKeyPath) {
-        self.labelDegree0Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
-        self.labelDegree15Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
-        self.labelDegree30Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
-        self.labelDegree90Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
-    }
 }
 
 -(id)debugQuickLookObject{
     return self;
 }
 
-
-
 #pragma mark - TextField Delegate
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (_segmentedControl.selectedSegmentIndex == 0) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -175,19 +137,12 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-//    _textFieldSource.valueUI = textField.text.floatValue;
+    //    textField.parameter.valueUI = textField.text.floatValue;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 }
-
-#pragma mark - Segment Method
-
-- (IBAction)segmentValueChanged:(UISegmentedControl *)sender {
-//    _segmentSource.valueUI = (float) ((sender.selectedSegmentIndex + 1) % 2);
-}
-
 
 /*
 // Only override drawRect: if you perform custom drawing.
