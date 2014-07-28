@@ -776,6 +776,7 @@ static CXAlertView *__cx_alert_current_view;
 
 	_bottomScrollView.contentSize = CGSizeMake( _bottomScrollView.contentSize.width, maxHeight);
 	_bottomScrollViewHeight=maxHeight;
+    _bottomScrollView.scrollEnabled = NO;
 }
 
 - (void)addButtonWithTitle:(NSString *)title type:(CXAlertViewButtonType)type handler:(CXAlertButtonHandler)handler font:(UIFont *)font

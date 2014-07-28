@@ -24,6 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+}
+
+
 /*
 #pragma mark - Navigation
 
