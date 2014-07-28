@@ -1,3 +1,4 @@
+
 //
 //  yumeBTLERemoteController.m
 //  BT_Central
@@ -26,6 +27,10 @@
 //#ifndef DLog
 //#define DLog(...) /* */
 //#endif
+#ifdef DLog
+#undef DLog
+#define DLog(...) /* */
+#endif
 
 typedef NSData*(^yumeWriteToQueue)(void);
 typedef char(^yumePredictionOPCode)(void);
@@ -376,14 +381,14 @@ typedef char(^yumePredictionOPCode)(void);
     if ([yumeRemoteControllerDeviceProtocol isValidHeader:byteData]) {
         [self processAPSMDevicePacket];
     }else{
-        
+        [self.data setLength:0];
     }
 }
 
 -(void)processAPSMDevicePacket{
     
     short len = [yumeRemoteControllerDeviceProtocol retrieveLength:self.data];
-    if ((len + 6) != self.data.length) {
+    if ((len + 6) > self.data.length) {
         return;
     }
     
@@ -411,22 +416,24 @@ typedef char(^yumePredictionOPCode)(void);
         mainVersion = packet->typeSetting.mainVersion;
         subVersion = packet->typeSetting.subVersion;
         [NotificationCenter postNotificationName:@"connect" object:self];
-    }else if (command == COMMAND_SEND_PASSWORD){
-        DLog(@"command 10 Send Password:%d",packet->typeAck.ack);
-        if (packet->typeAck.ack == ACK_SUCCESS) {
-            
-            NSData *data = [yumeRemoteControllerDeviceProtocol readParameters];
-            [self enqueueDataToQueue:data prediction:21];
-            
-            checkConnectThread = [[NSThread alloc]initWithTarget:self selector:@selector(threadCheckConnect) object:nil];
-            [checkConnectThread start];
-        }else if (packet->typeAck.ack == ACK_FAIL || packet->typeAck.ack == ACK_OUT_OF_RANGE){
-            UIAlertView *passwordFailAlertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Password Failed",nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"Yes",nil) otherButtonTitles: nil];
-            [passwordFailAlertView show];
-            [self disconnet];
-            return;
-        }
-    }else if (command == COMMAND_RADIO){
+    }
+//    else if (command == COMMAND_SEND_PASSWORD){
+//        DLog(@"command 10 Send Password:%d",packet->typeAck.ack);
+//        if (packet->typeAck.ack == ACK_SUCCESS) {
+//            
+//            NSData *data = [yumeRemoteControllerDeviceProtocol readParameters];
+//            [self enqueueDataToQueue:data prediction:21];
+//            
+//            checkConnectThread = [[NSThread alloc]initWithTarget:self selector:@selector(threadCheckConnect) object:nil];
+//            [checkConnectThread start];
+//        }else if (packet->typeAck.ack == ACK_FAIL || packet->typeAck.ack == ACK_OUT_OF_RANGE){
+//            UIAlertView *passwordFailAlertView = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Password Failed",nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"Yes",nil) otherButtonTitles: nil];
+//            [passwordFailAlertView show];
+//            [self disconnet];
+//            return;
+//        }
+//    }
+    else if (command == COMMAND_RADIO){
         DLog(@"command 20 Radio");
         [self.radioDatas setDataWithPacket:packet->typeRadios];
         [NotificationCenter postNotificationName:@"radioData" object:self];
