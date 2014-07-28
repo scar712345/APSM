@@ -7,6 +7,8 @@
 //
 
 #import "ParameterRevise.h"
+#import "ViewSource.h"
+
 @interface ParameterRevise(){
     NSArray *labelValues;
     NSArray *steppers;
@@ -19,17 +21,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelIGain;
 @property (weak, nonatomic) IBOutlet UILabel *labelDGain;
 @property (weak, nonatomic) IBOutlet UILabel *labelPower;
-@property (weak, nonatomic) IBOutlet UILabel *labelGain;
 @property (weak, nonatomic) IBOutlet UILabel *labelPGainValue;
 @property (weak, nonatomic) IBOutlet UILabel *labelIGainValue;
 @property (weak, nonatomic) IBOutlet UILabel *labelDGainValue;
 @property (weak, nonatomic) IBOutlet UILabel *labelPowerValue;
-@property (weak, nonatomic) IBOutlet UILabel *labelGainValue;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperPGain;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperIGain;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperDGain;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperPower;
-@property (weak, nonatomic) IBOutlet UIStepper *stepperGain;
 
 @end
 
@@ -65,8 +64,8 @@
     [self addSubview:self.view];
     
     
-    labelValues = @[_labelPGainValue,_labelIGainValue,_labelDGainValue,_labelPowerValue,_labelGainValue];
-    steppers = @[_stepperPGain,_stepperIGain,_stepperDGain,_stepperPower,_stepperGain];
+    labelValues = @[_labelPGainValue,_labelIGainValue,_labelDGainValue,_labelPowerValue];
+    steppers = @[_stepperPGain,_stepperIGain,_stepperDGain,_stepperPower];
     checkd = YES;
 //    [stepper setMinimumValue:minValue];
 //    [stepper setMaximumValue:maxValue];
@@ -99,17 +98,20 @@
 }
 
 -(void) processViewSource{
-//    if (_viewSourceKeyPath) {
-//        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-//        NSString *type = dict[@"type"];
-//        NSString *className = NSStringFromClass([self class]);
-//        
-//        if ([className isEqualToString:type]) {
-//            //        _labelMainTitle.text =
-//            //        _labelSubTitle.text =
-//        }
-//        
-//    }
+    if (_viewSourceKeyPath) {
+        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+        NSString *type = dict[@"type"];
+        NSString *className = NSStringFromClass([self class]);
+        
+        if ([className isEqualToString:type]) {
+            _labelViewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil);
+            _labelPGain.text = NSLocalizedString(dict[@"labelPGain"], nil);
+            _labelIGain.text = NSLocalizedString(dict[@"labelIGain"], nil);
+            _labelDGain.text = NSLocalizedString(dict[@"labelDGain"], nil);
+            _labelPower.text = NSLocalizedString(dict[@"labelPower"], nil);
+        }
+        
+    }
 }
 
 -(id)debugQuickLookObject{
@@ -156,10 +158,7 @@
     NSLog(@"%f",_stepperPower.value);
     _labelPowerValue.text =[NSString stringWithFormat:@"%0.f",_stepperPower.value];
 }
-- (IBAction)stepperGain:(id)sender {
-    NSLog(@"%f",_stepperGain.value);
-    _labelGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperGain.value];
-}
+
 
 
 /*

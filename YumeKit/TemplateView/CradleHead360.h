@@ -13,8 +13,21 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable float borderRadius;
 @property (nonatomic) IBInspectable UIColor *borderColor;
 
-@property (nonatomic) IBInspectable NSString* segmentKeyPath;
-@property (nonatomic) IBInspectable NSString* textFieldKeyPath;
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+@property (nonatomic) IBInspectable NSString* textFieldDegree0KeyPath;
+@property (nonatomic) IBInspectable NSString* textFieldDegree15KeyPath;
+@property (nonatomic) IBInspectable NSString* textFieldDegree30KeyPath;
+@property (nonatomic) IBInspectable NSString* textFieldDegree90KeyPath;
+
+
+@property (nonatomic) IBInspectable NSString* labelMainTitleKeyPath;
+@property (nonatomic) IBInspectable NSString* labelSubTitleKeyPath;
+
+@property (nonatomic) IBInspectable NSString* labelDegree0KeyPath;
+@property (nonatomic) IBInspectable NSString* labelDegree15KeyPath;
+@property (nonatomic) IBInspectable NSString* labelDegree30KeyPath;
+@property (nonatomic) IBInspectable NSString* labelDegree90KeyPath;
+
+@property (nonatomic) IBInspectable NSString* labelUnitKeyPath;
+
 
 @end

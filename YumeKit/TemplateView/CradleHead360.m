@@ -95,16 +95,35 @@
 }
 
 -(void) processViewSource{
-    if (_viewSourceKeyPath) {
-    NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-    NSString *type = dict[@"type"];
-    NSString *className = NSStringFromClass([self class]);
-
-    if ([className isEqualToString:type]) {
-//        _labelMainTitle.text = 
-//        _labelSubTitle.text =
-        }
-        
+    if (_labelMainTitleKeyPath) {
+        self.labelMainTitle.text = NSLocalizedString(self.labelMainTitleKeyPath, nil) ;
+    }
+    
+    if (_labelSubTitleKeyPath) {
+        self.labelSubTitle.text = NSLocalizedString(self.labelSubTitleKeyPath, nil) ;
+    }
+    
+    if (_labelDegree0KeyPath) {
+        self.labelDegree0.text = NSLocalizedString(self.labelDegree0KeyPath, nil) ;
+    }
+    
+    if (_labelDegree15KeyPath) {
+        self.labelDegree15.text = NSLocalizedString(self.labelDegree15KeyPath, nil) ;
+    }
+    
+    if (_labelDegree30KeyPath) {
+        self.labelDegree30.text = NSLocalizedString(self.labelDegree30KeyPath, nil) ;
+    }
+    
+    if (_labelDegree90KeyPath) {
+        self.labelDegree90.text = NSLocalizedString(self.labelDegree90KeyPath, nil) ;
+    }
+    
+    if (_labelUnitKeyPath) {
+        self.labelDegree0Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
+        self.labelDegree15Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
+        self.labelDegree30Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
+        self.labelDegree90Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
     }
 }
 

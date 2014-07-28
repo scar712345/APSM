@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 @interface ParameterRevise : UIView
+@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @end
