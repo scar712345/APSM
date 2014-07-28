@@ -108,6 +108,13 @@
 		DB0E56A7197A21A8006D471C /* arrow(560x100).png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E56A4197A21A8006D471C /* arrow(560x100).png */; };
 		DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E56A5197A21A8006D471C /* slider_track(240x10).png */; };
 		DB0E56A9197A21A8006D471C /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E56A6197A21A8006D471C /* slider.png */; };
+		DB5478B31985F27F0031D700 /* CradleHead_Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478B21985F27F0031D700 /* CradleHead_Page3.m */; };
+		DB5478B6198618280031D700 /* CamaraFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478B4198618280031D700 /* CamaraFollow.h */; };
+		DB5478B7198618280031D700 /* CamaraFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478B5198618280031D700 /* CamaraFollow.m */; };
+		DB5478B9198618D50031D700 /* CamaraFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478B8198618D50031D700 /* CamaraFollow.xib */; };
+		DB5478BC198627490031D700 /* CradleHeadNeutralPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */; };
+		DB5478BD198627490031D700 /* CradleHeadNeutralPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */; };
+		DB5478BF198627FF0031D700 /* CradleHeadNeutralPosition.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */; };
 		DB8D1C901978E7C900FC88BA /* TransmitterRadioView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */; };
 		DB8D1C911978E7C900FC88BA /* TransmitterRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */; };
 		DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */; };
@@ -363,6 +370,14 @@
 		DB0E56A4197A21A8006D471C /* arrow(560x100).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow(560x100).png"; sourceTree = "<group>"; };
 		DB0E56A5197A21A8006D471C /* slider_track(240x10).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_track(240x10).png"; sourceTree = "<group>"; };
 		DB0E56A6197A21A8006D471C /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
+		DB5478B11985F27F0031D700 /* CradleHead_Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page3.h; sourceTree = "<group>"; };
+		DB5478B21985F27F0031D700 /* CradleHead_Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page3.m; sourceTree = "<group>"; };
+		DB5478B4198618280031D700 /* CamaraFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraFollow.h; sourceTree = "<group>"; };
+		DB5478B5198618280031D700 /* CamaraFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraFollow.m; sourceTree = "<group>"; };
+		DB5478B8198618D50031D700 /* CamaraFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CamaraFollow.xib; sourceTree = "<group>"; };
+		DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadNeutralPosition.h; sourceTree = "<group>"; };
+		DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadNeutralPosition.m; sourceTree = "<group>"; };
+		DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadNeutralPosition.xib; sourceTree = "<group>"; };
 		DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransmitterRadioView.h; sourceTree = "<group>"; };
 		DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransmitterRadioView.m; sourceTree = "<group>"; };
 		DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransmitterRadioView.xib; sourceTree = "<group>"; };
@@ -517,6 +532,12 @@
 				DB8EB7C61981E9E50089F01B /* ParameterRevise.h */,
 				DB8EB7C71981E9E50089F01B /* ParameterRevise.m */,
 				DB8EB7C81981E9E50089F01B /* ParameterRevise.xib */,
+				DB5478B4198618280031D700 /* CamaraFollow.h */,
+				DB5478B5198618280031D700 /* CamaraFollow.m */,
+				DB5478B8198618D50031D700 /* CamaraFollow.xib */,
+				DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */,
+				DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */,
+				DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */,
 			);
 			path = TemplateView;
 			sourceTree = "<group>";
@@ -837,6 +858,8 @@
 				DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */,
 				DBCF9592197CE376000ECE81 /* CradleHead_Page2.h */,
 				DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */,
+				DB5478B11985F27F0031D700 /* CradleHead_Page3.h */,
+				DB5478B21985F27F0031D700 /* CradleHead_Page3.m */,
 			);
 			name = CradleHead_Pages;
 			path = ..;
@@ -862,6 +885,7 @@
 				DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */,
 				4DF8E4AB1974BA0E00023E2A /* YumeKit.h in Headers */,
 				4D6BED25197A596900F6B545 /* ViewSource.h in Headers */,
+				DB5478BC198627490031D700 /* CradleHeadNeutralPosition.h in Headers */,
 				4DC05E8E1974C82E0011B415 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
 				4D879C841980F50300B7AE69 /* CXAlertView.h in Headers */,
 				DBC6109E1978FC980003EC11 /* BlankView.h in Headers */,
@@ -889,6 +913,7 @@
 				4DC05EB51974C82E0011B415 /* YumeKit-Prefix.pch in Headers */,
 				4DC05E8A1974C82E0011B415 /* SWLongPressGestureRecognizer.h in Headers */,
 				DB8D1C901978E7C900FC88BA /* TransmitterRadioView.h in Headers */,
+				DB5478B6198618280031D700 /* CamaraFollow.h in Headers */,
 				DBC610B6197909950003EC11 /* yumeSwicthAndVoltageView.h in Headers */,
 				DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */,
 				4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */,
@@ -1091,11 +1116,13 @@
 				DB9B36F3197A4B38005B0021 /* LabelAndSegment.xib in Resources */,
 				DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */,
 				DBC610B2197909950003EC11 /* yumeImageButtonsView.xib in Resources */,
+				DB5478B9198618D50031D700 /* CamaraFollow.xib in Resources */,
 				DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */,
 				DBC610BB197909950003EC11 /* yumeXYZView.xib in Resources */,
 				4DC05E9B1974C82E0011B415 /* pic_pitdirection_002(172x172).png in Resources */,
 				4D43517219751A020018D4F9 /* wing4_1.jpg in Resources */,
 				4DC05E9A1974C82E0011B415 /* pic_pitdirection_001(172x172).png in Resources */,
+				DB5478BF198627FF0031D700 /* CradleHeadNeutralPosition.xib in Resources */,
 				DBC610B5197909950003EC11 /* yumeSensitivityView.xib in Resources */,
 				DBDAB1D219822E3E005CF628 /* 112.png in Resources */,
 				4DC05E981974C82E0011B415 /* pic_Blade-Direction_001(172x172).png in Resources */,
@@ -1118,6 +1145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D43E3051976205E00B7CA4F /* Page.m in Sources */,
+				DB5478B31985F27F0031D700 /* CradleHead_Page3.m in Sources */,
 				4DF8E4491974B98500023E2A /* AppDelegate.m in Sources */,
 				4DF8E48C1974BA0000023E2A /* APSM_Page1.m in Sources */,
 				DB9437D019790DBC00AA2AE8 /* APSMViewController.m in Sources */,
@@ -1187,11 +1215,13 @@
 				4D879C8E1980F55E00B7AE69 /* LFDisplayBridge.m in Sources */,
 				4DC05E8B1974C82E0011B415 /* SWLongPressGestureRecognizer.m in Sources */,
 				4D879C871980F50300B7AE69 /* CXAlertViewController.m in Sources */,
+				DB5478BD198627490031D700 /* CradleHeadNeutralPosition.m in Sources */,
 				4DC05EA01974C82E0011B415 /* TemplateView2.m in Sources */,
 				4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */,
 				DBC610B7197909950003EC11 /* yumeSwicthAndVoltageView.m in Sources */,
 				DB9437C519790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.m in Sources */,
 				DB9437C719790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.m in Sources */,
+				DB5478B7198618280031D700 /* CamaraFollow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -164,6 +164,8 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="receiverKeyPath" value="parameterDatas.CMDSource"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="bindingKeyPath" value="parameterDatas.SPK_Binding"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelReceiverText" value="Receiver Type"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelBindingText" value="Binding Mode"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-3c-np6" customClass="BlankView">
@@ -368,7 +370,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View2"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View32"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
                                                         <real key="value" value="17"/>
                                                     </userDefinedRuntimeAttribute>
@@ -398,7 +400,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View3"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View33"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
                                                         <real key="value" value="17"/>
                                                     </userDefinedRuntimeAttribute>
@@ -428,7 +430,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View1"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View31"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="viewTitleTextFont">
                                                         <real key="value" value="17"/>
                                                     </userDefinedRuntimeAttribute>
@@ -450,7 +452,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="APSMPage5View4"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="OSDPage1View34"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="segmentKeyPath" value="parameterDatas.OSD_HeightEnable"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textField1KeyPath" value="parameterDatas.OSD_HeightHWarning"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="textField2KeyPath" value="parameterDatas.OSD_HeightLWarning"/>
@@ -597,19 +599,105 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
             <point key="canvasLocation" x="2146" y="1321"/>
         </scene>
         <!--Cradle Head Page1-->
+        <scene sceneID="hmf-Xn-FG1">
+            <objects>
+                <viewController storyboardIdentifier="CradleHead_Page1" id="JtW-7b-VaC" customClass="CradleHead_Page1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wQv-r2-KTr"/>
+                        <viewControllerLayoutGuide type="bottom" id="wgR-p0-yRt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LOe-7v-tNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="HcC-8u-saa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2H-yA-4om">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJa-V7-K1N" customClass="BlankView">
+                                        <rect key="frame" x="10" y="41" width="300" height="786"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-CC-3y6" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="32" width="300" height="246"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHH-7x-naa">
+                                                        <rect key="frame" x="8" y="245" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage1View31"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23o-K9-Dnf" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="286" width="300" height="246"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-MK-Mfo">
+                                                        <rect key="frame" x="8" y="245" width="284" height="1"/>
+                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage1View32"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHq-2p-5CT" customClass="ParameterRevise">
+                                                <rect key="frame" x="0.0" y="540" width="300" height="246"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage1View33"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="參數調整"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="2000"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="HcC-8u-saa" id="jRh-h9-GgI"/>
+                        <outlet property="lastView" destination="WJa-V7-K1N" id="rAU-ww-B7j"/>
+                        <outlet property="scrollView" destination="e2H-yA-4om" id="XnU-hl-Zwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCI-cm-YWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2146" y="3296"/>
+        </scene>
+        <!--Cradle Head Page2-->
         <scene sceneID="u0X-zt-70n">
             <objects>
-                <viewController storyboardIdentifier="CradleHead_Page1" id="ppZ-1Y-XhP" customClass="CradleHead_Page1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CradleHead_Page2" id="ppZ-1Y-XhP" customClass="CradleHead_Page2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2jW-fk-Upj"/>
                         <viewControllerLayoutGuide type="bottom" id="k7k-QK-N8F"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L2B-yc-6Lw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-4k-QZe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8K-wa-sar">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
@@ -629,8 +717,47 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-yB-CWh" customClass="BlankView">
+                                        <rect key="frame" x="10" y="208" width="300" height="184"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwx-4T-FCO" customClass="CradleHeadControllView">
+                                                <rect key="frame" x="0.0" y="78" width="300" height="39"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage2View22"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17c-Ry-mF4" customClass="CradleHeadControllView">
+                                                <rect key="frame" x="0.0" y="125" width="300" height="39"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage2View23"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-8O-p5G" customClass="CradleHeadControllView">
+                                                <rect key="frame" x="0.0" y="31" width="300" height="39"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage2View21"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="雲台控制模式"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8st-CC-mel" customClass="BlankView">
-                                        <rect key="frame" x="10" y="208" width="300" height="610"/>
+                                        <rect key="frame" x="10" y="400" width="300" height="610"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-dy-Jhp" customClass="TransmitterRadioView">
                                                 <rect key="frame" x="0.0" y="31" width="300" height="139"/>
@@ -681,25 +808,34 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="Transmitter"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGg-1b-G8y" customClass="BlankView">
-                                        <rect key="frame" x="10" y="826" width="300" height="184"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLS-e3-KI6" customClass="BlankView">
+                                        <rect key="frame" x="10" y="1018" width="300" height="225"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vCH-4m-GHY" customClass="CradleHeadControllView">
-                                                <rect key="frame" x="0.0" y="78" width="300" height="39"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eR0-NG-Gzz" customClass="SegmentAndSlider">
+                                                <rect key="frame" x="0.0" y="35" width="300" height="65"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage1View32"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage2View41"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VN2-vB-PxU" customClass="CradleHeadControllView">
-                                                <rect key="frame" x="0.0" y="125" width="300" height="39"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-7x-fpy">
+                                                <rect key="frame" x="8" y="108" width="284" height="1"/>
+                                                <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-aw-fjd" customClass="CradleHeadControllView">
-                                                <rect key="frame" x="0.0" y="31" width="300" height="39"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZx-wp-dLM" customClass="BlankView">
+                                                <rect key="frame" x="0.0" y="117" width="300" height="100"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-5T-p0H" customClass="SegmentAndSlider">
+                                                        <rect key="frame" x="0.0" y="35" width="300" height="65"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage2View42"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage1View31"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="環景拍照"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -714,7 +850,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="雲台控制模式"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="拍照"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -723,21 +859,21 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1200"/>
+                    <size key="freeformSize" width="320" height="1500"/>
                     <connections>
-                        <outlet property="backgroundView" destination="kvT-4k-QZe" id="gQk-HN-Aob"/>
-                        <outlet property="lastView" destination="AGg-1b-G8y" id="vWR-Bc-n7L"/>
-                        <outlet property="scrollView" destination="j8K-wa-sar" id="IYq-oX-5Iz"/>
+                        <outlet property="backgroundView" destination="kvT-4k-QZe" id="2TP-hB-r6K"/>
+                        <outlet property="lastView" destination="tLS-e3-KI6" id="bd1-6K-dxu"/>
+                        <outlet property="scrollView" destination="j8K-wa-sar" id="WKa-qF-Ogp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFx-zy-ZO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="2978"/>
+            <point key="canvasLocation" x="2688" y="2896"/>
         </scene>
-        <!--Cradle Head Page2-->
+        <!--Cradle Head Page3-->
         <scene sceneID="wyf-vp-SSS">
             <objects>
-                <viewController storyboardIdentifier="CradleHead_Page2" id="OWd-BK-kDs" customClass="CradleHead_Page2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CradleHead_Page3" id="OWd-BK-kDs" customClass="CradleHead_Page3" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z78-mf-AiQ"/>
                         <viewControllerLayoutGuide type="bottom" id="OfP-8n-3B9"/>
@@ -752,47 +888,29 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qol-5c-ltb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-CG-eNN" customClass="CradleHead360">
-                                        <rect key="frame" x="10" y="261" width="300" height="290"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntV-Fk-goz" customClass="BlankView">
-                                        <rect key="frame" x="10" y="559" width="300" height="891"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oku-XX-aOh" customClass="BlankView">
+                                        <rect key="frame" x="10" y="5" width="300" height="458"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93I-0y-MTl" customClass="ParameterRevise">
-                                                <rect key="frame" x="0.0" y="32" width="300" height="281"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaD-k1-nPK">
-                                                        <rect key="frame" x="8" y="280" width="284" height="1"/>
-                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </view>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-Oc-APd" customClass="CamaraFollow">
+                                                <rect key="frame" x="0.0" y="35" width="300" height="134"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage3View11"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-xU-Cec" customClass="ParameterRevise">
-                                                <rect key="frame" x="0.0" y="321" width="300" height="281"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-qA-zG4">
-                                                        <rect key="frame" x="8" y="280" width="284" height="1"/>
-                                                        <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </view>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEj-Ua-gEd" customClass="CamaraFollow">
+                                                <rect key="frame" x="0.0" y="177" width="300" height="134"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage3View12"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vl7-H1-UlA" customClass="ParameterRevise">
-                                                <rect key="frame" x="0.0" y="610" width="300" height="281"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52t-uP-DuX" customClass="CamaraFollow">
+                                                <rect key="frame" x="0.0" y="319" width="300" height="134"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="viewSourceKeyPath" value="CradleHeadPage3View13"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -806,7 +924,29 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="參數調整"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="相機"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsz-CG-eNN" customClass="CradleHead360">
+                                        <rect key="frame" x="10" y="785" width="300" height="290"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelMainTitleKey" value="360環繞拍攝"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelSubTitleKey" value="拍攝角度與數量"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree0Key" value="水平0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree15Key" value="水平往下15"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree30Key" value="水平往下30"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree90Key" value="向下垂直90"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelUnitKey" value="張"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -818,13 +958,13 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                     <size key="freeformSize" width="320" height="1800"/>
                     <connections>
                         <outlet property="backgroundView" destination="8NV-r5-VXS" id="RNH-ru-ffq"/>
-                        <outlet property="lastView" destination="ntV-Fk-goz" id="4os-89-u02"/>
+                        <outlet property="lastView" destination="Vsz-CG-eNN" id="32O-5y-ntA"/>
                         <outlet property="scrollView" destination="qol-5c-ltb" id="aIe-Hh-WhI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ADD-o7-zPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2539" y="3278"/>
+            <point key="canvasLocation" x="3171" y="3196"/>
         </scene>
         <!--Page2-->
         <scene sceneID="cOa-Z2-SyP">
