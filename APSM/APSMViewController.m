@@ -209,9 +209,10 @@
                                       otherButtonTitles:@"PAGE1",@"PAGE2", nil];
     
     cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"],
-                              [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page2"]];
+                              [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page2"],
+                              [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page3"]];
     cradleHeadPages.pageTitle = @"CradleHeadPages Setting";
-    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc"];
+    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"abc"];
     [self.navigationController pushViewController:cradleHeadPages animated:YES];
 }
 
