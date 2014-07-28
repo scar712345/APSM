@@ -18,4 +18,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString* textFieldKeyPath;
 @property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
+
+@property (nonatomic) IBInspectable CGFloat viewTitleTextFont;
+@property (nonatomic) IBInspectable UIColor *viewTitleColor;
 @end

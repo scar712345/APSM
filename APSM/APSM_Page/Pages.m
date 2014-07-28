@@ -42,7 +42,7 @@
 -(void)prepareTTScrollSlidingPagesController{
     ttScrollSlidingPagesController = [[TTScrollSlidingPagesController alloc] init];
     ttScrollSlidingPagesController.dataSource = self; /*the current view controller (self) conforms to the TTSlidingPagesDataSource protocol)*/
-    ttScrollSlidingPagesController.view.frame =  CGRectMake(0, 59, self.view.frame.size.width, self.view.frame.size.height - 25 - 10 - 25 - 50); //I'm setting up the view to be fullscreen in the current view
+    ttScrollSlidingPagesController.view.frame =  CGRectMake(0, 59, self.view.frame.size.width, self.view.frame.size.height - 25 - 8 - 25 - 50); //I'm setting up the view to be fullscreen in the current view
     ttScrollSlidingPagesController.TTScrollSlidingPagesControllerDelegate = self;
     [self.view addSubview:ttScrollSlidingPagesController.view];
     [self addChildViewController:ttScrollSlidingPagesController];

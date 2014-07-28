@@ -103,11 +103,11 @@
 
 -(void)processViewSource{
     if (_labelReceiverText) {
-        self.labelReceiver.text = self.labelReceiverText;
+        self.labelReceiver.text = NSLocalizedString(self.labelReceiverText, nil) ;
     }
     
     if (_labelBindingText) {
-        self.labelBinding.text = self.labelBindingText;
+        self.labelBinding.text =NSLocalizedString(self.labelBindingText, nil) ;
     }
 }
 
@@ -118,15 +118,16 @@
 #pragma mark - Button Method 
 
 - (IBAction)btnReceiverAction:(id)sender {
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil message:nil cancelButtonTitle:@"Cancel"];
-    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    alertView.contentView = picker;
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
     [picker selectRow:_receiverSource.valueUI inComponent:0 animated:NO];
+    
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
+    
     _array = _receiverArray;
-    [alertView addButtonWithTitle:@"OK"
-                             type:CXAlertViewButtonTypeDefault
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
                           handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
                               NSInteger selectedNumber = [picker selectedRowInComponent:0];
                               [self.btnReceiver setTitle:[NSString stringWithFormat:@"%@",_receiverArray[selectedNumber]] forState:UIControlStateNormal];
@@ -134,27 +135,27 @@
                               [alertView dismiss];
                           }];
     [alertView show];
-    NSLog(@"btnReceiver be check");
 }
 
 - (IBAction)btnBindingAction:(id)sender {
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil message:nil cancelButtonTitle:@"Cancel"];
-    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    alertView.contentView = picker;
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
     [picker selectRow:_bindingSource.valueUI inComponent:0 animated:NO];
+    
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
+ 
     _array = _bindingArray;
-    [alertView addButtonWithTitle:@"OK"
-                             type:CXAlertViewButtonTypeDefault
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
                           handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
                               NSInteger selectedNumber = [picker selectedRowInComponent:0];
                               [self.btnBinding setTitle:[NSString stringWithFormat:@"%@",_bindingArray[selectedNumber]] forState:UIControlStateNormal];
                               _bindingSource.valueUI = selectedNumber;
                               [alertView dismiss];
                           }];
+
     [alertView show];
-    NSLog(@"btnBinding be check");
 }
 
 #pragma mark - Picker Method
@@ -171,6 +172,11 @@
     return _array[row];
 }
 
+-(CGFloat)pickerView:(UIPickerView*)pickerView rowHeightForComponent:(NSInteger)component{
+    return 100;
+}
 
-
+-(CGFloat)pickerView:(UIPickerView*)pickerView widthForComponent:(NSInteger)component{
+    return 300;
+}
 @end

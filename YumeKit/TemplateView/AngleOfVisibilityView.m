@@ -61,7 +61,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
     
     _btnAngleOfVisibility.tintColor = [UIColor whiteColor];
     
-    _angleArray = @[@"30度",@"60度",@"90度",@"120度"];
+    _angleArray = @[@"30度",@"60度",@"90度", @"120度"];
     _adapterToUI = ^NSInteger(NSInteger angle) {
         NSInteger index = 0;
         switch (angle) {
@@ -144,14 +144,15 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 #pragma mark - Button Method
 
 - (IBAction)btnAngleAction:(id)sender {
-    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil message:nil cancelButtonTitle:@"Cancel"];
-    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    alertView.contentView = picker;
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
     [picker selectRow:_adapterToUI(_buttonSource.valueUI) inComponent:0 animated:NO];
-    [alertView addButtonWithTitle:@"OK"
-                             type:CXAlertViewButtonTypeDefault
+    
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
+   
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
                           handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
                               NSInteger selectedNumber = [picker selectedRowInComponent:0];
                               [self.btnAngleOfVisibility setTitle:[NSString stringWithFormat:@"%@",_angleArray[selectedNumber]] forState:UIControlStateNormal];
@@ -175,5 +176,13 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return _angleArray[row];
+}
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView rowHeightForComponent:(NSInteger)component{
+    return 100;
+}
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView widthForComponent:(NSInteger)component{
+    return 300;
 }
 @end

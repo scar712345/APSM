@@ -131,35 +131,35 @@
 
 -(void)processViewSource{
     if (self.viewTitleText) {
-        self.viewTitle.text = _viewTitleText;
+        self.viewTitle.text = NSLocalizedString(_viewTitleText, nil) ;
     }
     
     if (self.labelModeText) {
-        self.labelMode.text = _labelModeText;
+        self.labelMode.text = NSLocalizedString(_labelModeText, nil) ;
     }
     
     if (self.labelAileronText) {
-        self.labelAileron.text = _labelAileronText;
+        self.labelAileron.text = NSLocalizedString(_labelAileronText, nil);
     }
     
     if (self.labelElevatorText) {
-        self.labelElevator.text = _labelElevatorText;
+        self.labelElevator.text = NSLocalizedString(_labelElevatorText, nil) ;
     }
     
     if (self.labelRudderText) {
-        self.labelRudder.text = _labelRudderText;
+        self.labelRudder.text = NSLocalizedString(_labelRudderText, nil) ;
     }
     
     if (self.labelAltitudeText) {
-        self.labelAltitude.text = _labelAltitudeText;
+        self.labelAltitude.text = NSLocalizedString(_labelAltitudeText, nil) ;
     }
     
     if (self.labelManualText) {
-        self.labelManual.text = _labelManualText;
+        self.labelManual.text = NSLocalizedString(_labelManualText, nil) ;
     }
     
     if (self.labelAltitude2Text) {
-        self.labelAltitude2.text = _labelAltitude2Text;
+        self.labelAltitude2.text = NSLocalizedString(_labelAltitude2Text, nil) ;
     }
 }
 

@@ -7,9 +7,10 @@
 //
 
 #import "CradleHead360.h"
+#import "UITextField+Yume.h"
 #import "ViewSource.h"
 
-@interface CradleHead360()
+@interface CradleHead360()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelMainTitle;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -62,6 +63,7 @@
     [nib instantiateWithOwner:self options:nil];
     //Add the view loaded from the nib into self.
     [self addSubview:self.view];
+
 }
 
 -(void)prepareForInterfaceBuilder{

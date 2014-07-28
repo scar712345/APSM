@@ -113,7 +113,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
         NSString *className = NSStringFromClass([self class]);
         
         if ([className isEqualToString:type]) {
-            _viewTitle.text = dict[@"viewTitle"];
+            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil);
             _images = dict[@"images"];
 //            yumeAdapter toUI = ^NSInteger(NSInteger valueMCU) {
 //                return valueMCU;

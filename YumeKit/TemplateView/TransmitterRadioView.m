@@ -105,9 +105,9 @@
         NSString *className = NSStringFromClass([self class]);
         
         if ([className isEqualToString:type]) {
-            _labelTitle.text = dict[@"labelTitle"];
-            _labelLeft.text = dict[@"labelLeft"];
-            _labelRight.text = dict[@"labelRight"];
+            _labelTitle.text = NSLocalizedString(dict[@"labelTitle"], nil) ;
+            _labelLeft.text = NSLocalizedString(dict[@"labelLeft"], nil) ;
+            _labelRight.text = NSLocalizedString(dict[@"labelRight"], nil) ;
         }
 
     }
