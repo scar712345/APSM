@@ -940,13 +940,13 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelMainTitleKey" value="360環繞拍攝"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelSubTitleKey" value="拍攝角度與數量"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree0Key" value="水平0"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree15Key" value="水平往下15"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree30Key" value="水平往下30"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree90Key" value="向下垂直90"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelUnitKey" value="張"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelMainTitleKeyPath" value="360環繞拍攝"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelSubTitleKeyPath" value="拍攝角度與數量"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree0KeyPath" value="水平0"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree15KeyPath" value="水平往下15"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree30KeyPath" value="水平往下30"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree90KeyPath" value="向下垂直90"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelUnitKeyPath" value="張"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
