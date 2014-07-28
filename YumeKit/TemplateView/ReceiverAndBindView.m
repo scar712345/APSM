@@ -102,6 +102,10 @@
 }
 
 -(void)processViewSource{
+    
+}
+
+-(void)processStoryboardSource{
     if (_labelReceiverText) {
         self.labelReceiver.text = NSLocalizedString(self.labelReceiverText, nil) ;
     }
@@ -121,7 +125,6 @@
     UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
-    [picker selectRow:_receiverSource.valueUI inComponent:0 animated:NO];
     
     CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
     
@@ -135,13 +138,13 @@
                               [alertView dismiss];
                           }];
     [alertView show];
+    [picker selectRow:_receiverSource.valueUI inComponent:0 animated:NO];
 }
 
 - (IBAction)btnBindingAction:(id)sender {
     UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
-    [picker selectRow:_bindingSource.valueUI inComponent:0 animated:NO];
     
     CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
  
@@ -156,6 +159,7 @@
                           }];
 
     [alertView show];
+    [picker selectRow:_bindingSource.valueUI inComponent:0 animated:NO];
 }
 
 #pragma mark - Picker Method

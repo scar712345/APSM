@@ -143,9 +143,10 @@
     }
     
     static devicePacket packet = {0};
-    [data getBytes: &packet length: [data length]];
+    NSInteger length = [self retrieveLength:data] + 6;
+    [data getBytes: &packet length:length];
     
-    Byte checkSum =[self checksumWithBytes:(Byte *)&packet WithSize:(int)[data length]];
+    Byte checkSum =[self checksumWithBytes:(Byte *)&packet WithSize:(int)length];
     if (checkSum == packet.deviceHeader.checksum) {
         return &packet;
     }else{

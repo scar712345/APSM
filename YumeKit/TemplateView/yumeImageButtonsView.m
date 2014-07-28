@@ -133,11 +133,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
                                           self.buttonSize.width,
                                           self.buttonSize.height);
                 UIButton *button = [[UIButton alloc]initWithFrame:frame];
-#ifdef __IPHONE_8_0
-                UIImage *image = [UIImage imageNamed:_images[index] inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil];
-#else
-                UIImage *image = [UIImage imageNamed:_images[index]];
-#endif
+                UIImage *image = IMAGE_NAMED(_images[index]);
                 [button setBackgroundImage:image forState:UIControlStateNormal];
                 [button addTarget:self action:@selector(selectButtonAndSend:) forControlEvents:UIControlEventTouchUpInside];
                 button.alpha = 0.5;
