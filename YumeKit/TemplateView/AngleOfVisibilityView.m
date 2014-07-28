@@ -147,7 +147,6 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
     UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
     picker.dataSource = self;
     picker.delegate = self;
-    [picker selectRow:_adapterToUI(_buttonSource.valueUI) inComponent:0 animated:NO];
     
     CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
    
@@ -162,6 +161,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
                               [alertView dismiss];
                           }];
     [alertView show];
+    [picker selectRow:_adapterToUI(_buttonSource.valueUI) inComponent:0 animated:NO];
 }
 
 #pragma mark - Picker Method
