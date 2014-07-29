@@ -33,9 +33,6 @@
 		4D43E33019765FF100B7CA4F /* Pages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E32F19765FF100B7CA4F /* Pages.m */; };
 		4D6BED25197A596900F6B545 /* ViewSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6BED23197A596900F6B545 /* ViewSource.h */; };
 		4D6BED26197A596900F6B545 /* ViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6BED24197A596900F6B545 /* ViewSource.m */; };
-		4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */; };
-		4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */; };
-		4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */; };
 		4D879C7E1980F50300B7AE69 /* CXAlertBackgroundWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C741980F50300B7AE69 /* CXAlertBackgroundWindow.h */; };
 		4D879C7F1980F50300B7AE69 /* CXAlertBackgroundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879C751980F50300B7AE69 /* CXAlertBackgroundWindow.m */; };
 		4D879C801980F50300B7AE69 /* CXAlertButtonContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D879C761980F50300B7AE69 /* CXAlertButtonContainerView.h */; };
@@ -109,21 +106,54 @@
 		DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E56A5197A21A8006D471C /* slider_track(240x10).png */; };
 		DB0E56A9197A21A8006D471C /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E56A6197A21A8006D471C /* slider.png */; };
 		DB5478B31985F27F0031D700 /* CradleHead_Page3.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478B21985F27F0031D700 /* CradleHead_Page3.m */; };
-		DB5478B6198618280031D700 /* CamaraFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478B4198618280031D700 /* CamaraFollow.h */; };
-		DB5478B7198618280031D700 /* CamaraFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478B5198618280031D700 /* CamaraFollow.m */; };
-		DB5478B9198618D50031D700 /* CamaraFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478B8198618D50031D700 /* CamaraFollow.xib */; };
-		DB5478BC198627490031D700 /* CradleHeadNeutralPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */; };
-		DB5478BD198627490031D700 /* CradleHeadNeutralPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */; };
-		DB5478BF198627FF0031D700 /* CradleHeadNeutralPosition.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */; };
-		DB8D1C901978E7C900FC88BA /* TransmitterRadioView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */; };
-		DB8D1C911978E7C900FC88BA /* TransmitterRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */; };
-		DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */; };
-		DB8EB7C31981E6610089F01B /* CradleHead360.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8EB7C01981E6610089F01B /* CradleHead360.h */; };
-		DB8EB7C41981E6610089F01B /* CradleHead360.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8EB7C11981E6610089F01B /* CradleHead360.m */; };
-		DB8EB7C51981E6610089F01B /* CradleHead360.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB7C21981E6610089F01B /* CradleHead360.xib */; };
-		DB8EB7C91981E9E50089F01B /* ParameterRevise.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8EB7C61981E9E50089F01B /* ParameterRevise.h */; };
-		DB8EB7CA1981E9E50089F01B /* ParameterRevise.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8EB7C71981E9E50089F01B /* ParameterRevise.m */; };
-		DB8EB7CB1981E9E50089F01B /* ParameterRevise.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB8EB7C81981E9E50089F01B /* ParameterRevise.xib */; };
+		DB5478F41986462C0031D700 /* AngleOfVisibilityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478C11986462C0031D700 /* AngleOfVisibilityView.h */; };
+		DB5478F51986462C0031D700 /* AngleOfVisibilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478C21986462C0031D700 /* AngleOfVisibilityView.m */; };
+		DB5478F61986462C0031D700 /* AngleOfVisibilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478C31986462C0031D700 /* AngleOfVisibilityView.xib */; };
+		DB5478F71986462C0031D700 /* BlankView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478C41986462C0031D700 /* BlankView.h */; };
+		DB5478F81986462C0031D700 /* BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478C51986462C0031D700 /* BlankView.m */; };
+		DB5478F91986462C0031D700 /* CamaraFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478C61986462C0031D700 /* CamaraFollow.h */; };
+		DB5478FA1986462C0031D700 /* CamaraFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478C71986462C0031D700 /* CamaraFollow.m */; };
+		DB5478FB1986462C0031D700 /* CamaraFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478C81986462C0031D700 /* CamaraFollow.xib */; };
+		DB5478FC1986462C0031D700 /* CradleHead360.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478C91986462C0031D700 /* CradleHead360.h */; };
+		DB5478FD1986462C0031D700 /* CradleHead360.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478CA1986462C0031D700 /* CradleHead360.m */; };
+		DB5478FE1986462C0031D700 /* CradleHead360.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478CB1986462C0031D700 /* CradleHead360.xib */; };
+		DB5478FF1986462C0031D700 /* CradleHeadControllView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478CC1986462C0031D700 /* CradleHeadControllView.h */; };
+		DB5479001986462C0031D700 /* CradleHeadControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478CD1986462C0031D700 /* CradleHeadControllView.m */; };
+		DB5479011986462C0031D700 /* CradleHeadControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478CE1986462C0031D700 /* CradleHeadControllView.xib */; };
+		DB5479051986462C0031D700 /* CustomViewTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478D21986462C0031D700 /* CustomViewTemplate.h */; };
+		DB5479061986462C0031D700 /* CustomViewTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478D31986462C0031D700 /* CustomViewTemplate.m */; };
+		DB5479071986462C0031D700 /* LabelAndSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478D41986462C0031D700 /* LabelAndSegment.h */; };
+		DB5479081986462C0031D700 /* LabelAndSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478D51986462C0031D700 /* LabelAndSegment.m */; };
+		DB5479091986462C0031D700 /* LabelAndSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478D61986462C0031D700 /* LabelAndSegment.xib */; };
+		DB54790A1986462C0031D700 /* ParameterRevise.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478D71986462C0031D700 /* ParameterRevise.h */; };
+		DB54790B1986462C0031D700 /* ParameterRevise.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478D81986462C0031D700 /* ParameterRevise.m */; };
+		DB54790C1986462C0031D700 /* ParameterRevise.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478D91986462C0031D700 /* ParameterRevise.xib */; };
+		DB54790D1986462C0031D700 /* ReceiverAndBindView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478DA1986462C0031D700 /* ReceiverAndBindView.h */; };
+		DB54790E1986462C0031D700 /* ReceiverAndBindView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478DB1986462C0031D700 /* ReceiverAndBindView.m */; };
+		DB54790F1986462C0031D700 /* ReceiverAndBindView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478DC1986462C0031D700 /* ReceiverAndBindView.xib */; };
+		DB5479101986462C0031D700 /* SegmentAndSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478DD1986462C0031D700 /* SegmentAndSlider.h */; };
+		DB5479111986462C0031D700 /* SegmentAndSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478DE1986462C0031D700 /* SegmentAndSlider.m */; };
+		DB5479121986462C0031D700 /* SegmentAndSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478DF1986462C0031D700 /* SegmentAndSlider.xib */; };
+		DB5479131986462C0031D700 /* TransmitterRadioView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478E01986462C0031D700 /* TransmitterRadioView.h */; };
+		DB5479141986462C0031D700 /* TransmitterRadioView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478E11986462C0031D700 /* TransmitterRadioView.m */; };
+		DB5479151986462C0031D700 /* TransmitterRadioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478E21986462C0031D700 /* TransmitterRadioView.xib */; };
+		DB5479161986462C0031D700 /* UITextField+Yume.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478E31986462C0031D700 /* UITextField+Yume.h */; };
+		DB5479171986462C0031D700 /* UITextField+Yume.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478E41986462C0031D700 /* UITextField+Yume.m */; };
+		DB5479181986462C0031D700 /* yumeHeightWarningView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478E51986462C0031D700 /* yumeHeightWarningView.h */; };
+		DB5479191986462C0031D700 /* yumeHeightWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478E61986462C0031D700 /* yumeHeightWarningView.m */; };
+		DB54791A1986462C0031D700 /* yumeHeightWarningView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478E71986462C0031D700 /* yumeHeightWarningView.xib */; };
+		DB54791B1986462C0031D700 /* yumeImageButtonsView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478E81986462C0031D700 /* yumeImageButtonsView.h */; };
+		DB54791C1986462C0031D700 /* yumeImageButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478E91986462C0031D700 /* yumeImageButtonsView.m */; };
+		DB54791D1986462C0031D700 /* yumeImageButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478EA1986462C0031D700 /* yumeImageButtonsView.xib */; };
+		DB54791E1986462C0031D700 /* yumeSensitivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478EB1986462C0031D700 /* yumeSensitivityView.h */; };
+		DB54791F1986462C0031D700 /* yumeSensitivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478EC1986462C0031D700 /* yumeSensitivityView.m */; };
+		DB5479201986462C0031D700 /* yumeSensitivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478ED1986462C0031D700 /* yumeSensitivityView.xib */; };
+		DB5479211986462C0031D700 /* yumeSwicthAndVoltageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478EE1986462C0031D700 /* yumeSwicthAndVoltageView.h */; };
+		DB5479221986462C0031D700 /* yumeSwicthAndVoltageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478EF1986462C0031D700 /* yumeSwicthAndVoltageView.m */; };
+		DB5479231986462C0031D700 /* yumeSwicthAndVoltageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478F01986462C0031D700 /* yumeSwicthAndVoltageView.xib */; };
+		DB5479241986462C0031D700 /* yumeXYZView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5478F11986462C0031D700 /* yumeXYZView.h */; };
+		DB5479251986462C0031D700 /* yumeXYZView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5478F21986462C0031D700 /* yumeXYZView.m */; };
+		DB5479261986462C0031D700 /* yumeXYZView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5478F31986462C0031D700 /* yumeXYZView.xib */; };
 		DB9437BB19790B9800AA2AE8 /* MCUPacketDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9437A819790B9800AA2AE8 /* MCUPacketDevice.h */; };
 		DB9437BC19790B9800AA2AE8 /* VerticalUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9437A919790B9800AA2AE8 /* VerticalUILabel.h */; };
 		DB9437BD19790B9800AA2AE8 /* VerticalUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9437AA19790B9800AA2AE8 /* VerticalUILabel.m */; };
@@ -145,41 +175,13 @@
 		DB9437CD19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9437BA19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m */; };
 		DB9437D019790DBC00AA2AE8 /* APSMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9437CF19790DBC00AA2AE8 /* APSMViewController.m */; };
 		DB9B36ED197A4739005B0021 /* OSD_Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B36EC197A4739005B0021 /* OSD_Page1.m */; };
-		DB9B36F0197A49B4005B0021 /* LabelAndSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9B36EE197A49B3005B0021 /* LabelAndSegment.h */; };
-		DB9B36F1197A49B4005B0021 /* LabelAndSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B36EF197A49B3005B0021 /* LabelAndSegment.m */; };
-		DB9B36F3197A4B38005B0021 /* LabelAndSegment.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9B36F2197A4B38005B0021 /* LabelAndSegment.xib */; };
-		DB9B36F6197A58CD005B0021 /* AngleOfVisibilityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9B36F4197A58CD005B0021 /* AngleOfVisibilityView.h */; };
-		DB9B36F7197A58CD005B0021 /* AngleOfVisibilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9B36F5197A58CD005B0021 /* AngleOfVisibilityView.m */; };
-		DB9B36F9197A5A72005B0021 /* AngleOfVisibilityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB9B36F8197A5A72005B0021 /* AngleOfVisibilityView.xib */; };
-		DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = DBAB59D9197A1845008E770A /* SegmentAndSlider.h */; };
-		DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBAB59DA197A1845008E770A /* SegmentAndSlider.m */; };
-		DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */; };
 		DBBF4B431978A8D700665F99 /* page_buttombackground(1008x64).png in Resources */ = {isa = PBXBuildFile; fileRef = DBBF4B421978A8D700665F99 /* page_buttombackground(1008x64).png */; };
-		DBC6109E1978FC980003EC11 /* BlankView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC6109C1978FC980003EC11 /* BlankView.h */; };
-		DBC6109F1978FC980003EC11 /* BlankView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6109D1978FC980003EC11 /* BlankView.m */; };
-		DBC610AE197909950003EC11 /* UITextField+Yume.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610A0197909950003EC11 /* UITextField+Yume.h */; };
-		DBC610AF197909950003EC11 /* UITextField+Yume.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610A1197909950003EC11 /* UITextField+Yume.m */; };
-		DBC610B0197909950003EC11 /* yumeImageButtonsView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610A2197909950003EC11 /* yumeImageButtonsView.h */; };
-		DBC610B1197909950003EC11 /* yumeImageButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610A3197909950003EC11 /* yumeImageButtonsView.m */; };
-		DBC610B2197909950003EC11 /* yumeImageButtonsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC610A4197909950003EC11 /* yumeImageButtonsView.xib */; };
-		DBC610B3197909950003EC11 /* yumeSensitivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610A5197909950003EC11 /* yumeSensitivityView.h */; };
-		DBC610B4197909950003EC11 /* yumeSensitivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610A6197909950003EC11 /* yumeSensitivityView.m */; };
-		DBC610B5197909950003EC11 /* yumeSensitivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC610A7197909950003EC11 /* yumeSensitivityView.xib */; };
-		DBC610B6197909950003EC11 /* yumeSwicthAndVoltageView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610A8197909950003EC11 /* yumeSwicthAndVoltageView.h */; };
-		DBC610B7197909950003EC11 /* yumeSwicthAndVoltageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610A9197909950003EC11 /* yumeSwicthAndVoltageView.m */; };
-		DBC610B8197909950003EC11 /* yumeSwicthAndVoltageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC610AA197909950003EC11 /* yumeSwicthAndVoltageView.xib */; };
-		DBC610B9197909950003EC11 /* yumeXYZView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC610AB197909950003EC11 /* yumeXYZView.h */; };
-		DBC610BA197909950003EC11 /* yumeXYZView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC610AC197909950003EC11 /* yumeXYZView.m */; };
-		DBC610BB197909950003EC11 /* yumeXYZView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC610AD197909950003EC11 /* yumeXYZView.xib */; };
+		DBBF791B19864ADE0044BCBA /* CradleHeadNeutralPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = DBBF791819864ADE0044BCBA /* CradleHeadNeutralPosition.h */; };
+		DBBF791C19864ADE0044BCBA /* CradleHeadNeutralPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF791919864ADE0044BCBA /* CradleHeadNeutralPosition.m */; };
+		DBBF791D19864ADE0044BCBA /* CradleHeadNeutralPosition.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBF791A19864ADE0044BCBA /* CradleHeadNeutralPosition.xib */; };
 		DBCF958B197CA8BF000ECE81 /* CradleHead_Page1.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */; };
-		DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */; };
-		DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */; };
-		DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */; };
 		DBCF9594197CE376000ECE81 /* CradleHead_Page2.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */; };
 		DBD489421977CA3500532968 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */; };
-		DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */ = {isa = PBXBuildFile; fileRef = DBD489431977D37900532968 /* ReceiverAndBindView.h */; };
-		DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489441977D37900532968 /* ReceiverAndBindView.m */; };
-		DBD489481977D4AB00532968 /* ReceiverAndBindView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBD489471977D4AB00532968 /* ReceiverAndBindView.xib */; };
 		DBDAB1D219822E3E005CF628 /* 112.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDAB1D019822E3E005CF628 /* 112.png */; };
 		DBDAB1D319822E3E005CF628 /* 223.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDAB1D119822E3E005CF628 /* 223.png */; };
 /* End PBXBuildFile section */
@@ -277,9 +279,6 @@
 		4D43E32F19765FF100B7CA4F /* Pages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pages.m; path = APSM_Page/Pages.m; sourceTree = "<group>"; };
 		4D6BED23197A596900F6B545 /* ViewSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSource.h; sourceTree = "<group>"; };
 		4D6BED24197A596900F6B545 /* ViewSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSource.m; sourceTree = "<group>"; };
-		4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeHeightWarningView.h; sourceTree = "<group>"; };
-		4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeHeightWarningView.m; sourceTree = "<group>"; };
-		4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeHeightWarningView.xib; sourceTree = "<group>"; };
 		4D879C741980F50300B7AE69 /* CXAlertBackgroundWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertBackgroundWindow.h; sourceTree = "<group>"; };
 		4D879C751980F50300B7AE69 /* CXAlertBackgroundWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlertBackgroundWindow.m; sourceTree = "<group>"; };
 		4D879C761980F50300B7AE69 /* CXAlertButtonContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlertButtonContainerView.h; sourceTree = "<group>"; };
@@ -372,21 +371,54 @@
 		DB0E56A6197A21A8006D471C /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		DB5478B11985F27F0031D700 /* CradleHead_Page3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page3.h; sourceTree = "<group>"; };
 		DB5478B21985F27F0031D700 /* CradleHead_Page3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page3.m; sourceTree = "<group>"; };
-		DB5478B4198618280031D700 /* CamaraFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraFollow.h; sourceTree = "<group>"; };
-		DB5478B5198618280031D700 /* CamaraFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraFollow.m; sourceTree = "<group>"; };
-		DB5478B8198618D50031D700 /* CamaraFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CamaraFollow.xib; sourceTree = "<group>"; };
-		DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadNeutralPosition.h; sourceTree = "<group>"; };
-		DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadNeutralPosition.m; sourceTree = "<group>"; };
-		DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadNeutralPosition.xib; sourceTree = "<group>"; };
-		DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransmitterRadioView.h; sourceTree = "<group>"; };
-		DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransmitterRadioView.m; sourceTree = "<group>"; };
-		DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransmitterRadioView.xib; sourceTree = "<group>"; };
-		DB8EB7C01981E6610089F01B /* CradleHead360.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead360.h; sourceTree = "<group>"; };
-		DB8EB7C11981E6610089F01B /* CradleHead360.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead360.m; sourceTree = "<group>"; };
-		DB8EB7C21981E6610089F01B /* CradleHead360.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHead360.xib; sourceTree = "<group>"; };
-		DB8EB7C61981E9E50089F01B /* ParameterRevise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterRevise.h; sourceTree = "<group>"; };
-		DB8EB7C71981E9E50089F01B /* ParameterRevise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterRevise.m; sourceTree = "<group>"; };
-		DB8EB7C81981E9E50089F01B /* ParameterRevise.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParameterRevise.xib; sourceTree = "<group>"; };
+		DB5478C11986462C0031D700 /* AngleOfVisibilityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleOfVisibilityView.h; sourceTree = "<group>"; };
+		DB5478C21986462C0031D700 /* AngleOfVisibilityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleOfVisibilityView.m; sourceTree = "<group>"; };
+		DB5478C31986462C0031D700 /* AngleOfVisibilityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleOfVisibilityView.xib; sourceTree = "<group>"; };
+		DB5478C41986462C0031D700 /* BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankView.h; sourceTree = "<group>"; };
+		DB5478C51986462C0031D700 /* BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankView.m; sourceTree = "<group>"; };
+		DB5478C61986462C0031D700 /* CamaraFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraFollow.h; sourceTree = "<group>"; };
+		DB5478C71986462C0031D700 /* CamaraFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraFollow.m; sourceTree = "<group>"; };
+		DB5478C81986462C0031D700 /* CamaraFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CamaraFollow.xib; sourceTree = "<group>"; };
+		DB5478C91986462C0031D700 /* CradleHead360.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead360.h; sourceTree = "<group>"; };
+		DB5478CA1986462C0031D700 /* CradleHead360.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead360.m; sourceTree = "<group>"; };
+		DB5478CB1986462C0031D700 /* CradleHead360.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHead360.xib; sourceTree = "<group>"; };
+		DB5478CC1986462C0031D700 /* CradleHeadControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadControllView.h; sourceTree = "<group>"; };
+		DB5478CD1986462C0031D700 /* CradleHeadControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadControllView.m; sourceTree = "<group>"; };
+		DB5478CE1986462C0031D700 /* CradleHeadControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadControllView.xib; sourceTree = "<group>"; };
+		DB5478D21986462C0031D700 /* CustomViewTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewTemplate.h; sourceTree = "<group>"; };
+		DB5478D31986462C0031D700 /* CustomViewTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewTemplate.m; sourceTree = "<group>"; };
+		DB5478D41986462C0031D700 /* LabelAndSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelAndSegment.h; sourceTree = "<group>"; };
+		DB5478D51986462C0031D700 /* LabelAndSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelAndSegment.m; sourceTree = "<group>"; };
+		DB5478D61986462C0031D700 /* LabelAndSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndSegment.xib; sourceTree = "<group>"; };
+		DB5478D71986462C0031D700 /* ParameterRevise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterRevise.h; sourceTree = "<group>"; };
+		DB5478D81986462C0031D700 /* ParameterRevise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterRevise.m; sourceTree = "<group>"; };
+		DB5478D91986462C0031D700 /* ParameterRevise.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParameterRevise.xib; sourceTree = "<group>"; };
+		DB5478DA1986462C0031D700 /* ReceiverAndBindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverAndBindView.h; sourceTree = "<group>"; };
+		DB5478DB1986462C0031D700 /* ReceiverAndBindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverAndBindView.m; sourceTree = "<group>"; };
+		DB5478DC1986462C0031D700 /* ReceiverAndBindView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverAndBindView.xib; sourceTree = "<group>"; };
+		DB5478DD1986462C0031D700 /* SegmentAndSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentAndSlider.h; sourceTree = "<group>"; };
+		DB5478DE1986462C0031D700 /* SegmentAndSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentAndSlider.m; sourceTree = "<group>"; };
+		DB5478DF1986462C0031D700 /* SegmentAndSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentAndSlider.xib; sourceTree = "<group>"; };
+		DB5478E01986462C0031D700 /* TransmitterRadioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransmitterRadioView.h; sourceTree = "<group>"; };
+		DB5478E11986462C0031D700 /* TransmitterRadioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransmitterRadioView.m; sourceTree = "<group>"; };
+		DB5478E21986462C0031D700 /* TransmitterRadioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransmitterRadioView.xib; sourceTree = "<group>"; };
+		DB5478E31986462C0031D700 /* UITextField+Yume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Yume.h"; sourceTree = "<group>"; };
+		DB5478E41986462C0031D700 /* UITextField+Yume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Yume.m"; sourceTree = "<group>"; };
+		DB5478E51986462C0031D700 /* yumeHeightWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeHeightWarningView.h; sourceTree = "<group>"; };
+		DB5478E61986462C0031D700 /* yumeHeightWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeHeightWarningView.m; sourceTree = "<group>"; };
+		DB5478E71986462C0031D700 /* yumeHeightWarningView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeHeightWarningView.xib; sourceTree = "<group>"; };
+		DB5478E81986462C0031D700 /* yumeImageButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeImageButtonsView.h; sourceTree = "<group>"; };
+		DB5478E91986462C0031D700 /* yumeImageButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeImageButtonsView.m; sourceTree = "<group>"; };
+		DB5478EA1986462C0031D700 /* yumeImageButtonsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeImageButtonsView.xib; sourceTree = "<group>"; };
+		DB5478EB1986462C0031D700 /* yumeSensitivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeSensitivityView.h; sourceTree = "<group>"; };
+		DB5478EC1986462C0031D700 /* yumeSensitivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeSensitivityView.m; sourceTree = "<group>"; };
+		DB5478ED1986462C0031D700 /* yumeSensitivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeSensitivityView.xib; sourceTree = "<group>"; };
+		DB5478EE1986462C0031D700 /* yumeSwicthAndVoltageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeSwicthAndVoltageView.h; sourceTree = "<group>"; };
+		DB5478EF1986462C0031D700 /* yumeSwicthAndVoltageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeSwicthAndVoltageView.m; sourceTree = "<group>"; };
+		DB5478F01986462C0031D700 /* yumeSwicthAndVoltageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeSwicthAndVoltageView.xib; sourceTree = "<group>"; };
+		DB5478F11986462C0031D700 /* yumeXYZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeXYZView.h; sourceTree = "<group>"; };
+		DB5478F21986462C0031D700 /* yumeXYZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeXYZView.m; sourceTree = "<group>"; };
+		DB5478F31986462C0031D700 /* yumeXYZView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeXYZView.xib; sourceTree = "<group>"; };
 		DB9437A819790B9800AA2AE8 /* MCUPacketDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUPacketDevice.h; sourceTree = "<group>"; };
 		DB9437A919790B9800AA2AE8 /* VerticalUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalUILabel.h; sourceTree = "<group>"; };
 		DB9437AA19790B9800AA2AE8 /* VerticalUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalUILabel.m; sourceTree = "<group>"; };
@@ -410,43 +442,15 @@
 		DB9437CF19790DBC00AA2AE8 /* APSMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSMViewController.m; sourceTree = "<group>"; };
 		DB9B36EB197A4739005B0021 /* OSD_Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSD_Page1.h; sourceTree = "<group>"; };
 		DB9B36EC197A4739005B0021 /* OSD_Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSD_Page1.m; sourceTree = "<group>"; };
-		DB9B36EE197A49B3005B0021 /* LabelAndSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelAndSegment.h; sourceTree = "<group>"; };
-		DB9B36EF197A49B3005B0021 /* LabelAndSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelAndSegment.m; sourceTree = "<group>"; };
-		DB9B36F2197A4B38005B0021 /* LabelAndSegment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndSegment.xib; sourceTree = "<group>"; };
-		DB9B36F4197A58CD005B0021 /* AngleOfVisibilityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleOfVisibilityView.h; sourceTree = "<group>"; };
-		DB9B36F5197A58CD005B0021 /* AngleOfVisibilityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleOfVisibilityView.m; sourceTree = "<group>"; };
-		DB9B36F8197A5A72005B0021 /* AngleOfVisibilityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AngleOfVisibilityView.xib; sourceTree = "<group>"; };
-		DBAB59D9197A1845008E770A /* SegmentAndSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentAndSlider.h; sourceTree = "<group>"; };
-		DBAB59DA197A1845008E770A /* SegmentAndSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentAndSlider.m; sourceTree = "<group>"; };
-		DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentAndSlider.xib; sourceTree = "<group>"; };
 		DBBF4B421978A8D700665F99 /* page_buttombackground(1008x64).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_buttombackground(1008x64).png"; sourceTree = "<group>"; };
-		DBC6109C1978FC980003EC11 /* BlankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankView.h; sourceTree = "<group>"; };
-		DBC6109D1978FC980003EC11 /* BlankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankView.m; sourceTree = "<group>"; };
-		DBC610A0197909950003EC11 /* UITextField+Yume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Yume.h"; sourceTree = "<group>"; };
-		DBC610A1197909950003EC11 /* UITextField+Yume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Yume.m"; sourceTree = "<group>"; };
-		DBC610A2197909950003EC11 /* yumeImageButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeImageButtonsView.h; sourceTree = "<group>"; };
-		DBC610A3197909950003EC11 /* yumeImageButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeImageButtonsView.m; sourceTree = "<group>"; };
-		DBC610A4197909950003EC11 /* yumeImageButtonsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeImageButtonsView.xib; sourceTree = "<group>"; };
-		DBC610A5197909950003EC11 /* yumeSensitivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeSensitivityView.h; sourceTree = "<group>"; };
-		DBC610A6197909950003EC11 /* yumeSensitivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeSensitivityView.m; sourceTree = "<group>"; };
-		DBC610A7197909950003EC11 /* yumeSensitivityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeSensitivityView.xib; sourceTree = "<group>"; };
-		DBC610A8197909950003EC11 /* yumeSwicthAndVoltageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeSwicthAndVoltageView.h; sourceTree = "<group>"; };
-		DBC610A9197909950003EC11 /* yumeSwicthAndVoltageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeSwicthAndVoltageView.m; sourceTree = "<group>"; };
-		DBC610AA197909950003EC11 /* yumeSwicthAndVoltageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeSwicthAndVoltageView.xib; sourceTree = "<group>"; };
-		DBC610AB197909950003EC11 /* yumeXYZView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yumeXYZView.h; sourceTree = "<group>"; };
-		DBC610AC197909950003EC11 /* yumeXYZView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = yumeXYZView.m; sourceTree = "<group>"; };
-		DBC610AD197909950003EC11 /* yumeXYZView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = yumeXYZView.xib; sourceTree = "<group>"; };
+		DBBF791819864ADE0044BCBA /* CradleHeadNeutralPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadNeutralPosition.h; sourceTree = "<group>"; };
+		DBBF791919864ADE0044BCBA /* CradleHeadNeutralPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadNeutralPosition.m; sourceTree = "<group>"; };
+		DBBF791A19864ADE0044BCBA /* CradleHeadNeutralPosition.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadNeutralPosition.xib; sourceTree = "<group>"; };
 		DBCF9589197CA8BF000ECE81 /* CradleHead_Page1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page1.h; sourceTree = "<group>"; };
 		DBCF958A197CA8BF000ECE81 /* CradleHead_Page1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page1.m; sourceTree = "<group>"; };
-		DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHeadControllView.h; sourceTree = "<group>"; };
-		DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHeadControllView.m; sourceTree = "<group>"; };
-		DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CradleHeadControllView.xib; sourceTree = "<group>"; };
 		DBCF9592197CE376000ECE81 /* CradleHead_Page2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CradleHead_Page2.h; sourceTree = "<group>"; };
 		DBCF9593197CE376000ECE81 /* CradleHead_Page2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CradleHead_Page2.m; sourceTree = "<group>"; };
 		DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
-		DBD489431977D37900532968 /* ReceiverAndBindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiverAndBindView.h; sourceTree = "<group>"; };
-		DBD489441977D37900532968 /* ReceiverAndBindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiverAndBindView.m; sourceTree = "<group>"; };
-		DBD489471977D4AB00532968 /* ReceiverAndBindView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiverAndBindView.xib; sourceTree = "<group>"; };
 		DBDAB1D019822E3E005CF628 /* 112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 112.png; sourceTree = "<group>"; };
 		DBDAB1D119822E3E005CF628 /* 223.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 223.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -486,62 +490,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D435144197511E90018D4F9 /* TemplateView */ = {
-			isa = PBXGroup;
-			children = (
-				DBC6109C1978FC980003EC11 /* BlankView.h */,
-				DBC6109D1978FC980003EC11 /* BlankView.m */,
-				DBD489431977D37900532968 /* ReceiverAndBindView.h */,
-				DBD489441977D37900532968 /* ReceiverAndBindView.m */,
-				DBD489471977D4AB00532968 /* ReceiverAndBindView.xib */,
-				DB8D1C8E1978E7C900FC88BA /* TransmitterRadioView.h */,
-				DB8D1C8F1978E7C900FC88BA /* TransmitterRadioView.m */,
-				DB8D1C921978E81800FC88BA /* TransmitterRadioView.xib */,
-				DBAB59D9197A1845008E770A /* SegmentAndSlider.h */,
-				DBAB59DA197A1845008E770A /* SegmentAndSlider.m */,
-				DBAB59DB197A1845008E770A /* SegmentAndSlider.xib */,
-				DBC610A0197909950003EC11 /* UITextField+Yume.h */,
-				DBC610A1197909950003EC11 /* UITextField+Yume.m */,
-				DBC610A2197909950003EC11 /* yumeImageButtonsView.h */,
-				DBC610A3197909950003EC11 /* yumeImageButtonsView.m */,
-				DBC610A4197909950003EC11 /* yumeImageButtonsView.xib */,
-				DBC610A5197909950003EC11 /* yumeSensitivityView.h */,
-				DBC610A6197909950003EC11 /* yumeSensitivityView.m */,
-				DBC610A7197909950003EC11 /* yumeSensitivityView.xib */,
-				DBC610A8197909950003EC11 /* yumeSwicthAndVoltageView.h */,
-				DBC610A9197909950003EC11 /* yumeSwicthAndVoltageView.m */,
-				DBC610AA197909950003EC11 /* yumeSwicthAndVoltageView.xib */,
-				4D879C671980B5BD00B7AE69 /* yumeHeightWarningView.h */,
-				4D879C681980B5BD00B7AE69 /* yumeHeightWarningView.m */,
-				4D879C6D1980B5D900B7AE69 /* yumeHeightWarningView.xib */,
-				DBC610AB197909950003EC11 /* yumeXYZView.h */,
-				DBC610AC197909950003EC11 /* yumeXYZView.m */,
-				DBC610AD197909950003EC11 /* yumeXYZView.xib */,
-				DB9B36EE197A49B3005B0021 /* LabelAndSegment.h */,
-				DB9B36EF197A49B3005B0021 /* LabelAndSegment.m */,
-				DB9B36F2197A4B38005B0021 /* LabelAndSegment.xib */,
-				DB9B36F4197A58CD005B0021 /* AngleOfVisibilityView.h */,
-				DB9B36F5197A58CD005B0021 /* AngleOfVisibilityView.m */,
-				DB9B36F8197A5A72005B0021 /* AngleOfVisibilityView.xib */,
-				DBCF958C197CB914000ECE81 /* CradleHeadControllView.h */,
-				DBCF958D197CB914000ECE81 /* CradleHeadControllView.m */,
-				DBCF9590197CB9B8000ECE81 /* CradleHeadControllView.xib */,
-				DB8EB7C01981E6610089F01B /* CradleHead360.h */,
-				DB8EB7C11981E6610089F01B /* CradleHead360.m */,
-				DB8EB7C21981E6610089F01B /* CradleHead360.xib */,
-				DB8EB7C61981E9E50089F01B /* ParameterRevise.h */,
-				DB8EB7C71981E9E50089F01B /* ParameterRevise.m */,
-				DB8EB7C81981E9E50089F01B /* ParameterRevise.xib */,
-				DB5478B4198618280031D700 /* CamaraFollow.h */,
-				DB5478B5198618280031D700 /* CamaraFollow.m */,
-				DB5478B8198618D50031D700 /* CamaraFollow.xib */,
-				DB5478BA198627490031D700 /* CradleHeadNeutralPosition.h */,
-				DB5478BB198627490031D700 /* CradleHeadNeutralPosition.m */,
-				DB5478BE198627FF0031D700 /* CradleHeadNeutralPosition.xib */,
-			);
-			path = TemplateView;
-			sourceTree = "<group>";
-		};
 		4D43516B19751A020018D4F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,7 +753,7 @@
 			children = (
 				4D43516B19751A020018D4F9 /* images */,
 				4DC05E521974C82E0011B415 /* SWTableViewCell */,
-				4D435144197511E90018D4F9 /* TemplateView */,
+				DB5478C01986462C0031D700 /* TemplateView */,
 				4DC05E661974C82E0011B415 /* TemplateView2 */,
 				4D879C731980F50300B7AE69 /* CXAlertView */,
 				4DC05E711974C82E0011B415 /* yume */,
@@ -841,6 +789,64 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DB5478C01986462C0031D700 /* TemplateView */ = {
+			isa = PBXGroup;
+			children = (
+				DB5478C11986462C0031D700 /* AngleOfVisibilityView.h */,
+				DB5478C21986462C0031D700 /* AngleOfVisibilityView.m */,
+				DB5478C31986462C0031D700 /* AngleOfVisibilityView.xib */,
+				DB5478C41986462C0031D700 /* BlankView.h */,
+				DB5478C51986462C0031D700 /* BlankView.m */,
+				DB5478C61986462C0031D700 /* CamaraFollow.h */,
+				DB5478C71986462C0031D700 /* CamaraFollow.m */,
+				DB5478C81986462C0031D700 /* CamaraFollow.xib */,
+				DB5478C91986462C0031D700 /* CradleHead360.h */,
+				DB5478CA1986462C0031D700 /* CradleHead360.m */,
+				DB5478CB1986462C0031D700 /* CradleHead360.xib */,
+				DB5478CC1986462C0031D700 /* CradleHeadControllView.h */,
+				DB5478CD1986462C0031D700 /* CradleHeadControllView.m */,
+				DB5478CE1986462C0031D700 /* CradleHeadControllView.xib */,
+				DBBF791819864ADE0044BCBA /* CradleHeadNeutralPosition.h */,
+				DBBF791919864ADE0044BCBA /* CradleHeadNeutralPosition.m */,
+				DBBF791A19864ADE0044BCBA /* CradleHeadNeutralPosition.xib */,
+				DB5478D21986462C0031D700 /* CustomViewTemplate.h */,
+				DB5478D31986462C0031D700 /* CustomViewTemplate.m */,
+				DB5478D41986462C0031D700 /* LabelAndSegment.h */,
+				DB5478D51986462C0031D700 /* LabelAndSegment.m */,
+				DB5478D61986462C0031D700 /* LabelAndSegment.xib */,
+				DB5478D71986462C0031D700 /* ParameterRevise.h */,
+				DB5478D81986462C0031D700 /* ParameterRevise.m */,
+				DB5478D91986462C0031D700 /* ParameterRevise.xib */,
+				DB5478DA1986462C0031D700 /* ReceiverAndBindView.h */,
+				DB5478DB1986462C0031D700 /* ReceiverAndBindView.m */,
+				DB5478DC1986462C0031D700 /* ReceiverAndBindView.xib */,
+				DB5478DD1986462C0031D700 /* SegmentAndSlider.h */,
+				DB5478DE1986462C0031D700 /* SegmentAndSlider.m */,
+				DB5478DF1986462C0031D700 /* SegmentAndSlider.xib */,
+				DB5478E01986462C0031D700 /* TransmitterRadioView.h */,
+				DB5478E11986462C0031D700 /* TransmitterRadioView.m */,
+				DB5478E21986462C0031D700 /* TransmitterRadioView.xib */,
+				DB5478E31986462C0031D700 /* UITextField+Yume.h */,
+				DB5478E41986462C0031D700 /* UITextField+Yume.m */,
+				DB5478E51986462C0031D700 /* yumeHeightWarningView.h */,
+				DB5478E61986462C0031D700 /* yumeHeightWarningView.m */,
+				DB5478E71986462C0031D700 /* yumeHeightWarningView.xib */,
+				DB5478E81986462C0031D700 /* yumeImageButtonsView.h */,
+				DB5478E91986462C0031D700 /* yumeImageButtonsView.m */,
+				DB5478EA1986462C0031D700 /* yumeImageButtonsView.xib */,
+				DB5478EB1986462C0031D700 /* yumeSensitivityView.h */,
+				DB5478EC1986462C0031D700 /* yumeSensitivityView.m */,
+				DB5478ED1986462C0031D700 /* yumeSensitivityView.xib */,
+				DB5478EE1986462C0031D700 /* yumeSwicthAndVoltageView.h */,
+				DB5478EF1986462C0031D700 /* yumeSwicthAndVoltageView.m */,
+				DB5478F01986462C0031D700 /* yumeSwicthAndVoltageView.xib */,
+				DB5478F11986462C0031D700 /* yumeXYZView.h */,
+				DB5478F21986462C0031D700 /* yumeXYZView.m */,
+				DB5478F31986462C0031D700 /* yumeXYZView.xib */,
+			);
+			path = TemplateView;
+			sourceTree = "<group>";
+		};
 		DB9B36EA197A46EB005B0021 /* OSD_Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -872,53 +878,54 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8EB7C91981E9E50089F01B /* ParameterRevise.h in Headers */,
 				4D879C8D1980F55E00B7AE69 /* LFDisplayBridge.h in Headers */,
+				DB5479071986462C0031D700 /* LabelAndSegment.h in Headers */,
 				DB9437BB19790B9800AA2AE8 /* MCUPacketDevice.h in Headers */,
 				4D879C8F1980F55E00B7AE69 /* LFGlassView.h in Headers */,
-				DBCF958E197CB914000ECE81 /* CradleHeadControllView.h in Headers */,
-				DBC610AE197909950003EC11 /* UITextField+Yume.h in Headers */,
-				DBC610B3197909950003EC11 /* yumeSensitivityView.h in Headers */,
 				4D879C7E1980F50300B7AE69 /* CXAlertBackgroundWindow.h in Headers */,
+				DB5478F71986462C0031D700 /* BlankView.h in Headers */,
+				DB5478F41986462C0031D700 /* AngleOfVisibilityView.h in Headers */,
 				DB9437C819790B9800AA2AE8 /* yumeRCPRemoteControllerRadio.h in Headers */,
 				4DC05E9F1974C82E0011B415 /* TemplateView2.h in Headers */,
-				DBD489451977D37900532968 /* ReceiverAndBindView.h in Headers */,
 				4DF8E4AB1974BA0E00023E2A /* YumeKit.h in Headers */,
 				4D6BED25197A596900F6B545 /* ViewSource.h in Headers */,
-				DB5478BC198627490031D700 /* CradleHeadNeutralPosition.h in Headers */,
 				4DC05E8E1974C82E0011B415 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
 				4D879C841980F50300B7AE69 /* CXAlertView.h in Headers */,
-				DBC6109E1978FC980003EC11 /* BlankView.h in Headers */,
 				DB9437C419790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.h in Headers */,
+				DBBF791B19864ADE0044BCBA /* CradleHeadNeutralPosition.h in Headers */,
+				DB5479211986462C0031D700 /* yumeSwicthAndVoltageView.h in Headers */,
 				4D879C801980F50300B7AE69 /* CXAlertButtonContainerView.h in Headers */,
 				4D879C861980F50300B7AE69 /* CXAlertViewController.h in Headers */,
-				DBC610B0197909950003EC11 /* yumeImageButtonsView.h in Headers */,
 				DB9437BE19790B9800AA2AE8 /* yumeBTLERemoteController.h in Headers */,
-				DB9B36F6197A58CD005B0021 /* AngleOfVisibilityView.h in Headers */,
 				4D879C911980F55E00B7AE69 /* LiveFrost.h in Headers */,
 				DB9437C019790B9800AA2AE8 /* yumeDeviceListAlertTableView.h in Headers */,
+				DB5479101986462C0031D700 /* SegmentAndSlider.h in Headers */,
 				DB9437CC19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.h in Headers */,
+				DB54791B1986462C0031D700 /* yumeImageButtonsView.h in Headers */,
 				DB9437CA19790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.h in Headers */,
+				DB5479241986462C0031D700 /* yumeXYZView.h in Headers */,
+				DB5479161986462C0031D700 /* UITextField+Yume.h in Headers */,
+				DB5478FF1986462C0031D700 /* CradleHeadControllView.h in Headers */,
 				4DC05E9C1974C82E0011B415 /* TemplateView1.h in Headers */,
-				DB8EB7C31981E6610089F01B /* CradleHead360.h in Headers */,
-				DB9B36F0197A49B4005B0021 /* LabelAndSegment.h in Headers */,
 				4DC05E8C1974C82E0011B415 /* SWTableViewCell.h in Headers */,
 				4DDB13831974C93200045C40 /* APSM-Prefix.pch in Headers */,
 				4DC05E861974C82E0011B415 /* NSMutableArray+SWUtilityButtons.h in Headers */,
-				4D879C6A1980B5BD00B7AE69 /* yumeHeightWarningView.h in Headers */,
 				DB9437BC19790B9800AA2AE8 /* VerticalUILabel.h in Headers */,
 				DB9437C219790B9800AA2AE8 /* yumeLanguage.h in Headers */,
+				DB5479181986462C0031D700 /* yumeHeightWarningView.h in Headers */,
 				DB9437C619790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.h in Headers */,
-				DBC610B9197909950003EC11 /* yumeXYZView.h in Headers */,
 				4DC05EB51974C82E0011B415 /* YumeKit-Prefix.pch in Headers */,
+				DB54791E1986462C0031D700 /* yumeSensitivityView.h in Headers */,
 				4DC05E8A1974C82E0011B415 /* SWLongPressGestureRecognizer.h in Headers */,
-				DB8D1C901978E7C900FC88BA /* TransmitterRadioView.h in Headers */,
-				DB5478B6198618280031D700 /* CamaraFollow.h in Headers */,
-				DBC610B6197909950003EC11 /* yumeSwicthAndVoltageView.h in Headers */,
-				DBAB59DC197A1845008E770A /* SegmentAndSlider.h in Headers */,
+				DB5479131986462C0031D700 /* TransmitterRadioView.h in Headers */,
+				DB54790A1986462C0031D700 /* ParameterRevise.h in Headers */,
 				4DC05E881974C82E0011B415 /* SWCellScrollView.h in Headers */,
+				DB5478F91986462C0031D700 /* CamaraFollow.h in Headers */,
+				DB54790D1986462C0031D700 /* ReceiverAndBindView.h in Headers */,
 				4DC05E901974C82E0011B415 /* SWUtilityButtonView.h in Headers */,
+				DB5479051986462C0031D700 /* CustomViewTemplate.h in Headers */,
 				4D879C821980F50300B7AE69 /* CXAlertButtonItem.h in Headers */,
+				DB5478FC1986462C0031D700 /* CradleHead360.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,38 +1102,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5478FE1986462C0031D700 /* CradleHead360.xib in Resources */,
+				DB54791D1986462C0031D700 /* yumeImageButtonsView.xib in Resources */,
+				DB5479011986462C0031D700 /* CradleHeadControllView.xib in Resources */,
 				DB0E56A9197A21A8006D471C /* slider.png in Resources */,
-				DB9B36F9197A5A72005B0021 /* AngleOfVisibilityView.xib in Resources */,
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
-				4D879C6E1980B5D900B7AE69 /* yumeHeightWarningView.xib in Resources */,
-				DBAB59DE197A1845008E770A /* SegmentAndSlider.xib in Resources */,
-				DB8D1C931978E81800FC88BA /* TransmitterRadioView.xib in Resources */,
+				DB54790F1986462C0031D700 /* ReceiverAndBindView.xib in Resources */,
+				DB5479261986462C0031D700 /* yumeXYZView.xib in Resources */,
 				4DC05E991974C82E0011B415 /* pic_Blade-Direction_002(172x172).png in Resources */,
+				DB5478FB1986462C0031D700 /* CamaraFollow.xib in Resources */,
 				4DC05EA11974C82E0011B415 /* TemplateView2.xib in Resources */,
-				DB8EB7C51981E6610089F01B /* CradleHead360.xib in Resources */,
-				DBD489481977D4AB00532968 /* ReceiverAndBindView.xib in Resources */,
+				DB5479091986462C0031D700 /* LabelAndSegment.xib in Resources */,
 				4D43517419751A020018D4F9 /* wing6_1.jpg in Resources */,
-				DBC610B8197909950003EC11 /* yumeSwicthAndVoltageView.xib in Resources */,
 				4D43517319751A020018D4F9 /* wing4_2.jpg in Resources */,
 				DB0E56A7197A21A8006D471C /* arrow(560x100).png in Resources */,
+				DB5479121986462C0031D700 /* SegmentAndSlider.xib in Resources */,
+				DB54790C1986462C0031D700 /* ParameterRevise.xib in Resources */,
 				4D43517619751A020018D4F9 /* wing8_1.jpg in Resources */,
 				DBDAB1D319822E3E005CF628 /* 223.png in Resources */,
+				DB54791A1986462C0031D700 /* yumeHeightWarningView.xib in Resources */,
 				4D43517719751A020018D4F9 /* wing8_2.jpg in Resources */,
+				DB5479201986462C0031D700 /* yumeSensitivityView.xib in Resources */,
 				4DC05E9E1974C82E0011B415 /* TemplateView1.xib in Resources */,
-				DB9B36F3197A4B38005B0021 /* LabelAndSegment.xib in Resources */,
 				DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */,
-				DBC610B2197909950003EC11 /* yumeImageButtonsView.xib in Resources */,
-				DB5478B9198618D50031D700 /* CamaraFollow.xib in Resources */,
-				DBCF9591197CB9B8000ECE81 /* CradleHeadControllView.xib in Resources */,
-				DBC610BB197909950003EC11 /* yumeXYZView.xib in Resources */,
+				DB5479151986462C0031D700 /* TransmitterRadioView.xib in Resources */,
 				4DC05E9B1974C82E0011B415 /* pic_pitdirection_002(172x172).png in Resources */,
+				DB5478F61986462C0031D700 /* AngleOfVisibilityView.xib in Resources */,
 				4D43517219751A020018D4F9 /* wing4_1.jpg in Resources */,
+				DBBF791D19864ADE0044BCBA /* CradleHeadNeutralPosition.xib in Resources */,
+				DB5479231986462C0031D700 /* yumeSwicthAndVoltageView.xib in Resources */,
 				4DC05E9A1974C82E0011B415 /* pic_pitdirection_001(172x172).png in Resources */,
-				DB5478BF198627FF0031D700 /* CradleHeadNeutralPosition.xib in Resources */,
-				DBC610B5197909950003EC11 /* yumeSensitivityView.xib in Resources */,
 				DBDAB1D219822E3E005CF628 /* 112.png in Resources */,
 				4DC05E981974C82E0011B415 /* pic_Blade-Direction_001(172x172).png in Resources */,
-				DB8EB7CB1981E9E50089F01B /* ParameterRevise.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,48 +1187,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC610B1197909950003EC11 /* yumeImageButtonsView.m in Sources */,
 				DB9437C319790B9800AA2AE8 /* yumeLanguage.m in Sources */,
-				DBC6109F1978FC980003EC11 /* BlankView.m in Sources */,
+				DB5479141986462C0031D700 /* TransmitterRadioView.m in Sources */,
+				DB5479061986462C0031D700 /* CustomViewTemplate.m in Sources */,
 				4D6BED26197A596900F6B545 /* ViewSource.m in Sources */,
+				DB5479221986462C0031D700 /* yumeSwicthAndVoltageView.m in Sources */,
+				DB54791F1986462C0031D700 /* yumeSensitivityView.m in Sources */,
 				DB9437BF19790B9800AA2AE8 /* yumeBTLERemoteController.m in Sources */,
+				DB54790B1986462C0031D700 /* ParameterRevise.m in Sources */,
 				DB9437C119790B9800AA2AE8 /* yumeDeviceListAlertTableView.m in Sources */,
 				4DC05E871974C82E0011B415 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				4D879C901980F55E00B7AE69 /* LFGlassView.m in Sources */,
-				DBAB59DD197A1845008E770A /* SegmentAndSlider.m in Sources */,
 				DB9437BD19790B9800AA2AE8 /* VerticalUILabel.m in Sources */,
 				4DC05E911974C82E0011B415 /* SWUtilityButtonView.m in Sources */,
 				4D879C811980F50300B7AE69 /* CXAlertButtonContainerView.m in Sources */,
-				DBCF958F197CB914000ECE81 /* CradleHeadControllView.m in Sources */,
-				DB8EB7CA1981E9E50089F01B /* ParameterRevise.m in Sources */,
-				DBC610B4197909950003EC11 /* yumeSensitivityView.m in Sources */,
 				DB9437CD19790B9800AA2AE8 /* yumeRemoteControllerDeviceProtocol.m in Sources */,
+				DB5479191986462C0031D700 /* yumeHeightWarningView.m in Sources */,
+				DB5479001986462C0031D700 /* CradleHeadControllView.m in Sources */,
 				4D879C851980F50300B7AE69 /* CXAlertView.m in Sources */,
-				DB8EB7C41981E6610089F01B /* CradleHead360.m in Sources */,
 				4D879C7F1980F50300B7AE69 /* CXAlertBackgroundWindow.m in Sources */,
-				DB8D1C911978E7C900FC88BA /* TransmitterRadioView.m in Sources */,
 				4D879C831980F50300B7AE69 /* CXAlertButtonItem.m in Sources */,
+				DB5478F51986462C0031D700 /* AngleOfVisibilityView.m in Sources */,
+				DB5479171986462C0031D700 /* UITextField+Yume.m in Sources */,
 				4DC05E9D1974C82E0011B415 /* TemplateView1.m in Sources */,
-				DB9B36F7197A58CD005B0021 /* AngleOfVisibilityView.m in Sources */,
-				DBC610BA197909950003EC11 /* yumeXYZView.m in Sources */,
-				DBC610AF197909950003EC11 /* UITextField+Yume.m in Sources */,
+				DB54791C1986462C0031D700 /* yumeImageButtonsView.m in Sources */,
+				DB5479081986462C0031D700 /* LabelAndSegment.m in Sources */,
 				DB9437C919790B9800AA2AE8 /* yumeRCPRemoteControllerRadio.m in Sources */,
-				DBD489461977D37900532968 /* ReceiverAndBindView.m in Sources */,
 				4DC05E8D1974C82E0011B415 /* SWTableViewCell.m in Sources */,
+				DB5479251986462C0031D700 /* yumeXYZView.m in Sources */,
 				4DC05E8F1974C82E0011B415 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
-				DB9B36F1197A49B4005B0021 /* LabelAndSegment.m in Sources */,
+				DB5478F81986462C0031D700 /* BlankView.m in Sources */,
 				4DC05E891974C82E0011B415 /* SWCellScrollView.m in Sources */,
+				DB54790E1986462C0031D700 /* ReceiverAndBindView.m in Sources */,
 				DB9437CB19790B9800AA2AE8 /* yumeRCRDRemoteControllerRadioData.m in Sources */,
 				4D879C8E1980F55E00B7AE69 /* LFDisplayBridge.m in Sources */,
 				4DC05E8B1974C82E0011B415 /* SWLongPressGestureRecognizer.m in Sources */,
 				4D879C871980F50300B7AE69 /* CXAlertViewController.m in Sources */,
-				DB5478BD198627490031D700 /* CradleHeadNeutralPosition.m in Sources */,
 				4DC05EA01974C82E0011B415 /* TemplateView2.m in Sources */,
-				4D879C6B1980B5BD00B7AE69 /* yumeHeightWarningView.m in Sources */,
-				DBC610B7197909950003EC11 /* yumeSwicthAndVoltageView.m in Sources */,
+				DBBF791C19864ADE0044BCBA /* CradleHeadNeutralPosition.m in Sources */,
+				DB5478FA1986462C0031D700 /* CamaraFollow.m in Sources */,
 				DB9437C519790B9800AA2AE8 /* yumeRCPDRemoteControllerParameterData.m in Sources */,
+				DB5478FD1986462C0031D700 /* CradleHead360.m in Sources */,
+				DB5479111986462C0031D700 /* SegmentAndSlider.m in Sources */,
 				DB9437C719790B9800AA2AE8 /* yumeRCPRemoteControllerParameter.m in Sources */,
-				DB5478B7198618280031D700 /* CamaraFollow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
