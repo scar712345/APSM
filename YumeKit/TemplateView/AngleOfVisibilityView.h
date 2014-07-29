@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface AngleOfVisibilityView : UIView
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+@interface AngleOfVisibilityView : CustomViewTemplate
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString *buttonKeyPath;
 @end

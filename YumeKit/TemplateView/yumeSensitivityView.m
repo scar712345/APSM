@@ -37,59 +37,14 @@
 
 @implementation yumeSensitivityView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
 }
 
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-
-- (void)drawRect:(CGRect)rect{
-    self.layer.borderColor = _borderColor.CGColor;
-    self.layer.borderWidth = _borderLineWidth;
-    
-    if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
-        [self.layer setCornerRadius:_borderRadius];
-    
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
-}
-
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
 -(void)processFuture{
@@ -129,7 +84,11 @@
     }
 }
 
--(void)processViewSource{
+//-(void)processViewSource{
+//    
+//}
+
+-(void)processStoryBoardSource{
     if (self.viewTitleText) {
         self.viewTitle.text = NSLocalizedString(_viewTitleText, nil) ;
     }
@@ -161,10 +120,6 @@
     if (self.labelAltitude2Text) {
         self.labelAltitude2.text = NSLocalizedString(_labelAltitude2Text, nil) ;
     }
-}
-
--(id)debugQuickLookObject{
-    return self;
 }
 
 #pragma mark - TextField Delegate

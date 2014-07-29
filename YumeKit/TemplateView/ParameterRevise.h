@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface ParameterRevise : UIView
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+@interface ParameterRevise : CustomViewTemplate
+
 
 @end

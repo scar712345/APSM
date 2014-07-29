@@ -9,7 +9,6 @@
 #import "TransmitterRadioView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
-#import "ViewSource.h"
 
 @interface TransmitterRadioView()
 
@@ -28,57 +27,21 @@
 
 @implementation TransmitterRadioView
 
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
     
     _slider.enabled = NO;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
-}
-
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-- (void)drawRect:(CGRect)rect{
     
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
+    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    self.slider.continuous = YES;
 }
 
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
 -(void)processFuture{
@@ -94,27 +57,9 @@
 }
 
 -(void)processViewSource{
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    self.slider.continuous = YES;
-    
-    if (_viewSourceKeyPath) {
-        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        
-        NSString *type = dict[@"type"];
-        NSString *className = NSStringFromClass([self class]);
-        
-        if ([className isEqualToString:type]) {
-            _labelTitle.text = NSLocalizedString(dict[@"labelTitle"], nil) ;
-            _labelLeft.text = NSLocalizedString(dict[@"labelLeft"], nil) ;
-            _labelRight.text = NSLocalizedString(dict[@"labelRight"], nil) ;
-        }
-
-    }
-}
-
--(id)debugQuickLookObject{
-    return self;
+    _labelTitle.text = NSLocalizedString(self.viewSourceDictionary[@"labelTitle"], nil) ;
+    _labelLeft.text = NSLocalizedString(self.viewSourceDictionary[@"labelLeft"], nil) ;
+    _labelRight.text = NSLocalizedString(self.viewSourceDictionary[@"labelRight"], nil) ;
 }
 
 #pragma mark - Future Method

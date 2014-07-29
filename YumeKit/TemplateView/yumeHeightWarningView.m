@@ -9,7 +9,6 @@
 #import "yumeHeightWarningView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
-#import "ViewSource.h"
 
 @interface yumeHeightWarningView ()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -31,59 +30,14 @@
 
 @implementation yumeHeightWarningView
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
 }
 
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-
-- (void)drawRect:(CGRect)rect{
-    self.layer.borderColor = _borderColor.CGColor;
-    self.layer.borderWidth = _borderLineWidth;
-    
-    if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
-        [self.layer setCornerRadius:_borderRadius];
-    
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
-}
-
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
 -(void)processFuture{
@@ -104,25 +58,11 @@
 }
 
 -(void)processViewSource{
-    if (_viewSourceKeyPath) {
-        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        
-        NSString *type = dict[@"type"];
-        NSString *className = NSStringFromClass([self class]);
-        
-        if ([className isEqualToString:type]) {
-            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil) ;
-            _viewContent1.text = NSLocalizedString( dict[@"viewContent1"], nil);
-            _viewContent2.text = NSLocalizedString( dict[@"viewContent2"], nil);
-            _labelUnit1.text = dict[@"labelUnit1"];
-            _labelUnit2.text = dict[@"labelUnit2"];
-        }
-        
-    }
-}
-
--(id)debugQuickLookObject{
-    return self;
+    _viewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil) ;
+    _viewContent1.text = NSLocalizedString( self.viewSourceDictionary[@"viewContent1"], nil);
+    _viewContent2.text = NSLocalizedString( self.viewSourceDictionary[@"viewContent2"], nil);
+    _labelUnit1.text = self.viewSourceDictionary[@"labelUnit1"];
+    _labelUnit2.text = self.viewSourceDictionary[@"labelUnit2"];
 }
 
 #pragma mark - TextField Delegate

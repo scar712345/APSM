@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface LabelAndSegment : UIView
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+@interface LabelAndSegment : CustomViewTemplate
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 @property (nonatomic) IBInspectable NSString *segmentKeyPath;
 @end
 

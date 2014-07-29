@@ -34,33 +34,8 @@
 
 @implementation ParameterRevise
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
     
     
@@ -74,23 +49,9 @@
 //    [stepper addTarget:self action:@selector(stepperValueIschanged:) forControlEvents:UIControlEventValueChanged];
 }
 
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-- (void)drawRect:(CGRect)rect{
-    
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
-}
-
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
 -(void) processFuture{
@@ -98,26 +59,14 @@
 }
 
 -(void) processViewSource{
-    if (_viewSourceKeyPath) {
-        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        NSString *type = dict[@"type"];
-        NSString *className = NSStringFromClass([self class]);
-        
-        if ([className isEqualToString:type]) {
-            _labelViewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil);
-            _labelPGain.text = NSLocalizedString(dict[@"labelPGain"], nil);
-            _labelIGain.text = NSLocalizedString(dict[@"labelIGain"], nil);
-            _labelDGain.text = NSLocalizedString(dict[@"labelDGain"], nil);
-            _labelPower.text = NSLocalizedString(dict[@"labelPower"], nil);
-        }
-        
-    }
-}
 
--(id)debugQuickLookObject{
-    return self;
-}
+    _labelViewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil);
+    _labelPGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelPGain"], nil);
+    _labelIGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelIGain"], nil);
+    _labelDGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelDGain"], nil);
+    _labelPower.text = NSLocalizedString(self.viewSourceDictionary[@"labelPower"], nil);
 
+}
 
 #pragma mark - UIButton
 - (IBAction)checkBoxAction:(id)sender {

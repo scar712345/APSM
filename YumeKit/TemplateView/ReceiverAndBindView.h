@@ -7,16 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-IB_DESIGNABLE
-@interface ReceiverAndBindView : UIView
+#import "CustomViewTemplate.h"
 
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+IB_DESIGNABLE
+@interface ReceiverAndBindView : CustomViewTemplate
+
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString *receiverKeyPath;
 @property (nonatomic) IBInspectable NSString *bindingKeyPath;
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @property (nonatomic) IBInspectable NSString *labelReceiverText;
 @property (nonatomic) IBInspectable NSString *labelBindingText;

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface CradleHeadNeutralPosition : UIView
+@interface CradleHeadNeutralPosition : CustomViewTemplate
 
 @end

@@ -8,7 +8,6 @@
 
 #import "CradleHead360.h"
 #import "UITextField+Yume.h"
-#import "ViewSource.h"
 
 @interface CradleHead360()<UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
@@ -35,66 +34,22 @@
 
 @implementation CradleHead360
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
-
-}
-
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-- (void)drawRect:(CGRect)rect{
-    self.layer.borderColor = _borderColor.CGColor;
-    self.layer.borderWidth = _borderLineWidth;
-    
-    if( [self.layer respondsToSelector:@selector(setCornerRadius:)] )
-        [self.layer setCornerRadius:_borderRadius];
-
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
 }
 
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
--(void) processFuture{
-    
-}
+//-(void) processFuture{
+//    
+//}
 
--(void) processViewSource{
+-(void) processStoryBoardSource{
+
     if (_labelMainTitleKeyPath) {
         self.labelMainTitle.text = NSLocalizedString(self.labelMainTitleKeyPath, nil) ;
     }
@@ -125,13 +80,8 @@
         self.labelDegree30Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
         self.labelDegree90Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
     }
+
 }
-
--(id)debugQuickLookObject{
-    return self;
-}
-
-
 
 #pragma mark - TextField Delegate
 

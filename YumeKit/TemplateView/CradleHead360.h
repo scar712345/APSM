@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface CradleHead360 : UIView
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+@interface CradleHead360 : CustomViewTemplate
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
+
+@property (nonatomic) IBInspectable NSString* segmentKeyPath;
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @property (nonatomic) IBInspectable NSString* textFieldDegree0KeyPath;
 @property (nonatomic) IBInspectable NSString* textFieldDegree15KeyPath;
@@ -28,6 +32,5 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString* labelDegree90KeyPath;
 
 @property (nonatomic) IBInspectable NSString* labelUnitKeyPath;
-
 
 @end

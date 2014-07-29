@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "CustomViewTemplate.h"
 
 IB_DESIGNABLE
-@interface yumeImageButtonsView : UIView
+@interface yumeImageButtonsView : CustomViewTemplate
 
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable CGPoint buttonBeginPoint;
 @property (nonatomic) IBInspectable CGSize buttonSize;
@@ -24,6 +25,6 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable BOOL hasChangeAlert;
 
 @property (nonatomic) IBInspectable NSString* buttonsKeyPath;
-@property (nonatomic) IBInspectable NSString* viewSourceKeyPath;
+//@property (nonatomic) IBInspectable NSString* viewSourceKeyPath;
 
 @end

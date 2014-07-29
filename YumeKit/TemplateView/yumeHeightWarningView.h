@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface yumeHeightWarningView : UIView
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+@interface yumeHeightWarningView : CustomViewTemplate
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString* segmentKeyPath;
 @property (nonatomic) IBInspectable NSString* textField1KeyPath;
 @property (nonatomic) IBInspectable NSString* textField2KeyPath;
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 @end

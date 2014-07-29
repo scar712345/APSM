@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
+
 IB_DESIGNABLE
-@interface TransmitterRadioView : UIView
+@interface TransmitterRadioView : CustomViewTemplate
 
 @property (nonatomic) IBInspectable NSString *sliderKeyPath;
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @end

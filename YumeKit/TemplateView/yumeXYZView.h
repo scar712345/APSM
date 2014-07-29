@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface yumeXYZView : UIView
+@interface yumeXYZView : CustomViewTemplate
 
-@property (nonatomic) IBInspectable float borderLineWidth;
-@property (nonatomic) IBInspectable float borderRadius;
-@property (nonatomic) IBInspectable UIColor *borderColor;
+//@property (nonatomic) IBInspectable float borderLineWidth;
+//@property (nonatomic) IBInspectable float borderRadius;
+//@property (nonatomic) IBInspectable UIColor *borderColor;
 
 @property (nonatomic) IBInspectable NSString* xKeyPath;
 @property (nonatomic) IBInspectable NSString* yKeyPath;

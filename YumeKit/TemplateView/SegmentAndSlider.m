@@ -26,58 +26,31 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 
 @implementation SegmentAndSlider
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
     
     _slider.enabled = NO;
 //    _segmentedControl.enabled = NO;
     _adapter = nil;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
-}
-
--(void)prepareForInterfaceBuilder{
-    [self viewLiveRendering];
-}
-
-- (void)drawRect:(CGRect)rect{
     
-#ifndef TARGET_INTERFACE_BUILDER
-    [self viewLiveRendering];
-#endif
+    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    self.slider.continuous = YES;
+    
+    NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+    self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
+    self.segmentedControl.tintColor = [UIColor whiteColor];
+    self.segmentedControl.selectedSegmentIndex = 0;
+    _segmentedControl.enabled = NO;
+    [self.view addSubview:self.segmentedControl];
 }
 
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
 -(void)processFuture{
@@ -94,29 +67,29 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 }
 
 -(void)processViewSource{
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    self.slider.continuous = YES;
+        
+//    NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
+//
+//    itemArray = self.viewSourceDictionary[@"itemArray"];
+//    _adapter = self.viewSourceDictionary[@"adapter"];
+//
+//    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+//    self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
+//    self.segmentedControl.tintColor = [UIColor whiteColor];
+//    self.segmentedControl.selectedSegmentIndex = 0;
+//    _segmentedControl.enabled = NO;
+//    [self.view addSubview:self.segmentedControl];
     
-    NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
-    if (_viewSourceKeyPath) {
-        NSDictionary *dict =  [ViewSourceInstance valueForKey:_viewSourceKeyPath];
-        
-        NSString *type = dict[@"type"];
-        NSString *className = NSStringFromClass([self class]);
-        
-        if ([className isEqualToString:type]) {
-            itemArray = dict[@"itemArray"];
-            _adapter = dict[@"adapter"];
-        }
-        
+    
+    
+    NSArray *itemArray = self.viewSourceDictionary[@"itemArray"];
+    _adapter = self.viewSourceDictionary[@"adapter"];
+    
+    [self.segmentedControl removeAllSegments];
+    for (int index = 0 ; index < itemArray.count ; index++) {
+        [self.segmentedControl insertSegmentWithTitle:(NSString *)itemArray[index] atIndex:index animated:NO];
     }
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
-    self.segmentedControl.tintColor = [UIColor whiteColor];
-    self.segmentedControl.selectedSegmentIndex = 0;
-    _segmentedControl.enabled = NO;
-    [self.view addSubview:self.segmentedControl];
+   
 }
 
 -(id)debugQuickLookObject{

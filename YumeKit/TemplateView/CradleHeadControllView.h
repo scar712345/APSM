@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomViewTemplate.h"
 IB_DESIGNABLE
-@interface CradleHeadControllView : UIView
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+@interface CradleHeadControllView : CustomViewTemplate
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 @end
