@@ -305,6 +305,21 @@
                                    NSLocalizedString(@"Attitude",nil)]};
 }
 
+-(NSDictionary*)CradleHeadPage3View21{
+    return @{@"type":@"CradleHeadNeutralPosition",
+             @"viewTitle":NSLocalizedString(@"Pan", nil),};
+}
+
+-(NSDictionary*)CradleHeadPage3View22{
+    return @{@"type":@"CradleHeadNeutralPosition",
+             @"viewTitle":NSLocalizedString(@"Tilt", nil),};
+}
+
+-(NSDictionary*)CradleHeadPage3View23{
+    return @{@"type":@"CradleHeadNeutralPosition",
+             @"viewTitle":NSLocalizedString(@"Roll", nil),};
+}
+
 -(id)valueForUndefinedKey:(NSString *)key{
     return nil;
 }
