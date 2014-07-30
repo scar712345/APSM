@@ -15,39 +15,22 @@
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent1;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent2;
-@property (strong, nonatomic) UISegmentedControl *segmentedControl;@end
+@property (strong, nonatomic) UISegmentedControl *segmentedControl;
+@end
 
 @implementation CamaraFollow
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void) setup{
-    NSString *nibName = NSStringFromClass([self class]);
-    
-    NSBundle *p = [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"];
-    
-    UINib *nib = [UINib nibWithNibName:nibName bundle:p];
-    
-    [nib instantiateWithOwner:self options:nil];
-    //Add the view loaded from the nib into self.
+    [super setup];
     [self addSubview:self.view];
     
+     NSArray *segmentedControl = @[@"seg1",@"seg2"];
+    
+    _segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentedControl];
+    _segmentedControl.frame = CGRectMake(111, 6, 181, 29);
+    _segmentedControl.tintColor = [UIColor whiteColor];
+    //    _segmentedControl.selectedSegmentIndex = 0;
+    [self.view addSubview:_segmentedControl];
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -62,41 +45,24 @@
 }
 
 -(void)viewLiveRendering{
+    [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
-    
-    [self processViewSource];
-    
-    [self processFuture];
 }
 
--(void) processFuture{
-    
-}
+//-(void) processFuture{
+//    
+//}
 
 -(void) processViewSource{
-    NSArray *array = @[@"seg1",@"seg2"];
-    
-    if (_viewSourceKeyPath) {
-        NSDictionary *dict = [ViewSourceInstance valueForKey:_viewSourceKeyPath];
+    _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
+    _viewContent1.text = self.viewSourceDictionary[@"viewContent1"];
+    _viewContent2.text = self.viewSourceDictionary[@"viewContent2"];
+    NSArray *segmentedControl  = self.viewSourceDictionary[@"segmentedControl"];
         
-        NSString *type = dict[@"type"];
-        NSString *className = NSStringFromClass([self class]);
-        
-        if ([className isEqualToString:type]) {
-            _viewTitle.text = NSLocalizedString(dict[@"viewTitle"], nil) ;
-            _viewContent1.text = NSLocalizedString(dict[@"viewContent1"], nil);
-            _viewContent2.text = NSLocalizedString(dict[@"viewContent2"],nil);
-            array = dict[@"segmentedControl"];
-            _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
-            }
-    }else{
-        _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
+    [_segmentedControl removeAllSegments];
+    for (int index = 0 ; index < segmentedControl.count ; index++) {
+        [self.segmentedControl insertSegmentWithTitle:(NSString *)segmentedControl[index] atIndex:index animated:NO];
     }
-    _segmentedControl.frame = CGRectMake(111, 6, 181, 29);
-    _segmentedControl.tintColor = [UIColor whiteColor];
-    //    _segmentedControl.selectedSegmentIndex = 0;
-    [self.view addSubview:_segmentedControl];
-    
 }
 
 -(id)debugQuickLookObject{

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-IB_DESIGNABLE
-@interface CamaraFollow : UIView
+#import "CustomViewTemplate.h"
 
-@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+IB_DESIGNABLE
+@interface CamaraFollow : CustomViewTemplate
+
+//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
 
 @end
