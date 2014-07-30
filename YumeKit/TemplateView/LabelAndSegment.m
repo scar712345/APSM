@@ -46,12 +46,12 @@
 
 -(void)processViewSource{
 
-    _labelTitle.text = NSLocalizedString(self.viewSourceDictionary[@"labelTitle"], nil) ;
-    NSArray *array = self.viewSourceDictionary[@"segmentedControl"];
+    _labelTitle.text = self.viewSourceDictionary[@"labelTitle"];
+    NSArray *segmentedControl = self.viewSourceDictionary[@"segmentedControl"];
     
     [_segmentedControl removeAllSegments];
-    for (int index = 0 ; index < array.count ; index++) {
-        [self.segmentedControl insertSegmentWithTitle:(NSString *)array[index] atIndex:index animated:NO];
+    for (int index = 0 ; index < segmentedControl.count ; index++) {
+        [self.segmentedControl insertSegmentWithTitle:(NSString *)segmentedControl[index] atIndex:index animated:NO];
     }
     
 }
