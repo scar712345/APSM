@@ -16,7 +16,6 @@
 @property (strong, nonatomic) IBOutlet UIView *view;
 
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
-@property (weak, nonatomic) IBOutlet UILabel *viewContent;
 @property (weak, nonatomic) IBOutlet UILabel *labelX;
 @property (weak, nonatomic) IBOutlet UILabel *labelY;
 @property (weak, nonatomic) IBOutlet UILabel *labelZ;
@@ -64,10 +63,6 @@
 -(void)processStoryBoardSource{
     if (_viewTitleText) {
         _viewTitle.text = NSLocalizedString(_viewTitleText, nil);
-    }
-    
-    if (_viewContentText) {
-        _viewContent.text = NSLocalizedString(_viewContentText, nil);
     }
     
     if (_xText) {
