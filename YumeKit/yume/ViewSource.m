@@ -146,27 +146,57 @@
              @"labelUnit":@"V"};
 }
 
+#pragma mark - APSM Page 4
+
+-(NSDictionary*)APSMPage4View12{
+    return @{@"type":@"LabelAndTextfiled",
+             @"viewTitle":NSLocalizedString(@"巡航距離", nil),
+             @"viewContent1":NSLocalizedString(@"正方形單邊長距離", nil),
+             @"labelUnit":@"M"};
+}
+
+-(NSDictionary*)APSMPage4View13{
+    return @{@"type":@"LabelAndTextfiled",
+             @"viewTitle":NSLocalizedString(@"拍攝張數", nil),
+             @"viewContent1":NSLocalizedString(@"每10M拍攝張數", nil),
+             @"labelUnit":@"張"};
+}
+
+-(NSDictionary*)APSMPage4View14{
+    return @{@"type":@"yumeImageButtonsView",
+             @"viewTitle":NSLocalizedString(@"巡航點選擇", nil),
+             @"images":@[@"aps-m_2x2(140x140).jpg",
+                         @"aps-m_3x3(140x140).jpg",
+                         @"aps-m_5x5(140x140).jpg"],
+             @"toUI":^NSInteger(NSInteger valueMCU) {
+                 return valueMCU;
+             },
+             @"toMCU":^NSInteger(NSInteger valueUI) {
+                 return valueUI;
+             }};
+}
+
 #pragma mark - OSD Page 1
 
--(NSDictionary*)OSDPage1View11{
+-(NSDictionary*)OSDPage1View1{
     return @{@"type":@"LabelAndSegment",
              @"labelTitle":NSLocalizedString(@"顯示單位", nil),
              @"segmentedControl":@[NSLocalizedString(@"公制", nil),NSLocalizedString(@"英制",nil)]};
 }
 
--(NSDictionary*)OSDPage1View12{
+-(NSDictionary*)OSDPage1View2{
     return @{@"type":@"LabelAndSegment",
              @"labelTitle":NSLocalizedString(@"影像格式", nil),
              @"segmentedControl":@[NSLocalizedString(@"NTSC", nil),NSLocalizedString(@"PAL", nil)]};
 }
 
--(NSDictionary*)OSDPage1View13{
+-(NSDictionary*)OSDPage1View3{
     return @{@"type":@"LabelAndSegment",
              @"labelTitle":NSLocalizedString(@"顯示經緯度", nil),
              @"segmentedControl":@[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)]};
 }
 
--(NSDictionary*)OSDPage1View31{
+-(NSDictionary*)OSDPage1View51{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"低電壓提醒", nil),
              @"viewContent1":NSLocalizedString(@"電壓低於", nil),
@@ -174,7 +204,7 @@
              @"labelUnit":@"V"};
 }
 
--(NSDictionary*)OSDPage1View32{
+-(NSDictionary*)OSDPage1View52{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"衛星數量", nil),
              @"viewContent1":NSLocalizedString(@"衛星數量低於", nil),
@@ -182,7 +212,7 @@
              @"labelUnit":NSLocalizedString(@"個", nil)};
 }
 
--(NSDictionary*)OSDPage1View33{
+-(NSDictionary*)OSDPage1View53{
     return @{@"type":@"yumeSwicthAndVoltageView",
              @"viewTitle":NSLocalizedString(@"飛行距離提醒", nil),
              @"viewContent1":NSLocalizedString(@"飛行距離超過", nil),
@@ -190,7 +220,7 @@
              @"labelUnit":@"M"};
 }
 
--(NSDictionary*)OSDPage1View34{
+-(NSDictionary*)OSDPage1View54{
     return @{@"type":@"yumeHeightWarningView",
              @"viewTitle":NSLocalizedString(@"飛行高度提醒", nil),
              @"viewContent1":NSLocalizedString(@"飛行高度超過", nil),
@@ -201,10 +231,22 @@
 
 #pragma mark - CradleHead Page 1
 
+-(NSDictionary*)CradleHeadPage1View1{
+    return @{@"type":@"yumeImageButtonsView",
+             @"viewTitle":NSLocalizedString(@"選擇雲台類型", nil),
+             @"images":@[@"G2001(152x152).jpg",
+                         @"G3001(152x152).jpg"],
+             @"toUI":^NSInteger(NSInteger valueMCU) {
+                 return valueMCU;
+             },
+             @"toMCU":^NSInteger(NSInteger valueUI) {
+                 return valueUI;
+             }};
+}
 
 -(NSDictionary*)CradleHeadPage1View31{
     return @{@"type":@"ParameterRevise",
-             @"viewTitle":NSLocalizedString(@"PAN", nil),
+             @"labelViewTitle":NSLocalizedString(@"PAN", nil),
              @"labelPGain":NSLocalizedString(@"P Gain", nil),
              @"labelIGain":NSLocalizedString(@"I Gain", nil),
              @"labelDGain":NSLocalizedString(@"D Gain", nil),
@@ -213,7 +255,7 @@
 
 -(NSDictionary*)CradleHeadPage1View32{
     return @{@"type":@"ParameterRevise",
-             @"viewTitle":NSLocalizedString(@"ROLL", nil),
+             @"labelViewTitle":NSLocalizedString(@"ROLL", nil),
              @"labelPGain":NSLocalizedString(@"P Gain", nil),
              @"labelIGain":NSLocalizedString(@"I Gain", nil),
              @"labelDGain":NSLocalizedString(@"D Gain", nil),
@@ -222,7 +264,7 @@
 
 -(NSDictionary*)CradleHeadPage1View33{
     return @{@"type":@"ParameterRevise",
-             @"viewTitle":NSLocalizedString(@"TILT", nil),
+             @"labelViewTitle":NSLocalizedString(@"TILT", nil),
              @"labelPGain":NSLocalizedString(@"P Gain", nil),
              @"labelIGain":NSLocalizedString(@"I Gain", nil),
              @"labelDGain":NSLocalizedString(@"D Gain", nil),
@@ -248,6 +290,35 @@
              @"labelTitle":NSLocalizedString(@"Tilt", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
+
+-(NSDictionary*)CradleHeadPage2View31{
+    return @{@"type":@"TransmitterRadioView",
+             @"labelTitle":NSLocalizedString(@"PAN", nil),
+             @"labelLeft":NSLocalizedString(@"Left", nil),
+             @"labelRight":NSLocalizedString(@"Right", nil)};
+}
+
+-(NSDictionary*)CradleHeadPage2View32{
+    return @{@"type":@"TransmitterRadioView",
+             @"labelTitle":NSLocalizedString(@"ROLL", nil),
+             @"labelLeft":NSLocalizedString(@"Left", nil),
+             @"labelRight":NSLocalizedString(@"Right", nil)};
+}
+
+-(NSDictionary*)CradleHeadPage2View33{
+    return @{@"type":@"TransmitterRadioView",
+             @"labelTitle":NSLocalizedString(@"TILT", nil),
+             @"labelLeft":NSLocalizedString(@"Up", nil),
+             @"labelRight":NSLocalizedString(@"Down", nil)};
+}
+
+-(NSDictionary*)CradleHeadPage2View34{
+    return @{@"type":@"TransmitterRadioView",
+             @"labelTitle":NSLocalizedString(@"ZOOM", nil),
+             @"labelLeft":NSLocalizedString(@"", nil),
+             @"labelRight":NSLocalizedString(@"", nil)};
+}
+
 
 -(NSDictionary*)CradleHeadPage2View41{
     return @{@"type":@"SegmentAndSlider",
