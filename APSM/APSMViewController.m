@@ -176,13 +176,14 @@
                                                  message:nil
                                                 delegate:nil
                                        cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                       otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3", nil];
+                                       otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3",@"PAGE4",nil];
     
     APSMPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page1"],
                [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page2"],
-               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page3"]];
+               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page3"],
+               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page4"]];
     APSMPages.pageTitle = @"APSM Setting";
-    APSMPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"def"];
+    APSMPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"def",@"Page4"];
     [self.navigationController pushViewController:APSMPages animated:YES];
 }
 
@@ -206,7 +207,7 @@
                                                 message:nil
                                                delegate:nil
                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                      otherButtonTitles:@"PAGE1",@"PAGE2", nil];
+                                      otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3", nil];
     
     cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"],
                               [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page2"],
