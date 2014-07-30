@@ -30,13 +30,13 @@
 - (void) setup{
     [super setup];
     [self addSubview:self.view];
-    [_viewTitle setFont:[UIFont systemFontOfSize:_viewTitleTextFont]];
-    [_viewTitle setBackgroundColor:_viewTitleColor];
 }
 
 -(void)viewLiveRendering{
     [super viewLiveRendering];
     self.view.backgroundColor = [UIColor clearColor];
+    [_viewTitle setFont:[UIFont systemFontOfSize:_viewTitleTextFont]];
+    [_viewTitle setBackgroundColor:_viewTitleColor];
 }
 
 -(void)processFuture{
@@ -52,9 +52,9 @@
 }
 
 -(void)processViewSource{
-    _viewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil) ;
-    _viewContent1.text = NSLocalizedString(self.viewSourceDictionary[@"viewContent1"], nil) ;
-    _viewContent2.text = NSLocalizedString(self.viewSourceDictionary[@"viewContent2"], nil) ;
+    _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
+    _viewContent1.text = self.viewSourceDictionary[@"viewContent1"];
+    _viewContent2.text = self.viewSourceDictionary[@"viewContent2"];
     _labelUnit.text = self.viewSourceDictionary[@"labelUnit"];
 }
 

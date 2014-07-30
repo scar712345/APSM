@@ -57,9 +57,9 @@
 }
 
 -(void)processViewSource{
-    _labelTitle.text = NSLocalizedString(self.viewSourceDictionary[@"labelTitle"], nil) ;
-    _labelLeft.text = NSLocalizedString(self.viewSourceDictionary[@"labelLeft"], nil) ;
-    _labelRight.text = NSLocalizedString(self.viewSourceDictionary[@"labelRight"], nil) ;
+    _labelTitle.text = self.viewSourceDictionary[@"labelTitle"];
+    _labelLeft.text = self.viewSourceDictionary[@"labelLeft"];
+    _labelRight.text = self.viewSourceDictionary[@"labelRight"];
 }
 
 #pragma mark - Future Method

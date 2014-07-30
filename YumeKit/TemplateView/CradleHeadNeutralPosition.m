@@ -32,7 +32,7 @@
 //}
 
 -(void) processViewSource{
-    _viewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil) ;
+    _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
 }
 
 

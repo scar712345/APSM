@@ -58,9 +58,9 @@
 }
 
 -(void)processViewSource{
-    _viewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil) ;
-    _viewContent1.text = NSLocalizedString( self.viewSourceDictionary[@"viewContent1"], nil);
-    _viewContent2.text = NSLocalizedString( self.viewSourceDictionary[@"viewContent2"], nil);
+    _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
+    _viewContent1.text = self.viewSourceDictionary[@"viewContent1"];
+    _viewContent2.text = self.viewSourceDictionary[@"viewContent2"];
     _labelUnit1.text = self.viewSourceDictionary[@"labelUnit1"];
     _labelUnit2.text = self.viewSourceDictionary[@"labelUnit2"];
 }

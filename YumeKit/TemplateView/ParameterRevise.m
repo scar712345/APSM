@@ -59,13 +59,11 @@
 }
 
 -(void) processViewSource{
-
-    _labelViewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil);
-    _labelPGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelPGain"], nil);
-    _labelIGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelIGain"], nil);
-    _labelDGain.text = NSLocalizedString(self.viewSourceDictionary[@"labelDGain"], nil);
-    _labelPower.text = NSLocalizedString(self.viewSourceDictionary[@"labelPower"], nil);
-
+    _labelViewTitle.text = self.viewSourceDictionary[@"labelViewTitle"];
+    _labelPGain.text = self.viewSourceDictionary[@"labelPGain"];
+    _labelIGain.text = self.viewSourceDictionary[@"labelIGain"];
+    _labelDGain.text = self.viewSourceDictionary[@"labelDGain"];
+    _labelPower.text = self.viewSourceDictionary[@"labelPower"];
 }
 
 #pragma mark - UIButton

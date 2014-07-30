@@ -50,7 +50,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 
 -(void)processViewSource{
 
-    _viewTitle.text = NSLocalizedString(self.viewSourceDictionary[@"viewTitle"], nil);
+    _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
     _images = self.viewSourceDictionary[@"images"];
 
     yumeAdapter toUI = self.viewSourceDictionary[@"toUI"];
