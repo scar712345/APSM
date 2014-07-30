@@ -90,7 +90,6 @@
 		4DF8E4961974BA0000023E2A /* phone_Menu_031(218x96).png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E4771974BA0000023E2A /* phone_Menu_031(218x96).png */; };
 		4DF8E4971974BA0000023E2A /* phone_Menu_032(194x96).png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E4781974BA0000023E2A /* phone_Menu_032(194x96).png */; };
 		4DF8E4981974BA0000023E2A /* phone_Menu_033(218x96).png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E4791974BA0000023E2A /* phone_Menu_033(218x96).png */; };
-		4DF8E4991974BA0000023E2A /* phone_page00(640).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E47A1974BA0000023E2A /* phone_page00(640).jpg */; };
 		4DF8E49A1974BA0000023E2A /* window_background.png(1008x642).png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF8E47B1974BA0000023E2A /* window_background.png(1008x642).png */; };
 		4DF8E49B1974BA0000023E2A /* LicensePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E47D1974BA0000023E2A /* LicensePageViewController.m */; };
 		4DF8E49C1974BA0000023E2A /* TTBlackTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8E4801974BA0000023E2A /* TTBlackTriangle.m */; };
@@ -184,6 +183,23 @@
 		DBD489421977CA3500532968 /* TTScrollSlidingPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */; };
 		DBDAB1D219822E3E005CF628 /* 112.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDAB1D019822E3E005CF628 /* 112.png */; };
 		DBDAB1D319822E3E005CF628 /* 223.png in Resources */ = {isa = PBXBuildFile; fileRef = DBDAB1D119822E3E005CF628 /* 223.png */; };
+		DBDFF7251987403600437B82 /* G2001(152x152).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF7231987403600437B82 /* G2001(152x152).jpg */; };
+		DBDFF7261987403600437B82 /* G3001(152x152).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF7241987403600437B82 /* G3001(152x152).jpg */; };
+		DBDFF7291987428300437B82 /* CamaraSelect.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDFF7271987428300437B82 /* CamaraSelect.h */; };
+		DBDFF72A1987428300437B82 /* CamaraSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFF7281987428300437B82 /* CamaraSelect.m */; };
+		DBDFF72C1987449A00437B82 /* CamaraSelect.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF72B1987449A00437B82 /* CamaraSelect.xib */; };
+		DBDFF72F198767FD00437B82 /* APSM_Page4.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFF72E198767FD00437B82 /* APSM_Page4.m */; };
+		DBDFF73519876B8C00437B82 /* LabelAndTextfiled.h in Headers */ = {isa = PBXBuildFile; fileRef = DBDFF73319876B8C00437B82 /* LabelAndTextfiled.h */; };
+		DBDFF73619876B8C00437B82 /* LabelAndTextfiled.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDFF73419876B8C00437B82 /* LabelAndTextfiled.m */; };
+		DBDFF73819876CB900437B82 /* LabelAndTextfiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF73719876CB900437B82 /* LabelAndTextfiled.xib */; };
+		DBDFF73C19877BCB00437B82 /* aps-m_2x2(140x140).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF73919877BCB00437B82 /* aps-m_2x2(140x140).jpg */; };
+		DBDFF73D19877BCB00437B82 /* aps-m_3x3(140x140).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF73A19877BCB00437B82 /* aps-m_3x3(140x140).jpg */; };
+		DBDFF73E19877BCB00437B82 /* aps-m_5x5(140x140).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF73B19877BCB00437B82 /* aps-m_5x5(140x140).jpg */; };
+		DBDFF743198780C200437B82 /* aps-m_down(24x24).png in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF73F198780C200437B82 /* aps-m_down(24x24).png */; };
+		DBDFF744198780C200437B82 /* aps-m_left(24x24).png in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF740198780C200437B82 /* aps-m_left(24x24).png */; };
+		DBDFF745198780C200437B82 /* aps-m_Right(24x24).png in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF741198780C200437B82 /* aps-m_Right(24x24).png */; };
+		DBDFF746198780C200437B82 /* aps-m_up(24x24).png in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF742198780C200437B82 /* aps-m_up(24x24).png */; };
+		DBDFF7481987829400437B82 /* aps-m_page001(640x1136).jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBDFF7471987829400437B82 /* aps-m_page001(640x1136).jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,7 +360,6 @@
 		4DF8E4771974BA0000023E2A /* phone_Menu_031(218x96).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_Menu_031(218x96).png"; sourceTree = "<group>"; };
 		4DF8E4781974BA0000023E2A /* phone_Menu_032(194x96).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_Menu_032(194x96).png"; sourceTree = "<group>"; };
 		4DF8E4791974BA0000023E2A /* phone_Menu_033(218x96).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_Menu_033(218x96).png"; sourceTree = "<group>"; };
-		4DF8E47A1974BA0000023E2A /* phone_page00(640).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "phone_page00(640).jpg"; sourceTree = "<group>"; };
 		4DF8E47B1974BA0000023E2A /* window_background.png(1008x642).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "window_background.png(1008x642).png"; sourceTree = "<group>"; };
 		4DF8E47C1974BA0000023E2A /* LicensePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicensePageViewController.h; sourceTree = "<group>"; };
 		4DF8E47D1974BA0000023E2A /* LicensePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicensePageViewController.m; sourceTree = "<group>"; };
@@ -453,6 +468,24 @@
 		DBD489411977CA3500532968 /* TTScrollSlidingPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollSlidingPagesController.m; sourceTree = "<group>"; };
 		DBDAB1D019822E3E005CF628 /* 112.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 112.png; sourceTree = "<group>"; };
 		DBDAB1D119822E3E005CF628 /* 223.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 223.png; sourceTree = "<group>"; };
+		DBDFF7231987403600437B82 /* G2001(152x152).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "G2001(152x152).jpg"; sourceTree = "<group>"; };
+		DBDFF7241987403600437B82 /* G3001(152x152).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "G3001(152x152).jpg"; sourceTree = "<group>"; };
+		DBDFF7271987428300437B82 /* CamaraSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraSelect.h; sourceTree = "<group>"; };
+		DBDFF7281987428300437B82 /* CamaraSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraSelect.m; sourceTree = "<group>"; };
+		DBDFF72B1987449A00437B82 /* CamaraSelect.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CamaraSelect.xib; sourceTree = "<group>"; };
+		DBDFF72D198767FD00437B82 /* APSM_Page4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSM_Page4.h; sourceTree = "<group>"; };
+		DBDFF72E198767FD00437B82 /* APSM_Page4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSM_Page4.m; sourceTree = "<group>"; };
+		DBDFF73319876B8C00437B82 /* LabelAndTextfiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelAndTextfiled.h; sourceTree = "<group>"; };
+		DBDFF73419876B8C00437B82 /* LabelAndTextfiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelAndTextfiled.m; sourceTree = "<group>"; };
+		DBDFF73719876CB900437B82 /* LabelAndTextfiled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndTextfiled.xib; sourceTree = "<group>"; };
+		DBDFF73919877BCB00437B82 /* aps-m_2x2(140x140).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aps-m_2x2(140x140).jpg"; sourceTree = "<group>"; };
+		DBDFF73A19877BCB00437B82 /* aps-m_3x3(140x140).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aps-m_3x3(140x140).jpg"; sourceTree = "<group>"; };
+		DBDFF73B19877BCB00437B82 /* aps-m_5x5(140x140).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aps-m_5x5(140x140).jpg"; sourceTree = "<group>"; };
+		DBDFF73F198780C200437B82 /* aps-m_down(24x24).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aps-m_down(24x24).png"; sourceTree = "<group>"; };
+		DBDFF740198780C200437B82 /* aps-m_left(24x24).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aps-m_left(24x24).png"; sourceTree = "<group>"; };
+		DBDFF741198780C200437B82 /* aps-m_Right(24x24).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aps-m_Right(24x24).png"; sourceTree = "<group>"; };
+		DBDFF742198780C200437B82 /* aps-m_up(24x24).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aps-m_up(24x24).png"; sourceTree = "<group>"; };
+		DBDFF7471987829400437B82 /* aps-m_page001(640x1136).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aps-m_page001(640x1136).jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +526,11 @@
 		4D43516B19751A020018D4F9 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DBDFF73919877BCB00437B82 /* aps-m_2x2(140x140).jpg */,
+				DBDFF73A19877BCB00437B82 /* aps-m_3x3(140x140).jpg */,
+				DBDFF73B19877BCB00437B82 /* aps-m_5x5(140x140).jpg */,
+				DBDFF7231987403600437B82 /* G2001(152x152).jpg */,
+				DBDFF7241987403600437B82 /* G3001(152x152).jpg */,
 				DBDAB1D019822E3E005CF628 /* 112.png */,
 				DBDAB1D119822E3E005CF628 /* 223.png */,
 				4D43516C19751A020018D4F9 /* wing4_1.jpg */,
@@ -684,6 +722,8 @@
 				4D43514019750D530018D4F9 /* APSM_Page2.m */,
 				4D4351161974D8CE0018D4F9 /* APSM_Page3.h */,
 				4D4351171974D8CE0018D4F9 /* APSM_Page3.m */,
+				DBDFF72D198767FD00437B82 /* APSM_Page4.h */,
+				DBDFF72E198767FD00437B82 /* APSM_Page4.m */,
 			);
 			path = APSM_Page;
 			sourceTree = "<group>";
@@ -700,6 +740,10 @@
 		4DF8E4701974BA0000023E2A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				DBDFF73F198780C200437B82 /* aps-m_down(24x24).png */,
+				DBDFF740198780C200437B82 /* aps-m_left(24x24).png */,
+				DBDFF741198780C200437B82 /* aps-m_Right(24x24).png */,
+				DBDFF742198780C200437B82 /* aps-m_up(24x24).png */,
 				4D43E31A197646EB00B7CA4F /* phone_Menu_021(218x96).png */,
 				4D43E31B197646EB00B7CA4F /* phone_Menu_022(194x96).png */,
 				DBBF4B421978A8D700665F99 /* page_buttombackground(1008x64).png */,
@@ -722,8 +766,8 @@
 				4D43E30F197629E800B7CA4F /* phone_Menu_013(122x96).png */,
 				4DF8E4781974BA0000023E2A /* phone_Menu_032(194x96).png */,
 				4DF8E4791974BA0000023E2A /* phone_Menu_033(218x96).png */,
-				4DF8E47A1974BA0000023E2A /* phone_page00(640).jpg */,
 				4DF8E47B1974BA0000023E2A /* window_background.png(1008x642).png */,
+				DBDFF7471987829400437B82 /* aps-m_page001(640x1136).jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -800,6 +844,9 @@
 				DB5478C61986462C0031D700 /* CamaraFollow.h */,
 				DB5478C71986462C0031D700 /* CamaraFollow.m */,
 				DB5478C81986462C0031D700 /* CamaraFollow.xib */,
+				DBDFF7271987428300437B82 /* CamaraSelect.h */,
+				DBDFF7281987428300437B82 /* CamaraSelect.m */,
+				DBDFF72B1987449A00437B82 /* CamaraSelect.xib */,
 				DB5478C91986462C0031D700 /* CradleHead360.h */,
 				DB5478CA1986462C0031D700 /* CradleHead360.m */,
 				DB5478CB1986462C0031D700 /* CradleHead360.xib */,
@@ -843,6 +890,9 @@
 				DB5478F11986462C0031D700 /* yumeXYZView.h */,
 				DB5478F21986462C0031D700 /* yumeXYZView.m */,
 				DB5478F31986462C0031D700 /* yumeXYZView.xib */,
+				DBDFF73319876B8C00437B82 /* LabelAndTextfiled.h */,
+				DBDFF73419876B8C00437B82 /* LabelAndTextfiled.m */,
+				DBDFF73719876CB900437B82 /* LabelAndTextfiled.xib */,
 			);
 			path = TemplateView;
 			sourceTree = "<group>";
@@ -895,6 +945,7 @@
 				DBBF791B19864ADE0044BCBA /* CradleHeadNeutralPosition.h in Headers */,
 				DB5479211986462C0031D700 /* yumeSwicthAndVoltageView.h in Headers */,
 				4D879C801980F50300B7AE69 /* CXAlertButtonContainerView.h in Headers */,
+				DBDFF73519876B8C00437B82 /* LabelAndTextfiled.h in Headers */,
 				4D879C861980F50300B7AE69 /* CXAlertViewController.h in Headers */,
 				DB9437BE19790B9800AA2AE8 /* yumeBTLERemoteController.h in Headers */,
 				4D879C911980F55E00B7AE69 /* LiveFrost.h in Headers */,
@@ -925,6 +976,7 @@
 				4DC05E901974C82E0011B415 /* SWUtilityButtonView.h in Headers */,
 				DB5479051986462C0031D700 /* CustomViewTemplate.h in Headers */,
 				4D879C821980F50300B7AE69 /* CXAlertButtonItem.h in Headers */,
+				DBDFF7291987428300437B82 /* CamaraSelect.h in Headers */,
 				DB5478FC1986462C0031D700 /* CradleHead360.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1066,7 +1118,10 @@
 				4DF8E4981974BA0000023E2A /* phone_Menu_033(218x96).png in Resources */,
 				4D43E310197629E800B7CA4F /* caution(60x60).png.png in Resources */,
 				DBBF4B431978A8D700665F99 /* page_buttombackground(1008x64).png in Resources */,
+				DBDFF745198780C200437B82 /* aps-m_Right(24x24).png in Resources */,
 				4D43E325197659FF00B7CA4F /* Localizable.strings in Resources */,
+				DBDFF743198780C200437B82 /* aps-m_down(24x24).png in Resources */,
+				DBDFF746198780C200437B82 /* aps-m_up(24x24).png in Resources */,
 				4DF8E4931974BA0000023E2A /* Icon.png in Resources */,
 				4D43E314197629E800B7CA4F /* phone_Menu_001(630x96).png in Resources */,
 				4DF8E4901974BA0000023E2A /* 112.png in Resources */,
@@ -1074,7 +1129,6 @@
 				4D43E31D197646EB00B7CA4F /* phone_Menu_021(218x96).png in Resources */,
 				4DF8E4971974BA0000023E2A /* phone_Menu_032(194x96).png in Resources */,
 				4D43E31919762FB400B7CA4F /* phone_h_001(320x64).png in Resources */,
-				4DF8E4991974BA0000023E2A /* phone_page00(640).jpg in Resources */,
 				4DF8E4911974BA0000023E2A /* 223.png in Resources */,
 				4D43E315197629E800B7CA4F /* phone_Menu_011(412x96).png in Resources */,
 				4D43E31E197646EB00B7CA4F /* phone_Menu_022(194x96).png in Resources */,
@@ -1085,8 +1139,10 @@
 				4DF8E44F1974B98500023E2A /* Main.storyboard in Resources */,
 				4D43E316197629E800B7CA4F /* phone_Menu_012(96x96).png in Resources */,
 				4D43E313197629E800B7CA4F /* phone_ConnectionStatus(64x64).png in Resources */,
+				DBDFF7481987829400437B82 /* aps-m_page001(640x1136).jpg in Resources */,
 				4DF8E49A1974BA0000023E2A /* window_background.png(1008x642).png in Resources */,
 				4DF8E4921974BA0000023E2A /* home(32x32).png in Resources */,
+				DBDFF744198780C200437B82 /* aps-m_left(24x24).png in Resources */,
 				4DF8E4511974B98500023E2A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1106,13 +1162,16 @@
 				DB54791D1986462C0031D700 /* yumeImageButtonsView.xib in Resources */,
 				DB5479011986462C0031D700 /* CradleHeadControllView.xib in Resources */,
 				DB0E56A9197A21A8006D471C /* slider.png in Resources */,
+				DBDFF73C19877BCB00437B82 /* aps-m_2x2(140x140).jpg in Resources */,
 				4D43517519751A020018D4F9 /* wing6_2.jpg in Resources */,
 				DB54790F1986462C0031D700 /* ReceiverAndBindView.xib in Resources */,
 				DB5479261986462C0031D700 /* yumeXYZView.xib in Resources */,
 				4DC05E991974C82E0011B415 /* pic_Blade-Direction_002(172x172).png in Resources */,
 				DB5478FB1986462C0031D700 /* CamaraFollow.xib in Resources */,
 				4DC05EA11974C82E0011B415 /* TemplateView2.xib in Resources */,
+				DBDFF73D19877BCB00437B82 /* aps-m_3x3(140x140).jpg in Resources */,
 				DB5479091986462C0031D700 /* LabelAndSegment.xib in Resources */,
+				DBDFF7261987403600437B82 /* G3001(152x152).jpg in Resources */,
 				4D43517419751A020018D4F9 /* wing6_1.jpg in Resources */,
 				4D43517319751A020018D4F9 /* wing4_2.jpg in Resources */,
 				DB0E56A7197A21A8006D471C /* arrow(560x100).png in Resources */,
@@ -1124,6 +1183,7 @@
 				4D43517719751A020018D4F9 /* wing8_2.jpg in Resources */,
 				DB5479201986462C0031D700 /* yumeSensitivityView.xib in Resources */,
 				4DC05E9E1974C82E0011B415 /* TemplateView1.xib in Resources */,
+				DBDFF72C1987449A00437B82 /* CamaraSelect.xib in Resources */,
 				DB0E56A8197A21A8006D471C /* slider_track(240x10).png in Resources */,
 				DB5479151986462C0031D700 /* TransmitterRadioView.xib in Resources */,
 				4DC05E9B1974C82E0011B415 /* pic_pitdirection_002(172x172).png in Resources */,
@@ -1131,8 +1191,11 @@
 				4D43517219751A020018D4F9 /* wing4_1.jpg in Resources */,
 				DBBF791D19864ADE0044BCBA /* CradleHeadNeutralPosition.xib in Resources */,
 				DB5479231986462C0031D700 /* yumeSwicthAndVoltageView.xib in Resources */,
+				DBDFF7251987403600437B82 /* G2001(152x152).jpg in Resources */,
 				4DC05E9A1974C82E0011B415 /* pic_pitdirection_001(172x172).png in Resources */,
 				DBDAB1D219822E3E005CF628 /* 112.png in Resources */,
+				DBDFF73819876CB900437B82 /* LabelAndTextfiled.xib in Resources */,
+				DBDFF73E19877BCB00437B82 /* aps-m_5x5(140x140).jpg in Resources */,
 				4DC05E981974C82E0011B415 /* pic_Blade-Direction_001(172x172).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1165,6 +1228,7 @@
 				DB9B36ED197A4739005B0021 /* OSD_Page1.m in Sources */,
 				4D43E32C19765B7300B7CA4F /* Language.m in Sources */,
 				DBCF9594197CE376000ECE81 /* CradleHead_Page2.m in Sources */,
+				DBDFF72F198767FD00437B82 /* APSM_Page4.m in Sources */,
 				4DF8E48F1974BA0000023E2A /* HomeViewController.m in Sources */,
 				4D43E33019765FF100B7CA4F /* Pages.m in Sources */,
 				4DF8E4A01974BA0000023E2A /* TTSlidingPageTitle.m in Sources */,
@@ -1189,6 +1253,7 @@
 			files = (
 				DB9437C319790B9800AA2AE8 /* yumeLanguage.m in Sources */,
 				DB5479141986462C0031D700 /* TransmitterRadioView.m in Sources */,
+				DBDFF73619876B8C00437B82 /* LabelAndTextfiled.m in Sources */,
 				DB5479061986462C0031D700 /* CustomViewTemplate.m in Sources */,
 				4D6BED26197A596900F6B545 /* ViewSource.m in Sources */,
 				DB5479221986462C0031D700 /* yumeSwicthAndVoltageView.m in Sources */,
@@ -1209,6 +1274,7 @@
 				4D879C831980F50300B7AE69 /* CXAlertButtonItem.m in Sources */,
 				DB5478F51986462C0031D700 /* AngleOfVisibilityView.m in Sources */,
 				DB5479171986462C0031D700 /* UITextField+Yume.m in Sources */,
+				DBDFF72A1987428300437B82 /* CamaraSelect.m in Sources */,
 				4DC05E9D1974C82E0011B415 /* TemplateView1.m in Sources */,
 				DB54791C1986462C0031D700 /* yumeImageButtonsView.m in Sources */,
 				DB5479081986462C0031D700 /* LabelAndSegment.m in Sources */,

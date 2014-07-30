@@ -94,20 +94,24 @@
 //OSD Page 1
 
 
-//OSDPage1View11
+//OSD Page1 View11
 "顯示單位" = "顯示單位";
 "公制" = "公制";
 "英制" = "英制";
 
 
-//OSDPage1View12
+//OSD Page1 View12
 
 "影像格式" = "影像格式";
 "NTSC" = "NTSC";
 "PAL" = "PAL";
 
-//OSDPage1View13
+//OSD Page1 View13
 "顯示經緯度" = "顯示經緯度";
 "ON" = "ON";
 "OFF" = "OFF";
 
+
+//Cradle Head Page1 View2
+
+"選擇相機型號" = "選擇相機型號";
