@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7jC-KL-x7D">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -61,7 +61,7 @@
                                     <action selector="btnSubmit:" destination="t08-HA-JBm" eventType="touchUpInside" id="v4D-7f-3as"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Py-xZO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTr-Py-xZO">
                                 <rect key="frame" x="0.0" y="73" width="320" height="417"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="hnh-Au-VEz" customClass="VerticalUILabel">
@@ -273,7 +273,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="腳架收合功能"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="腳架收合與返航"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-vs-HNZ" customClass="SegmentAndSlider">
@@ -473,7 +473,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="警告提醒顯示"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="警告提醒設定"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eHi-Uw-j32" customClass="LabelAndSegment">
@@ -909,7 +909,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="拍照"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="AVCS Mode"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -983,7 +983,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="相機"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="相機跟隨功能設定"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kxc-R2-1YH" customClass="BlankView">
@@ -1038,12 +1038,12 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelMainTitleKeyPath" value="360環繞拍攝"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelMainTitleKeyPath" value="360。 環繞拍攝"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="labelSubTitleKeyPath" value="拍攝角度與數量"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree0KeyPath" value="水平0"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree15KeyPath" value="水平往下15"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree30KeyPath" value="水平往下30"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree90KeyPath" value="向下垂直90"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree0KeyPath" value="水平0。"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree15KeyPath" value="水平往下15。"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree30KeyPath" value="水平往下30。"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelDegree90KeyPath" value="向下垂直90。"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="labelUnitKeyPath" value="張"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -1103,6 +1103,13 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="string" keyPath="altitudeRudderKeyPath" value="parameterDatas.psi"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="altitudeAltitudeKeyPath" value="parameterDatas.altitude"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="viewTitleText" value="感度"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelAltitude2Text" value="Attitude"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelManualText" value="Manual"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelAltitudeText" value="Altituder"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelRudderText" value="Rudder"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelElevatorText" value="Elevator"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelAileronText" value="Aileron"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelModeText" value="Mode"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-7u-eld" customClass="yumeImageButtonsView">
@@ -1231,6 +1238,10 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="string" keyPath="xKeyPath" value="parameterDatas.AntX"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="yKeyPath" value="parameterDatas.AntY"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="zKeyPath" value="parameterDatas.AntZ"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="viewTitleText" value="APS-M多軸控制器與GPS感應器的中心位置距離"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xText" value="X軸距離"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="yText" value="Y軸距離"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="zText" value="Z軸距離"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -1324,6 +1335,17 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mT9-jL-x6g">
+                                                <rect key="frame" x="8" y="57" width="139" height="29"/>
+                                                <segments>
+                                                    <segment title="ON"/>
+                                                    <segment title="OFF"/>
+                                                </segments>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="segmentAction:" destination="Ffo-hK-7l7" eventType="valueChanged" id="y0c-V0-tB1"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
@@ -1336,7 +1358,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="定點"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitleText" value="定點巡迒拍攝"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -1350,6 +1372,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <outlet property="backgroundView" destination="cX0-Sm-BP4" id="YfJ-sm-8bC"/>
                         <outlet property="lastView" destination="tqO-5e-Hao" id="Lby-Jb-Eey"/>
                         <outlet property="scrollView" destination="wWq-aM-aOV" id="Rau-WJ-OtF"/>
+                        <outlet property="segment" destination="mT9-jL-x6g" id="dBk-YF-NlE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJA-yx-6sw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1365,7 +1388,7 @@ e) 貴用戶自 ALIGN、任何其他第三方，或透過「軟體」所獲得�
                         <viewControllerLayoutGuide type="bottom" id="qhh-F8-2ev"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GRD-V5-yGu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="628"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-CT-8Zq">
@@ -1462,86 +1485,6 @@ Please ensure helicopter’s hardware settings has been completed before making 
                                             <action selector="saveAPSMData:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="R7k-L6-kRG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGb-Zr-7k3">
-                                        <rect key="frame" x="0.0" y="389" width="211" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushToOSDSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="vMN-mU-o7m"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-Il-ujv">
-                                        <rect key="frame" x="211" y="389" width="48" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L22-Cl-1zn">
-                                        <rect key="frame" x="259" y="389" width="61" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ON-xj-P0N">
-                                        <rect key="frame" x="0.0" y="516" width="105" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_021(218x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnHowToUse:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="XGG-zC-cyZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBy-Nk-u07">
-                                        <rect key="frame" x="106" y="516" width="105" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_022(194x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changeLanguage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="TjH-D8-tkQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og1-3J-MdJ">
-                                        <rect key="frame" x="212" y="516" width="108" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_023(218x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnWebside:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="zN1-E6-HPX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-bt-xgF">
-                                        <rect key="frame" x="-2" y="449" width="211" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushToCradleHeadSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="WJX-gL-dHW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-lv-l63">
-                                        <rect key="frame" x="209" y="449" width="48" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-3m-EdB">
-                                        <rect key="frame" x="257" y="449" width="61" height="48"/>
-                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-gc-KYf">
                                         <rect key="frame" x="0.0" y="329" width="211" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1553,6 +1496,61 @@ Please ensure helicopter’s hardware settings has been completed before making 
                                             <action selector="pushToAPSMSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="p1k-41-k6B"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ON-xj-P0N">
+                                        <rect key="frame" x="2" y="451" width="105" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_021(218x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnHowToUse:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="XGG-zC-cyZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBy-Nk-u07">
+                                        <rect key="frame" x="108" y="451" width="105" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_022(194x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeLanguage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="TjH-D8-tkQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og1-3J-MdJ">
+                                        <rect key="frame" x="214" y="451" width="108" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_023(218x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnWebside:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="zN1-E6-HPX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-bt-xgF">
+                                        <rect key="frame" x="0.0" y="384" width="211" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" backgroundImage="phone_Menu_011(412x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pushToCradleHeadSettingPage:" destination="0Of-Ae-IW1" eventType="touchUpInside" id="WJX-gL-dHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-lv-l63">
+                                        <rect key="frame" x="211" y="384" width="48" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_012(96x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JL-3m-EdB">
+                                        <rect key="frame" x="259" y="384" width="61" height="48"/>
+                                        <state key="normal" backgroundImage="phone_Menu_013(122x96).png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1562,7 +1560,7 @@ Please ensure helicopter’s hardware settings has been completed before making 
                         <barButtonItem key="backBarButtonItem" title="Back" id="3dV-3g-rgf"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="628"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="btnDisconnectDevice" destination="My5-pN-45S" id="Gvd-Xt-rsZ"/>
                         <outlet property="btnScanDevice" destination="e3j-bt-c0l" id="1kN-4R-8Qe"/>
@@ -1596,7 +1594,7 @@ Please ensure helicopter’s hardware settings has been completed before making 
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="window_background.png(1008x642).png" translatesAutoresizingMaskIntoConstraints="NO" id="1Lr-NX-7Z7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-KW-rd0">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-KW-rd0">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page_buttombackground(1008x64).png" translatesAutoresizingMaskIntoConstraints="NO" id="SHR-zw-xAj">
@@ -1634,6 +1632,11 @@ Please ensure helicopter’s hardware settings has been completed before making 
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QPh-KW-rd0" firstAttribute="leading" secondItem="Sa9-Xw-HO5" secondAttribute="leading" id="HmI-n9-jOk"/>
+                            <constraint firstAttribute="trailing" secondItem="QPh-KW-rd0" secondAttribute="trailing" id="YhG-wN-ZMv"/>
+                            <constraint firstItem="nqC-zp-DaG" firstAttribute="top" secondItem="QPh-KW-rd0" secondAttribute="bottom" id="uxd-uY-I7I"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonBack" destination="SWR-QO-0eE" id="0Ir-s8-qEo"/>
@@ -1691,9 +1694,6 @@ Please ensure helicopter’s hardware settings has been completed before making 
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

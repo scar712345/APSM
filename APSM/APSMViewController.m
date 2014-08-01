@@ -50,7 +50,7 @@
     [self prepareNavigationIcon];
     
     [self.btnScanDevice setTitle:NSLocalizedString(@"Search Device - Bluetooth",nil) forState:UIControlStateNormal];
-    [self.btnDisconnectDevice setTitle:NSLocalizedString(@"Disconnected ",nil) forState:UIControlStateNormal];
+    [self.btnDisconnectDevice setTitle:NSLocalizedString(@"Disconnect",nil) forState:UIControlStateNormal];
 //    [self.btnSettingPage setTitle:NSLocalizedString(@"Setup Menu",nil) forState:UIControlStateNormal];
 //    [self.btnParameterPage setTitle:NSLocalizedString(@"Parameter Menu",nil) forState:UIControlStateNormal];
     self.labelCaution.text = [Language get:@"Caution" alter:nil];
@@ -154,7 +154,7 @@
         
         self.labelCaution.text=[Language get:@"Caution" alter:nil];
         [self.btnScanDevice setTitle:[Language get:@"Search Device - Bluetooth" alter:nil] forState:UIControlStateNormal];
-        [self.btnDisconnectDevice setTitle:[Language get:@"Disconnected " alter:nil] forState:UIControlStateNormal];
+        [self.btnDisconnectDevice setTitle:[Language get:@"Disconnect" alter:nil] forState:UIControlStateNormal];
 //        [self.btnSettingPage setTitle:[Language get:@"Setup Menu" alter:nil] forState:UIControlStateNormal];
 //        [self.btnParameterPage setTitle:[Language get:@"Parameter Menu" alter:nil] forState:UIControlStateNormal];
         self.labelWarning.text=NSLocalizedString(@"WarningMessageFirstPage",nil);
@@ -172,48 +172,51 @@
 
 - (IBAction)pushToAPSMSettingPage:(id)sender {
     Pages *APSMPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
-    APSMPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
+    NSArray *arrayTitle = @[NSLocalizedString(@"遙控器與接收器", nil),
+                            NSLocalizedString(@"感度與飛行器類型", nil),
+                            NSLocalizedString(@"GPS感應器位置與保護裝置", nil),
+                            NSLocalizedString(@"定點巡航拍攝功能", nil),
+                            NSLocalizedString( @"OSD設定", nil)];
+    
+    APSMPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"APSM Setting",nil)
                                                  message:nil
                                                 delegate:nil
                                        cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                       otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3",@"PAGE4",nil];
+                                       otherButtonTitles:[arrayTitle objectAtIndex:0],
+                                                         [arrayTitle objectAtIndex:1],
+                                                         [arrayTitle objectAtIndex:2],
+                                                         [arrayTitle objectAtIndex:3],
+                                                         [arrayTitle objectAtIndex:4],nil];
     
     APSMPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page1"],
                [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page2"],
                [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page3"],
-               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page4"]];
-    APSMPages.pageTitle = @"APSM Setting";
-    APSMPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"def",@"Page4"];
+               [self.storyboard instantiateViewControllerWithIdentifier:@"APSM_Page4"],
+               [self.storyboard instantiateViewControllerWithIdentifier:@"OSD_Page1"]];
+    APSMPages.pageTitle = NSLocalizedString(@"APSM Setting",nil);
+    APSMPages.pagesSubTitle = arrayTitle;
     [self.navigationController pushViewController:APSMPages animated:YES];
-}
-
-- (IBAction)pushToOSDSettingPage:(id)sender {
-    Pages *OSDPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
-    OSDPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
-                                                 message:nil
-                                                delegate:nil
-                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                       otherButtonTitles:@"PAGE1", nil];
-    
-    OSDPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"OSD_Page1"]];
-    OSDPages.pageTitle = @"OSD Setting";
-    OSDPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings"];
-    [self.navigationController pushViewController:OSDPages animated:YES];
 }
 
 - (IBAction)pushToCradleHeadSettingPage:(id)sender {
     Pages *cradleHeadPages = [self.storyboard instantiateViewControllerWithIdentifier:@"Pages"];
-    cradleHeadPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Parameter Menu",nil)
+    NSArray *arrayTitle = @[NSLocalizedString(@"雲台基本設定", nil),
+                            NSLocalizedString(@"雲台控制設定", nil),
+                            NSLocalizedString(@"雲台進階設定", nil)];
+    
+    cradleHeadPages.alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"CradleHeadPages Setting",nil)
                                                 message:nil
                                                delegate:nil
                                       cancelButtonTitle:NSLocalizedString(@"Cancel",nil)
-                                      otherButtonTitles:@"PAGE1",@"PAGE2",@"PAGE3", nil];
+                                      otherButtonTitles:[arrayTitle objectAtIndex:0],
+                                                        [arrayTitle objectAtIndex:1],
+                                                        [arrayTitle objectAtIndex:2],nil];
     
     cradleHeadPages.pages = @[[self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page1"],
                               [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page2"],
                               [self.storyboard instantiateViewControllerWithIdentifier:@"CradleHead_Page3"]];
-    cradleHeadPages.pageTitle = @"CradleHeadPages Setting";
-    cradleHeadPages.pagesSubTitle = @[@"Helicopter Size & Beginner Settings",@"abc",@"abc"];
+    cradleHeadPages.pageTitle = NSLocalizedString(@"CradleHeadPages Setting",nil);
+    cradleHeadPages.pagesSubTitle = arrayTitle;
     [self.navigationController pushViewController:cradleHeadPages animated:YES];
 }
 
