@@ -245,6 +245,13 @@
 			remoteGlobalIDString = 4DF8E4A51974BA0E00023E2A;
 			remoteInfo = YumeKit;
 		};
+		DB5B1656198B2F810014885B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF8E4381974B98500023E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF8E4A51974BA0E00023E2A;
+			remoteInfo = YumeKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1054,6 +1061,7 @@
 				4DF8E4B31974BA0E00023E2A /* PBXTargetDependency */,
 				4DF8E4C71974BA0F00023E2A /* PBXTargetDependency */,
 				4D8422131980A091008113AC /* PBXTargetDependency */,
+				DB5B1657198B2F810014885B /* PBXTargetDependency */,
 			);
 			name = YumeKitTests;
 			productName = YumeKitTests;
@@ -1339,6 +1347,11 @@
 			isa = PBXTargetDependency;
 			target = 4DF8E4A51974BA0E00023E2A /* YumeKit */;
 			targetProxy = 4DF8E4C61974BA0F00023E2A /* PBXContainerItemProxy */;
+		};
+		DB5B1657198B2F810014885B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF8E4A51974BA0E00023E2A /* YumeKit */;
+			targetProxy = DB5B1656198B2F810014885B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
