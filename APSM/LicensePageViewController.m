@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view.
     
     [self.labelTitle setFont:[UIFont boldSystemFontOfSize:15]];
-    self.labelTitle.text = NSLocalizedString(@"Gpro Disclaimer:",nil);
+    self.labelTitle.text = NSLocalizedString(@"Gimbal Disclaimer:",nil);
     
     self.labelLicense.verticalAlignment = VerticalAlignmentTop;
     self.labelLicense.text = NSLocalizedString(@"License",nil);

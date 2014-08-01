@@ -5,113 +5,307 @@
   Created by APP559 on 2014/7/16.
   Copyright (c) 2014年 yume. All rights reserved.
 */
+//免責聲明
+"License" = "\nThis ALIGN Gimbal Agreement for the licensing of ALIGN Cooperation Ltd.\n\nProducts and Services is made and entered into by and between ALIGN Cooperation Ltd. \n\nand the customer/users identified below and/or on the Ordering Document(s). \n\nThis Agreement, each accompanying addendum and each accompanying Ordering Document governs Customer/user's access to and use of the Products and Services (hereinafter called the Software).\n\nCustomers and Users understand and agree completely with:\n\na) Except as explicitly provided in this agreement or in an addendum, and to the maximum extent permitted by applicable law, ALIGN, its licensors, and their suppliers do not make any other warranty of any kind, whether express, implied, statutory or otherwise including, without limitation, warranties of merchantability, fitness for a particular use, non-infringement or ALIGN content accuracy\n\nALIGN do not make any other warranty of any kind and of below situation:\n\n(I) The Software will meet all customers/users need and request.\n\n(II) The operation of the Software will be uninterrupted and error free\n\n(III) The liability, safety, instant and performance of the Software are in accuracy.\n\n(IV) Any improvements, updates, variations, modifications, alterations, additions and error message of the Software will be corrected.\n\nb) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if causing any damage or data and/or other relative device lost, customers and users must be solely responsible for the consequences.\n\nc) The Software does not designed for emergency services, nuclear facilities, air traffic control or life support systems, and any occupation where the use or failure of the Software could lead to death, personal injury, or environmental damage.\n\nd) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if the claim would have been avoided by the non-combined or independent use of the Ordering Document(s).";
 
-"License" = "\nThis ALIGN Gpro Flybarless System Agreement for the licensing of ALIGN Cooperation Ltd.\n\nProducts and Services is made and entered into by and between ALIGN Cooperation Ltd. \n\nand the customer/users identified below and/or on the Ordering Document(s). \n\nThis Agreement, each accompanying addendum and each accompanying Ordering Document governs Customer/user's access to and use of the Products and Services (hereinafter called the Software).\n\nCustomers and Users understand and agree completely with:\n\na) Except as explicitly provided in this agreement or in an addendum, and to the maximum extent permitted by applicable law, ALIGN, its licensors, and their suppliers do not make any other warranty of any kind, whether express, implied, statutory or otherwise including, without limitation, warranties of merchantability, fitness for a particular use, non-infringement or ALIGN content accuracy\n\nALIGN do not make any other warranty of any kind and of below situation:\n\n(I) The Software will meet all customers/users need and request.\n\n(II) The operation of the Software will be uninterrupted and error free\n\n(III) The liability, safety, instant and performance of the Software are in accuracy.\n\n(IV) Any improvements, updates, variations, modifications, alterations, additions and error message of the Software will be corrected.\n\nb) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if causing any damage or data and/or other relative device lost, customers and users must be solely responsible for the consequences.\n\nc) The Software does not designed for emergency services, nuclear facilities, air traffic control or life support systems, and any occupation where the use or failure of the Software could lead to death, personal injury, or environmental damage.\n\nd) Customer/User's combination or use of the Software with software, services, or products developed by Customer/User or third parties, if the claim would have been avoided by the non-combined or independent use of the Ordering Document(s).";
+"Gimbal Disclaimer:" = "Gimbal Disclaimer:";
+"I understand and agree" = "I understand and agree";
 
 //First page
 "WarningMessageFirstPage"= "Thank you for choosing Align Gpro flybarless system.\n\nPrior to first use, please enter setup program through helicopter’s Hardware Setup menu, followed by parameter tuning in each tab, then concludes with flight parameter menu settings.\n\nPlease ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
 
-"ConnectedParameterPushMessage"="Please ensure helicopter’s hardware settings has been completed before making changes to flight parameters.";
-"Confirm" = "Ok";
+"Caution" = "Caution";
+
+"Connected" = "Connected";
+"Disconnected" = "Disconnected";
+
+"Search Device - Bluetooth" = "Search Device - Bluetooth";
+"Disconnect" = "Disconnect";
 
 //(彈跳視窗)
 "Incorrect Version" = "Unsupported version";
-"Formatting errors or corrupted file" = "Corrupted file or formatting errors";//
+"Formatting errors or corrupted file" = "Corrupted file or formatting errors";
+"Device List" = "Device List";
+"No device found" = "No device found";
 
-
-//APSM page 1
-
-"SBus" = "SBus";
-"Traditional" = "Traditional";
-"SPK DMS2" = "SPK DMS2";
-"SPK DMSX" = "SPK DMSX";
-"Xbus" = "Xbus";
-"JR DMSS" = "JR DMSS";
-"FlySky" = "FlySky";
-
-"No bind" = "No bind";
-"Binding" = "Binding";
-"Binding with FS" = "Binding with FS";
-
+"Language" = "Language";
 "Cancel" = "Cancel";
 "OK" = "OK";
 
+//APSM Title
+"APSM Setting" = "APSM Setting";
+"遙控器與接收器" = "遙控器與接收器";
+"感度與飛行器類型" = "感度與飛行器類型";
+"GPS感應器位置與保護裝置" = "GPS感應器位置與保護裝置";
+"定點巡航拍攝功能" = "定點巡航拍攝功能";
+"OSD設定" = "OSD設定";
+
+//APSM page 1 View1
+"Receiver Type" = "Receiver Type";
+"Traditional Receiver" = "Traditional Receiver";
+"S.BUS Receiver" = "S.BUS Receiver";
+"X.BUS Receiver" = "X.BUS Receiver";
+"SPK SAT DSM2 Receiver" = "SPK SAT DSM2 Receiver";
+"SPK SAT DSMX Receiver" = "SPK SAT DSMX Receiver";
+"JR DMSS Receiver" = "JR DMSS Receiver";
+
+"Binding Mode" = "Binding Mode";
+"No bind" = "No bind";
+"Binding" = "Binding";
+"Binding with Failed Safe" = "Binding with Failed Safe";
+
+//APSM Page1 View2
 "Transmitter" = "Transmitter";
 
-//APSMPage1View21
+//APSM Page1 View21
 "AIL" = "AIL";
 "Left" = "Left";
 "Right" = "Right";
 
-//APSMPage1View22
+//APSM Page1 View22
 "ELE" = "ELE";
 "Up" = "Up";
 "Down" = "Down";
 
-//APSMPage1View23
+//APSM Page1 View23
 "RUD" = "RUD";
-"Left" = "Left";
-"Right" = "Right";
+//"Left" = "Left";
+//"Right" = "Right";
 
-//APSMPage1View24
+//APSM Page1 View24
 "THR" = "THR";
 "Idle" = "Idle";
 "Full" = "Full";
 
-//APSMPage1View31
+
+//APSM Page1 View31
+
 "MANUAL" = "MANUAL";
 "ATTITUDE" = "ATTITUDE";
 "GPS" = "GPS";
+
+//APSM Page1 View32
 "SMART" = "SMART";
 "OFF" = "OFF";
 
-//APSMPage1View33
+//APSM Page1 View33
 "HOME" = "HOME";
 "OFF" = "OFF";
 
-//APSMPage1View34
+//APSM Page1 View34
+"腳架收合與返航" = "腳架收合與返航";
 "ON" = "ON";
 "OFF" = "OFF";
 
 
-//APSM page 2
+//APSM page 2 View1
+"感度" = "感度";
+"Mode" = "Mode";
+"Manual" = "Manual";
+"Attitude" = "Attitude";
 
-//APSMPage2View2
+"Aileron" = "Aileron";
+"Elevator" = "Elevator";
+"Rudder" = "Rudder";
+"Altituder" = "Altituder";
+
+//APSM Page2 View2
 "飛行器類型" = "飛行器類型";
 
-//APSM page 3
+//APSM page 3 View1
+"APS-M多軸控制器與GPS感應器的中心位置距離" = "APS-M多軸控制器與GPS感應器的中心位置距離";
+"X軸距離" = "X軸距離";
+"Y軸距離" = "Y軸距離";
+"Z軸距離" = "Z軸距離";
 
-//APSMPage3View2
+//APSM Page3 View2
 "低電壓返航保護裝置" = "低電壓返航保護裝置";
+//"ON" = "ON";
+//"OFF" = "OFF";
 "電壓低於" = "電壓低於";
 "飛行器執行返回Home點" = "飛行器執行返回Home點";
 
-//APSMPage3View3
+//APSM Page3 View3
 "低電壓警示燈閃爍提醒" = "低電壓警示燈閃爍提醒";
-"電壓低於" = "電壓低於";
+//"ON" = "ON";
+//"OFF" = "OFF";
+//"電壓低於" = "電壓低於";
 "飛行器警示燈閃爍提醒" = "飛行器警示燈閃爍提醒";
 
-//OSD Page 1
+//APSM Page4 View1
+"定點巡迒拍攝" = "定點巡迒拍攝";
+//"ON" = "ON";
+//"OFF" = "OFF";
 
+"巡航距離" = "巡航距離";
+"正方型單邊長,距離" = "正方型單邊長,距離";
 
-//OSD Page1 View11
+"拍攝張數" = "拍攝張數";
+"每10M拍攝張數" = "每10M拍攝張數";
+"張" = "張";
+
+"巡航點選擇" = "巡航點選擇";
+
+//OSD Page1 View1
 "顯示單位" = "顯示單位";
 "公制" = "公制";
 "英制" = "英制";
 
-
-//OSD Page1 View12
-
+//OSD Page1 View2
 "影像格式" = "影像格式";
 "NTSC" = "NTSC";
 "PAL" = "PAL";
 
-//OSD Page1 View13
+//OSD Page1 View3
 "顯示經緯度" = "顯示經緯度";
 "ON" = "ON";
 "OFF" = "OFF";
 
+//OSD Page1 View4
+"可視角" = "可視角";
+
+//OSD Page1 View5
+"警告提醒設定" = "警告提醒設定";
+
+//OSD Page1 View51
+"低電壓" = "低電壓";
+//"ON" = "ON";
+//"OFF" = "OFF";
+"電壓低於" = "電壓低於";
+
+//OSD Page1 View52
+"衛星數量" = "衛星數量";
+"衛星數量低於" = "衛星數量低於";
+"個" = "個";
+
+//OSD Page1 View53
+"飛行距離" = "飛行距離";
+"飛行距離超過" = "飛行距離超過";
+
+//OSD Page1 View54
+"飛行高度" = "飛行高度";
+"飛行高度超過" = "飛行高度超過";
+"飛行高度低於" = "飛行高度低於";
+
+//OSD Page1 View6
+"影像微調" = "影像微調";
+
+
+
+
+
+//Cradle Head Title
+"CradleHeadPages Setting" = "CradleHeadPages Setting";
+"雲台基本設定" = "雲台基本設定";
+"雲台控制設定" = "雲台控制設定";
+"雲台進階設定" = "雲台進階設定";
+
+//Cradle Head Page1 View1
+"選擇雲台類型" = "選擇雲台類型";
+
 
 //Cradle Head Page1 View2
-
 "選擇相機型號" = "選擇相機型號";
+
+//Cradle Head Page1 View3
+"參數調整" = "參數調整";
+
+//Cradle Head Page1 View31
+"PAN" = "PAN";
+"P Gain" = "P Gain";
+"I Gain" = "I Gain";
+"D Gain" = "D Gain";
+"Power" = "Power";
+
+//Cradle Head Page1 View32
+"ROLL" = "ROLL";
+
+//Cradle Head Page1 View33
+"TILT" = "TILT";
+
+//Cradle Head Page2 View1
+"Receiver Type" = "Receiver Type";
+"ALIGN APS-M" = "ALIGN APS-M";
+"Futaba S.BUS" = "Futaba S.BUS";
+"Spektrum / JR SAT DSM2" = "Spektrum / JR SAT DSM2";
+"Spektrum SAT DSMX" = "Spektrum SAT DSMX";
+
+"Binding Mode" = "Binding Mode";
+"None" = "None";
+"Binding" = "Binding";
+"Binding with Failed Safe" = "Binding with Failed Safe";
+
+//Cradle Head Page2 View2
+"雲台控制模式" = "雲台控制模式";
+
+//Cradle Head Page2 View21
+//"PAN" = "PAN";
+"Manual" = "Manual";
+"Attitude" = "Attitude";
+
+//Cradle Head Page2 View22
+//"ROLL" = "ROLL";
+
+//Cradle Head Page2 View23
+//"TILT" = "TILT";
+
+//Cradle Head Page2 View3
+
+//Cradle Head Page2 View31
+//"PAN" = "PAN";
+"Left" = "Left";
+"Right" = "Right";
+
+//Cradle Head Page2 View32
+//"ROLL" = "ROLL"
+//"Left" = "Left";
+//"Right" = "Right";
+
+//Cradle Head Page2 View33
+//"TILT" = "TILT";
+"Up" = "Up";
+"Down" = "Down";
+
+//Cradle Head Page2 View34
+"Zoom" = "Zoom";
+
+//Cradle Head Page2 View41
+"AVCS Mode" = "AVCS Mode";
+"ON" = "ON";
+"OFF" = "OFF";
+
+//Cradle Head Page2 View42
+"環景拍照" = "環景拍照";
+
+//Cradle Head Page3 View1
+"相機跟隨功能設定" = "相機跟隨功能設定";
+
+//Cradle Head Page3 View11
+//"PAN" = "PAN";
+//"Manual" = "Manual";
+//"Attitude" = "Attitude";
+"跟隨速度" = "跟隨速度";
+"跟隨角度差最大值" = "跟隨角度差最大值";
+
+//Cradle Head Page3 View12
+//"ROLL" = "ROLL";
+
+//Cradle Head Page3 View13
+//"TILT" = "TILT";
+
+//Cradle Head Page3 View2
+"雲台中立點設定" = "雲台中立點設定";
+//"PAN" = "PAN";
+//"ROLL" = "ROLL";
+//"TILT" = "TILT";
+
+//Cradle Head Page3 View3
+"360。 環繞拍攝" = "360。 環繞拍攝";
+//"ON" = "ON";
+//"OFF" = "OFF";
+"拍攝角度與數量" = "拍攝角度與數量";
+"水平0。" = "水平0。";
+"水平往下15。" = "水平往下15。";
+"水平往下30。" = "水平往下30。";
+"向下垂直90。" = "向下垂直90。";
+"張" = "張";

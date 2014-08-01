@@ -35,7 +35,7 @@
     [self addSubview:self.view];
     
     _receiverArray = @[@"SBus",@"Traditional",@"SPK DMS2",@"SPK DMSX",@"Xbus",@"JR DMSS",@"FlySky"];
-    _bindingArray = @[@"No bind",@"Binding",@"Binding with FS"];
+    _bindingArray = @[@"No bind",@"Binding",@"Binding with Failed Safe"];
 }
 
 
