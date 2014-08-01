@@ -9,6 +9,7 @@
 #import "APSM_Page4.h"
 
 @interface APSM_Page4 ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 @end
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.segment removeAllSegments];
+    
+    NSArray *array = @[NSLocalizedString(@"ON", nil),NSLocalizedString(@"OFF", nil)];
+    for (int index = 0 ; index < array.count ; index++) {
+        [self.segment insertSegmentWithTitle:(NSString *)array[index] atIndex:index animated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +34,10 @@
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
+}
+
+- (IBAction)segmentAction:(UISegmentedControl *)sender {
+
 }
 
 /*
