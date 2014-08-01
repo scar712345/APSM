@@ -151,7 +151,7 @@
 -(NSDictionary*)APSMPage4View12{
     return @{@"type":@"LabelAndTextfiled",
              @"viewTitle":NSLocalizedString(@"巡航距離", nil),
-             @"viewContent1":NSLocalizedString(@"正方形單邊長距離", nil),
+             @"viewContent1":NSLocalizedString(@"正方型單邊長,距離", nil),
              @"labelUnit":@"M"};
 }
 
@@ -198,7 +198,7 @@
 
 -(NSDictionary*)OSDPage1View51{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":NSLocalizedString(@"低電壓提醒", nil),
+             @"viewTitle":NSLocalizedString(@"低電壓", nil),
              @"viewContent1":NSLocalizedString(@"電壓低於", nil),
              @"viewContent2":@"",
              @"labelUnit":@"V"};
@@ -214,7 +214,7 @@
 
 -(NSDictionary*)OSDPage1View53{
     return @{@"type":@"yumeSwicthAndVoltageView",
-             @"viewTitle":NSLocalizedString(@"飛行距離提醒", nil),
+             @"viewTitle":NSLocalizedString(@"飛行距離", nil),
              @"viewContent1":NSLocalizedString(@"飛行距離超過", nil),
              @"viewContent2":@"",
              @"labelUnit":@"M"};
@@ -222,7 +222,7 @@
 
 -(NSDictionary*)OSDPage1View54{
     return @{@"type":@"yumeHeightWarningView",
-             @"viewTitle":NSLocalizedString(@"飛行高度提醒", nil),
+             @"viewTitle":NSLocalizedString(@"飛行高度", nil),
              @"viewContent1":NSLocalizedString(@"飛行高度超過", nil),
              @"viewContent2":NSLocalizedString(@"飛行高度低於", nil),
              @"labelUnit1":@"M",
@@ -275,19 +275,19 @@
 
 -(NSDictionary*)CradleHeadPage2View21{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":NSLocalizedString(@"Pan", nil),
+             @"labelTitle":NSLocalizedString(@"PAN", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
 -(NSDictionary*)CradleHeadPage2View22{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":NSLocalizedString(@"Roll", nil),
+             @"labelTitle":NSLocalizedString(@"ROLL", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
 -(NSDictionary*)CradleHeadPage2View23{
     return @{@"type":@"CradleHeadControllView",
-             @"labelTitle":NSLocalizedString(@"Tilt", nil),
+             @"labelTitle":NSLocalizedString(@"TILT", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude", nil)]};
 }
 
@@ -352,7 +352,7 @@
 
 -(NSDictionary*)CradleHeadPage3View11{
     return @{@"type":@"CamaraFollow",
-             @"viewTitle":NSLocalizedString(@"Pan", nil),
+             @"viewTitle":NSLocalizedString(@"PAN", nil),
              @"viewContent1":NSLocalizedString(@"跟隨速度", nil),
              @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual", nil),NSLocalizedString(@"Attitude",nil)]};
@@ -360,7 +360,7 @@
 
 -(NSDictionary*)CradleHeadPage3View12{
     return @{@"type":@"CamaraFollow",
-             @"viewTitle":NSLocalizedString(@"Roll", nil),
+             @"viewTitle":NSLocalizedString(@"ROLL", nil),
              @"viewContent1":NSLocalizedString(@"跟隨速度", nil) ,
              @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil) ,
              @"segmentedControl":@[NSLocalizedString(@"Manual",nil),
@@ -369,7 +369,7 @@
 
 -(NSDictionary*)CradleHeadPage3View13{
     return @{@"type":@"CamaraFollow",
-             @"viewTitle":NSLocalizedString(@"Tilt", nil),
+             @"viewTitle":NSLocalizedString(@"TILT", nil),
              @"viewContent1":NSLocalizedString(@"跟隨速度", nil),
              @"viewContent2":NSLocalizedString(@"跟隨角度差最大值", nil),
              @"segmentedControl":@[NSLocalizedString(@"Manual",nil),
@@ -378,17 +378,17 @@
 
 -(NSDictionary*)CradleHeadPage3View21{
     return @{@"type":@"CradleHeadNeutralPosition",
-             @"viewTitle":NSLocalizedString(@"Pan", nil),};
+             @"viewTitle":NSLocalizedString(@"PAN", nil),};
 }
 
 -(NSDictionary*)CradleHeadPage3View22{
     return @{@"type":@"CradleHeadNeutralPosition",
-             @"viewTitle":NSLocalizedString(@"Tilt", nil),};
+             @"viewTitle":NSLocalizedString(@"TILT", nil),};
 }
 
 -(NSDictionary*)CradleHeadPage3View23{
     return @{@"type":@"CradleHeadNeutralPosition",
-             @"viewTitle":NSLocalizedString(@"Roll", nil),};
+             @"viewTitle":NSLocalizedString(@"ROLL", nil),};
 }
 
 -(id)valueForUndefinedKey:(NSString *)key{
