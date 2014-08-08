@@ -8,11 +8,15 @@
 
 #import "CradleHeadControllView.h"
 #import "ViewSource.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 
 @interface CradleHeadControllView()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (strong, nonatomic) UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *segmentSource;
 @end
 
 @implementation CradleHeadControllView
@@ -20,11 +24,8 @@
 - (void) setup{
     [super setup];
     [self addSubview:self.view];
-    NSArray *array = @[@"seg1",@"seg2"];
-    _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
-    _segmentedControl.frame = CGRectMake(115, 5, 177, 29);
-    _segmentedControl.tintColor = [UIColor whiteColor];
-    //    _segmentedControl.selectedSegmentIndex = 0;
+   
+    [_segmentedControl addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentedControl];
 }
 
@@ -33,9 +34,12 @@
     self.view.backgroundColor = [UIColor clearColor];
 }
 
-//-(void) processFuture{
-//    
-//}
+-(void) processFuture{
+    if (_segmentKeyPath) {
+        _segmentSource = [YumeBTSharedInstance valueForKeyPath:_segmentKeyPath];
+        [_segmentedControl setSelectedSegmentIndex:(int)_segmentSource.valueUI];
+    }
+}
 
 -(void) processViewSource{
 
@@ -51,5 +55,12 @@
 -(id)debugQuickLookObject{
     return self;
 }
+
+#pragma mark Segement Method
+
+-(void)segmentValueChanged:(UISegmentedControl *)sender{
+    _segmentSource.valueUI = (float) sender.selectedSegmentIndex;
+}
+
 
 @end

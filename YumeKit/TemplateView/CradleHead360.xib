@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CradleHead360">
             <connections>
+                <outlet property="btnDegree0" destination="MkU-oe-YLg" id="1sm-Rw-Wsj"/>
+                <outlet property="btnDegree15" destination="khz-Us-i9X" id="Ixc-zv-7j3"/>
+                <outlet property="btnDegree30" destination="uSq-MZ-35K" id="F9w-9s-PCD"/>
+                <outlet property="btnDegree90" destination="ubJ-8d-xK9" id="HEY-JD-x1H"/>
                 <outlet property="labelDegree0" destination="ixd-Ls-RO3" id="HU1-fI-eiO"/>
                 <outlet property="labelDegree0Unit" destination="Fbh-gG-y7v" id="IZj-7o-wVG"/>
                 <outlet property="labelDegree15" destination="owz-jS-UQa" id="RQl-Vt-oNn"/>
@@ -17,10 +21,6 @@
                 <outlet property="labelMainTitle" destination="ViT-k2-PoK" id="vSh-v1-Kaf"/>
                 <outlet property="labelSubTitle" destination="gYA-Fg-fTp" id="3oq-np-d9T"/>
                 <outlet property="segmentedControl" destination="8ZN-av-Ciq" id="d10-lf-UU2"/>
-                <outlet property="textFieldDegree0" destination="jJX-BS-iMZ" id="NfU-kp-dWZ"/>
-                <outlet property="textFieldDegree15" destination="fut-b0-E1X" id="fMa-X3-XgB"/>
-                <outlet property="textFieldDegree30" destination="xdh-NV-mAO" id="GNM-Xf-3OY"/>
-                <outlet property="textFieldDegree90" destination="WOJ-nw-zmO" id="RSa-kV-Kz0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="F1F-TX-yoY"/>
             </connections>
         </placeholder>
@@ -50,28 +50,12 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jJX-BS-iMZ">
-                    <rect key="frame" x="140" y="129" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="8PU-tg-EV3"/>
-                    </connections>
-                </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="labelDegree0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-Ls-RO3">
                     <rect key="frame" x="8" y="129" width="124" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fut-b0-E1X">
-                    <rect key="frame" x="140" y="167" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="Kn5-y7-DOk"/>
-                    </connections>
-                </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9P-uY-Nb1">
                     <rect key="frame" x="245" y="167" width="47" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -84,14 +68,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-NV-mAO">
-                    <rect key="frame" x="140" y="205" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="P1w-03-sKm"/>
-                    </connections>
-                </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv3-qz-3jn">
                     <rect key="frame" x="245" y="205" width="47" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -104,14 +80,6 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-nw-zmO">
-                    <rect key="frame" x="140" y="243" width="97" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="6Pv-i1-rWr"/>
-                    </connections>
-                </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaF-I2-FWs">
                     <rect key="frame" x="245" y="243" width="47" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -130,12 +98,56 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-oe-YLg">
+                    <rect key="frame" x="140" y="129" width="97" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" backgroundImage="arrow(560x100).png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDegree0Action:" destination="-1" eventType="touchUpInside" id="MKl-ua-Xwd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khz-Us-i9X">
+                    <rect key="frame" x="140" y="167" width="97" height="30"/>
+                    <state key="normal" backgroundImage="arrow(560x100).png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDegree15Action:" destination="-1" eventType="touchUpInside" id="dYF-RZ-mPw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSq-MZ-35K">
+                    <rect key="frame" x="140" y="205" width="97" height="30"/>
+                    <state key="normal" backgroundImage="arrow(560x100).png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDegree30Action:" destination="-1" eventType="touchUpInside" id="oAi-2Y-Ylw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubJ-8d-xK9">
+                    <rect key="frame" x="140" y="240" width="97" height="30"/>
+                    <state key="normal" backgroundImage="arrow(560x100).png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDegree90Action:" destination="-1" eventType="touchUpInside" id="Zeh-Um-aNP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="628" y="348.5"/>
+            <point key="canvasLocation" x="628" y="348"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow(560x100).png" width="560" height="100"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

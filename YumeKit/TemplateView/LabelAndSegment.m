@@ -13,7 +13,7 @@
 @interface LabelAndSegment()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
-@property (strong,nonatomic) UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *segmentSource;
 @end
@@ -24,10 +24,7 @@
 - (void) setup{
     [super setup];
     [self addSubview:self.view];
-    NSArray *array = @[@"seg1",@"seg2"];
-    _segmentedControl = [[UISegmentedControl alloc] initWithItems:array];
-    _segmentedControl.frame = CGRectMake(8, self.labelTitle.frame.origin.y+self.labelTitle.frame.size.height+8, 284, 40);
-    _segmentedControl.tintColor = [UIColor whiteColor];
+    
     [_segmentedControl addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_segmentedControl];
 }
@@ -47,11 +44,11 @@
 -(void)processViewSource{
 
     _labelTitle.text = self.viewSourceDictionary[@"labelTitle"];
-    NSArray *segmentedControl = self.viewSourceDictionary[@"segmentedControl"];
+    NSArray *itemArray = self.viewSourceDictionary[@"itemArray"];
     
     [_segmentedControl removeAllSegments];
-    for (int index = 0 ; index < segmentedControl.count ; index++) {
-        [self.segmentedControl insertSegmentWithTitle:(NSString *)segmentedControl[index] atIndex:index animated:NO];
+    for (int index = 0 ; index < itemArray.count ; index++) {
+        [self.segmentedControl insertSegmentWithTitle:(NSString *)itemArray[index] atIndex:index animated:NO];
     }
     
 }

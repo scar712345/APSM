@@ -10,6 +10,6 @@
 #import "CustomViewTemplate.h"
 IB_DESIGNABLE
 @interface CradleHeadControllView : CustomViewTemplate
-//@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
+@property (nonatomic) IBInspectable NSString *segmentKeyPath;
 
 @end

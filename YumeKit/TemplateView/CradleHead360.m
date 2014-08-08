@@ -7,9 +7,11 @@
 //
 
 #import "CradleHead360.h"
-#import "UITextField+Yume.h"
+#import "ParameterExtension.h"
+#import "CXAlertView.h"
 
-@interface CradleHead360()<UITextFieldDelegate>
+
+@interface CradleHead360()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelMainTitle;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
@@ -25,10 +27,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelDegree30Unit;
 @property (weak, nonatomic) IBOutlet UILabel *labelDegree90Unit;
 
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree0;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree15;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree30;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldDegree90;
+@property (weak, nonatomic) IBOutlet UIButton *btnDegree0;
+@property (weak, nonatomic) IBOutlet UIButton *btnDegree15;
+@property (weak, nonatomic) IBOutlet UIButton *btnDegree30;
+@property (weak, nonatomic) IBOutlet UIButton *btnDegree90;
+
+@property (strong, nonatomic) NSArray *arrayItem;
+@property (strong, nonatomic) NSArray *array;
 
 @end
 
@@ -37,6 +42,14 @@
 - (void) setup{
     [super setup];
     [self addSubview:self.view];
+    
+    _arrayItem = @[@"1",@"4",@"8",@"12",@"20",@"24",@"30",@"36"];
+    
+    NSArray *segmentedControlItem = @[@"seg1",@"seg2"];
+    [self.segmentedControl removeAllSegments];
+    for (int index = 0 ; index < segmentedControlItem.count ; index++) {
+        [self.segmentedControl insertSegmentWithTitle:(NSString *)segmentedControlItem[index] atIndex:index animated:NO];
+    }
 }
 
 -(void)viewLiveRendering{
@@ -80,62 +93,75 @@
         self.labelDegree30Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
         self.labelDegree90Unit.text = NSLocalizedString(self.labelUnitKeyPath, nil) ;
     }
-
-}
-
-#pragma mark - TextField Delegate
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (_segmentedControl.selectedSegmentIndex == 0) {
-        return YES;
-    }else{
-        return NO;
-    }
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
-    
-    NSString *expression = @"^[0-9]*(\\.)?[0-9]*$";
-    
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:nil];
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:newString
-                                                        options:0
-                                                          range:NSMakeRange(0, [newString length])];
-    if (numberOfMatches == 0)
-        return NO;
-    
-    //    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-    //    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    //    NSNumber *num = [f numberFromString:newString];
-    //    if ([num floatValue] > [[textField.parameter valueForKey:@"parameterMax"] floatValue] ||
-    //        [num floatValue] < [[textField.parameter valueForKey:@"parameterMin"] floatValue])
-    //        return NO;
-    
-    return YES;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    _textFieldSource.valueUI = textField.text.floatValue;
-}
-
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
 }
 
 #pragma mark - Segment Method
 
 - (IBAction)segmentValueChanged:(UISegmentedControl *)sender {
 //    _segmentSource.valueUI = (float) ((sender.selectedSegmentIndex + 1) % 2);
+}
+
+#pragma mark button Method
+
+- (IBAction)btnDegree0Action:(id)sender {
+    [self creatCXAlertViewWithArray:_arrayItem WithButton:_btnDegree0];
+}
+
+- (IBAction)btnDegree15Action:(id)sender {
+    [self creatCXAlertViewWithArray:_arrayItem WithButton:_btnDegree15];
+}
+
+- (IBAction)btnDegree30Action:(id)sender {
+    [self creatCXAlertViewWithArray:_arrayItem WithButton:_btnDegree30];
+}
+
+- (IBAction)btnDegree90Action:(id)sender {
+    [self creatCXAlertViewWithArray:_arrayItem WithButton:_btnDegree90];
+}
+
+#pragma mark CXAlertView Method
+
+-(void)creatCXAlertViewWithArray:(NSArray *)arrayItem WithButton:(UIButton *)btnSender{
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
+    picker.dataSource = self;
+    picker.delegate = self;
+    
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
+    
+    _array = arrayItem;
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
+                          handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
+                              NSInteger selectedNumber = [picker selectedRowInComponent:0];
+                              [btnSender setTitle:[NSString stringWithFormat:@"%@",arrayItem[selectedNumber]] forState:UIControlStateNormal];
+                              //                              _bindingSource.valueUI = selectedNumber;
+                              [alertView dismiss];
+                          }];
+    
+    [alertView show];
+    //    [picker selectRow:_bindingSource.valueUI inComponent:0 animated:NO];
+}
+
+#pragma mark - Picker Method
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return _array.count;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return _array[row];
+}
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView rowHeightForComponent:(NSInteger)component{
+    return 100;
+}
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView widthForComponent:(NSInteger)component{
+    return 300;
 }
 
 

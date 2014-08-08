@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelAndSegment">
             <connections>
                 <outlet property="labelTitle" destination="Atn-vI-wdI" id="1qV-li-kjv"/>
+                <outlet property="segmentedControl" destination="6Uy-ud-G8y" id="0A3-mN-Iki"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Nm9-cp-qNq"/>
             </connections>
         </placeholder>
@@ -21,6 +22,14 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Uy-ud-G8y">
+                    <rect key="frame" x="8" y="39" width="284" height="29"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

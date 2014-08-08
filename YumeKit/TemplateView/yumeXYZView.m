@@ -9,7 +9,7 @@
 #import "yumeXYZView.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
-#import "UITextField+Yume.h"
+#import "ParameterExtension.h"
 
 @interface yumeXYZView ()
 

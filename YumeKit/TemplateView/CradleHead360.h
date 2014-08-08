@@ -17,11 +17,10 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable NSString* segmentKeyPath;
 //@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
 
-@property (nonatomic) IBInspectable NSString* textFieldDegree0KeyPath;
-@property (nonatomic) IBInspectable NSString* textFieldDegree15KeyPath;
-@property (nonatomic) IBInspectable NSString* textFieldDegree30KeyPath;
-@property (nonatomic) IBInspectable NSString* textFieldDegree90KeyPath;
-
+//@property (nonatomic) IBInspectable NSString* textFieldDegree0KeyPath;
+//@property (nonatomic) IBInspectable NSString* textFieldDegree15KeyPath;
+//@property (nonatomic) IBInspectable NSString* textFieldDegree30KeyPath;
+//@property (nonatomic) IBInspectable NSString* textFieldDegree90KeyPath;
 
 @property (nonatomic) IBInspectable NSString* labelMainTitleKeyPath;
 @property (nonatomic) IBInspectable NSString* labelSubTitleKeyPath;

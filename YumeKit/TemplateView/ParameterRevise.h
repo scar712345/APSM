@@ -10,6 +10,9 @@
 #import "CustomViewTemplate.h"
 IB_DESIGNABLE
 @interface ParameterRevise : CustomViewTemplate
-
+@property (nonatomic) IBInspectable NSString* pGainKeyPath;
+@property (nonatomic) IBInspectable NSString* iGainKeyPath;
+@property (nonatomic) IBInspectable NSString* dGainKeyPath;
+@property (nonatomic) IBInspectable NSString* powerKeyPath;
 
 @end

@@ -11,4 +11,5 @@
 IB_DESIGNABLE
 @interface CradleHeadNeutralPosition : CustomViewTemplate
 
+@property (nonatomic) IBInspectable NSString* stepperKeyPath;
 @end

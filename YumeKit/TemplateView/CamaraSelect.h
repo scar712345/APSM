@@ -14,6 +14,4 @@ IB_DESIGNABLE
 
 
 @property (nonatomic) IBInspectable NSString *labelViewTitleText;
-@property (nonatomic) IBInspectable NSString *btnCamaraSelectText;
-
 @end

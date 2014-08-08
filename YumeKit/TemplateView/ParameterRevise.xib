@@ -6,7 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParameterRevise">
             <connections>
-                <outlet property="btnCheckBox" destination="NDz-vr-hbt" id="PGN-Uz-e5A"/>
                 <outlet property="labelDGain" destination="Ckr-Sl-03O" id="6EX-9h-yUF"/>
                 <outlet property="labelDGainValue" destination="INm-np-Stf" id="mQS-2I-d2I"/>
                 <outlet property="labelIGain" destination="HPn-34-sos" id="WYE-dP-1sU"/>
@@ -16,10 +15,10 @@
                 <outlet property="labelPower" destination="gd2-Tf-8NI" id="9Lq-ND-DaW"/>
                 <outlet property="labelPowerValue" destination="gP7-va-mcO" id="aOt-TF-3Cg"/>
                 <outlet property="labelViewTitle" destination="ygC-PB-spB" id="VIQ-pe-FOM"/>
-                <outlet property="stepperDGain" destination="l5z-dl-CCB" id="2dp-oM-E1E"/>
-                <outlet property="stepperIGain" destination="g5r-zS-gri" id="CgS-Oo-1db"/>
+                <outlet property="stepperDGain" destination="l5z-dl-CCB" id="B9l-Fq-xRH"/>
+                <outlet property="stepperIGain" destination="g5r-zS-gri" id="3Fm-6R-bde"/>
                 <outlet property="stepperPGain" destination="Men-cO-ZwW" id="mgg-so-Q8L"/>
-                <outlet property="stepperPower" destination="Eh1-nT-5LI" id="Gxc-6m-Fge"/>
+                <outlet property="stepperPower" destination="Eh1-nT-5LI" id="Suc-eW-cdj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BXb-sE-h8w"/>
             </connections>
         </placeholder>
@@ -35,85 +34,78 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDz-vr-hbt">
-                    <rect key="frame" x="8" y="50" width="27" height="27"/>
-                    <state key="normal" backgroundImage="223.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="checkBoxAction:" destination="-1" eventType="touchUpInside" id="Zei-S1-SKt"/>
-                    </connections>
-                </button>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Men-cO-ZwW">
                     <rect key="frame" x="200" y="49" width="94" height="29"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <action selector="stepperPGain:" destination="-1" eventType="valueChanged" id="0Da-ru-sTA"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label P Gain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-Jd-DuG">
-                    <rect key="frame" x="43" y="50" width="108" height="27"/>
+                    <rect key="frame" x="8" y="50" width="131" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g5r-zS-gri">
                     <rect key="frame" x="200" y="94" width="94" height="29"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="stepperIGain:" destination="-1" eventType="valueChanged" id="2P9-bx-6UQ"/>
+                        <action selector="stepperPGain:" destination="-1" eventType="valueChanged" id="aIC-lN-Ut6"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSa-Vo-e5T">
-                    <rect key="frame" x="154" y="92" width="42" height="34"/>
+                    <rect key="frame" x="148" y="92" width="42" height="34"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label I Gain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPn-34-sos">
-                    <rect key="frame" x="43" y="95" width="101" height="27"/>
+                    <rect key="frame" x="8" y="95" width="131" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-dl-CCB">
                     <rect key="frame" x="200" y="139" width="94" height="29"/>
-                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="stepperDGain:" destination="-1" eventType="valueChanged" id="tYP-5v-IPa"/>
+                        <action selector="stepperPGain:" destination="-1" eventType="valueChanged" id="rzx-mL-P3q"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INm-np-Stf">
-                    <rect key="frame" x="154" y="137" width="42" height="34"/>
+                    <rect key="frame" x="148" y="137" width="42" height="34"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label D Gain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ckr-Sl-03O">
-                    <rect key="frame" x="43" y="140" width="109" height="27"/>
+                    <rect key="frame" x="8" y="140" width="131" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Eh1-nT-5LI">
                     <rect key="frame" x="200" y="184" width="94" height="29"/>
-                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <action selector="stepperPower:" destination="-1" eventType="valueChanged" id="y81-zl-L25"/>
+                        <action selector="stepperPGain:" destination="-1" eventType="valueChanged" id="95f-nQ-Ae7"/>
                     </connections>
                 </stepper>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gP7-va-mcO">
-                    <rect key="frame" x="154" y="182" width="42" height="34"/>
+                    <rect key="frame" x="148" y="182" width="42" height="34"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label Power" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gd2-Tf-8NI">
-                    <rect key="frame" x="43" y="185" width="106" height="27"/>
+                    <rect key="frame" x="8" y="185" width="131" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-Ro-hyT">
-                    <rect key="frame" x="154" y="47" width="42" height="34"/>
+                    <rect key="frame" x="148" y="47" width="42" height="34"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
@@ -124,9 +116,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <resources>
-        <image name="223.png" width="23" height="23"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

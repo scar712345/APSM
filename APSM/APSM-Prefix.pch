@@ -11,8 +11,8 @@
 #endif
 
 #ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #endif
 
 // Log Method
@@ -39,4 +39,12 @@
 #endif
 #ifndef IB_DESIGNABLE
 #define IB_DESIGNABLE
+#endif
+
+#define YUME_KIT_BUNDLE [NSBundle bundleWithIdentifier:@"com.Align.YumeKit"]
+
+#ifdef __IPHONE_8_0
+#define IMAGE_NAMED(image)  [UIImage imageNamed:image inBundle:YUME_KIT_BUNDLE compatibleWithTraitCollection:nil]
+#else
+#define IMAGE_NAMED(image)  [UIImage imageNamed:image]
 #endif

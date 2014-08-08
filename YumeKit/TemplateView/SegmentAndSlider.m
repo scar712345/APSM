@@ -16,7 +16,7 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
 @interface SegmentAndSlider()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (strong, nonatomic) UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *sliderSource;
 @property (strong,nonatomic) yumeAdapter adapter;
@@ -35,17 +35,11 @@ typedef NSInteger(^yumeAdapter)(NSInteger value);
     _adapter = nil;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
     
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setMaximumTrackImage:IMAGE_NAMED(@"slider_track(240x10).png") forState:UIControlStateNormal];
+    [self.slider setThumbImage:IMAGE_NAMED(@"slider.png") forState:UIControlStateNormal];
     self.slider.continuous = YES;
     
-    NSArray *itemArray = [NSArray arrayWithObjects:@"Seg 1", @"Seg 2", @"Seg 3",nil];
-    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
-    self.segmentedControl.frame = CGRectMake(8, 10, 284, 25);
-    self.segmentedControl.tintColor = [UIColor whiteColor];
-    self.segmentedControl.selectedSegmentIndex = 0;
     _segmentedControl.enabled = NO;
-    [self.view addSubview:self.segmentedControl];
 }
 
 -(void)viewLiveRendering{

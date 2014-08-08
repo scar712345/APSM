@@ -34,8 +34,8 @@
     _slider.enabled = NO;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(radioData:) name:@"radioData" object:[yumeBTLERemoteController sharedInstance ]];
     
-    [self.slider setMaximumTrackImage:[ UIImage imageNamed:@"slider_track(240x10).png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [self.slider setThumbImage:[UIImage imageNamed:@"slider.png"  inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.slider setMaximumTrackImage:IMAGE_NAMED(@"slider_track(240x10).png") forState:UIControlStateNormal];
+    [self.slider setThumbImage:IMAGE_NAMED(@"slider.png") forState:UIControlStateNormal];
     self.slider.continuous = YES;
 }
 

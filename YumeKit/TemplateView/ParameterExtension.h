@@ -13,3 +13,9 @@
 @interface UITextField (Yume)
 @property (strong,nonatomic) yumeRCPRemoteControllerParameter *parameter;
 @end
+
+
+@interface UIStepper (Yume)
+@property (strong,nonatomic) yumeRCPRemoteControllerParameter *parameter;
+@property (strong,nonatomic) UILabel *label;
+@end

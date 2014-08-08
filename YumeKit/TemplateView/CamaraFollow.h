@@ -13,6 +13,7 @@ IB_DESIGNABLE
 @interface CamaraFollow : CustomViewTemplate
 
 //@property (nonatomic) IBInspectable NSString *viewSourceKeyPath;
-
+@property (nonatomic) IBInspectable NSString *followSpeedKeyPath;
+@property (nonatomic) IBInspectable NSString *followAngleKeyPath;
 
 @end

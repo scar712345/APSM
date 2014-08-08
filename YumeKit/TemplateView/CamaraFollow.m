@@ -7,15 +7,30 @@
 //
 
 #import "CamaraFollow.h"
-#import "ViewSource.h"
+#import "CXAlertView.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 
+typedef NSInteger(^yumeAdapter)(NSInteger value);
 
-@interface CamaraFollow()
+@interface CamaraFollow()<UIPickerViewDataSource,UIPickerViewDelegate>
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *viewTitle;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent1;
 @property (weak, nonatomic) IBOutlet UILabel *viewContent2;
-@property (strong, nonatomic) UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *btnFollowSpeed;
+@property (weak, nonatomic) IBOutlet UIButton *btnFollowAngle;
+
+@property (strong, nonatomic) NSArray *followSpeedArray;
+@property (strong, nonatomic) NSArray *followAngleArray;
+@property (strong, nonatomic) NSArray *array;
+
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *followSpeedSource;
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *followAngleSource;
+@property (strong) yumeAdapter adapterToUI;
 @end
 
 @implementation CamaraFollow
@@ -24,13 +39,23 @@
     [super setup];
     [self addSubview:self.view];
     
-     NSArray *segmentedControl = @[@"seg1",@"seg2"];
-    
-    _segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentedControl];
-    _segmentedControl.frame = CGRectMake(111, 6, 181, 29);
-    _segmentedControl.tintColor = [UIColor whiteColor];
-    //    _segmentedControl.selectedSegmentIndex = 0;
-    [self.view addSubview:_segmentedControl];
+    _followSpeedArray = @[@"慢",@"中",@"快"];
+    _followAngleArray = @[@"15°",@"30°",@"45°"];
+    _adapterToUI = ^NSInteger(NSInteger angle) {
+        NSInteger index = 0;
+        switch (angle) {
+            case 45:
+                index++;
+            case 30:
+                index++;
+            case 15:
+                break;
+            default:
+                break;
+        }
+        return index;
+    };
+
 }
 
 -(void)prepareForInterfaceBuilder{
@@ -49,9 +74,19 @@
     self.view.backgroundColor = [UIColor clearColor];
 }
 
-//-(void) processFuture{
-//    
-//}
+-(void) processFuture{
+    if (_followSpeedKeyPath) {
+        _followSpeedSource = [YumeBTSharedInstance valueForKeyPath:_followSpeedKeyPath];
+        [self.btnFollowSpeed setTitle:[NSString stringWithFormat:@"%@",_followSpeedArray[(int)_followSpeedSource.valueUI]] forState:UIControlStateNormal];
+    }
+    
+    if (_followAngleKeyPath) {
+        _followAngleSource = [YumeBTSharedInstance valueForKeyPath:_followAngleKeyPath];
+        
+        NSInteger index = _adapterToUI( _followAngleSource.valueUI );
+        [self.btnFollowAngle setTitle:[NSString stringWithFormat:@"%@",_followAngleArray[index]] forState:UIControlStateNormal];
+    }
+}
 
 -(void) processViewSource{
     _viewTitle.text = self.viewSourceDictionary[@"viewTitle"];
@@ -69,46 +104,73 @@
     return self;
 }
 
-#pragma mark - TextField Delegate
+#pragma mark - Button Method
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+- (IBAction)followSpeed:(id)sender {
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
+    picker.dataSource = self;
+    picker.delegate = self;
     
-    NSString *expression = @"^[0-9]*(\\.)?[0-9]*$";
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression
-                                                                           options:NSRegularExpressionCaseInsensitive
-                                                                             error:nil];
-    NSUInteger numberOfMatches = [regex numberOfMatchesInString:newString
-                                                        options:0
-                                                          range:NSMakeRange(0, [newString length])];
-    if (numberOfMatches == 0)
-        return NO;
+    _array = _followSpeedArray;
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
+                          handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
+                              NSInteger selectedNumber = [picker selectedRowInComponent:0];
+                              [self.btnFollowSpeed setTitle:[NSString stringWithFormat:@"%@",_followSpeedArray[selectedNumber]] forState:UIControlStateNormal];
+                              _followSpeedSource.valueUI = selectedNumber;
+                              [alertView dismiss];
+                          }];
+    [alertView show];
+    [picker selectRow:_followSpeedSource.valueUI inComponent:0 animated:NO];
+}
+- (IBAction)followAngle:(id)sender {
+    UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(-15, 0, 300, 200)];
+    picker.dataSource = self;
+    picker.delegate = self;
     
-    //    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-    //    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    //    NSNumber *num = [f numberFromString:newString];
-    //    if ([num floatValue] > [[textField.parameter valueForKey:@"parameterMax"] floatValue] ||
-    //        [num floatValue] < [[textField.parameter valueForKey:@"parameterMin"] floatValue])
-    //        return NO;
+    CXAlertView *alertView = [[CXAlertView alloc] initWithTitle:nil contentView:picker cancelButtonTitle:NSLocalizedString(@"Cancel", nil) ];
     
-    return YES;
+    _array = _followAngleArray;
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", nil)
+                             type:CXAlertViewButtonTypeCancel
+                          handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
+                              NSInteger selectedNumber = [picker selectedRowInComponent:0];
+                              [self.btnFollowAngle setTitle:[NSString stringWithFormat:@"%@",_followAngleArray[selectedNumber]] forState:UIControlStateNormal];
+                              
+                               float angle = [_followAngleArray[selectedNumber] floatValue];
+                              _followAngleSource.valueUI = angle;
+                              [alertView dismiss];
+                          }];
+    
+    [alertView show];
+    [picker selectRow:_adapterToUI(_followAngleSource.valueUI) inComponent:0 animated:NO];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
+
+#pragma mark - Picker Method
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 1;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    //    textField.parameter.valueUI = textField.text.floatValue;
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    return _array.count;
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    return _array[row];
 }
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView rowHeightForComponent:(NSInteger)component{
+    return 100;
+}
+
+-(CGFloat)pickerView:(UIPickerView*)pickerView widthForComponent:(NSInteger)component{
+    return 300;
+}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

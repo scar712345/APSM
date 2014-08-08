@@ -7,16 +7,13 @@
 //
 
 #import "ParameterRevise.h"
-#import "ViewSource.h"
+#import "ParameterExtension.h"
+#import "yumeBTLERemoteController.h"
+#import "yumeRCPRemoteControllerParameter.h"
 
-@interface ParameterRevise(){
-    NSArray *labelValues;
-    NSArray *steppers;
-    BOOL checkd;
-}
+@interface ParameterRevise()
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewTitle;
-@property (weak, nonatomic) IBOutlet UIButton *btnCheckBox;
 @property (weak, nonatomic) IBOutlet UILabel *labelPGain;
 @property (weak, nonatomic) IBOutlet UILabel *labelIGain;
 @property (weak, nonatomic) IBOutlet UILabel *labelDGain;
@@ -30,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepperDGain;
 @property (weak, nonatomic) IBOutlet UIStepper *stepperPower;
 
+
 @end
 
 @implementation ParameterRevise
@@ -38,10 +36,6 @@
     [super setup];
     [self addSubview:self.view];
     
-    
-    labelValues = @[_labelPGainValue,_labelIGainValue,_labelDGainValue,_labelPowerValue];
-    steppers = @[_stepperPGain,_stepperIGain,_stepperDGain,_stepperPower];
-    checkd = YES;
 //    [stepper setMinimumValue:minValue];
 //    [stepper setMaximumValue:maxValue];
 //    [stepper setValue:defaultValue];
@@ -55,7 +49,42 @@
 }
 
 -(void) processFuture{
+    if (_pGainKeyPath) {
+        _stepperPGain.parameter = [YumeBTSharedInstance valueForKeyPath:_pGainKeyPath];
+        _stepperPGain.label = _labelPGainValue;
+        _stepperPGain.label.text = [[_stepperPGain.parameter valueForKey:@"valueUI"] stringValue];
+        _stepperPGain.minimumValue = [[_stepperPGain.parameter valueForKey:@"parameterMin"] floatValue];
+        _stepperPGain.maximumValue = [[_stepperPGain.parameter valueForKey:@"parameterMax"] floatValue];
+        _stepperPGain.value =  _stepperPGain.parameter.valueUI;
+    }
     
+    if (_iGainKeyPath) {
+        _stepperIGain.parameter = [YumeBTSharedInstance valueForKeyPath:_iGainKeyPath];
+        _stepperIGain.label = _labelIGainValue;
+        _stepperIGain.label.text = [[_stepperIGain.parameter valueForKey:@"valueUI"] stringValue];
+        _stepperIGain.minimumValue = [[_stepperIGain.parameter valueForKey:@"parameterMin"] floatValue];
+        _stepperIGain.maximumValue = [[_stepperIGain.parameter valueForKey:@"parameterMax"] floatValue];
+        _stepperIGain.value =  _stepperIGain.parameter.valueUI;
+    }
+    
+    if (_dGainKeyPath) {
+        _stepperDGain.parameter = [YumeBTSharedInstance valueForKeyPath:_dGainKeyPath];
+        _stepperDGain.label = _labelDGainValue;
+        _stepperDGain.label.text = [[_stepperDGain.parameter valueForKey:@"valueUI"] stringValue];
+        _stepperDGain.minimumValue = [[_stepperDGain.parameter valueForKey:@"parameterMin"] floatValue];
+        _stepperDGain.maximumValue = [[_stepperDGain.parameter valueForKey:@"parameterMax"] floatValue];
+        _stepperDGain.value =  _stepperDGain.parameter.valueUI;
+ 
+    }
+    
+    if (_powerKeyPath) {
+        _stepperPower.parameter = [YumeBTSharedInstance valueForKeyPath:_powerKeyPath];
+        _stepperPower.label = _labelPowerValue;
+        _stepperPower.label.text = [[_stepperPower.parameter valueForKey:@"valueUI"] stringValue];
+        _stepperPower.maximumValue = [[_stepperPower.parameter valueForKey:@"parameterMax"] floatValue];
+         _stepperPower.minimumValue = [[_stepperPower.parameter valueForKey:@"parameterMin"] floatValue];
+        _stepperPower.value =  _stepperPower.parameter.valueUI;
+    }
 }
 
 -(void) processViewSource{
@@ -64,47 +93,29 @@
     _labelIGain.text = self.viewSourceDictionary[@"labelIGain"];
     _labelDGain.text = self.viewSourceDictionary[@"labelDGain"];
     _labelPower.text = self.viewSourceDictionary[@"labelPower"];
+
 }
 
-#pragma mark - UIButton
-- (IBAction)checkBoxAction:(id)sender {
-    checkd = !checkd;
-    for (int index = 0; index < labelValues.count; index++) {
-        UILabel *label = labelValues[index];
-        UIStepper *stepper = steppers[index];
-        
-        if (checkd) {
-            label.alpha = 1;
-            stepper.enabled = YES;
-            stepper.tintColor = [UIColor colorWithRed:0.000 green:0.478 blue:1.000 alpha:1.000];
-            [_btnCheckBox setBackgroundImage:[UIImage imageNamed:@"223.png" inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-        }else{
-        label.alpha = 0.5;
-        stepper.enabled = NO;
-        stepper.tintColor = [UIColor clearColor];
-        [_btnCheckBox setBackgroundImage:[UIImage imageNamed:@"112.png" inBundle:[NSBundle bundleWithIdentifier:@"com.Align.YumeKit"] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-        }
-    }
-}
+
 
 #pragma mark - UIStepper
 
-- (IBAction)stepperPGain:(id)sender {
-    NSLog(@"%f",_stepperPGain.value);
-    _labelPGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperPGain.value];
+- (IBAction)stepperPGain:(UIStepper *)sender {
+    sender.parameter.valueUI =sender.value;
+    sender.label.text =[[sender.parameter valueForKey:@"valueUI"] stringValue];
 }
-- (IBAction)stepperIGain:(id)sender {
-    NSLog(@"%f",_stepperIGain.value);
-    _labelIGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperIGain.value];
-}
-- (IBAction)stepperDGain:(id)sender {
-    NSLog(@"%f",_stepperDGain.value);
-    _labelDGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperDGain.value];
-}
-- (IBAction)stepperPower:(id)sender {
-    NSLog(@"%f",_stepperPower.value);
-    _labelPowerValue.text =[NSString stringWithFormat:@"%0.f",_stepperPower.value];
-}
+//- (IBAction)stepperIGain:(id)sender {
+//    NSLog(@"%f",_stepperIGain.value);
+//    _labelIGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperIGain.value];
+//}
+//- (IBAction)stepperDGain:(id)sender {
+//    NSLog(@"%f",_stepperDGain.value);
+//    _labelDGainValue.text =[NSString stringWithFormat:@"%0.f",_stepperDGain.value];
+//}
+//- (IBAction)stepperPower:(id)sender {
+//    NSLog(@"%f",_stepperPower.value);
+//    _labelPowerValue.text =[NSString stringWithFormat:@"%0.f",_stepperPower.value];
+//}
 
 
 

@@ -2,7 +2,7 @@
 //  YumeKit.h
 //  YumeKit
 //
-//  Created by APP559 on 2014/7/15.
+//  Created by ALIGN-APP on 2014/8/8.
 //  Copyright (c) 2014年 yume. All rights reserved.
 //
 

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnCamaraSelect;
 
 @property (strong, nonatomic) NSArray *camaraArray;
+@property (weak,nonatomic) yumeRCPRemoteControllerParameter *camaraSource;
 @end
 
 
@@ -28,7 +29,7 @@
     [super setup];
     [self addSubview:self.view];
     
-    _camaraArray = @[@"Sony NEX7",@"Sony NEX7",@"Sony NEX7",@"Sony NEX7"];
+    _camaraArray = @[@"Sony NEX7 1",@"Sony NEX7 2",@"Sony NEX7 3",@"Sony NEX7 4"];
 }
 
 -(void)viewLiveRendering{
@@ -37,12 +38,10 @@
 }
 
 -(void)processFuture{
-//    if (_buttonKeyPath) {
-//        _buttonSource = [YumeBTSharedInstance valueForKeyPath:_buttonKeyPath];
-//        
-//        NSInteger index = _adapterToUI( _buttonSource.valueUI );
-//        [_btnAngleOfVisibility setTitle:[NSString stringWithFormat:@"%@",_angleArray[index]] forState:UIControlStateNormal];
-//    }
+    if (_btnCamaraSelectKeyPath) {
+        _camaraSource = [YumeBTSharedInstance valueForKeyPath:_btnCamaraSelectKeyPath];
+        [self.btnCamaraSelect setTitle:[NSString stringWithFormat:@"%@",_camaraArray[(int)_camaraSource.valueUI]] forState:UIControlStateNormal];
+    }
 }
 
 //-(void)processViewSource{
@@ -69,11 +68,11 @@
                           handler:^(CXAlertView *alertView, CXAlertButtonItem *button) {
                               NSInteger selectedNumber = [picker selectedRowInComponent:0];
                               [self.btnCamaraSelect setTitle:[NSString stringWithFormat:@"%@",_camaraArray[selectedNumber]] forState:UIControlStateNormal];
-                              
+                               _camaraSource.valueUI = selectedNumber;
                               [alertView dismiss];
                           }];
     [alertView show];
-//    [picker selectRow:_receiverSource.valueUI inComponent:0 animated:NO];
+    [picker selectRow:_camaraSource.valueUI inComponent:0 animated:NO];
 
 }
 

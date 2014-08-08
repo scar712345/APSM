@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CradleHeadNeutralPosition">
             <connections>
+                <outlet property="labelValue" destination="i5d-Eh-Q97" id="q1Y-OH-fSo"/>
+                <outlet property="stepper" destination="fmc-WL-HxH" id="xJd-vV-F9h"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Z8e-Xn-u2z"/>
                 <outlet property="viewTitle" destination="KHq-eA-EJH" id="ovI-OI-X3V"/>
             </connections>
@@ -29,6 +31,10 @@
                 </label>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-WL-HxH">
                     <rect key="frame" x="196" y="5" width="94" height="29"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="stepperAction:" destination="-1" eventType="valueChanged" id="QMR-Ol-3UE"/>
+                    </connections>
                 </stepper>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

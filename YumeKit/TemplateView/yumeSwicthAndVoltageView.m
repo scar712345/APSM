@@ -56,6 +56,13 @@
     _viewContent1.text = self.viewSourceDictionary[@"viewContent1"];
     _viewContent2.text = self.viewSourceDictionary[@"viewContent2"];
     _labelUnit.text = self.viewSourceDictionary[@"labelUnit"];
+    
+    NSArray *itemArray = self.viewSourceDictionary[@"itemArray"];
+    
+    [self.segment removeAllSegments];
+    for (int index = 0 ; index < itemArray.count ; index++) {
+        [self.segment insertSegmentWithTitle:(NSString *)itemArray[index] atIndex:index animated:NO];
+    }
 }
 
 #pragma mark - TextField Delegate

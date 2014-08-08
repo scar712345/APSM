@@ -20,8 +20,7 @@
 
 @property (strong, nonatomic) NSArray *receiverArray;
 @property (strong, nonatomic) NSArray *bindingArray;
-@property (weak, nonatomic) NSArray *array;
-
+@property (strong, nonatomic) NSArray *array;
 
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *receiverSource;
 @property (weak,nonatomic) yumeRCPRemoteControllerParameter *bindingSource;

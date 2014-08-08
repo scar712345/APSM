@@ -7,7 +7,7 @@
 //
 
 #import "yumeSensitivityView.h"
-#import "UITextField+Yume.h"
+#import "ParameterExtension.h"
 #import "yumeBTLERemoteController.h"
 #import "yumeRCPRemoteControllerParameter.h"
 
